@@ -95,32 +95,32 @@
 -
 ## 2. Módulos
 ### 2.1 Módulo Compra-Proveedores
-- Responsabilidades:
+- Responsabilidades: Gestionar el proceso de compra, elección de proveedores, añadir nuevos proveedores, subir los archivos de la cotizacion que el proveedor le ofrece y confirmar o rechazar las ofertas del proveedor.
 
 - Interacción: Con el módulo de almacen y finanzas.
 
 - Funcionalidad:
 
   **- Home Gestor Compra**
-    - Responsabilidades:
+    - Responsabilidades: Permite al gestor de compras tener su propia vista de las partes que constituyen su módulo, como son la visualizacion de proveedores, acceso al stock y acceso a finanzas.
 
   **- Proveedores Actuales**
-    - Responsabilidades:
+    - Responsabilidades: Permite al gestor visualizar y acceder al historial de todos los proveedores con las que la empresa esta trabajando.
 
   **- Añadir proveedores**
-    - Responsabilidades:
+    - Responsabilidades: Permite al gestor de compras añadir nuevos proveedores con los que va a trabajar.
 
-  **- Datos del proveedor**
-    - Responsabilidades:
+  **- Perfil del proveedor**
+    - Responsabilidades: Permite al gestor de compras visualizar, gestionar y actualizar la información de los proveedores con los que está trabajando.
 
   **- Historial del proveedor**
-    - Responsabilidades:
+    - Responsabilidades: Muestra al gestor de compras un registro detallado de las ofertas no aceptadas, aceptadas y pendientes por aceptar/rechazar, dentro de la plataforma a lo largo del tiempo. Además permite que el gestor pueda realizar un seguimiento de sus ofertas pasadas.
 
-  **- Datos de oferta**
-    - Responsabilidades:
+  **- Datos de cotización**
+    - Responsabilidades: Permite visualizar el detalle de la cotización de productos que ha realizado el proveedor a la empresa.
 
   **- Confirmar Oferta**
-    - Responsabilidades:
+    - Responsabilidades: Permite al gestor de compras aceptar o rechazar la oferta final que ha realizado el proveedor hacia la empresa.
 
 ### 2.2 Módulo 2
 ### 2.3 Módulo 3
