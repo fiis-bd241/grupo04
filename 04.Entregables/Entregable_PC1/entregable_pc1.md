@@ -122,12 +122,12 @@
   **- Confirmar Oferta**
     - Responsabilidades: Permite al gestor de compras aceptar o rechazar la oferta final que ha realizado el proveedor hacia la empresa.
 
-### 2.2 Módulo 2
-### 2.3 Módulo 3
-### 2.4 Módulo 4
-### 2.5 Módulo 5
-### 2.6 Módulo 6
-### 2.7 Módulo 7
+### 2.2 Módulo Venta
+### 2.3 Módulo Almacén
+### 2.4 Módulo Distribución
+### 2.5 Módulo Marketing
+### 2.6 Módulo Finanzas
+### 2.7 Módulo CRM
 ## 3. Requerimientos
 ## 4. Prototipo
 - Para ver el prototipo debe ingresar al siguiente enlace:
@@ -143,5 +143,6 @@
 
 ## 6. Modelado Relacional
 ### 6.1 Modelo Lógico
-[Se inserta imagen][o tambien el link]
+![Modelo Lógico](Modelo_Logico.png)
+[Modelo Lógico](https://drive.google.com/file/d/1_JcvnJOoGrkaA1rP-jQhsR2sMmhgNscB/view?usp=sharing)
 
