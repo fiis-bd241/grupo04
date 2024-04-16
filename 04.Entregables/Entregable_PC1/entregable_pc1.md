@@ -94,7 +94,34 @@
 ### 1.3 Motivación
 -
 ## 2. Módulos
-### 2.1 Módulo 1
+### 2.1 Módulo Compra-Proveedores
+- Responsabilidades:
+
+- Interacción: Con el módulo de almacen y finanzas.
+
+- Funcionalidad:
+
+  **- Home Gestor Compra**
+    - Responsabilidades:
+
+  **- Proveedores Actuales**
+    - Responsabilidades:
+
+  **- Añadir proveedores**
+    - Responsabilidades:
+
+  **- Datos del proveedor**
+    - Responsabilidades:
+
+  **- Historial del proveedor**
+    - Responsabilidades:
+
+  **- Datos de oferta**
+    - Responsabilidades:
+
+  **- Confirmar Oferta**
+    - Responsabilidades:
+
 ### 2.2 Módulo 2
 ### 2.3 Módulo 3
 ### 2.4 Módulo 4
