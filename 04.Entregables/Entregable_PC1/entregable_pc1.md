@@ -200,7 +200,7 @@
 ## 3. Requerimientos
 ### 3.1 Requerimientos Funcionales
 
-**Caso de uso N°: Añadir proveedor**
+**Caso de uso N°1: Añadir proveedor**
 
 | Objetivo | <p align="left">Permitir que el Gestor de compras pueda añadir proveedores a la página de Migni Store.</p> | 
 |:--------------:|--------------|
@@ -218,7 +218,7 @@
 | 7 | El sistema confirma de la creación de un nuevo proveedor |
 | 8 | El caso termina |
 
-**Caso de uso N°: Aceptar/Rechazar oferta del proveedor**
+**Caso de uso N°2: Aceptar/Rechazar oferta del proveedor**
 
 | Objetivo | <p align="left"> Permitir que el gestor de compras pueda aceptar o rechazar la oferta realizada por el proveedor d</p> | 
 |:--------------:|--------------|
@@ -237,7 +237,7 @@
 | 8  | Se actualiza el estado de la oferta  |
 | 9 | El caso se termina |
 
-**Caso de uso N°: Visualizar proveedores/historial**
+**Caso de uso N°3: Visualizar proveedores/historial**
 
 | Objetivo | <p align="left">  Permitir a los gestores poder acceder  y visualizar los proveedores y registros, con sus datos. </p> | 
 |:--------------:|--------------|
