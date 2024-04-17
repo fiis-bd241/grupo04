@@ -323,6 +323,112 @@
 | 6 | El sistema muestra el historial de ofertas que fueron subidas a la pagina web y su estado|
 | 7 | El caso termina |
 
+Distribucion
+
+**Caso de uso N°: Establecer fecha y hora de entrega del pedido**
+
+| Objetivo | <p align="left">Permitir que el cliente establezca la entrega de pedido .</p> | 
+|:--------------:|--------------|
+| Descripción | Proceso de asignacion de la fecha y hora de la entrega del pedido,con actualizaciones de estado en el apartado del cliente y la lista de pedidos del gestor de ventas.  | 
+| Actor primario   | Cliente | 
+|Actor secundario| - |
+|Precondiciones | El cliente realizo el pedido y el pago respectivo |
+| Paso | <p align="center"> Acción </p> |
+| 1 | El cliente accede a la pagina web |
+| 2 | El cliente ingresa sus datos de inicio de sesión |
+| 3 | El cliente se dirige al apartado de mis pedidos |
+| 4 | El cliente selecciona "Establecer fecha y hora de entrega" de la seccion de uno de sus pedidos|
+| 5 | El cliente asigna la fecha y hora de entrega |
+| 6 | El sistema actualiza la base de datos con la fecha y hora asignada de entrega |
+| 7 | El sistema actualiza la seccion del pedido del cliente,quitando la seleccion "Establecer fecha y hora de entrega" y añadiendo la opcion "Reprogramar fecha" |
+| 8 | El sistemas actualiza la base de datos de la lista de "gestionar pedidos" del apartado del gestor de ventas y añade el pedido |
+|9|El sistema asigna el estado del pedido en la lista de "Gestionar pedidos" del apartado del gestor de ventas a "PENDIENTE" |
+|10|El caso termina|
+
+**Caso de uso N°: Asignar repartidor**
+
+| Objetivo | <p align="left">Permitir que el Gestor de ventas pueda asignar un repartidor a cada pedido.</p> | 
+|:--------------:|--------------|
+| Descripción | Proceso de eleccion de repartidores disponibles para cada entrega de un pedido.  | 
+| Actor primario   | Gestor de ventas | 
+|Actor secundario| - |
+|Precondiciones | El pedido deberia tener una direccion,fecha y hora establecida de entrega |
+| Paso | <p align="center"> Acción </p> |
+| 1 | El gestor de ventas accede a la pagina web |
+| 2 | El gestor de ventas ingresa sus datos de inicio de sesión |
+| 3 | El gestor de ventas se dirige al apartado de gestionar pedidos |
+| 4 | El gestor de ventas presiona la parte “ASIGNAR” en la columna de repartidor,de cualquier pedido |
+| 5 | El gestor de ventas escoge al repartidor entre todos los disponibles |
+| 6 | El sistema actualiza el pedido con los datos del repartidor asignado |
+| 7 | El sistema actualiza la base de datos del repartidor asignado |
+| 8 | El pedido aparece en la lista de pendientes del repartidor |
+|9|El pedido se actualiza en la columna de repartidor a "ASIGNADO"|
+|10|El caso termina|
+
+**Caso de uso N°: Cancelar entrega**
+
+| Objetivo | <p align="left">Permitir que el cliente establezca una nueva fecha de entrega del pedido.</p> | 
+|:--------------:|--------------|
+| Descripción | Proceso de cancelacion de entrega de un pedido y establecimiento de una nueva fecha de entrega de un pedido.  | 
+| Actor primario   | Cliente | 
+|Actor secundario| - |
+|Precondiciones | El pedido se le asignó una fecha y hora de entrega |
+| Paso | <p align="center"> Acción </p> |
+| 1 | El cliente de ventas accede a la pagina web |
+| 2 | El cliente ingresa sus datos de inicio de sesión |
+| 3 | El cliente se dirige al apartado de "mis pedidos" |
+| 4 | El cliente selecciona "REPROGRAMAR FECHA" de la seccion de uno de sus pedidos |
+| 5 | El cliente establece una nueva fecha de entrega del pedido |
+| 6 | El sistema actualiza el pedido con los datos de la nueva fecha de entrega |
+| 7 | El sistema actualiza la base de datos del gestor de ventas y asigna el estado del pedido a "CANCELADO" |
+| 8 | El sistema actualiza la base de datos del gestor de ventas y añade un nuevo pedido con la nueva fecha |
+|9|El sistema actualiza la base de datos del repartidor si el pedido ya se le habia asignado uno,y asigna el estado del pedido a "CANCELADO"|
+|10|El caso termina|
+
+**Caso de uso N°: Actualizar estado de pedido a ENTREGADO**
+
+| Objetivo | <p align="left">Permitir que el repartidor logre la entrega de pedido y actualice el estado .</p> | 
+|:--------------:|--------------|
+| Descripción | Proceso de entrega del pedido,con actualizaciones de estado en el apartado del cliente y la lista de pedidos del gestor de ventas.  | 
+| Actor primario   | Repartidor | 
+|Actor secundario| - |
+|Precondiciones | El pedido fue asignado a un repartidor |
+| Paso | <p align="center"> Acción </p> |
+| 1 | El repartidor accede a la pagina web |
+| 2 | El repartidor ingresa sus datos de inicio de sesión |
+| 3 | El repartidor se dirige al apartado de pedidos pendientes |
+| 4 | El repartidor acepta el pedido|
+| 5 | El sistema actualiza el estado del pedido en el apartado de "mis pedidos" del cliente a "SU PEDIDO ESTA EN CAMINO" |
+| 6 | El repartidor realiza la entrega |
+| 7 | El repartidor vuelve a ingresar a la pagina web y se dirige a su apartado |
+| 8 | El repartidor confirma que se ha entregado el pedido |
+|9|El sistema quita el pedido del la seccion de "Pedidos pendientes" del repartidor |
+|10|El sistema agrega el pedido entregado y actualiza la base de datos del historial de pedidos del repartidor |
+|11|El sistema actualiza el estado del pedido a "ENTREGADO" en la seccion de gestionar pedidos del gestor de ventas|
+|12|El caso termina|
+
+**Caso de uso N°: Reprogramar nueva fecha de entrega**
+
+| Objetivo | <p align="left">Permitir que el repartidor establezca una nueva fecha de entrega del pedido,por incovenientes en la entrega.</p> | 
+|:--------------:|--------------|
+| Descripción | Proceso de reprogramacion de una nueva fecha de entrega de un pedido,dado el caso que la entrega no se haya realizado con exito,ya sea codigo incorrecto de compra o cliente ausente.  | 
+| Actor primario   | Repartidor | 
+|Actor secundario| - |
+|Precondiciones | El pedido se le asigno a un repartidor |
+| Paso | <p align="center"> Acción </p> |
+| 1 | El repartidor accede a la pagina web |
+| 2 | El repartidor ingresa sus datos de inicio de sesión |
+| 3 | El repartidor se dirige al apartado de pedidos pendientes |
+| 4 | El repartidor acepta el pedido|
+| 5 | El sistema actualiza el estado del pedido en el apartado de "mis pedidos" del cliente a "SU PEDIDO ESTA EN CAMINO" |
+| 6 | El repartidor no logra entregar el pedido,por codigo incorrecto o cliente ausente |
+| 7 | El repartidor vuelve a ingresar a la pagina web y accede a su apartado |
+| 8 | El repartidor selecciona "reprogramar" en la fila del pedido antes aceptado |
+|9|El sistema actualiza la base de datos del repartidor y asigna el estado del pedido a "CANCELADO"|
+|10|El sistema actualiza la base de datos del gestor de ventas y asigna el estado del pedido a "CANCELADO"|
+|11|El sistema pide al cliente la reprogramacion de una nueva fecha|
+|10|El caso termina|
+
 ## 4. Prototipo
 - Para ver el prototipo debe ingresar al siguiente enlace:
 
