@@ -729,6 +729,24 @@ Distribucion
 
 ### 3.2 Requerimientos de atributos de Calidad
 
+   **Simplicidad y Facilidad de Uso:**
+   - La página web debe ser intuitiva y fácil de usar, especialmente para usuarios nuevos. Se deben evitar interfaces complicadas que puedan confundir a los 
+     usuarios.
+   **Rendimiento:**
+   - La página web debe cargar rápidamente y proporcionar una experiencia de usuario fluida en todos los dispositivos y conexiones a internet. Se debe minimizar 
+     el tiempo de carga de las páginas y optimizar el rendimiento del sitio.
+
+### Restricciones:
+
+   **Compatibilidad con Navegadores:**
+   - La página web debe ser compatible con una variedad de navegadores web modernos, incluidos Chrome, Firefox, Safari y Edge, para garantizar una experiencia de 
+     usuario consistente.
+
+   **Cumplimiento Legal Básico:**
+   - Se deben cumplir con las leyes y regulaciones básicas relacionadas con la protección de datos y la privacidad en línea, pero considerando la capacidad 
+     limitada de recursos para cumplir con estándares más complejos desde el principio.
+
+
 
 
 ## 4. Prototipo
