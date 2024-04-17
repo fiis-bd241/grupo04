@@ -73,6 +73,13 @@
 - Proceso de Almacén
 
 ![Proceso de Almacén](../Entregable2/ProcesosASIS/AsIs%20Almacen.png)
+| Secuencia | Actividad                                | Descripción                                                                                                      | Responsable      |
+|-----------|------------------------------------------|------------------------------------------------------------------------------------------------------------------|------------------|
+|1| Buscar Mercancía|Al confirmase una venta, la persona que lo realizó busca los productos en almacén| Gestor de Almacén|
+|2| Despachar Mercancía|Se prepara el producto para su entrega en el lugar establecido| Gestor de Almacén|
+|3| Registrar Nuevo Stock|Se registra el la cantidad final que queda del producto (conteo rápido)| Gestor de Almacén|
+|4| Realizar Cotización de Nuevos Productos|Si el Stock es 0, se cotiza con la lista de proveedores para recibir nueva mercadería| Gestor de Almacén|
+|5| Actualizar|Al comprar nueva mercancía, se deja el stock en almacén y se registra la cantidad que se compró| Gestor de Almacén|
 
 - Proceso de Distribución
   
@@ -209,6 +216,20 @@
 - Proceso de Almacén
 
 ![Proceso de Almacén](../Entregable2/ProcesosTOBE/ToBeAlmacen.jpg)
+|Secuencia | Actividad | Descripción | Responsable |
+|:----:|:----------------:|:--------------------------:|:-----------:|
+| 1 | Recepción de la órden de despacho | El área de ventas, al concretar la venta de un producto con el cliente, emitirpa una orden de despacho al área de almacén para que éste pueda preparar la lista de productos para su entrega. | Gestor de Almacén |
+| 2 | Picking | El reponsable derivado a la órden de despacho selecciona y recoge los productos de los diferentes lugares del almacén donde se encuentre los productos de la órden. | Personal de almacén |
+| 3 | Packing | El reponsable derivado a la órden de despacho empaqueta y embala los productos selecionados garantiznado las condiciones adecuadas para el envío.| Personal de almacén |
+| 4 | Despachar Mercancía | Los producto empaquetados son llevados al área de distribución para su respectiva entrega| Personal de almacén |
+| 5 | Actualizar stock | En el sistema de almacén se registra la salida del producto (cantidad) con la fecha y hora para la actualización en tiempo real del inventario | Gestor de almacén |
+| 6 | Realizar control inventario | Al terminar con la actualización del Stock, el sistema evaluará la condición de que si para el producto ingresado se tiene su stock mínimo; si es así, se genera un reporte de salidas (al final del día) para el registro de inventario que se enviará a Ventas para que tenga la cantidad exacta existente a promocionar. | Gestor de almacén |
+| 7 | Realizar requerimiento de compra | Si para los producto despechados no se cuenta con su stock mínimo, el sistema realizará una lista de requerimiento que se enviará al área de compras. | Gestor de almacén |
+| 8 | Recepción de mercancía | Si llega un registro de compra de proveedores a almacen, los encargados hará la recepción de la mercancía (descarga del medio de transporte) y marcarán la fecha y hora en que lo hacen como indicador de tiempo. | Gestor Ventas  y Encargado de almacén |
+| 9 | Verificar artículos | Verificar el estado de cada artículo comprado para ver si hay defectuosos y proceder a realizar una observación y posible cambio o devolución si se encuentra en ese estado. | Personal de almacén |
+| 10 | Actualizar stock | Si el artículo está en buena condición, se registra la cantidad en el sistema con su respectivo código y ubicación de donde se colocará en el almacén para un rápido picking | Gestor de almacén |
+| 11 | Almacenar mercanción | El personal distribuirá los articulos según su ubicación correspondiente en los andamios del almacén. | Personal de almacén |
+| 12 | Registrar artículo defectuoso | Si se encuentra un producto defectuoso, se registrará en el sistema con las características defectuosa, el proveedor y código del producto. | Gestor de almacén |
 
 - Proceso de Distribución
   
@@ -356,6 +377,21 @@
 
   
 ### 2.3 Módulo Almacén
+- Descripción: Este módulo permite a la empresa a conocer, gestionar, informarse para la toma de decisiones, y tener control sobre el inventario y el flujo de entradas y salidas de la mercancía adquirida. Proporciona información detallada de cada producto y sus características, del Kardex en el registro de movimientos y agregar nuvos ítems al inventario.
+
+- Responsabilidades: Gestionar el proceso de recibir, buscar, ordenar, controlar, preparar y entregar la mercancía que la empresa desea vender.
+
+- Interacción: Con el módulo de ventas, compras, marketing, CRM, finanzas y distribución.
+
+- Funcionalidad:
+
+  **- Ingresos General**
+    - Responsabilidades: Permite al gestor de almacén ver los ingresos que se han hecho durante cierto periodo en el almacén.
+  **- Salidas General**
+    - Responsabilidades: Permite al gestor de almacén ver las respectivas salidas que se han hecho durante cierto periodo en el almacén y de cada producto.
+    -   **- Inventario**
+    - Responsabilidades: Permite al gestor de almacén ver los movimientos efectuados y el stock disponible de cada producto; asi mismo de agregar un nuevo artículo para su venta.
+    - 
 ### 2.4 Módulo Distribución
 
 - Descripcion: Este modulo de distribucion permite al cliente ver el estado de sus pedidos,al gestor de ventas acceder a la base de datos de los pedidos para ver los detalles de las entregas y asignarles un repartidor,y este ultimo podra visualizar la lista de pedidos pendientes que se les asigno accediendo a la base datos y actualizar los estados de los pedidos.
@@ -462,7 +498,46 @@
     - Responsabilidades: Permite al gestor de marketing asignar un equipo de marketing a una campaña dandoles una descripción general de las especificaciones.
 
 ### 2.6 Módulo Finanzas
-    - Descripción: 
+    - Descripción: Este módulo permite obtener las fcaturas y cómo es el estdo de ellas de manera que permite realizar los asientos contable de cuando a los ingresos y gastos que se tienen con las compras ventas gastos y pagos para poder hacer el  estado de resultados y hacer un reporte para ver las ganancias.
+    - Responsabilidades: Registrar facturas, ver resumen contable, ver reporte contable, ver asientos contables y ver estado de resultados.
+    - Funciones:
+    Historial de Ventas y Compras:
+
+     - Mostrar un registro detallado de todas las transacciones de ventas y compras realizadas por la empresa.
+      Filtrar y buscar transacciones por fecha, cliente, proveedor, producto, etc.
+      Registro Automatizado de Facturas:
+      
+     - Permitir el registro automático de facturas de ventas y compras.
+      Reconocimiento automático de datos relevantes en las facturas para facilitar el proceso de registro.
+      Asientos Contables Automatizados:
+      
+      -Generar automáticamente asientos contables basados en las transacciones registradas.
+      Integrar con el módulo de ventas y compras para capturar datos necesarios para la contabilidad.
+      Estado de Resultados Automatizado:
+      
+     - Calcular automáticamente el estado de resultados utilizando la información de ventas, compras, gastos y pagos.
+      Mostrar ingresos, costos de ventas, gastos operativos, y beneficios netos.
+      Reportes Financieros:
+      
+     - Generar reportes financieros personalizados como balances generales, estados de resultados, y flujos de efectivo.
+      Permitir la exportación de informes en diferentes formatos como PDF, Excel, etc.
+      Alertas y Notificaciones:
+      
+      -Enviar alertas sobre transacciones pendientes, vencimientos de pagos, y otras actividades financieras importantes.
+      Integración con Otros Módulos:
+      
+     - Integrar con módulos de inventario, nómina, y otros sistemas relacionados para obtener una visión completa de la situación financiera de la empresa.
+      Acceso Múltiple y Seguridad:
+      
+     - Permitir el acceso a diferentes usuarios con roles y permisos específicos.
+      Garantizar la seguridad de los datos mediante encriptación y medidas de protección contra accesos no autorizados.
+      Gestión de Proveedores y Clientes:
+      
+      -Mantener un registro detallado de proveedores y clientes, incluyendo información de contacto, historial de transacciones, y términos de pago.
+      Análisis Financiero:
+      
+     -Ofrecer herramientas de análisis financiero para evaluar la rentabilidad, liquidez, y solvencia de la empresa.
+      Realizar proyecciones financieras y escenarios hipotéticos para la toma de decisiones estratégicas.
 ### 2.7 Módulo CRM
 
 ## 3. Requerimientos
@@ -834,6 +909,90 @@ Distribucion
 | 9 | El cliente puede optar por volver a la lista de direcciones o realizar otras acciones en su cuenta |
 | 10 | El caso termina |
 
+### Casos de uso relacionado a modulo almacén
+ | Caso de uso: Ver Ingresos, Salidas e Inventario de Productos |
+ |---------------------|
+ | *Descripción:*|
+ | El Gestor de Almacén puede acceder a la sección que muestra el ingreso de los productos comprados, para su respectiva venta o para su respectivo uso dentro de la empresa Migni Store, ver dónde están ubicados. De igual manera puede informarse de las salidas que se registran con las ventas con un reporte de Importe de Inventario para saber el Capital Actual. Y el inventario de cada producto con su seguimiento y stock disponible.|
+ | *Flujo de Eventos*:|
+ | - El Gestor de Almacén inicia sesión en su cuenta en la página web de Migni Store. <br> - Accede a la sección de "Almacén". <br> - Visualiza la lista de productos disponibles, incluyendo detalles como nombre, descripción, cantidad en stock y precios. <br> - Accede a la función de "Ingresos" para generar reportes, registrar nuevos ingresos de productos. <br> - Accede a la función de "Salidas" para generar una Guía de Remisión al Área de Distribución o una Guía de Salida para distruir bienes dentro de las áreas de la empresa. <br> - Puede "Solicitar Compra" si el Stock Actual del producto es igual al Stock Mínimo que debe de contabilizarse en Almacén. <br> - En la función "Inventario" puede ver el flujo de entradas y salidas de cada producto y su Importe Total Existente para una toma de decisiones para el área de marketing| 
+|*Requerimientos:*|
+| Funcionales:|
+| - Acceder al inventario de productos disponibles. <br> - Actualizar la disponibilidad de productos. <br> - Generar Solicitues de Compras para productos de bajo Stock. <br> -Generar reportes de flujo de entrada y salida. <br> Registrar nuevo producto en almacén y saber su ubicación para un rápido picking. <br> -Informar sobre la presentación del producto. <br> - Generar Guías para un mayor control del inventario. |
+| No Funcionales:| 
+|- Interoperabilidad: Integración fácil y eficiente con el sistema de Migni Store. <br> - Fiabilidad: Garantía de que las actualizaciones en el inventario se reflejen correctamente. <br> - Usabilidad: Interfaz clara y fácil de usar para la gestión de productos y cotizaciones.|
+
+Finanzas:
+  ## Caso de Uso: Añadir Factura
+
+  | Aspecto            | Detalles |
+  |--------------------|----------|
+  | **Actores**        | Usuario, Sistema |
+  | **Precondiciones** | - El usuario ha iniciado sesión en el sistema.<br>- El usuario tiene permisos para añadir facturas. |
+  | Paso | <p align="center"> Acción </p> |
+  | 1 | El usuario selecciona la opción de "Añadir Factura" en el menú principal. |
+  | 2 | El sistema muestra un formulario para ingresar los detalles de la factura.|
+  | 3 | El usuario completa el formulario con la información de la factura.
+  | 4 | El usuario confirma la creación de la factura.
+  | 5 | El sistema valida la información ingresada y registra la factura en la base de datos.|
+  | 6 | El sistema genera automáticamente el asiento contable correspondiente a la factura. |
+  | **Flujo Alternativo** | - Si hay errores en los datos ingresados, el sistema muestra mensajes de error y permite al usuario corregir la información. |
+
+   ## Caso de Uso: Ver Resumen Contable
+
+  | Aspecto            | Detalles |
+  |--------------------|----------|
+  | **Actores**        | Usuario, Sistema |
+  | **Precondiciones** | - El usuario ha iniciado sesión en el sistema.<br>- El usuario tiene permisos para ver el resumen contable. |
+  | **Paso**           | <p align="center"> Acción </p> |
+  | 1 | El usuario selecciona la opción de "Ver Resumen Contable" en el menú principal. |
+  | 2 | El sistema muestra un resumen contable con el total de ingresos, gastos, activos, pasivos y patrimonio. |
+  | 3 | El sistema presenta un desglose detallado de cada categoría contable. |
+  | 4 | El usuario puede filtrar y buscar transacciones específicas dentro del resumen. |
+  | 5 | El caso termina. |
+  | **Flujo Alternativo** | - Si el usuario no tiene permisos para acceder al resumen contable, el sistema muestra un mensaje de error. |
+
+  ## Caso de Uso: Ver Estado de Resultados
+
+  | Aspecto            | Detalles |
+  |--------------------|----------|
+  | **Actores**        | Usuario, Sistema |
+  | **Precondiciones** | - El usuario ha iniciado sesión en el sistema.<br>- El usuario tiene permisos para ver el estado de resultados. |
+  | **Paso**           | <p align="center"> Acción </p> |
+  | 1 | El usuario selecciona la opción de "Ver Estado de Resultados" en el menú principal. |
+  | 2 | El sistema muestra el estado de resultados que incluye ingresos, costos de ventas, gastos operativos, y beneficios netos. |
+  | 3 | El sistema calcula automáticamente los valores basados en las transacciones registradas. |
+  | 4 | El usuario puede filtrar y buscar transacciones específicas dentro del estado de resultados. |
+  | 5 | El caso termina. |
+  | **Flujo Alternativo** | - Si el usuario no tiene permisos para acceder al estado de resultados, el sistema muestra un mensaje de error. |
+
+  ## Caso de Uso: Ver Asientos Contables
+
+  | Aspecto            | Detalles |
+  |--------------------|----------|
+  | **Actores**        | Usuario, Sistema |
+  | **Precondiciones** | - El usuario ha iniciado sesión en el sistema.<br>- El usuario tiene permisos para ver los asientos contables. |
+  | **Paso**           | <p align="center"> Acción </p> |
+  | 1 | El usuario selecciona la opción de "Ver Asientos Contables" en el menú principal. |
+  | 2 | El sistema muestra una lista de asientos contables ordenados por fecha. |
+  | 3 | El usuario puede seleccionar un asiento contable para ver detalles adicionales como cuentas afectadas, descripción, y montos. |
+  | 4 | El usuario puede filtrar y buscar asientos contables específicos por fecha, número, o tipo. |
+  | 5 | El caso termina. |
+  | **Flujo Alternativo** | - Si el usuario no tiene permisos para acceder a los asientos contables, el sistema muestra un mensaje de error. |
+  ## Caso de Uso: Ver Reporte Contable en Formato Descargable para GitHub
+
+  | Aspecto            | Detalles |
+  |--------------------|----------|
+  | **Actores**        | Usuario, Sistema |
+  | **Precondiciones** | - El usuario ha iniciado sesión en el sistema.<br>- El usuario tiene permisos para descargar reportes contables. |
+  | **Paso**           | <p align="center"> Acción </p> |
+  | 1 | El usuario selecciona la opción de "Descargar Reporte Contable" en el menú principal. |
+  | 2 | El sistema genera el reporte contable en formato descargable (por ejemplo, CSV o JSON). |
+  | 3 | El usuario selecciona la opción para guardar el archivo en su dispositivo. |
+  | 4 | El usuario sube el archivo al repositorio de GitHub. |
+  | 5 | El caso termina. |
+  | **Flujo Alternativo** | - Si el usuario no tiene permisos para descargar reportes contables, el sistema muestra un mensaje de error. |
+
 ### 3.2 Requerimientos de atributos de Calidad
 
    **Simplicidad y Facilidad de Uso:**
@@ -860,6 +1019,7 @@ Distribucion
 - Para ver el prototipo de forma general debe ingresar al siguiente enlace:
 
 [Figma](https://www.figma.com/file/JaEtbwPTFhxpp8rVLio8Lc/Proyecto-Migni-Store?type=design&node-id=56-105&mode=design&t=6vRNAXtGiQCHDJhl-0)
+[Balsemiq (Momentáneo Almacén)](https://balsamiq.cloud/s8kcngg/pm8ichu)
 
 
 
@@ -889,3 +1049,5 @@ Distribucion
 
 
 [Taipe Sicha Ronny Andy](../../06.Videos_Individuales/VideosPC1/TaipeSichaRonnyAndy_VideoIndividual.md)
+
+[Salazar Uribe Christian Johmar](../../06.Videos_Individuales/VideosPC1/SalazarUribeChristianJohmar_VideoIndividual.md)
