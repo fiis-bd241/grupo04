@@ -195,6 +195,73 @@
 ### 2.2 Módulo Venta
 ### 2.3 Módulo Almacén
 ### 2.4 Módulo Distribución
+
+- Descripcion: Este modulo de distribucion permite al cliente ver el estado de sus pedidos,al gestor de ventas acceder a la base de datos de los pedidos para ver los detalles de las entregas y asignarles un repartidor,y este ultimo podra visualizar la lista de pedidos pendientes que se les asigno accediendo a la base datos y actualizar los estados de los pedidos.
+
+- Responsabilidades: Gestionar las entregas de los pedidos,asignarles una fecha,elegir el repartidor,ver detalles de la entrega,actualizar los estados de entrega,y notificarle al cliente la llegada de su pedido.
+
+- Interacción: Con el módulo de ventas y almacen.
+
+- Detalles de estado:
+
+  - CANCELADO: El pedido ha sido reprogramado,el cliente cambió la fecha,por lo que se cancela la entrega del pedido en la fecha pre-establecida.
+  - PENDIENTE: El pedido aun no ha sido entregado.
+  - ENTREGADO: El pedido fue entregado al cliente con exito.
+
+- Funcionalidad:
+
+  **- Home Gestor Ventas**
+    - Responsabilidades: Permite al gestor de ventas tener su propia vista de las partes que constituyen su módulo, como son el acceso al historial de ventas, pedidos y gestion de los pedidos .
+
+  **- Gestionar pedidos**
+    - Responsabilidades: Permite al gestor de ventas vizualizar los pedidos,su estado y si hay asignado o no un repartidor para cada entrega.
+
+  **- Asignar repartidor**
+    - Responsabilidades: Permite al gestor de ventas asignar un repartidor a cada pedido para su respectiva entrega.
+
+  **- Ver mas**
+    - Responsabilidades: Permite al gestor de ventas y el repartidor visualizar los detalles de la entrega,nombre del cliente,fecha,hora,dirrecion,y los detalles del repartidor.
+
+  **- Eliminar X-gestor de ventas**
+    - Responsabilidades: Permite al gestor de ventas eliminar pedidos cancelados o entregados de la lista de gestion de pedidos,estos pasan automaticamente al historial de pedidos.
+
+  **- Historial de pedidos-gestor de ventas**
+    - Responsabilidades: Permite al gestor de ventas visualizar todos los pedidos,entregados o cancelados, que se realizaron en el mes.
+
+  **- Home Repartidor**
+    - Responsabilidades: Permite al repartidor tener su propia vista de las partes que constituyen su módulo, como son el acceso al la lista de sus pedidos pendientes y el historial de sus entregas .
+
+  **- Pedidos pendientes**
+    - Responsabilidades: Permite al repartidor visualizar los pedidos que se le asignaron,sus detalles y estado.
+
+  **- Aceptar-repartidor**
+    - Responsabilidades: Permite al repartidor,que esta listo con el pedido para la entrega,aceptar el pedido para dirigirse a la direccion dada,lo cual actualiza y notifica al cliente con "SU PEDIDO ESTA EN CAMINO".
+
+  **- Entregado-repartidor**
+    - Responsabilidades: Permite al repartidor,que ya hizo la entrega, actualizar el estado del pedido de "PENDIENTE" a "ENTREGADO",tanto para la lista del gestor de ventas y para el historial del repartidor.
+
+  **- Eliminar X-repartidor**
+    - Responsabilidades: Permite al repartidor eliminar pedidos cancelados de su lista de pedidos pendientes,estos pasan automaticamente a su historial de pedidos.    
+
+  **- Reprogramar-repartidor**
+    - Responsabilidades: Permite al repartidor,que no logro entregar el pedido,por codigo incorrecto o ausencia del cliente,hacer una reprogramacion de la fecha.
+
+  **- Ver mis pedidos**
+    - Responsabilidades: Permite al cliente visualizar el estado de sus pedidos y sus detalles.
+
+  **- Ver detalles de su compra**
+    - Responsabilidades: Permite al cliente ver los detalles de la compra que realizó,como la fecha,hora,los productos que compró,su precio y el monto total .
+
+  **- Establecer la fecha y hora de entrega**
+    - Responsabilidades: Permite al cliente establecer la hora y la fecha en la que se va a realizar la entrega.
+
+  **- Reprogramar fecha**
+    - Responsabilidades: Permite al cliente reprogramar la fecha de la entrega de su producto,dado el caso que ocurra un imprevisto,lo cual cancela la entrega del pedido con la antigua fecha.
+
+  **- Ver detalles de la entrega**
+    - Responsabilidades: Permite al cliente ver los detalles de la entrega,como la fecha,hora,el perfil del repartidor que fue asignado.
+
+
 ### 2.5 Módulo Marketing
 ### 2.6 Módulo Finanzas
 ### 2.7 Módulo CRM
