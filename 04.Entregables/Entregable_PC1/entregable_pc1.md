@@ -590,6 +590,7 @@ Distribucion
 |11|El sistema pide al cliente la reprogramacion de una nueva fecha|
 |10|El caso termina|
 
+### Casos de uso relacionado a modulo ventas
 **Caso de uso N°: Realizar una Compra**
 
 | Objetivo | <p align="left">Permitir que el cliente realice una compra en la plataforma de ventas.</p> | 
@@ -726,6 +727,7 @@ Distribucion
 | 9 | El cliente puede optar por volver a la lista de direcciones o realizar otras acciones en su cuenta |
 | 10 | El caso termina |
 
+### 3.2 Requerimientos de atributos de Calidad
 
 
 
