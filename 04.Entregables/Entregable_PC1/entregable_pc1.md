@@ -377,6 +377,21 @@
 
   
 ### 2.3 Módulo Almacén
+- Descripción: Este módulo permite a la empresa a conocer, gestionar, informarse para la toma de decisiones, y tener control sobre el inventario y el flujo de entradas y salidas de la mercancía adquirida. Proporciona información detallada de cada producto y sus características, del Kardex en el registro de movimientos y agregar nuvos ítems al inventario.
+
+- Responsabilidades: Gestionar el proceso de recibir, buscar, ordenar, controlar, preparar y entregar la mercancía que la empresa desea vender.
+
+- Interacción: Con el módulo de ventas, compras, marketing, CRM, finanzas y distribución.
+
+- Funcionalidad:
+
+  **- Ingresos General**
+    - Responsabilidades: Permite al gestor de almacén ver los ingresos que se han hecho durante cierto periodo en el almacén.
+  **- Salidas General**
+    - Responsabilidades: Permite al gestor de almacén ver las respectivas salidas que se han hecho durante cierto periodo en el almacén y de cada producto.
+    -   **- Inventario**
+    - Responsabilidades: Permite al gestor de almacén ver los movimientos efectuados y el stock disponible de cada producto; asi mismo de agregar un nuevo artículo para su venta.
+    - 
 ### 2.4 Módulo Distribución
 
 - Descripcion: Este modulo de distribucion permite al cliente ver el estado de sus pedidos,al gestor de ventas acceder a la base de datos de los pedidos para ver los detalles de las entregas y asignarles un repartidor,y este ultimo podra visualizar la lista de pedidos pendientes que se les asigno accediendo a la base datos y actualizar los estados de los pedidos.
