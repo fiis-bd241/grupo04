@@ -69,7 +69,7 @@
 | 7         | Realizar el pago                        | El cliente realiza el pago a través de los métodos de pago acordados, como transferencia bancaria o depósito en efectivo. | Gestor de Ventas         |
 | 8        | Confirmación de pago                    | Un empleado de ventas verifica manualmente el pago recibido y actualiza el estado del pedido en los registros.    | Gestor de Ventas |
 | 9        | Envío de código de compra               | Se genera manualmente un código de compra único y se envía al cliente por correo electrónico.                    | Gestor de Ventas |
-| 10      | Emitir comprobante de pago electrónico | Se genera manualmente un comprobante de pago y se envía al cliente por correo electrónico. 
+| 10      | Emitir comprobante de pago electrónico | Se genera manualmente un comprobante de pago y se envía al cliente por correo electrónico. | Gestor de Ventas |
 - Proceso de Almacén
 
 ![Proceso de Almacén](../Entregable2/ProcesosASIS/AsIs%20Almacen.png)
@@ -480,7 +480,26 @@
 | 6 | El sistema muestra el historial de ofertas que fueron subidas a la pagina web y su estado|
 | 7 | El caso termina |
 
-**Caso de uso N°4: Revisar campaña**
+**Caso de uso N°4: Editar campaña**
+
+| Objetivo | <p align="left"> Permitir que el Gestor de marketing edite las campañas vigentes.</p> | 
+|:--------------:|--------------|
+| Descripción | Proceso mediante el cual el Gestor de marketing puede editar las campañas que ya están vigentes, se limita a los datos necesarios y posibles de editar. | 
+| Actor primario   | Gestor de marketing | 
+|Actor secundario| - |
+|Precondiciones | Debe existir al menos una campaña vigente. |
+| Paso | <p align="center"> Acción </p> |
+| 1 | El gestor de marketing inicia sesión en su cuenta de la página web de Migni Store. |
+| 2 | El gestor de marketing accede a la sección "campañas vigentes". |
+| 3 | La página muestra la vista de campañas vigentes y un histograma que muestra la cantidad de clientes que han ingresado a travez de los medios de publicidad. |
+| 4 | El gestor de marketing accede a la opción de "editar" de la respectiva campaña.|
+| 5 | El gestor de marketing puede eliminar la campaña. |
+| 6 | El gestor de marketing procede a editar los datos necesarios y posibles de editar. |
+| 7 | En caso de que se quiera cancelar la edición, el gestor de marketing accede a la opción de "cancelar" y será redirigido a la pantalla anterior. |
+| 8 | En caso de querer guardar los cambios realizados, el gestor de marketing accede a la opción de "guardar" y la campaña será guardada. |
+| 9 | El caso termina |
+
+**Caso de uso N°5: Revisar campaña**
 
 | Objetivo | <p align="left"> Permitir que el Gestor de marketing revise la campaña brindada por el equipo de marketing correspondiente.</p> | 
 |:--------------:|--------------|
@@ -490,13 +509,31 @@
 |Precondiciones | El equipo de marketing debe haber propuesto una campaña. |
 | Paso | <p align="center"> Acción </p> |
 | 1 | El gestor de marketing inicia sesión en su cuenta de la página web de Migni Store. |
-| 2 | El  El gestor de marketing accede a la sección "campañas propuestas". |
+| 2 | El gestor de marketing accede a la sección "campañas propuestas". |
 | 3 | La página muestra la vista de campañas propuestas. |
 | 4 | El gestor de marketing accede a la opción de "ver más" de la respectiva campaña a revisar.|
-| 5 | El gerente de marketing analiza los datos presentados y toma decisiones estratégicas basadas en la información proporcionada. |
+| 5 | El gestor de marketing analiza los datos presentados y toma decisiones estratégicas basadas en la información proporcionada. |
 | 6 | En caso de que considere correcta la información proporcionada, el gestor de marketing lo publicará. |
 | 7 | En caso de que se considere incorrecta la información proporcionada, el gestor de marketing rechazará la campaña. |
 | 8 | En caso de rechazar la campaña, el gerente de marketing relizará las observaciones y se las enviará al equipo de marketing. |
+| 9 | El caso termina |
+
+**Caso de uso N°6: Generar campaña**
+
+| Objetivo | <p align="left"> Permitir que el Gestor de marketing genere una campaña y la asigne a un equipo de marketing.</p> | 
+|:--------------:|--------------|
+| Descripción | Proceso mediante el cual el Gestor de marketing puede generar la campaña y asignarla a un equipo de marketing, se enviará una descripción general del concepto de la campaña. | 
+| Actor primario   | Gestor de marketing | 
+|Actor secundario| - |
+|Precondiciones | - |
+| Paso | <p align="center"> Acción </p> |
+| 1 | El gestor de marketing inicia sesión en su cuenta de la página web de Migni Store. |
+| 2 | El gestor de marketing accede a la sección "generar campaña". |
+| 3 | La página muestra la vista de generar campaña. |
+| 4 | El gestor de marketing introduce la id del equipo de marketing al que se va a designar la formulación de la campaña.|
+| 5 | El gestor de marketing introduce la descripción general del concepto de la campaña, esta contiene principalmente los productos que se quieren promocionar y la temática de la campaña respecto de la temporada. |
+| 6 | El gestor de marketing envia la campaña generada al equipo de marketing correspondiente con la opción enviar. |
+| 7 | El caso termina |
 
 Distribucion
 
@@ -605,6 +642,20 @@ Distribucion
 |10|El caso termina|
 
 ### Casos de uso relacionado a modulo ventas
+**Caso de Uso: Inicio de Sesión del Gestor de Ventas**
+
+| Objetivo | <p align="left">Permitir al gestor de ventas acceder al sistema iniciando sesión en la plataforma web.</p> | 
+|:--------------:|--------------|
+| Actor Principal   | Gestor de Ventas | 
+| Precondiciones | El gestor de ventas debe estar afiliado a la empresa. |
+| Paso | <p align="center"> Acción </p> |
+| 1 | El gestor de ventas accede a la página web de "Migni Store". |
+| 2 | El sistema presenta la página de inicio de sesión. |
+| 3 | El gestor de ventas ingresa su nombre de usuario y contraseña. |
+| 4 | El sistema valida las credenciales del gestor de ventas. |
+| 5 | El sistema redirige al gestor de ventas a su página de inicio. |
+| Postcondiciones | El gestor de ventas ha iniciado sesión en la plataforma web y puede comenzar a utilizar las funciones disponibles para su rol. |
+
 **Caso de uso N°: Realizar una Compra**
 
 | Objetivo | <p align="left">Permitir que el cliente realice una compra en la plataforma de ventas.</p> | 
@@ -764,21 +815,23 @@ Distribucion
 
 
 ## 4. Prototipo
-- Para ver el prototipo debe ingresar al siguiente enlace:
+- Para ver el prototipo de forma general debe ingresar al siguiente enlace:
 
 [Figma](https://www.figma.com/file/JaEtbwPTFhxpp8rVLio8Lc/Proyecto-Migni-Store?type=design&node-id=56-105&mode=design&t=6vRNAXtGiQCHDJhl-0)
+
+
+
 
 ## 5. Modelado Conceptual
 ### 5.1 Diagrama de entidad relación
 - Modelo Conceptual
 
-![Modelo Conceptual](Modelo%20conceptualv1.png)
+![Modelo Conceptual](MODELO%20CONCEPTUAL.png)
 
 
 ## 6. Modelado Relacional
 ### 6.1 Modelo Lógico
-![Modelo Lógico](Modelo_Logico.png)
-[Modelo Lógico](https://drive.google.com/file/d/1_JcvnJOoGrkaA1rP-jQhsR2sMmhgNscB/view?usp=sharing)
+![Modelo Lógico](Modelo%20Logicov2.png)
 
 # ENTREVISTA
 ## Link
@@ -788,3 +841,6 @@ Distribucion
 # VIDEOS INDIVIDUALES
  
 [Quispe Mitma Cesar](../../06.Videos_Individuales/VideosPC1/Quispe%20Mitma%20Cesar%20Fernando%20-%20Video%20Individual.md)
+
+
+[Damian Cutisaca Jhon Kenedy](../../06.Videos_Individuales/VideosPC1/DamianCutisacaJhonKenedy_video_individual.md)
