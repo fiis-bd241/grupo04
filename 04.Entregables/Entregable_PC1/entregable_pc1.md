@@ -495,7 +495,7 @@
 |Precondiciones | El equipo de marketing debe haber propuesto una campaña. |
 | Paso | <p align="center"> Acción </p> |
 | 1 | El gestor de marketing inicia sesión en su cuenta de la página web de Migni Store. |
-| 2 | El  El gestor de marketing accede a la sección "campañas propuestas". |
+| 2 | El gestor de marketing accede a la sección "campañas propuestas". |
 | 3 | La página muestra la vista de campañas propuestas. |
 | 4 | El gestor de marketing accede a la opción de "ver más" de la respectiva campaña a revisar.|
 | 5 | El gestor de marketing analiza los datos presentados y toma decisiones estratégicas basadas en la información proporcionada. |
@@ -503,6 +503,23 @@
 | 7 | En caso de que se considere incorrecta la información proporcionada, el gestor de marketing rechazará la campaña. |
 | 8 | En caso de rechazar la campaña, el gerente de marketing relizará las observaciones y se las enviará al equipo de marketing. |
 | 9 | El caso termina |
+
+**Caso de uso N°6: Generar campaña**
+
+| Objetivo | <p align="left"> Permitir que el Gestor de marketing genere una campaña y la asigne a un equipo de marketing.</p> | 
+|:--------------:|--------------|
+| Descripción | Proceso mediante el cual el Gestor de marketing puede generar la campaña y asignarla a un equipo de marketing, se enviará una descripción general del concepto de la campaña. | 
+| Actor primario   | Gestor de marketing | 
+|Actor secundario| - |
+|Precondiciones | - |
+| Paso | <p align="center"> Acción </p> |
+| 1 | El gestor de marketing inicia sesión en su cuenta de la página web de Migni Store. |
+| 2 | El gestor de marketing accede a la sección "generar campaña". |
+| 3 | La página muestra la vista de generar campaña. |
+| 4 | El gestor de marketing introduce la id del equipo de marketing al que se va a designar la formulación de la campaña.|
+| 5 | El gestor de marketing introduce la descripción general del concepto de la campaña, esta contiene principalmente los productos que se quieren promocionar y la temática de la campaña respecto de la temporada. |
+| 6 | El gestor de marketing envia la campaña generada al equipo de marketing correspondiente con la opción enviar. |
+| 7 | El caso termina |
 
 Distribucion
 
