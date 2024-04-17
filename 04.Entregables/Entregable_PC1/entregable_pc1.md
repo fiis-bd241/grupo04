@@ -241,7 +241,9 @@
 ![Proceso de CRM](../Entregable2/ProcesosTOBE/Proceso-CRM-BPMN.png)
 
 ### 1.3 Motivación
--
+-  La principal motivación para elegir a "Migni Store" y desarrollar una página web es el potencial de crecimiento que ofrece. Al ser una empresa pequeña en el mercado de la venta de papelería y maquillaje para dama, el 
+   lanzamiento de una plataforma en línea puede abrir nuevas oportunidades para expandir su alcance, atraer a más clientes y aumentar sus ventas. Una presencia en línea sólida puede llevar a "Migni Store" a competir de 
+   manera más efectiva en un mercado cada vez más digitalizado y ofrecer una experiencia de compra conveniente y satisfactoria para sus clientes.
 ## 2. Módulos
 ### 2.1 Módulo Compra-Proveedores
 - Descripción: Este módulo de compra-proveedores permite al gestor de compras añadir nuevos proveedores a la base de datos de la empresa, así como también facilita la gestión de las ofertas recibidas de dichos proveedores. Desde aceptar hasta rechazar ofertas, además permite la visualización completa de los datos del proveedor, desde sus datos hasta el historial de ofertas que han realizado a la empresa, este modulo tiene el fin de poder optimizar el proceso de gestión de compras realizadas a los proveedores.
