@@ -848,4 +848,4 @@ Distribucion
 [Damian Cutisaca Jhon Kenedy](../../06.Videos_Individuales/VideosPC1/DamianCutisacaJhonKenedy_video_individual.md)
 
 
-[Taipe Sicha Ronny Andy](06.Videos_Individuales/VideosPC1/TaipeSichaRonnyAndy_VideoIndividual.md)
+[Taipe Sicha Ronny Andy](../../06.Videos_Individuales/VideosPC1/TaipeSichaRonnyAndy_VideoIndividual.md)
