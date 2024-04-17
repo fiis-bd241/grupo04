@@ -218,7 +218,7 @@
 | 7 | El sistema confirma de la creación de un nuevo proveedor |
 | 8 | El caso termina |
 
-**Caso de uso N°: Añadir proveedor**
+**Caso de uso N°: Aceptar/Rechazar oferta del proveedor**
 
 | Objetivo | <p align="left"> Permitir que el gestor de compras pueda aceptar o rechazar la oferta realizada por el proveedor d</p> | 
 |:--------------:|--------------|
