@@ -459,6 +459,24 @@
 | 6 | El sistema muestra el historial de ofertas que fueron subidas a la pagina web y su estado|
 | 7 | El caso termina |
 
+**Caso de uso N°4: Revisar campaña**
+
+| Objetivo | <p align="left"> Permitir que el Gestor de marketing revise la campaña brindada por el equipo de marketing correspondiente.</p> | 
+|:--------------:|--------------|
+| Descripción | Proceso mediante el cual el Gestor de marketing puede revisar las campañas propuestas por el equipo de marketing, su criterio definirá si la campaña será aceptada o rechazada, en el caso de ser rechazada se enviarán las observaciones al equipo de marketing.  | 
+| Actor primario   | Gestor de marketing | 
+|Actor secundario| - |
+|Precondiciones | El equipo de marketing debe haber propuesto una campaña. |
+| Paso | <p align="center"> Acción </p> |
+| 1 | El gestor de marketing inicia sesión en su cuenta de la página web de Migni Store. |
+| 2 | El  El gestor de marketing accede a la sección "campañas propuestas". |
+| 3 | La página muestra la vista de campañas propuestas. |
+| 4 | El gestor de marketing accede a la opción de "ver más" de la respectiva campaña a revisar.|
+| 5 | El gerente de marketing analiza los datos presentados y toma decisiones estratégicas basadas en la información proporcionada. |
+| 6 | En caso de que considere correcta la información proporcionada, el gestor de marketing lo publicará. |
+| 7 | En caso de que se considere incorrecta la información proporcionada, el gestor de marketing rechazará la campaña. |
+| 8 | En caso de rechazar la campaña, el gerente de marketing relizará las observaciones y se las enviará al equipo de marketing. |
+
 Distribucion
 
 **Caso de uso N°: Establecer fecha y hora de entrega del pedido**
