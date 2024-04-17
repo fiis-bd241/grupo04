@@ -118,6 +118,20 @@
 
 ![Proceso de CRM](../Entregable2/ProcesosASIS/Proceso-CRM.png)
 
+| Secuencia | Actividad                                | Descripción                            | Responsable      |
+|-----------|------------------------------------------|-----------------------------------------------------------------------|------------------|
+| 1         | recepción de información |El proceso comienza con la recepción de información semanal , ya que en base a esto se preparan para analizar la fidelización de los clientes| gestor CRM |
+| 2         | analisis de las ventas por semana | Se hace una revisión de las ventas de la semana y ver que productos son rentables comprar ya que hay productosque se quedan por mucho tiempo en almacén | gestor CRM  |
+| 3         |revisión del segmento del cliente |Ver que tanto aumento o disminuyo , por ende en base a esto se tomará las medidas correspondientes para mejorar las ventas del segmento que son de interes  | gestor CRM |
+| 4         |compra del producto |En base al analisis se hace la compra correspondiente , veamoslo de manera de rotación de activos por margen de venta , en caso se queda mucho producto y no rota , se hace promoción y se genera cupones si el analisis lo permite| gestor CRM  |
+| 5         | busqueda de tendencias | Se hace una busqueda de los productos que estan siendo mas comprados por el segmento que es de nuestro interes | gestor CRM|
+| 6         | compra de productos en tendencia | En base al analisis con respecto a las tendencias , se busca los productos en proveedores que tenemos o en nuevos proveedores , haciendo comparativas de las cotizaciones | gestor CRM |
+| 7         | confirmación de la compra| Con las otras areas se llega al acuerdo por lo cual solo resta esperar a que el nuevo producto llegue |  gestor CRM  |
+| 8         | preparar las campañas por redes sociales | El nuevo producto se debe avisar por varios medios para que tenga mayor alcance| gestor CRM |
+| 9        | verificación de ofertas| En esta parte se verifica si es posible incluir ofertas en los productos nuevos , por la compra de muchos de estos | gestor CRM |
+| 10        |Información y puesta en marcha | Se envian las campañas y avisos a los clientes , asi que si se dio el caso de ofertas|gestor CRM 
+| 11     | revision de la calidad hacia el cliente | se revisan los libros de reclamaciones para ver posibles quejas y puntos a mejorar  | gestor CRM |
+
 - Proceso de Finanzas
 
 ![Proceso de Finanzas](../Entregable2/ProcesosASIS/ProcesosFinanzas.png)
