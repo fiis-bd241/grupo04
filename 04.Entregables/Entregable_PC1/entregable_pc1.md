@@ -271,3 +271,12 @@
 ![Modelo Lógico](Modelo_Logico.png)
 [Modelo Lógico](https://drive.google.com/file/d/1_JcvnJOoGrkaA1rP-jQhsR2sMmhgNscB/view?usp=sharing)
 
+# ENTREVISTA
+## Link
+- [Entrevista1](https://drive.google.com/drive/folders/1TTn2h-Z3sSz5ciMGMDi5mqIKiaWJ94f7?usp=sharing)
+[![Video](https://img.youtube.com/vi/9kZT8WSCRc4/0.jpg)](https://www.youtube.com/watch?v=9kZT8WSCRc4)
+
+# VIDEOS INDIVIDUALES
+
+
+
