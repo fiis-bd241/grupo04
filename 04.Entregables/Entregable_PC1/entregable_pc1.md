@@ -466,7 +466,26 @@
 | 6 | El sistema muestra el historial de ofertas que fueron subidas a la pagina web y su estado|
 | 7 | El caso termina |
 
-**Caso de uso N°4: Revisar campaña**
+**Caso de uso N°4: Editar campaña**
+
+| Objetivo | <p align="left"> Permitir que el Gestor de marketing edite las campañas vigentes.</p> | 
+|:--------------:|--------------|
+| Descripción | Proceso mediante el cual el Gestor de marketing puede editar las campañas que ya están vigentes, se limita a los datos necesarios y posibles de editar. | 
+| Actor primario   | Gestor de marketing | 
+|Actor secundario| - |
+|Precondiciones | Debe existir al menos una campaña vigente. |
+| Paso | <p align="center"> Acción </p> |
+| 1 | El gestor de marketing inicia sesión en su cuenta de la página web de Migni Store. |
+| 2 | El gestor de marketing accede a la sección "campañas vigentes". |
+| 3 | La página muestra la vista de campañas vigentes y un histograma que muestra la cantidad de clientes que han ingresado a travez de los medios de publicidad. |
+| 4 | El gestor de marketing accede a la opción de "editar" de la respectiva campaña.|
+| 5 | El gestor de marketing puede eliminar la campaña. |
+| 6 | El gestor de marketing procede a editar los datos necesarios y posibles de editar. |
+| 7 | En caso de que se quiera cancelar la edición, el gestor de marketing accede a la opción de "cancelar" y será redirigido a la pantalla anterior. |
+| 8 | En caso de querer guardar los cambios realizados, el gestor de marketing accede a la opción de "guardar" y la campaña será guardada. |
+| 9 | El caso termina |
+
+**Caso de uso N°5: Revisar campaña**
 
 | Objetivo | <p align="left"> Permitir que el Gestor de marketing revise la campaña brindada por el equipo de marketing correspondiente.</p> | 
 |:--------------:|--------------|
@@ -479,10 +498,11 @@
 | 2 | El  El gestor de marketing accede a la sección "campañas propuestas". |
 | 3 | La página muestra la vista de campañas propuestas. |
 | 4 | El gestor de marketing accede a la opción de "ver más" de la respectiva campaña a revisar.|
-| 5 | El gerente de marketing analiza los datos presentados y toma decisiones estratégicas basadas en la información proporcionada. |
+| 5 | El gestor de marketing analiza los datos presentados y toma decisiones estratégicas basadas en la información proporcionada. |
 | 6 | En caso de que considere correcta la información proporcionada, el gestor de marketing lo publicará. |
 | 7 | En caso de que se considere incorrecta la información proporcionada, el gestor de marketing rechazará la campaña. |
 | 8 | En caso de rechazar la campaña, el gerente de marketing relizará las observaciones y se las enviará al equipo de marketing. |
+| 9 | El caso termina |
 
 Distribucion
 
