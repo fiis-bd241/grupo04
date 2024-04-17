@@ -816,4 +816,4 @@ Distribucion
 [Quispe Mitma Cesar](../../06.Videos_Individuales/VideosPC1/Quispe%20Mitma%20Cesar%20Fernando%20-%20Video%20Individual.md)
 
 
-[Damian Cutisaca Jhon Kenedy](grupo04/06.Videos_Individuales/VideosPC1/DamianCutisacaJhonKenedy_video _individual.md)
+[Damian Cutisaca Jhon Kenedy](../../06.Videos_Individuales/VideosPC1/DamianCutisacaJhonKenedy_video_individual.md)
