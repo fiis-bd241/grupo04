@@ -310,7 +310,7 @@
 
 | Objetivo | <p align="left">  Permitir a los gestores poder acceder  y visualizar los proveedores y registros, con sus datos. </p> | 
 |:--------------:|--------------|
-| Descripción | Permitir a los gestores poder acceder  y visualizar los proveedores y registros, con sus datos. | 
+| Descripción | Proceso mediante el cual los gestores pueden acceder a la visualización de proveedores y sus registros de compras.  | 
 | Actor primario | Gestor de compras | 
 |Actor secundario| - |
 |Precondiciones | El proveedor debe haber sido registrado por el gestor de compras |
