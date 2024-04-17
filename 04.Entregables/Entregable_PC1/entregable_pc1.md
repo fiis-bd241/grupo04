@@ -606,6 +606,5 @@ Distribucion
 [![Video](https://img.youtube.com/vi/9kZT8WSCRc4/0.jpg)](https://www.youtube.com/watch?v=9kZT8WSCRc4)
 
 # VIDEOS INDIVIDUALES
-
-
-
+ 
+[Quispe Mitma Cesar](../../06.Videos_Individuales/VideosPC1/Quispe%20Mitma%20Cesar%20Fernando%20-%20Video%20Individual.md)
