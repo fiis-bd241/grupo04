@@ -73,6 +73,13 @@
 - Proceso de Almacén
 
 ![Proceso de Almacén](../Entregable2/ProcesosASIS/AsIs%20Almacen.png)
+| Secuencia | Actividad                                | Descripción                                                                                                      | Responsable      |
+|-----------|------------------------------------------|------------------------------------------------------------------------------------------------------------------|------------------|
+|1| Buscar Mercancía|Al confirmase una venta, la persona que lo realizó busca los productos en almacén| Gestor de Almacén|
+|2| Despachar Mercancía|Se prepara el producto para su entrega en el lugar establecido| Gestor de Almacén|
+|3| Registrar Nuevo Stock|Se registra el la cantidad final que queda del producto (conteo rápido)| Gestor de Almacén|
+|4| Realizar Cotización de Nuevos Productos|Si el Stock es 0, se cotiza con la lista de proveedores para recibir nueva mercadería| Gestor de Almacén|
+|5| Actualizar|Al comprar nueva mercancía, se deja el stock en almacén y se registra la cantidad que se compró| Gestor de Almacén|
 
 - Proceso de Distribución
   
