@@ -798,13 +798,12 @@ Distribucion
 ### 5.1 Diagrama de entidad relación
 - Modelo Conceptual
 
-![Modelo Conceptual](Modelo%20conceptualv1.png)
+![Modelo Conceptual](MODELO20CONCEPTUAL.png)
 
 
 ## 6. Modelado Relacional
 ### 6.1 Modelo Lógico
-![Modelo Lógico](Modelo_Logico.png)
-[Modelo Lógico](https://drive.google.com/file/d/1_JcvnJOoGrkaA1rP-jQhsR2sMmhgNscB/view?usp=sharing)
+![Modelo Lógico](Modelo%20Logicov2.png)
 
 # ENTREVISTA
 ## Link
