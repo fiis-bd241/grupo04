@@ -149,6 +149,27 @@
 
 ![Proceso de Venta](../Entregable2/ProcesosTOBE/VentaTOBE.png)
 
+| Secuencia | Actividad                                           | Descripción                                                   | Responsable      |
+|-----------|-----------------------------------------------------|---------------------------------------------------------------|------------------|
+| 1         | Cliente ingresa a la web y se logea                | El cliente accede a la plataforma web e inicia sesión.        | Cliente/Plataforma |
+| 2         | Plataforma verifica credenciales y da acceso       | La plataforma valida las credenciales ingresadas por el cliente. Si son correctas, se le concede acceso. | Plataforma       |
+| 3         | Cliente navega por el catálogo de productos        | El cliente explora los productos disponibles en la plataforma. | Cliente          |
+| 4         | Cliente añade productos al carrito de compra       | El cliente selecciona los productos que desea comprar y los agrega al carrito de compra. | Cliente          |
+| 5         | Cliente realiza la compra                           | El cliente procede a confirmar la compra de los productos en su carrito. | Cliente          |
+| 6         | Plataforma registra la compra                       | La plataforma registra la transacción de compra realizada por el cliente. | Plataforma       |
+| 7         | Plataforma envía y muestra código de compra único  | La plataforma genera un código de compra único y lo muestra al cliente. Además, se lo envía. | Plataforma       |
+| 8         | Plataforma envía comprobante de pago por email     | La plataforma envía un comprobante de pago al correo electrónico del cliente. | Plataforma       |
+
+### Cambios que se implementarán
+1) Se implementará la pagina web que permite realizar **log in**. Los usuarios podrán hacer sus **pedidos** directamente en el **sitio web**.
+2) Para crear su cuenta se le pedirá al usuario que añada sus datos personales, así como su dirreción actual para asi poder tenerlo en cuenta a la hora de
+   realizar el envío de pedidos. En caso contrario, puede añadir otra dirección por si quiere que los pedidos lleguen a esa nueva dirección. Esto
+   evita estar haciendo coordinaciones previas y lo hace más dinámico.
+4) De la misma forma, el usuario elige sus **metodos de pago** en la **plataforma web**. Se cuenta por ahora, con pagos por tarjeta de crédito y débito.
+5) Los clientes pueden acceder a su **carro de compras** donde podrán encontrar información sobre su producto. A travez del catalogo se puede añadir los
+   productos al carro de compras.
+6) La **emision de comprobante de pago** ya no será manual. La misma página los puede enviar.
+
 - Proceso de Almacén
 
 ![Proceso de Almacén](../Entregable2/ProcesosTOBE/ToBeAlmacen.jpg)
