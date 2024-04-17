@@ -688,6 +688,24 @@ Distribucion
 | 8 | El cliente puede aplicar filtros o categorías para refinar su búsqueda si lo desea |
 | 9 | El caso termina |
 
+**Caso de uso N°: Ver Detalle de Producto desde el Catálogo**
+
+| Objetivo | <p align="left">Permitir que el cliente acceda a una vista detallada de un producto mientras navega por el catálogo en la plataforma de ventas.</p> | 
+|:--------------:|--------------|
+| Descripción | Facilitar al cliente la visualización de información detallada sobre un producto específico mientras navega por el catálogo de la plataforma de ventas, brindando detalles como descripción, código, marca, tipo de producto, precio y disponibilidad en stock. | 
+| Actor primario   | Cliente | 
+| Actor secundario | Plataforma de Ventas |
+| Precondiciones | El cliente ha iniciado sesión en la plataforma de ventas |
+| Paso | <p align="center"> Acción </p> |
+| 1 | El cliente accede al catálogo de productos en la plataforma de ventas |
+| 2 | El cliente examina la lista de productos disponibles |
+| 3 | Para un producto específico, el cliente hace clic en el enlace o imagen del producto para ver más detalles |
+| 4 | La plataforma de ventas muestra una vista detallada del producto seleccionado, que incluye información como descripción, código, marca, tipo de producto, precio y disponibilidad en stock |
+| 5 | El cliente decide si agregar el producto directamente al carrito de compras o proceder a la compra inmediata |
+| 6 | Si el cliente desea agregar el producto al carrito de compras, selecciona esta opción |
+| 7 | Si el cliente decide proceder a la compra inmediata, selecciona esta opción |
+| 8 | El caso termina |
+
 **Caso de uso N°: Añadir Nueva Dirección de Envío**
 
 | Objetivo | <p align="left">Permitir que el cliente agregue una nueva dirección de envío para recibir sus productos comprados en la plataforma de ventas.</p> | 
@@ -707,6 +725,8 @@ Distribucion
 | 8 | Si la información no es válida, la plataforma muestra un mensaje de error y solicita al cliente que corrija los campos incorrectos |
 | 9 | El cliente puede optar por volver a la lista de direcciones o realizar otras acciones en su cuenta |
 | 10 | El caso termina |
+
+
 
 
 ## 4. Prototipo
