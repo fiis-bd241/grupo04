@@ -22,7 +22,7 @@
 
 - Proceso de Finanzas
 
-![Proceso de Finanzas](ProcesosFinanzas.png)
+![Proceso de Finanzas](Proceso ASIS finanzas.png)
 
 [Regresar a Entregable 2](../entregable2.md)
 
