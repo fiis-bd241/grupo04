@@ -868,6 +868,76 @@ Distribucion
 | No Funcionales:| 
 |- Interoperabilidad: Integración fácil y eficiente con el sistema de Migni Store. <br> - Fiabilidad: Garantía de que las actualizaciones en el inventario se reflejen correctamente. <br> - Usabilidad: Interfaz clara y fácil de usar para la gestión de productos y cotizaciones.|
 
+Finanzas:
+  ## Caso de Uso: Añadir Factura
+
+  | Aspecto            | Detalles |
+  |--------------------|----------|
+  | **Actores**        | Usuario, Sistema |
+  | **Precondiciones** | - El usuario ha iniciado sesión en el sistema.<br>- El usuario tiene permisos para añadir facturas. |
+  | Paso | <p align="center"> Acción </p> |
+  | 1 | El usuario selecciona la opción de "Añadir Factura" en el menú principal. |
+  | 2 | El sistema muestra un formulario para ingresar los detalles de la factura.|
+  | 3 | El usuario completa el formulario con la información de la factura.
+  | 4 | El usuario confirma la creación de la factura.
+  | 5 | El sistema valida la información ingresada y registra la factura en la base de datos.|
+  | 6 | El sistema genera automáticamente el asiento contable correspondiente a la factura. |
+  | **Flujo Alternativo** | - Si hay errores en los datos ingresados, el sistema muestra mensajes de error y permite al usuario corregir la información. |
+
+   ## Caso de Uso: Ver Resumen Contable
+
+  | Aspecto            | Detalles |
+  |--------------------|----------|
+  | **Actores**        | Usuario, Sistema |
+  | **Precondiciones** | - El usuario ha iniciado sesión en el sistema.<br>- El usuario tiene permisos para ver el resumen contable. |
+  | **Paso**           | <p align="center"> Acción </p> |
+  | 1 | El usuario selecciona la opción de "Ver Resumen Contable" en el menú principal. |
+  | 2 | El sistema muestra un resumen contable con el total de ingresos, gastos, activos, pasivos y patrimonio. |
+  | 3 | El sistema presenta un desglose detallado de cada categoría contable. |
+  | 4 | El usuario puede filtrar y buscar transacciones específicas dentro del resumen. |
+  | 5 | El caso termina. |
+  | **Flujo Alternativo** | - Si el usuario no tiene permisos para acceder al resumen contable, el sistema muestra un mensaje de error. |
+
+  ## Caso de Uso: Ver Estado de Resultados
+
+  | Aspecto            | Detalles |
+  |--------------------|----------|
+  | **Actores**        | Usuario, Sistema |
+  | **Precondiciones** | - El usuario ha iniciado sesión en el sistema.<br>- El usuario tiene permisos para ver el estado de resultados. |
+  | **Paso**           | <p align="center"> Acción </p> |
+  | 1 | El usuario selecciona la opción de "Ver Estado de Resultados" en el menú principal. |
+  | 2 | El sistema muestra el estado de resultados que incluye ingresos, costos de ventas, gastos operativos, y beneficios netos. |
+  | 3 | El sistema calcula automáticamente los valores basados en las transacciones registradas. |
+  | 4 | El usuario puede filtrar y buscar transacciones específicas dentro del estado de resultados. |
+  | 5 | El caso termina. |
+  | **Flujo Alternativo** | - Si el usuario no tiene permisos para acceder al estado de resultados, el sistema muestra un mensaje de error. |
+
+  ## Caso de Uso: Ver Asientos Contables
+
+  | Aspecto            | Detalles |
+  |--------------------|----------|
+  | **Actores**        | Usuario, Sistema |
+  | **Precondiciones** | - El usuario ha iniciado sesión en el sistema.<br>- El usuario tiene permisos para ver los asientos contables. |
+  | **Paso**           | <p align="center"> Acción </p> |
+  | 1 | El usuario selecciona la opción de "Ver Asientos Contables" en el menú principal. |
+  | 2 | El sistema muestra una lista de asientos contables ordenados por fecha. |
+  | 3 | El usuario puede seleccionar un asiento contable para ver detalles adicionales como cuentas afectadas, descripción, y montos. |
+  | 4 | El usuario puede filtrar y buscar asientos contables específicos por fecha, número, o tipo. |
+  | 5 | El caso termina. |
+  | **Flujo Alternativo** | - Si el usuario no tiene permisos para acceder a los asientos contables, el sistema muestra un mensaje de error. |
+  ## Caso de Uso: Ver Reporte Contable en Formato Descargable para GitHub
+
+  | Aspecto            | Detalles |
+  |--------------------|----------|
+  | **Actores**        | Usuario, Sistema |
+  | **Precondiciones** | - El usuario ha iniciado sesión en el sistema.<br>- El usuario tiene permisos para descargar reportes contables. |
+  | **Paso**           | <p align="center"> Acción </p> |
+  | 1 | El usuario selecciona la opción de "Descargar Reporte Contable" en el menú principal. |
+  | 2 | El sistema genera el reporte contable en formato descargable (por ejemplo, CSV o JSON). |
+  | 3 | El usuario selecciona la opción para guardar el archivo en su dispositivo. |
+  | 4 | El usuario sube el archivo al repositorio de GitHub. |
+  | 5 | El caso termina. |
+  | **Flujo Alternativo** | - Si el usuario no tiene permisos para descargar reportes contables, el sistema muestra un mensaje de error. |
 
 ### 3.2 Requerimientos de atributos de Calidad
 
