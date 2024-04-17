@@ -855,6 +855,20 @@ Distribucion
 | 9 | El cliente puede optar por volver a la lista de direcciones o realizar otras acciones en su cuenta |
 | 10 | El caso termina |
 
+### Casos de uso relacionado a modulo almacén
+ | Caso de uso: Ver Ingresos, Salidas e Inventario de Productos |
+ |---------------------|
+ | *Descripción:*|
+ | El Gestor de Almacén puede acceder a la sección que muestra el ingreso de los productos comprados, para su respectiva venta o para su respectivo uso dentro de la empresa Migni Store, ver dónde están ubicados. De igual manera puede informarse de las salidas que se registran con las ventas con un reporte de Importe de Inventario para saber el Capital Actual. Y el inventario de cada producto con su seguimiento y stock disponible.|
+ | *Flujo de Eventos*:|
+ | - El Gestor de Almacén inicia sesión en su cuenta en la página web de Migni Store. <br> - Accede a la sección de "Almacén". <br> - Visualiza la lista de productos disponibles, incluyendo detalles como nombre, descripción, cantidad en stock y precios. <br> - Accede a la función de "Ingresos" para generar reportes, registrar nuevos ingresos de productos. <br> - Accede a la función de "Salidas" para generar una Guía de Remisión al Área de Distribución o una Guía de Salida para distruir bienes dentro de las áreas de la empresa. <br> - Puede "Solicitar Compra" si el Stock Actual del producto es igual al Stock Mínimo que debe de contabilizarse en Almacén. <br> - En la función "Inventario" puede ver el flujo de entradas y salidas de cada producto y su Importe Total Existente para una toma de decisiones para el área de marketing| 
+|*Requerimientos:*|
+| Funcionales:|
+| - Acceder al inventario de productos disponibles. <br> - Actualizar la disponibilidad de productos. <br> - Generar Solicitues de Compras para productos de bajo Stock. <br> -Generar reportes de flujo de entrada y salida. <br> Registrar nuevo producto en almacén y saber su ubicación para un rápido picking. <br> -Informar sobre la presentación del producto. <br> - Generar Guías para un mayor control del inventario. |
+| No Funcionales:| 
+|- Interoperabilidad: Integración fácil y eficiente con el sistema de Migni Store. <br> - Fiabilidad: Garantía de que las actualizaciones en el inventario se reflejen correctamente. <br> - Usabilidad: Interfaz clara y fácil de usar para la gestión de productos y cotizaciones.|
+
+
 ### 3.2 Requerimientos de atributos de Calidad
 
    **Simplicidad y Facilidad de Uso:**
