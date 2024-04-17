@@ -805,7 +805,7 @@ Distribucion
 
 [Figma](https://www.figma.com/file/JaEtbwPTFhxpp8rVLio8Lc/Proyecto-Migni-Store?type=design&node-id=56-105&mode=design&t=6vRNAXtGiQCHDJhl-0)
 
-### Prototipos de Venta
+
 
 
 ## 5. Modelado Conceptual
