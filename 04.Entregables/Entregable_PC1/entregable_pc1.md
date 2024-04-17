@@ -23,7 +23,7 @@
     - Máscaras de pestañas
 ### 1.2 Descripción del proceso de negocio
 
-- Proceso de compra - Este proceso se refiere a las compras de los diversos productos para el almacén de la empresa y poder venderlos.
+- Proceso de compra - Este proceso se refiere a las compras de los diversos productos mediante la aceptación de ofertas realizadas por los proveedores, estos productos posteriormente irán al almacén de la empresa.
 - Proceso de venta - Este proceso es acerca de los procesos de venta en la empresa que inicia desde que el cliente nos contacta para venderle el producto.
 - Proceso de almacen - Este proceso se refiere a cómo se gestiona el almacén de manera que constatemente se verifica el stock de los productos.
 - Proceso de distribucion - Este proceso se refiere a las actividades que abarcan llevar el producto hasta el cliente.
