@@ -293,6 +293,13 @@
       
   **- Añadir una nueva dirección**
     - Responsabilidades: Permite al cliente la posibilidad de añadir una nueva dirección si este lo requiere. Básicamente al logearse el usuario tiene que colocar     su dirección para que se guarde y se muestre en el carro de compras. Si el usuario quiere otra dirección lo puede hacer en este apartado del módulo.
+ 
+  **- Catalogo de prodductos**
+    - Responsabilidades: Permite al cliente navegar en la pagina web mostrandole todos los productos que tiene que tiene a su disposicion. Puede agregarlos al 
+    carro de compra con un simple boton, tambien puede acceder a mas detalles presionando la imagen (detalles de producto). Por ultimo, es el principal pantalla 
+    que hace que el proceso de venta se pueda realizar. 
+
+  
 ### 2.3 Módulo Almacén
 ### 2.4 Módulo Distribución
 
