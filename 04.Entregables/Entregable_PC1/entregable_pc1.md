@@ -263,7 +263,7 @@
 ### 5.1 Diagrama de entidad relación
 - Modelo Conceptual
 
-![Modelo Conceptual](Modelo%20conceptual.png)
+![Modelo Conceptual](Modelo%20conceptualv1.png)
 
 
 ## 6. Modelado Relacional
