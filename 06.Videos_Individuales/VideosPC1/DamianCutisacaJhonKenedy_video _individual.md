@@ -2,5 +2,5 @@
 Damian Cutisaca Jhon Kenedy
 20212568E
 
-[Video Individual](link)
+[![Alt text](https://img.youtube.com/vi/eEpkWtuQVr4/0.jpg)](https://www.youtube.com/watch?v=eEpkWtuQVr4)
 
