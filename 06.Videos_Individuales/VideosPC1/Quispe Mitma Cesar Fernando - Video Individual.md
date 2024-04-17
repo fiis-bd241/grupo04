@@ -4,4 +4,4 @@ Quispe Mitma Cesar Fernando
 
 [Video Individual](link)
 
-[![Video](https://img.youtube.com/vi/2Ykbz91O7lo/0.jpg)]([link](https://www.youtube.com/watch?v=2Ykbz91O7lo))
+[![Video](https://img.youtube.com/vi/2Ykbz91O7lo/0.jpg)](https://www.youtube.com/watch?v=2Ykbz91O7lo)
