@@ -98,6 +98,24 @@
 
 ![Proceso de Marketing](../Entregable2/ProcesosASIS/BPMN_marketing.jpeg)
 
+| Secuencia | Actividad                                | Descripción                            | Responsable      |
+|-----------|------------------------------------------|-----------------------------------------------------------------------|------------------|
+| 1         | Creación de campaña | Aquí se define el concepto de la campaña a diseñar, como que productos se van a publicitar o la temática respecto a la temporada del año.| Gestor de marketing |
+| 2         | Notificación de productos en almacén | Se le notifica al Director de marketing que hay existencias del producto a publicitar. | Gestor de almacén |
+| 3         | Compra | Proceso principal del negocio, en este caso se comprarán los productos que se quieran publicitar ya que no hay suficientes existencias en stock. | Gestor de compras |
+| 4         | Almacén | Proceso principal del negocio, se almacenarán los productos solicitados en el proceso de compra. | Gestor de almacén |
+| 5         | Consultar posibles precios de oferta | Se hace una consulta al área de ventas de los precios en los cuales el producto se puede ofertar, el área nos comunicará el precio nuevo del producto o la negación de la rebaja. | Equipo de marketing |
+| 6         | Realizar combos de productos | Al no poder rebajar el precio de los productos en su venta unitaria, se realizan combos de los productos consigo mismos o con otros que tengan una demanda generalmente alta.| Equipo de marketing |
+| 7         | Diseños de estrategias de marketing | Se define cuando se iniciará la campaña dependiendo de la temporada o demanda de productos, además de ver el público objetivo, realización  de sorteos, entre otros. | Equipo de marketing |
+| 8         | Se propone un mes de campaña | Ya que el producto a publicitar es nuevo, se le da un margen de un mes para darse a conocer y acoplarse al proceso de venta de la organización. | Equipo de marketing |
+| 9         | Se propone una semana de campaña | El producto ya se estaba vendiendo antes, se le da una semana de duración a la campaña. | Equipo de marketing |
+| 10         | Definición de medios publicitarios | Se define que medios se van a utilizar para publicitar la campaña. | Equipo de marketing |
+| 11        | Definición de medios de pago | Se define que medios de pago podrá utilizar el cliente en el proceso de venta. | Equipo de marketing |
+| 12        | Envio de nueva campaña | Se le envía la campaña al Director de marketing para su revisión. | Equipo de marketing |
+| 13        | Revisión de la campaña | El Director de marketing revisa la campaña, su decisión definirá si la campaña será publicada o no. | Gestor de marketing |
+| 14        | Realización de correcciones | La campaña que no ha sido aprobada se corregirá en los puntos que el Director de marketing haya considerado no aprovechables o que reduzcan la eficacia de la publicidad. | Equipo de marketing |
+| 15        | Se publica la campaña | La campaña será publicada dependiendo de lo acordado y aprobado anteriormente. | Gestor de marketing |
+
 - Proceso de CRM
 
 ![Proceso de CRM](../Entregable2/ProcesosASIS/Proceso-CRM.png)
@@ -275,6 +293,42 @@
 
 
 ### 2.5 Módulo Marketing
+
+- Descripción: Este módulo de gestión de publicidad permite al gestor de marketing tener control sobre las campañas realizadas por el equipo de maeketing con el fin de atraer más clientes. El gestor de marketing puede visualizar y editar las campañas vigentes, además puede revisar y tomar decisiones sobre las campañas propuestas comunicandose con el equipo de marketing encargado, pues estos han sido asignados a una campaña en la opción de generar campaña disponible para el administrador.
+
+- Responsabilidades: Gestionar las campañas vigentes, asignar equipos de marketing a una nueva campaña, revisar aceptando o rechazando campañas propuestas, comunicar observaciones al equipo de marketing designado a la campaña en caso de rachazar. 
+
+- Interacción: Con el módulo de compras y almacén.
+
+- Detalles de estado:
+ - VIGENTE: La campaña esta vigente, se puedeneditar algunos aspectos como la fecha final y la modalidad de la publicidad, además de agregar o quitar algunos productos y /o servicios y cambiar el archivo de publicidad.
+ - PROPUESTA: La campaña esta a disposición del gerente de marketing, dependiendo de su desición, esta puede pasar a ser aceptada o rechazada.
+ - ACEPTADA: La campaña ha sido aceptada, por lo tanto estará en espera a entrar en vigencia dependiendo de su fecha de inicio y fecha final.
+ - RECHAZADA: La campaña ha sido rechazada, el director de marketing le comunica las observaciones al equipo de marketing para su corrección.
+
+- Funcionalidad:
+
+  **- Home Gestor de marketing**
+    - Responsabilidades: Permite al gestor de marketing tener acceso a las funciones de campañas vigentes, campañas propuestas y generar campaña.
+
+  **- Campañas vigentes**
+    - Responsabilidades: Permite al gestor visualizar las campañas vigentes, además de mostrar un histograma de todas las entradas generadas por los anuncios por día.
+
+  **- Editar campaña**
+    - Responsabilidades: Permite al gestor editar las campañas vigentes, puede cambiar información limitada correspondiente a cada campaña.
+    - 
+  **- Campañas propuestas**
+    - Responsabilidades: Permite al gestor de marketing visualizar las campañas propuestas por el equipo de marketing designado, además de poder desplegar la vista de revisar campaña.
+
+  **- Revisar campaña**
+    - Responsabilidades: Permite al gestor de marketing visualizar los datos pertenecientes a la propuesta y tomar la desición de aceptarla o rechazarla en base a su criterio.
+      
+  **- Registrar observaciones**
+    - Responsabilidades: Permite al gestor de marketing comunicar observaciones al equipo de marketing después de rechazar su propuesta de campaña correspondiente.
+
+  **- Generar campaña**
+    - Responsabilidades: Permite al gestor de marketing asignar un equipo de marketing a una campaña dandoles una descripción general de las especificaciones.
+
 ### 2.6 Módulo Finanzas
 ### 2.7 Módulo CRM
 
