@@ -483,7 +483,46 @@
     - Responsabilidades: Permite al gestor de marketing asignar un equipo de marketing a una campaña dandoles una descripción general de las especificaciones.
 
 ### 2.6 Módulo Finanzas
-    - Descripción: 
+    - Descripción: Este módulo permite obtener las fcaturas y cómo es el estdo de ellas de manera que permite realizar los asientos contable de cuando a los ingresos y gastos que se tienen con las compras ventas gastos y pagos para poder hacer el  estado de resultados y hacer un reporte para ver las ganancias.
+    - Responsabilidades: Registrar facturas, ver resumen contable, ver reporte contable, ver asientos contables y ver estado de resultados.
+    - Funciones:
+    Historial de Ventas y Compras:
+
+     - Mostrar un registro detallado de todas las transacciones de ventas y compras realizadas por la empresa.
+      Filtrar y buscar transacciones por fecha, cliente, proveedor, producto, etc.
+      Registro Automatizado de Facturas:
+      
+     - Permitir el registro automático de facturas de ventas y compras.
+      Reconocimiento automático de datos relevantes en las facturas para facilitar el proceso de registro.
+      Asientos Contables Automatizados:
+      
+      -Generar automáticamente asientos contables basados en las transacciones registradas.
+      Integrar con el módulo de ventas y compras para capturar datos necesarios para la contabilidad.
+      Estado de Resultados Automatizado:
+      
+     - Calcular automáticamente el estado de resultados utilizando la información de ventas, compras, gastos y pagos.
+      Mostrar ingresos, costos de ventas, gastos operativos, y beneficios netos.
+      Reportes Financieros:
+      
+     - Generar reportes financieros personalizados como balances generales, estados de resultados, y flujos de efectivo.
+      Permitir la exportación de informes en diferentes formatos como PDF, Excel, etc.
+      Alertas y Notificaciones:
+      
+      -Enviar alertas sobre transacciones pendientes, vencimientos de pagos, y otras actividades financieras importantes.
+      Integración con Otros Módulos:
+      
+     - Integrar con módulos de inventario, nómina, y otros sistemas relacionados para obtener una visión completa de la situación financiera de la empresa.
+      Acceso Múltiple y Seguridad:
+      
+     - Permitir el acceso a diferentes usuarios con roles y permisos específicos.
+      Garantizar la seguridad de los datos mediante encriptación y medidas de protección contra accesos no autorizados.
+      Gestión de Proveedores y Clientes:
+      
+      -Mantener un registro detallado de proveedores y clientes, incluyendo información de contacto, historial de transacciones, y términos de pago.
+      Análisis Financiero:
+      
+     -Ofrecer herramientas de análisis financiero para evaluar la rentabilidad, liquidez, y solvencia de la empresa.
+      Realizar proyecciones financieras y escenarios hipotéticos para la toma de decisiones estratégicas.
 ### 2.7 Módulo CRM
 
 ## 3. Requerimientos
