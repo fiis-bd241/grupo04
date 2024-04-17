@@ -134,7 +134,7 @@
 
 - Proceso de Finanzas
 
-![Proceso de Finanzas](../Entregable2/ProcesosASIS/ProcesosFinanzas.png)
+![Proceso de Finanzas](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable2/ProcesosASIS/Proceso%20ASIS%20finanzas.png)
 
 ### PROCESO TO BE
 
