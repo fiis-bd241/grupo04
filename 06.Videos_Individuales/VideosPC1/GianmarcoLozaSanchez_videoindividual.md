@@ -1,5 +1,5 @@
 # Video individual
 Gianmarco Loza Sanchez 
+VIDEO:
 
-[![Alt text](https://img.youtube.com/vi/eEpkWtuQVr4/0.jpg)](https://www.youtube.com/watch?v=eEpkWtuQVr4)
-
+https://drive.google.com/drive/u/1/folders/1offADnxyz59SEA50883ts8hZMK5A3RCH
