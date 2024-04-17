@@ -583,6 +583,125 @@ Distribucion
 |11|El sistema pide al cliente la reprogramacion de una nueva fecha|
 |10|El caso termina|
 
+**Caso de uso N°: Realizar una Compra**
+
+| Objetivo | <p align="left">Permitir que el cliente realice una compra en la plataforma de ventas.</p> | 
+|:--------------:|--------------|
+| Descripción | Facilitar el proceso de compra para el cliente, desde la selección de productos hasta la finalización de la transacción.  | 
+| Actor primario   | Cliente | 
+| Actor secundario | Plataforma de Ventas |
+| Precondiciones | El cliente ha accedido a la plataforma de ventas |
+| Paso | <p align="center"> Acción </p> |
+| 1 | El cliente accede a la plataforma de ventas |
+| 2 | El cliente navega por el catálogo de productos |
+| 3 | El cliente selecciona los productos deseados y los agrega al carrito de compras |
+| 4 | El cliente decide seguir comprando y vuelve al catálogo para explorar más productos |
+| 5 | El cliente repite los pasos 2 y 3 según sea necesario |
+| 6 | El cliente revisa el carrito de compras y procede al proceso de pago |
+| 7 | El cliente elige un método de pago y proporciona la información necesaria |
+| 8 | La plataforma de ventas procesa el pago y registra la transacción |
+| 9 | La plataforma de ventas envía un comprobante de pago al cliente por correo electrónico |
+| 10 | El cliente recibe el comprobante de pago y finaliza la compra |
+| 11 | El caso termina |
+
+**Caso de uso N°: Consultar Historial de Ventas de la Empresa**
+
+| Objetivo | <p align="left">Permitir que el gestor acceda al historial de ventas de la empresa en la plataforma de ventas.</p> | 
+|:--------------:|--------------|
+| Descripción | Facilitar al gestor el acceso a información detallada sobre las ventas realizadas por la empresa, incluyendo datos como fechas, productos vendidos, montos y clientes.  | 
+| Actor primario   | Gestor de Ventas | 
+| Actor secundario | Plataforma de Ventas |
+| Precondiciones | El gestor ha accedido a la plataforma de ventas |
+| Paso | <p align="center"> Acción </p> |
+| 1 | El gestor accede a la plataforma de ventas |
+| 2 | El gestor inicia sesión en su cuenta de gestor |
+| 3 | El gestor navega hasta la sección de historial de ventas |
+| 4 | La plataforma de ventas muestra una lista de las ventas realizadas por la empresa |
+| 5 | El gestor puede aplicar filtros para buscar ventas específicas por fecha, producto, monto, etc. |
+| 6 | El gestor selecciona una venta específica para ver más detalles |
+| 7 | La plataforma de ventas muestra los detalles de la venta seleccionada, incluyendo fecha, productos vendidos, monto total y cliente asociado |
+| 8 | El gestor puede optar por exportar o imprimir el detalle de la venta para su análisis |
+| 9 | El gestor cierra la consulta del historial de ventas |
+| 10 | El caso termina |
+
+**Caso de uso N°: Elegir Método de Pago**
+
+| Objetivo | <p align="left">Permitir que el cliente elija el método de pago al realizar una compra en la plataforma de ventas.</p> | 
+|:--------------:|--------------|
+| Descripción | Facilitar al cliente la selección de su método de pago preferido durante el proceso de compra, limitando las opciones a tarjeta de débito o crédito.  | 
+| Actor primario   | Cliente | 
+| Actor secundario | Plataforma de Ventas |
+| Precondiciones | El cliente ha accedido a la plataforma de ventas y ha agregado productos al carrito de compras |
+| Paso | <p align="center"> Acción </p> |
+| 1 | El cliente revisa el carrito de compras y procede al proceso de pago |
+| 2 | La plataforma de ventas presenta al cliente las opciones de método de pago disponibles |
+| 3 | El cliente elige la opción de pago con tarjeta de débito o crédito |
+| 4 | La plataforma de ventas solicita al cliente que ingrese los detalles de su tarjeta (número de tarjeta, fecha de vencimiento, código de seguridad, etc.) |
+| 5 | El cliente proporciona la información requerida |
+| 6 | La plataforma de ventas valida la información ingresada por el cliente |
+| 7 | Si la información es válida, la plataforma procede con el proceso de pago |
+| 8 | Si la información no es válida, la plataforma notifica al cliente y le solicita que corrija los detalles de su tarjeta |
+| 9 | El cliente confirma la elección del método de pago |
+| 10 | El caso termina |
+
+**Caso de uso N°: Ver Detalles del Producto**
+
+| Objetivo | <p align="left">Permitir que el cliente acceda a una vista detallada del producto en la plataforma de ventas después de rellenar los datos de su tarjeta.</p> | 
+|:--------------:|--------------|
+| Descripción | Facilitar al cliente la visualización de información detallada sobre un producto seleccionado, incluyendo descripción, código, marca, catálogo, tipo de producto, venta, stock restante, precio y cantidad disponible.  | 
+| Actor primario   | Cliente | 
+| Actor secundario | Plataforma de Ventas |
+| Precondiciones | El cliente ha iniciado el proceso de pago y ha ingresado los datos de su tarjeta |
+| Paso | <p align="center"> Acción </p> |
+| 1 | Después de ingresar los datos de la tarjeta, el cliente accede a la vista general de productos disponibles |
+| 2 | El cliente examina la lista de productos y decide ver más detalles de un producto específico |
+| 3 | El cliente hace clic en el botón de información (o enlace similar) asociado al producto seleccionado |
+| 4 | La plataforma de ventas muestra una vista detallada del producto, que incluye información como descripción, código, marca, catálogo, tipo de producto, venta, stock restante, precio y cantidad disponible |
+| 5 | El cliente puede revisar la información detallada del producto y decidir continuar con la compra o regresar a la lista de productos |
+| 6 | El cliente puede ajustar la cantidad de productos a comprar si lo desea |
+| 7 | El cliente puede optar por agregar el producto al carrito de compras o seguir explorando otros productos |
+| 8 | El caso termina |
+
+**Caso de uso N°: Ver Catálogo de Productos**
+
+| Objetivo | <p align="left">Permitir que el cliente visualice el catálogo completo de productos disponibles en la plataforma de ventas.</p> | 
+|:--------------:|--------------|
+| Descripción | Facilitar al cliente la exploración de todos los productos disponibles para su compra, mostrando información básica de cada producto.  | 
+| Actor primario   | Cliente | 
+| Actor secundario | Plataforma de Ventas |
+| Precondiciones | El cliente ha accedido a la plataforma de ventas |
+| Paso | <p align="center"> Acción </p> |
+| 1 | El cliente accede a la plataforma de ventas |
+| 2 | El cliente navega hasta la sección de catálogo de productos |
+| 3 | La plataforma de ventas muestra una lista de productos disponibles, organizados de manera clara y accesible |
+| 4 | Para cada producto, se muestra información básica como nombre, imagen, precio y una breve descripción |
+| 5 | El cliente puede examinar la lista de productos desplazándose hacia arriba o hacia abajo |
+| 6 | El cliente puede hacer clic en un producto específico para ver más detalles |
+| 7 | El cliente puede decidir agregar el producto al carrito de compras o continuar explorando otros productos |
+| 8 | El cliente puede aplicar filtros o categorías para refinar su búsqueda si lo desea |
+| 9 | El caso termina |
+
+**Caso de uso N°: Añadir Nueva Dirección de Envío**
+
+| Objetivo | <p align="left">Permitir que el cliente agregue una nueva dirección de envío para recibir sus productos comprados en la plataforma de ventas.</p> | 
+|:--------------:|--------------|
+| Descripción | Facilitar al cliente la posibilidad de registrar una dirección adicional donde desee recibir sus pedidos, aumentando la flexibilidad en la entrega de productos.  | 
+| Actor primario   | Cliente | 
+| Actor secundario | Plataforma de Ventas |
+| Precondiciones | El cliente ha iniciado sesión en su cuenta en la plataforma de ventas |
+| Paso | <p align="center"> Acción </p> |
+| 1 | El cliente accede a la configuración de su cuenta o a la sección de direcciones de envío |
+| 2 | El cliente selecciona la opción para añadir una nueva dirección |
+| 3 | La plataforma de ventas presenta un formulario para que el cliente ingrese los detalles de la nueva dirección, como nombre del destinatario, dirección, distrito, código postal, etc. |
+| 4 | El cliente completa el formulario con la información de la nueva dirección |
+| 5 | El cliente guarda la nueva dirección |
+| 6 | La plataforma valida la información ingresada por el cliente para asegurar que todos los campos requeridos estén completos y sean válidos |
+| 7 | Si la información es válida, la plataforma confirma que la nueva dirección ha sido añadida con éxito |
+| 8 | Si la información no es válida, la plataforma muestra un mensaje de error y solicita al cliente que corrija los campos incorrectos |
+| 9 | El cliente puede optar por volver a la lista de direcciones o realizar otras acciones en su cuenta |
+| 10 | El caso termina |
+
+
 ## 4. Prototipo
 - Para ver el prototipo debe ingresar al siguiente enlace:
 
