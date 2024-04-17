@@ -628,6 +628,20 @@ Distribucion
 |10|El caso termina|
 
 ### Casos de uso relacionado a modulo ventas
+**Caso de Uso: Inicio de Sesión del Gestor de Ventas**
+
+| Objetivo | <p align="left">Permitir al gestor de ventas acceder al sistema iniciando sesión en la plataforma web.</p> | 
+|:--------------:|--------------|
+| Actor Principal   | Gestor de Ventas | 
+| Precondiciones | El gestor de ventas debe estar afiliado a la empresa. |
+| Paso | <p align="center"> Acción </p> |
+| 1 | El gestor de ventas accede a la página web de "Migni Store". |
+| 2 | El sistema presenta la página de inicio de sesión. |
+| 3 | El gestor de ventas ingresa su nombre de usuario y contraseña. |
+| 4 | El sistema valida las credenciales del gestor de ventas. |
+| 5 | El sistema redirige al gestor de ventas a su página de inicio. |
+| Postcondiciones | El gestor de ventas ha iniciado sesión en la plataforma web y puede comenzar a utilizar las funciones disponibles para su rol. |
+
 **Caso de uso N°: Realizar una Compra**
 
 | Objetivo | <p align="left">Permitir que el cliente realice una compra en la plataforma de ventas.</p> | 
