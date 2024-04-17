@@ -22,7 +22,7 @@
 
 - Proceso de CRM
 
-![Proceso de CRM](Proceso-CRM-BPMN.png)
+![Proceso de CRM](TOBEProcesoCRM.png)
 
 - Proceso de Finanzas
 
