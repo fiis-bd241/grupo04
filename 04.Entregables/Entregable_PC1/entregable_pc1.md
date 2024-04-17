@@ -100,7 +100,7 @@
 
 | Secuencia | Actividad                                | Descripción                            | Responsable      |
 |-----------|------------------------------------------|-----------------------------------------------------------------------|------------------|
-| 1         | Creación de campaña | Aquí se define el concepto de la campaña a diseñar, como que productos se van a publicitar o la temática respecto a la temporada del año.| Gestor de marketing |
+| 1         | Creación de campaña | Aquí se brinda una descripción general del concepto de la campaña, como que productos se van a publicitar o la temática respecto a la temporada del año.| Gestor de marketing |
 | 2         | Notificación de productos en almacén | Se le notifica al Director de marketing que hay existencias del producto a publicitar. | Gestor de almacén |
 | 3         | Compra | Proceso principal del negocio, en este caso se comprarán los productos que se quieran publicitar ya que no hay suficientes existencias en stock. | Gestor de compras |
 | 4         | Almacén | Proceso principal del negocio, se almacenarán los productos solicitados en el proceso de compra. | Gestor de almacén |
@@ -202,7 +202,7 @@
 
 | Secuencia | Actividad                                | Descripción                            | Responsable      |
 |-----------|------------------------------------------|-----------------------------------------------------------------------|------------------|
-| 1         | Creación de campaña | Aquí se define el concepto de la campaña a diseñar, como que productos se van a publicitar o la temática respecto a la temporada del año.| Gestor de marketing |
+| 1         | Creación de campaña | Aquí se brinda una descripción general del concepto de la campaña, como que productos se van a publicitar o la temática respecto a la temporada del año.| Gestor de marketing |
 | 2         | Notificación de productos en almacén | Se le notifica al Director de marketing que hay existencias del producto a publicitar. | Gestor de almacén |
 | 3         | Compra | Proceso principal del negocio, en este caso se comprarán los productos que se quieran publicitar ya que no hay suficientes existencias en stock. | Gestor de compras |
 | 4         | Almacén | Proceso principal del negocio, se almacenarán los productos solicitados en el proceso de compra. | Gestor de almacén |
