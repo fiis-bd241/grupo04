@@ -160,7 +160,7 @@
 | 7         | Plataforma envía y muestra código de compra único  | La plataforma genera un código de compra único y lo muestra al cliente. Además, se lo envía. | Plataforma       |
 | 8         | Plataforma envía comprobante de pago por email     | La plataforma envía un comprobante de pago al correo electrónico del cliente. | Plataforma       |
 
-### Cambios que se implementarán
+### Cambios que se implementarán en ventas
 1) Se implementará la pagina web que permite realizar **log in**. Los usuarios podrán hacer sus **pedidos** directamente en el **sitio web**.
 2) Para crear su cuenta se le pedirá al usuario que añada sus datos personales, así como su dirreción actual para asi poder tenerlo en cuenta a la hora de
    realizar el envío de pedidos. En caso contrario, puede añadir otra dirección por si quiere que los pedidos lleguen a esa nueva dirección. Esto
