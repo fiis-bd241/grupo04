@@ -798,7 +798,7 @@ Distribucion
 ### 5.1 Diagrama de entidad relación
 - Modelo Conceptual
 
-![Modelo Conceptual](MODELO20CONCEPTUAL.png)
+![Modelo Conceptual](MODELO%20CONCEPTUAL.png)
 
 
 ## 6. Modelado Relacional
