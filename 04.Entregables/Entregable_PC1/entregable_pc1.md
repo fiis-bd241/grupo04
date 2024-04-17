@@ -149,7 +149,7 @@
 
 - Proceso de Venta
 
-![Proceso de Venta](../Entregable2/ProcesosTOBE/BPMN_VENTATOBE.png)
+![Proceso de Venta](../Entregable2/ProcesosTOBE/VentaTOBE.png)
 
 - Proceso de Almacén
 
