@@ -2,10 +2,10 @@
 ### 1.1 Datos de la empresa
 - Descripción de la empresa: Es una microempresa que vende maquillaje y papelería que busca traer productos de buena calidad y buen precio, sus principales productos son maquillaje, lapiceros, cuadernos.
 
-- RUC:
-- Razón social:
-- Dirección:
-- Teléfono:
+- RUC: 20602390510
+- Razón social: VASOA srl
+- Direción: Tienda Virtual
+- Teléfono: 914166070
 - Misión: Nuestra misión es ser un referente en el mercado por la diversidad y calidad de nuestros productos en papelería y maquillaje. Buscamos ofrecer una orientación personalizada a nuestros clientes para encontrar los productos que mejor se adapten a sus gustos con la única finalidad de satisfacerlos.💗✨
 - Visión: Nuestra visión es ser reconocidos como el espacio preferido para aquellos que buscan una experiencia de compra excepcional en el mundo del maquillaje y la papelería por lo que nos esforzamos por crear un ambiente acogedor y emocionante, donde los clientes puedan explorar una amplia diversidad de productos y recibir asesoramiento personalizado por parte de nuestro equipo capacitado. Es así que aspiramos establecer relaciones sólidas y duraderas con nuestros clientes, basadas en la confianza, la satisfacción y la lealtad hacia nuestro servicio por eso es que nos innovaremos constantemente para mantenernos a la vanguardia de las tendencias y necesidades de nuestros público, sin descuidar la dedicación y calidad procurada. 💗
 - Productos ofrecidos:
@@ -28,7 +28,7 @@
 - Proceso de almacen - Este proceso se refiere a cómo se gestiona el almacén de manera que constatemente se verifica el stock de los productos.
 - Proceso de distribucion - Este proceso se refiere a las actividades que abarcan llevar el producto hasta el cliente.
 - Proceso de marketing - Este proceso es acerca de las actividades que realizan para llamar al cliente.
-- Proceso de finanzas - Este proceso abarca las diversas actividades en que se gestionan las ganancias y perdidas en base a las compras, los gastos y las ventas.
+- Proceso de finanzas - Este proceso abarca las diversas actividades en que se gestionan las ganancias y perdidas en base a las compras, los gastos, pagos y las ventas.
 - Proceso de CRM - Este proceso abarca las actividades para mapear a los clientes y saber mejor sus necesidades.
 
 ### PROCESO AS IS
@@ -136,6 +136,28 @@
 
 ![Proceso de Finanzas](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable2/ProcesosASIS/Proceso%20ASIS%20finanzas.png)
 
+| Secuencia | Proceso                       | Descripción                                                                                                                       | Autor    |
+|-----------|-------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|----------|
+| 1         | Generar un presupuesto de compra    | Generar un monto  de cuánto se dispone a tener de presupuesto para realizar las compras | Gestor de costos |
+| 2         | Enviar el presupuesto al área de compras | Envíar el presupuesto al área de compras para que en base a eso procedan a comprar los productos.| Gestor de costos |
+| 3         | Recepción de las compras | Recibir las compras realizadas. | Gestor de costos |
+| 4         | Validar las compras | Revisar las compras que registro concuerdan con lo recibido| Gestor de costos |
+| 5         | Recepción de los gastos administrativos | Recibe en un excel todos los gastos de la administración. | Gestor de costos |
+| 6         | Realizar la suma total de compras y gastos | Realizar operaciones de suma total para obtener cuánto se está costando el producto. | Gestor de costos |
+| 7         | Recepción de costos | Recibir los costos realizados de las compras y los gastos administrativos | Contador |
+| 8         | Asegurar la obtención de los comprobantes de pago de las compras  | Verificar que todos los comprobante de pago en las compras están registrados. | Contador |
+| 9         | Recepción de ventas | Recibir toda la información respecto a las ventas realizadas dentro de la empresa. | Gestor de costos |
+| 10        | Validar las ventas | Revisar que las ventas que registró concuerdan con lo recibido | Gestor de costos|
+| 11        | Realizar la suma total de ventas | Realizar operaciones de suma total para obtener cuánto se está vendiendo. | Gestor de costos |
+| 12        | Recepción de ventas | Recibir toda la información respecto a las ventas realizadas dentro de la empresa. | Contador |
+| 13        | Asegurar la obtención de los comprobantes de pago de las ventas.  | Verificar que todos los comprobante de pago en las ventas están registrados. | Contador |
+| 14        | Registrar Facturas | Se registra todas las facturas de compra de proveedores, ventas y gastos. | Contador |
+| 15        | Registrar transacciones | Se registran los pagos realizados como el flujo de efectivo y bancos. | Contador |
+| 16        | Realizar los asientos contables | Según las operaciones obtenidas se registran en una tabla donde muestra el haber y der en excel. | Contador |
+| 17        | Realizar el estado de resultado | Con los datos registrados se puede calcular la venta total, coste total y utilidades para ver la ganacia verdadera. | Contador |
+| 18        | Realizar Reportes | Realizar reportes de las ganancias, cuento se vende, que producto es más vendido, las pérdidas, etc. | Contador |
+
+
 ### PROCESO TO BE
 
 - Proceso de Compra
@@ -234,30 +256,25 @@
 
 - Proceso de Finanzas
 
-![Proceso de Finanzas](../Entregable2/ProcesosTOBE/ProcesoFinanzasTOBE.png)
+![Proceso de Finanzas](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable2/ProcesosTOBE/Proceso%20TOBE%20Finanzas.png)
 
 | Secuencia | Proceso                       | Descripción                                                                                                                       | Autor    |
 |-----------|-------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|----------|
-| 1         | Generar un presupuesto de compra    | Generar un monto  de cuánto se dispone a tener de presupuesto para realizar las compras | Gestor de costos |
-| 2         | Enviar el presupuesto al área de compras | Envíar el presupuesto al área de compras para que en base a eso procedan a comprar los productos.| Gestor de costos |
-| 3         | Recepción de las compras | Recibir las compras realizadas. | Gestor de costos |
-| 4         | Validar las compras | Revisar las compras que registro concuerdan con lo recibido| Gestor de costos |
-| 5         | Recepción de los gastos administrativos | Recibe en un excel todos los gastos de la administración. | Gestor de costos |
-| 6         | Realizar la suma total de compras y gastos | Realizar operaciones de suma total para obtener cuánto se está costando el producto. | Gestor de costos |
-| 7         | Recepción de costos | Recibir los costos realizados de las compras y los gastos administrativos | Contador |
-| 8         | Asegurar la obtención de los comprobantes de pago de las compras  | Verificar que todos los comprobante de pago en las compras están registrados. | Contador |
-| 9         | Recepción de ventas | Recibir toda la información respecto a las ventas realizadas dentro de la empresa. | Gestor de costos |
-| 10        | Validar las ventas | Revisar que las ventas que registró concuerdan con lo recibido | Gestor de costos|
-| 11        | Realizar la suma total de ventas | Realizar operaciones de suma total para obtener cuánto se está vendiendo. | Gestor de costos |
-| 12        | Recepción de ventas | Recibir toda la información respecto a las ventas realizadas dentro de la empresa. | Contador |
-| 13        | Asegurar la obtención de los comprobantes de pago de las ventas.  | Verificar que todos los comprobante de pago en las ventas están registrados. | Contador |
-| 14        | Registrar Facturas | Se registra todas las facturas de compra de proveedores, ventas y gastos. | Contador |
-| 15        | Registrar transacciones | Se registran los pagos realizados como el flujo de efectivo y bancos. | Contador |
-| 16        | Realizar los asientos contables | Según las operaciones obtenidas se registran en una tabla donde muestra el haber y der en excel. | Contador |
-| 17        | Realizar el estado de resultado | Con los datos registrados se puede calcular la venta total, coste total y utilidades para ver la ganacia verdadera. | Contador |
-| 18        | Realizar Reportes | Realizar reportes de las ganancias, cuento se vende, que producto es más vendido, las pérdidas, etc. | Contador |
+| 1         | Revisar Reportes | Se obtendrá reportes dentro del sistema que da´ran las diferente áreas mediante su alamcenamiento dentro del sistema. | Gestor de costos |.
+| 2         | Registrar el presupuesto en el sistema. | Registrar el presupuesto para que llegue al área de compras para que en base a eso procedan a comprar los productos.| Gestor de costos |
+| 3         | Realizar la suma total de compras , ventas y  gastos dentro del sistema donde solo tendrá que revisar y verificar. | Realizar operaciones de suma total para obtener cuánto se está costando el producto. | Gestor de costos |
+| 4         | Recepción de costos | Recibir los costos realizados de las compras y los gastos administrativos dentro del sistema | Contador |
+| 5         | Asegurar la obtención de los comprobantes de pago de las compras y si no está podrá notificar mediante el sistema. | Verificar que todos los comprobante de pago en las compras están registrados. | Contador |
+| 6         | Registrar Facturas dentro de las ventana emergentes del sistema. | Se registra todas las facturas de compra de proveedores, ventas y gastos. | Contador |
+| 7         | Registrar transacciones | Se registran los pagos realizados como el flujo de efectivo y bancos. | Contador |
+| 8         | Realizar los asientos contables | Según las operaciones obtenidas se registran en una tabla donde muestra el haber y der en excel. | Contador |
+| 9         | Realizar el estado de resultado | Con los datos registrados se puede calcular la venta total, coste total y utilidades para ver la ganacia verdadera. | Contador |
+| 10        | Realizar Reportes | Realizar reportes de las ganancias, cuento se vende, que producto es más vendido, las pérdidas, etc. | Contador |
 
+## Cambios implementados: 
+- Anteriormente los registro se hacen mediante un excel y cuando se recepciona hacia el gesto de costos es median un correo o whattsap pero con el nuevo sistema podra registrar todo en el sitio web de manera que al registrar las ventas, los gastos, costos y pagos automáticamente se tendrá la suma total de todos que se alamnecará en una base datos de manera que eso servirá para realizar automáticamente los asientos contables y el estado de resultados además que dentro del sistema web podra registrar todas las facturas y transacciones donde podra ver el resumen de ello y darse cuenta más fácil que facturas faltan pagar o cobrar.
 
+  
 - Proceso de CRM
 
 ![Proceso de CRM](../Entregable2/ProcesosTOBE/Proceso-CRM-BPMN.png)
@@ -445,6 +462,7 @@
     - Responsabilidades: Permite al gestor de marketing asignar un equipo de marketing a una campaña dandoles una descripción general de las especificaciones.
 
 ### 2.6 Módulo Finanzas
+    - Descripción: 
 ### 2.7 Módulo CRM
 
 ## 3. Requerimientos
