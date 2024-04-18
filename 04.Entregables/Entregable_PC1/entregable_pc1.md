@@ -1051,4 +1051,5 @@ Finanzas:
 [Taipe Sicha Ronny Andy](../../06.Videos_Individuales/VideosPC1/TaipeSichaRonnyAndy_VideoIndividual.md)
 
 [Salazar Uribe Christian Johmar](../../06.Videos_Individuales/VideosPC1/SalazarUribeChristianJohmar_VideoIndividual.md)
-[Peralta Gil, Alexandra ] (https://youtu.be/boQK4ulGiNI)
+
+[Peralta Gil, Alexandra ](https://youtu.be/boQK4ulGiNI)
