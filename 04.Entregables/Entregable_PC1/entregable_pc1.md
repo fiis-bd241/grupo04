@@ -1019,6 +1019,7 @@ Finanzas:
 - Para ver el prototipo de forma general debe ingresar al siguiente enlace:
 
 [Figma](https://www.figma.com/file/JaEtbwPTFhxpp8rVLio8Lc/Proyecto-Migni-Store?type=design&node-id=56-105&mode=design&t=6vRNAXtGiQCHDJhl-0)
+
 [Balsemiq (Momentáneo Almacén)](https://balsamiq.cloud/s8kcngg/pm8ichu)
 
 
