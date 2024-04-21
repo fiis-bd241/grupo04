@@ -540,6 +540,57 @@
       Realizar proyecciones financieras y escenarios hipotéticos para la toma de decisiones estratégicas.
 ### 2.7 Módulo CRM
 
+- Descripción: Este módulo especificamente de fidelización , permite al gestor de CRM tener control sobre control de información para retención de personas. Este gestor es el encargado de visualizar y editar tanto las ofertas y personalización de las vistas (usuarios) de los clientes , siendo asi realizar envios masivos de correos como de envio de formularios , para los cuales se le ha habilitado las opciones de vista de usuarios , importanción de información , creación de correos y formularios , toma decisiones sobre ofertas y soluciones a quejas y reclamos , tomando en cuenta también la revisión de comentarios que hacen en la plataforma , asi como la revisión de la llamadas que se registran en el sentido de devolver llamadas para verificación de clientes potenciales.
+
+
+- Responsabilidades: Gestión de ofertas y personalización de vista de usuarios , creación de correos y formularios , vista de todos los usuarios agrupación de usuarios segun caracteristicas especificas , revisión de analitica y tendencias , solcuión de quejas y reclamos.
+
+
+- Interacción: Con el módulo de compras y almacen.
+
+
+- Detalles de estado:
+  -PREPARACIÓN: Proceso de creación de formularios e mails, en este caso se agrupa por tipo de cliente y se notifica ofertas,noticias , soluciones 
+   a quejas asi como encuestas.
+  -ENVIADA:En esta fase se ha hecho envio de los de los formularios e mails , en proceso de espera de una respuesta o de un numero considerable de 
+   respuestas.
+  -REVISIÓN:Se hace clasificación y se guardan en base de datos para su posterior analisis , de modo para poder tener una visión del impacto 
+   generado y que tanto mejoran las ventas o retención de clientes en la empresa .
+  
+- Funcionalidad:
+
+  **- Home Gestor de CRM**
+    - Responsabilidades: Permite al gestor de CRM tener acceso a las funciones de creación de formularios y mails , visualización de los 
+      datos almacenados y su analisis , asi como modificación de las ofertas para usuarios , osea una vista después del inicio de sesión.
+
+  **- Creacion de forms**
+    - Responsabilidades: Permite al gestor la creación de formularios , para varios fines como los de valor e impacto que genera en los clientes,
+    verificación o gusto de un nuevo producto , ver quejas y fallas , asi como hacer campañas.
+
+  **- creación de mails**
+    - Responsabilidades: Permite al gestor crear mails de manera masiva , con el fin de generar informar o de soluciones personalizadas , con el   
+    fin de poder solucionar imprevistos , notificar de nuevos productos y servicios .
+    - 
+  **- edición de vista de ofertas**
+    - Responsabilidades: Permite al gestor editar esta vista a los usuarios tratando de ser llamativo , para asi poder generar un impacto a los 
+     clientes ,incentivando a comprar mediante descuentos y productos personalizados .
+
+  **- revisión de comentarios**
+    - Responsabilidades: Permite al gestor ver todos los comentarios ,con el fin de ver el punto de vista directo de las personas con la pagina 
+     web , que les parecio o si tuvieron algun inconveniente , poder orientar y poder generar propuestas de cambio.
+      
+  **- creación de base de datos con información relevante**
+    - Responsabilidades: Esta parte es la inserción de la información tanto de formularios , mails , comentarios que los potenciales clientes 
+     dejan sobre la pagina web y los productos o servicios que se brinda, todo para su posterior analisis.
+
+  **- revisión de lista de llamadas**
+    - Responsabilidades: Permite al gestor poder hacer una revisión de llamadas perdidas con el fin de poder comunicarnos con los potenciales 
+     clientes que se pudo haber tenido solucionando la problematica , con el fin de que puedan adquirir nuestro producto o servicio.
+  **- analisis de las bases de datos**
+     - Responsabilidades: Permite al gestor tener una vista de cuanto aumentaron las ventas , si en segmento de cliente de nuestro interes aumenta 
+    sus compras, asi como que tan bueno y necesario , fue en general la pataforma , asi como productos y servicios , todo esto mediante metodos de 
+    analisis.
+
 ## 3. Requerimientos
 ### 3.1 Requerimientos Funcionales
 
