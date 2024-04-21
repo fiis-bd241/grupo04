@@ -298,7 +298,7 @@
   
 - Proceso de CRM
 
-![Proceso de CRM](../Entregable2/ProcesosTOBE/Proceso-CRM-BPMN.png)
+![Proceso de CRM](../Entregable2/ProcesosTOBE/TOBEProcesoCRM.png)
 
 ### 1.3 Motivación
 -  La principal motivación para elegir a "Migni Store" y desarrollar una página web es el potencial de crecimiento que ofrece. Al ser una empresa pequeña en el mercado de la venta de papelería y maquillaje para dama, el 
