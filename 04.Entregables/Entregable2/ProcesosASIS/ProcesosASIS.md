@@ -22,7 +22,11 @@
 
 - Proceso de Finanzas
 
-![Proceso de Finanzas](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable2/ProcesosASIS/Proceso%20ASIS%20finanzas.png)
+![Proceso de Finanzas](ProcesosFinanzas.png)
+
+- Proceso CRM
+
+![Proceso CRM](Proceso-CRM.png)
 
 [Regresar a Entregable 2](../entregable2.md)
 
