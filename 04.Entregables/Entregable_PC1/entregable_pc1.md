@@ -1053,3 +1053,7 @@ Finanzas:
 [Salazar Uribe Christian Johmar](../../06.Videos_Individuales/VideosPC1/SalazarUribeChristianJohmar_VideoIndividual.md)
 
 [Peralta Gil, Alexandra ](https://youtu.be/boQK4ulGiNI)
+
+[Loza Sanchez Gianmarco](../../06.Videos_Individuales/VideosPC1/GianmarcoLozaSanchez_videoindividual.md)
+
+[Montes Lozano Diego](../../06.Videos_Individuales/VideosPC1/MontesLozanoDiegoMartín_Video%20Individual.md)
