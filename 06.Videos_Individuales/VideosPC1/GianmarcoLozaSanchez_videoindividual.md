@@ -1,5 +1,6 @@
 # Video individual
 Gianmarco Loza Sanchez 
 VIDEO:
+[PC1_Video_Loza_Sanchez_CRM](https://drive.google.com/file/d/1RPZhmV4S3eG1zi6FenGZgV0wfnug2631/view?usp=sharing)
 
-https://drive.google.com/drive/u/1/folders/1offADnxyz59SEA50883ts8hZMK5A3RCH
+
