@@ -149,5 +149,7 @@ Módulo 2: Compras
      Utiliza información financiera para optimizar las estrategias de marketing y promoción en función del rendimiento económico de la empresa.
    - Interacción con Autenticación/Registro de Usuario:
      Personaliza las promociones y ofertas según el perfil y las preferencias de los usuarios registrados.
+
+
     
 [Regresar a Entregable 2](entregable2.md)
