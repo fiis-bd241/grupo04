@@ -196,13 +196,14 @@
 | Secuencia | Actividad                                           | Descripción                                                   | Responsable      |
 |-----------|-----------------------------------------------------|---------------------------------------------------------------|------------------|
 | 1         | Cliente ingresa a la web y se logea                | El cliente accede a la plataforma web e inicia sesión.        | Cliente/Plataforma |
-| 2         | Plataforma verifica credenciales y da acceso       | La plataforma valida las credenciales ingresadas por el cliente. Si son correctas, se le concede acceso. | Plataforma       |
-| 3         | Cliente navega por el catálogo de productos        | El cliente explora los productos disponibles en la plataforma. | Cliente          |
-| 4         | Cliente añade productos al carrito de compra       | El cliente selecciona los productos que desea comprar y los agrega al carrito de compra. | Cliente          |
-| 5         | Cliente realiza la compra                           | El cliente procede a confirmar la compra de los productos en su carrito. | Cliente          |
-| 6         | Plataforma registra la compra                       | La plataforma registra la transacción de compra realizada por el cliente. | Plataforma       |
-| 7         | Plataforma envía y muestra código de compra único  | La plataforma genera un código de compra único y lo muestra al cliente. Además, se lo envía. | Plataforma       |
-| 8         | Plataforma envía comprobante de pago por email     | La plataforma envía un comprobante de pago al correo electrónico del cliente. | Plataforma       |
+| 2         | Cliente navega por el catálogo de productos        | El cliente explora los productos disponibles en la plataforma. | Cliente          |
+| 3         | Cliente selecciona productos y añade al carrito    | El cliente selecciona los productos que desea comprar y decide si añadirlos al carrito de compra. | Cliente          |
+| 4         | Cliente confirma método de pago                    | El cliente elige el método de pago que utilizará para realizar la compra. | Cliente          |
+| 5         | Sistema informa los detalles de la compra          | El sistema muestra al cliente un resumen con los detalles de su compra, incluyendo los productos seleccionados y el método de pago. | Plataforma       |
+| 6         | Cliente confirma la compra                         | El cliente confirma la compra después de revisar los detalles proporcionados por el sistema. | Cliente          |
+| 7         | Plataforma registra la compra                       | La plataforma registra la transacción de compra realizada por el cliente. | Plataforma       |
+| 8         | Plataforma envía confirmación de compra con código único | La plataforma envía al cliente una confirmación de compra que incluye un código de compra único. | Plataforma       |
+
 
 ### Cambios que se implementarán en ventas
 1) Se implementará la pagina web que permite realizar **log in**. Los usuarios podrán hacer sus **pedidos** directamente en el **sitio web**.
@@ -213,7 +214,7 @@
 5) Los clientes pueden acceder a su **carro de compras** donde podrán encontrar información sobre su producto. A travez del catalogo se puede añadir los
    productos al carro de compras.
 6) La **emision de comprobante de pago** ya no será manual. La misma página los puede enviar.
-
+7) Con respecto al tema del gestor de ventas, se han establecido permisos para que, al ingresar a la página web en su respectivo rol, pueda acceder a múltiples opciones que un usuario común no puede visualizar, como el historial de ventas. Allí podrá gestionar y revisar la trayectoria de las ventas en cualquier unidad de tiempo, por ejemplo, las ventas del día, de la semana, del mes, etc. Esto con la finalidad de realizar seguimiento a las ventas y los productos más vendidos, tener un mejor conocimiento del inventario que se debe conseguir, y ayuda en las planificaciones financieras en la elaboración de presupuestos.
 - Proceso de Almacén
 
 ![Proceso de Almacén](../Entregable2/ProcesosTOBE/ToBeAlmacen.jpg)
