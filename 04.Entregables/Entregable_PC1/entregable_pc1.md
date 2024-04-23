@@ -353,29 +353,29 @@
 - Funcionalidad:
 
   **- Home Gestor Vendedor**
-    - Responsabilidades: Permite al gestor de ventas manejar y acceder a ventanas y pantallas que permitan cumplir sus responsabilidades.
-  
+    - Responsabilidades: Permite al gestor de ventas manejar y acceder a ventanas y pantallas que le permitan cumplir sus responsabilidades.
+      
   **- Historial de Ventas**
-    - Responsabilidades: Permite al gestor hacer un seguimiento de las ventas que se realizan en un periodo específico (ventas del día, ventas del mes, etc.) con 
+    - Responsabilidades: Permite al gestor hacer un seguimiento de las ventas que se realizan en un período específico (ventas del día, ventas del mes, etc.) con
       datos relevantes (como código de compra, remitente, fecha, importe total de venta, etc.) que brinda a otros módulos (finanzas y CRM) información.
        
   **- Carrito de compras**
-    - Responsabilidades: Es la ventana que permite al usuario visualizar y editar sus productos. Se visualizarán los productos que compre, la cantidad, el código 
-      del producto y el precio total así como si tiene descuento aplicado a ese producto. Permite la posibilidad de volver al catálogo, visualizar información 
-      detallada del producto a comprar, permite seguir con el proceso de compra y pasar a la siguiente ventana de elegir método de pago. También permite ver la 
+    - Responsabilidades: Es la ventana que permite al usuario visualizar y editar sus productos. Se visualizarán los productos que compre, la cantidad, el código
+      del producto y el precio total así como si tiene descuento aplicado a ese producto. Permite la posibilidad de volver al catálogo, visualizar información
+      detallada del producto a comprar, permite seguir con el proceso de compra y pasar a la siguiente ventana de elegir método de pago. También permite ver la
       dirección a donde se va a distribuir este pedido.
       
   **- Pago (Métodos de pago)**
-    - Responsabilidades: Permite al cliente elegir su método de pago, da una pequeña información del producto (un resumen antes de pagar), permite la función de   
-      hacer el pago respectivo luego de elegir su método de pago.
+    - Responsabilidades: Permite al cliente elegir su método de pago, da una pequeña información del producto (un resumen antes de pagar), permite la función de        hacer el pago respectivo luego de elegir su método de pago.
       
   **- Añadir una nueva dirección**
-    - Responsabilidades: Permite al cliente la posibilidad de añadir una nueva dirección si este lo requiere. Básicamente al logearse el usuario tiene que colocar     su dirección para que se guarde y se muestre en el carro de compras. Si el usuario quiere otra dirección lo puede hacer en este apartado del módulo.
- 
-  **- Catalogo de prodductos**
-    - Responsabilidades: Permite al cliente navegar en la pagina web mostrandole todos los productos que tiene que tiene a su disposicion. Puede agregarlos al 
-    carro de compra con un simple boton, tambien puede acceder a mas detalles presionando la imagen (detalles de producto). Por ultimo, es el principal pantalla 
-    que hace que el proceso de venta se pueda realizar. 
+    - Responsabilidades: Permite al cliente la posibilidad de añadir una nueva dirección si este lo requiere. Básicamente al loguearse el usuario tiene que
+      colocar su dirección para que se guarde y se muestre en el carro de compras. Si el usuario quiere otra dirección lo puede hacer en este apartado del módulo.
+
+  **- Catálogo de productos**
+    - Responsabilidades: Permite al cliente navegar en la página web mostrándole todos los productos que tiene a su disposición. Puede agregarlos al
+      carro de compra con un simple botón, también puede acceder a más detalles presionando la imagen (detalles de producto). Por último, es la pantalla principal
+      que hace que el proceso de venta se pueda realizar.
 
   
 ### 2.3 Módulo Almacén
