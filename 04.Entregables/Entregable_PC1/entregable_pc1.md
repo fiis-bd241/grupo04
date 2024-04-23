@@ -191,7 +191,7 @@
 
 - Proceso de Venta
 
-![Proceso de Venta](../Entregable2/ProcesosTOBE/VentaTOBE.png)
+![Proceso de Venta](../Entregable2/ProcesosTOBE/VentaTOBE2.png)
 
 | Secuencia | Actividad                                           | Descripción                                                   | Responsable      |
 |-----------|-----------------------------------------------------|---------------------------------------------------------------|------------------|
