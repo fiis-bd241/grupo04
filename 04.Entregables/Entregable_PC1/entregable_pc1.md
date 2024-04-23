@@ -707,7 +707,7 @@
 
 Distribucion
 
-**Caso de uso N°: Establecer fecha y hora de entrega del pedido**
+**Caso de uso N°7: Establecer fecha y hora de entrega del pedido**
 
 | Objetivo | <p align="left">Permitir que el cliente establezca la entrega de pedido .</p> | 
 |:--------------:|--------------|
@@ -727,7 +727,7 @@ Distribucion
 |9|El sistema asigna el estado del pedido en la lista de "Gestionar pedidos" del apartado del gestor de ventas a "PENDIENTE" |
 |10|El caso termina|
 
-**Caso de uso N°: Asignar repartidor**
+**Caso de uso N°8: Asignar repartidor**
 
 | Objetivo | <p align="left">Permitir que el Gestor de ventas pueda asignar un repartidor a cada pedido.</p> | 
 |:--------------:|--------------|
@@ -747,7 +747,7 @@ Distribucion
 |9|El pedido se actualiza en la columna de repartidor a "ASIGNADO"|
 |10|El caso termina|
 
-**Caso de uso N°: Cancelar entrega**
+**Caso de uso N°9: Cancelar entrega**
 
 | Objetivo | <p align="left">Permitir que el cliente establezca una nueva fecha de entrega del pedido.</p> | 
 |:--------------:|--------------|
@@ -767,7 +767,7 @@ Distribucion
 |9|El sistema actualiza la base de datos del repartidor si el pedido ya se le habia asignado uno,y asigna el estado del pedido a "CANCELADO"|
 |10|El caso termina|
 
-**Caso de uso N°: Actualizar estado de pedido a ENTREGADO**
+**Caso de uso N°10: Actualizar estado de pedido a ENTREGADO**
 
 | Objetivo | <p align="left">Permitir que el repartidor logre la entrega de pedido y actualice el estado .</p> | 
 |:--------------:|--------------|
@@ -789,7 +789,7 @@ Distribucion
 |11|El sistema actualiza el estado del pedido a "ENTREGADO" en la seccion de gestionar pedidos del gestor de ventas|
 |12|El caso termina|
 
-**Caso de uso N°: Reprogramar nueva fecha de entrega**
+**Caso de uso N°11: Reprogramar nueva fecha de entrega**
 
 | Objetivo | <p align="left">Permitir que el repartidor establezca una nueva fecha de entrega del pedido,por incovenientes en la entrega.</p> | 
 |:--------------:|--------------|
@@ -812,7 +812,7 @@ Distribucion
 |10|El caso termina|
 
 ### Casos de uso relacionado a modulo ventas
-**Caso de Uso: Inicio de Sesión del Gestor de Ventas**
+**Caso de Uso Nº12: Inicio de Sesión del Gestor de Ventas**
 
 | Objetivo | <p align="left">Permitir al gestor de ventas acceder al sistema iniciando sesión en la plataforma web.</p> | 
 |:--------------:|--------------|
@@ -823,31 +823,44 @@ Distribucion
 | 2 | El sistema presenta la página de inicio de sesión. |
 | 3 | El gestor de ventas ingresa su nombre de usuario y contraseña. |
 | 4 | El sistema valida las credenciales del gestor de ventas. |
-| 5 | El sistema redirige al gestor de ventas a su página de inicio. |
+| 5 | El sistema redirige al gestor de ventas a su página de inicio (Home). |
 | Postcondiciones | El gestor de ventas ha iniciado sesión en la plataforma web y puede comenzar a utilizar las funciones disponibles para su rol. |
 
-**Caso de uso N°: Realizar una Compra**
+**Caso de uso N°13: Realizar una Compra**
 
-| Objetivo | <p align="left">Permitir que el cliente realice una compra en la plataforma de ventas.</p> | 
+| Objetivo | <p align="left">Permitir que el cliente realice una compra en la plataforma de ventas y pueda cambiar su dirección de envío antes de finalizar la transacción.</p> | 
 |:--------------:|--------------|
-| Descripción | Facilitar el proceso de compra para el cliente, desde la selección de productos hasta la finalización de la transacción.  | 
+| Objetivo | <p align="left">Permitir que el cliente realice una compra en la plataforma de ventas y pueda cambiar su dirección de envío antes de finalizar la transacción si lo desea.</p> | 
+|:--------------:|--------------|
+| Descripción | Facilitar el proceso de compra para el cliente, desde la selección de productos hasta la finalización de la transacción, permitiendo además la modificación de la dirección de envío si es necesario.  | 
 | Actor primario   | Cliente | 
 | Actor secundario | Plataforma de Ventas |
-| Precondiciones | El cliente ha accedido a la plataforma de ventas |
+| Precondiciones | El cliente ha accedido a la plataforma de ventas y ha agregado productos al carrito de compras |
 | Paso | <p align="center"> Acción </p> |
-| 1 | El cliente accede a la plataforma de ventas |
+| 1 | El cliente accede a la plataforma |
 | 2 | El cliente navega por el catálogo de productos |
 | 3 | El cliente selecciona los productos deseados y los agrega al carrito de compras |
 | 4 | El cliente decide seguir comprando y vuelve al catálogo para explorar más productos |
 | 5 | El cliente repite los pasos 2 y 3 según sea necesario |
-| 6 | El cliente revisa el carrito de compras y procede al proceso de pago |
-| 7 | El cliente elige un método de pago y proporciona la información necesaria |
-| 8 | La plataforma de ventas procesa el pago y registra la transacción |
-| 9 | La plataforma de ventas envía un comprobante de pago al cliente por correo electrónico |
-| 10 | El cliente recibe el comprobante de pago y finaliza la compra |
-| 11 | El caso termina |
+| 6 | El cliente revisa el carrito de compras y decide si desea cambiar su dirección de envío |
+| 7 | **[Flujo alternativo]** Si el cliente decide cambiar su dirección de envío, sigue el flujo alternativo |
+| 8 | El cliente elige un método de pago y proporciona la información necesaria |
+| 9 | La plataforma de ventas procesa el pago y registra la transacción |
+| 10 | El cliente recibe una confirmación de la transacción en pantalla |
+| 11 | El cliente finaliza la compra |
+| 12 | El caso termina |
 
-**Caso de uso N°: Consultar Historial de Ventas de la Empresa**
+**Flujo alternativo: Cambio de dirección de envío realizado**
+
+| Paso | Acción |
+|-----|--------|
+| 7a | El cliente decide cambiar su dirección de envío |
+| 7b | El cliente selecciona la opción de "Añadir otra dirección" |
+| 7c | El cliente es redirigido a una ventana para agregar una nueva dirección de envío |
+| 7d | El cliente proporciona los detalles de la nueva dirección y confirma |
+| 7e | El cliente vuelve al proceso de pago |
+
+**Caso de uso N°14: Consultar Historial de Ventas de la Empresa**
 
 | Objetivo | <p align="left">Permitir que el gestor acceda al historial de ventas de la empresa en la plataforma de ventas.</p> | 
 |:--------------:|--------------|
@@ -863,11 +876,11 @@ Distribucion
 | 5 | El gestor puede aplicar filtros para buscar ventas específicas por fecha, producto, monto, etc. |
 | 6 | El gestor selecciona una venta específica para ver más detalles |
 | 7 | La plataforma de ventas muestra los detalles de la venta seleccionada, incluyendo fecha, productos vendidos, monto total y cliente asociado |
-| 8 | El gestor puede optar por exportar o imprimir el detalle de la venta para su análisis |
-| 9 | El gestor cierra la consulta del historial de ventas |
-| 10 | El caso termina |
+| 8 | El gestor cierra la consulta del historial de ventas |
+| 9 | El caso termina |
 
-**Caso de uso N°: Elegir Método de Pago**
+
+**Caso de uso N°15: Elegir Método de Pago**
 
 | Objetivo | <p align="left">Permitir que el cliente elija el método de pago al realizar una compra en la plataforma de ventas.</p> | 
 |:--------------:|--------------|
@@ -887,7 +900,7 @@ Distribucion
 | 9 | El cliente confirma la elección del método de pago |
 | 10 | El caso termina |
 
-**Caso de uso N°: Ver Detalles del Producto**
+**Caso de uso N°16: Ver Detalles del Producto**
 
 | Objetivo | <p align="left">Permitir que el cliente acceda a una vista detallada del producto en la plataforma de ventas después de rellenar los datos de su tarjeta.</p> | 
 |:--------------:|--------------|
@@ -896,16 +909,16 @@ Distribucion
 | Actor secundario | Plataforma de Ventas |
 | Precondiciones | El cliente ha iniciado el proceso de pago y ha ingresado los datos de su tarjeta |
 | Paso | <p align="center"> Acción </p> |
-| 1 | Después de ingresar los datos de la tarjeta, el cliente accede a la vista general de productos disponibles |
-| 2 | El cliente examina la lista de productos y decide ver más detalles de un producto específico |
-| 3 | El cliente hace clic en el botón de información (o enlace similar) asociado al producto seleccionado |
-| 4 | La plataforma de ventas muestra una vista detallada del producto, que incluye información como descripción, código, marca, catálogo, tipo de producto, venta, stock restante, precio y cantidad disponible |
-| 5 | El cliente puede revisar la información detallada del producto y decidir continuar con la compra o regresar a la lista de productos |
-| 6 | El cliente puede ajustar la cantidad de productos a comprar si lo desea |
-| 7 | El cliente puede optar por agregar el producto al carrito de compras o seguir explorando otros productos |
-| 8 | El caso termina |
+|-----|---------------------------------|
+| 1   | Después de ingresar los datos de la tarjeta, el cliente accede a la vista general de productos disponibles |
+| 2   | El cliente examina la lista de productos y decide ver más detalles de un producto específico |
+| 3   | El cliente hace clic en el botón de información (o enlace similar) asociado al producto seleccionado |
+| 4   | La plataforma de ventas muestra una vista detallada del producto, que incluye información como descripción, código, marca, catálogo, tipo de producto, venta, stock restante, precio y cantidad disponible |
+| 5   | El cliente revisa la información detallada del producto |
+| 6   | El caso termina |
 
-**Caso de uso N°: Ver Catálogo de Productos**
+
+**Caso de uso N°17: Ver Catálogo de Productos**
 
 | Objetivo | <p align="left">Permitir que el cliente visualice el catálogo completo de productos disponibles en la plataforma de ventas.</p> | 
 |:--------------:|--------------|
@@ -924,7 +937,7 @@ Distribucion
 | 8 | El cliente puede aplicar filtros o categorías para refinar su búsqueda si lo desea |
 | 9 | El caso termina |
 
-**Caso de uso N°: Ver Detalle de Producto desde el Catálogo**
+**Caso de uso N°18: Ver Detalle de Producto desde el Catálogo**
 
 | Objetivo | <p align="left">Permitir que el cliente acceda a una vista detallada de un producto mientras navega por el catálogo en la plataforma de ventas.</p> | 
 |:--------------:|--------------|
@@ -942,7 +955,7 @@ Distribucion
 | 7 | Si el cliente decide proceder a la compra inmediata, selecciona esta opción |
 | 8 | El caso termina |
 
-**Caso de uso N°: Añadir Nueva Dirección de Envío**
+**Caso de uso N°19: Añadir Nueva Dirección de Envío**
 
 | Objetivo | <p align="left">Permitir que el cliente agregue una nueva dirección de envío para recibir sus productos comprados en la plataforma de ventas.</p> | 
 |:--------------:|--------------|
@@ -951,19 +964,21 @@ Distribucion
 | Actor secundario | Plataforma de Ventas |
 | Precondiciones | El cliente ha iniciado sesión en su cuenta en la plataforma de ventas |
 | Paso | <p align="center"> Acción </p> |
-| 1 | El cliente accede a la configuración de su cuenta o a la sección de direcciones de envío |
-| 2 | El cliente selecciona la opción para añadir una nueva dirección |
-| 3 | La plataforma de ventas presenta un formulario para que el cliente ingrese los detalles de la nueva dirección, como nombre del destinatario, dirección, distrito, código postal, etc. |
-| 4 | El cliente completa el formulario con la información de la nueva dirección |
-| 5 | El cliente guarda la nueva dirección |
-| 6 | La plataforma valida la información ingresada por el cliente para asegurar que todos los campos requeridos estén completos y sean válidos |
-| 7 | Si la información es válida, la plataforma confirma que la nueva dirección ha sido añadida con éxito |
-| 8 | Si la información no es válida, la plataforma muestra un mensaje de error y solicita al cliente que corrija los campos incorrectos |
-| 9 | El cliente puede optar por volver a la lista de direcciones o realizar otras acciones en su cuenta |
-| 10 | El caso termina |
+|-----|---------------------------------|
+| 1   | El cliente accede a la configuración de su cuenta o a la sección de direcciones de envío |
+| 2   | El cliente selecciona la opción para añadir una nueva dirección |
+| 3   | La plataforma de ventas presenta un formulario para que el cliente ingrese los detalles de la nueva dirección |
+| 4   | El cliente completa el formulario con la información de la nueva dirección |
+| 5   | El cliente guarda la nueva dirección |
+| 6   | La plataforma valida la información ingresada por el cliente para asegurar que todos los campos requeridos estén completos y sean válidos |
+| 7a  | Si la información es válida, la plataforma confirma que la nueva dirección ha sido añadida con éxito |
+| 7b  | Si la información no es válida, la plataforma muestra un mensaje de error y solicita al cliente que corrija los campos incorrectos |
+| 8   | El cliente cambia su dirección por la nueva que ha ingresado en el formulario |
+| 9   | El caso termina |
+
 
 ### Casos de uso relacionado a modulo almacén
- | Caso de uso: Ver Ingresos, Salidas e Inventario de Productos |
+ | Caso de uso Nº20: Ver Ingresos, Salidas e Inventario de Productos |
  |---------------------|
  | *Descripción:*|
  | El Gestor de Almacén puede acceder a la sección que muestra el ingreso de los productos comprados, para su respectiva venta o para su respectivo uso dentro de la empresa Migni Store, ver dónde están ubicados. De igual manera puede informarse de las salidas que se registran con las ventas con un reporte de Importe de Inventario para saber el Capital Actual. Y el inventario de cada producto con su seguimiento y stock disponible.|
@@ -976,7 +991,7 @@ Distribucion
 |- Interoperabilidad: Integración fácil y eficiente con el sistema de Migni Store. <br> - Fiabilidad: Garantía de que las actualizaciones en el inventario se reflejen correctamente. <br> - Usabilidad: Interfaz clara y fácil de usar para la gestión de productos y cotizaciones.|
 
 Finanzas:
-  ## Caso de Uso: Añadir Factura
+  ## Caso de Uso Nº21: Añadir Factura
 
   | Aspecto            | Detalles |
   |--------------------|----------|
@@ -991,7 +1006,7 @@ Finanzas:
   | 6 | El sistema genera automáticamente el asiento contable correspondiente a la factura. |
   | **Flujo Alternativo** | - Si hay errores en los datos ingresados, el sistema muestra mensajes de error y permite al usuario corregir la información. |
 
-   ## Caso de Uso: Ver Resumen Contable
+   ## Caso de Uso Nº22: Ver Resumen Contable
 
   | Aspecto            | Detalles |
   |--------------------|----------|
@@ -1005,7 +1020,7 @@ Finanzas:
   | 5 | El caso termina. |
   | **Flujo Alternativo** | - Si el usuario no tiene permisos para acceder al resumen contable, el sistema muestra un mensaje de error. |
 
-  ## Caso de Uso: Ver Estado de Resultados
+  ## Caso de Uso Nº23: Ver Estado de Resultados
 
   | Aspecto            | Detalles |
   |--------------------|----------|
@@ -1019,7 +1034,7 @@ Finanzas:
   | 5 | El caso termina. |
   | **Flujo Alternativo** | - Si el usuario no tiene permisos para acceder al estado de resultados, el sistema muestra un mensaje de error. |
 
-  ## Caso de Uso: Ver Asientos Contables
+  ## Caso de Uso Nº24: Ver Asientos Contables
 
   | Aspecto            | Detalles |
   |--------------------|----------|
@@ -1032,7 +1047,7 @@ Finanzas:
   | 4 | El usuario puede filtrar y buscar asientos contables específicos por fecha, número, o tipo. |
   | 5 | El caso termina. |
   | **Flujo Alternativo** | - Si el usuario no tiene permisos para acceder a los asientos contables, el sistema muestra un mensaje de error. |
-  ## Caso de Uso: Ver Reporte Contable en Formato Descargable para GitHub
+  ## Caso de Uso Nº25: Ver Reporte Contable en Formato Descargable para GitHub
 
   | Aspecto            | Detalles |
   |--------------------|----------|
