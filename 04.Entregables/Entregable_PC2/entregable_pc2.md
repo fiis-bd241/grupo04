@@ -19,6 +19,13 @@ Descripción: Empresa o persona que proporciona productos a la empresa
 | telefono | Numero de contacto con el proveedor | A(15) | VARCHAR(15) | NOT NULL |
 | id_est_proveedor | Identificador único del estado del proveedor | A(10) | VARCHAR(10) | NOT NULL |
 
+Entidad: Tipo_est_cotizacion
+
+Descripción: Estado del proveedor en la empresa.
+| Atributo | Descripción | Formato | Naturaleza | Valores |
+|:----------:|:--------------------------------:|:---------------:|:------------------:|:--------:|
+| id_est_proveedor | Identificador único del estado del proveedor | A(10) | VARCHAR(10) | NOT NULL |
+| est_proveedor | Estado del proveedor | A(100) | VARCHAR(100) | NOT NULL |
 
 Entidad: Cotización
 
@@ -37,6 +44,55 @@ Descripción: Estado de la cotizacion presentada por el proveedor.
 |:----------:|:--------------------------------:|:---------------:|:------------------:|:--------:|
 | id_est_cotizacion | Identificador único del estado de la cotizacion | A | CHAR(1) | NOT NULL |
 | est_cotizacion | Estado de la cotizacion | A(100)| VARCHAR(100) | NOT NULL |
+
+Entidad: Producto
+
+Descripción: Son los bienes que la empresa tiene en venta
+| Atributo | Descripción | Formato | Naturaleza | Valores |
+|:----------:|:--------------------------------:|:---------------:|:------------------:|:--------:|
+| id_producto | Identificador único del producto | 99999 | Int | >0 |
+| nombre_producto | Nombre del producto | A(100) | VARCHAR(100) | NOT NULL |
+| descripcion_prod | Descripcion de especificaciones del producto | A(100) | VARCHAR(100) | NOT NULL |
+| cant_min | Cantidad minima que puede haber de un producto | 99 | Int | >0 |
+| cant_min | Cantidad maxima que puede haber de un producto | 999 | Int | >0 |
+| precio_unit | Precio unitario que la empresa asigno a un producto | 999 | Int | >0 |
+| id_categoria_prod | Identificador unico de la categoria de un producto | 999 | Int | >0 |
+| id_cupon | Identificador unico de un cupon | 999 | Int | >0 |
+
+Entidad: Categoria_prod
+
+Descripción: Categoria al que pertenece un producto
+| Atributo | Descripción | Formato | Naturaleza | Valores |
+|:----------:|:--------------------------------:|:---------------:|:------------------:|:--------:|
+| id_categoria_prod | Identificador unico de la categoria de un producto | 999 | Int | >0 |
+| nombre | Nombre de la categoria del producto | A(100)| VARCHAR(100) | NOT NULL |
+| id_tipo_prod | Identificador unico del tipo de producto | 999 | Int | >0 |
+
+Entidad: tipo_prod
+
+Descripción: Tipo de producto al que eertenece un producto
+| Atributo | Descripción | Formato | Naturaleza | Valores |
+|:----------:|:--------------------------------:|:---------------:|:------------------:|:--------:|
+| id_tipo_prod | Identificador unico del tipo de producto | 999 | Int | >0 |
+| nombre | Nombre del tipo de producto | A(100)| VARCHAR(100) | NOT NULL |
+
+Entidad: ProveedorXProducto
+
+Descripción: Relacion entre el proveedor y los productos que ofrece en una cotizacion
+| Atributo | Descripción | Formato | Naturaleza | Valores |
+|:----------:|:--------------------------------:|:---------------:|:------------------:|:--------:|
+| id_producto | Identificador único del producto | 99999 | Int | >0 |
+| RUC_proveedor | RUC del proveedor que lo identifica en la empresa | 99999999999 | CHAR(11) | NOT NULL |
+| precio_prod_prov | Precio unitario que el proveedor asigno a un producto| 999 | Int | >0 |
+
+Entidad: CotizacionXProducto
+
+Descripción: Relacion entre la cotizacion y los productos que nos determina la cantidad de cada producto
+| Atributo | Descripción | Formato | Naturaleza | Valores |
+|:----------:|:--------------------------------:|:---------------:|:------------------:|:--------:|
+| id_cotizacion |  Identificador único de la cotización | 999999 | Int | >0 |
+| id_producto | Identificador único del producto | 99999 | Int | >0 |
+| cantidad | Cantidad de un producto ofrecido en una cotizacion | 999 | Int | >0 |
 
 Entidad: Distrito
 
