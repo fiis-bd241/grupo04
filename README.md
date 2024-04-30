@@ -1,8 +1,12 @@
 # DBD-24-1-GRUPO-4
 Bienvenidos al repositorio del Proyecto de Diseño de Base de Datos del Grupo 4. En este github, se encontrará todos los documentos y archivos referentes al proyecto.
 # Índice
-1. [Integrantes del grupo](01.Integrantes/integrantes.md)
-2. [Empresa](02.Empresa/SeleccionEmpresa.md)
-3. [Entrevista](03.Entrevista/entrevista.md)
-4. [Entregables Y PCs](04.Entregables/entregables.md)
-5. [Glosario](05.Glosario/Glosario.md)
+### 1. [Integrantes del grupo](01.Integrantes/integrantes.md)
+### 2. [Empresa](02.Empresa/SeleccionEmpresa.md)
+### 3. [Entrevista](03.Entrevista/entrevista.md)
+### 4. [Entregables Y PCs](04.Entregables/entregables.md)
+### ENTREGABLE PC2
+- [Entregable PC2](Entregable_PC2/entregable_pc2.md)
+### ENTREGABLE PC1
+- [Entregable PC1](Entregable_PC1/entregable_pc1.md)
+### 5. [Glosario](05.Glosario/Glosario.md)
