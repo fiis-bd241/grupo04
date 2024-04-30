@@ -54,10 +54,11 @@ Descripción: Son los bienes que la empresa tiene en venta
 | nombre_producto | Nombre del producto | A(100) | VARCHAR(100) | NOT NULL |
 | descripcion_prod | Descripcion de especificaciones del producto | A(100) | VARCHAR(100) | NOT NULL |
 | cant_min | Cantidad minima que puede haber de un producto | 99 | Int | >0 |
-| cant_min | Cantidad maxima que puede haber de un producto | 999 | Int | >0 |
+| cant_max | Cantidad maxima que puede haber de un producto | 999 | Int | >0 |
 | precio_unit | Precio unitario que la empresa asigno a un producto | 999 | Int | >0 |
 | id_categoria_prod | Identificador unico de la categoria de un producto | 999 | Int | >0 |
-| id_cupon | Identificador unico de un cupon | 999 | Int | >0 |
+| Id_cupón | Identificador unico del cupón aplicado al producto | 9999 | Int | NOT NULL |
+| Id_campaña | Identificador unico de la campaña activa que promociona al producto | 999999 | Int | NOT NULL |
 
 Entidad: Categoria_prod
 
@@ -155,6 +156,42 @@ Descripcion:
 |Id_repartidor|Codigo del repartidor encargado de realizar la entrega |9999999|INT|NOT NULL|
 |Id_vemta|Codigo de la venta realizada que se va a entregar|9999|INT|NOT NULL|
 |Id_persona|Codigo de la persona/cliente que realizó compra|9999999|INT|NOT NULL|
+
+Entidad: Equipo marketing
+
+Descripción: Conjunto de empleados pertenecientes al área de marketing encargados de crear las campañas.
+| Atributo | Descripción | Formato | Naturaleza | Valores |
+|:----------:|:--------------------------------:|:---------------:|:------------------:|:--------:|
+| Id_equipo_mark | Identificador único del equipo de marketing | 99 | INT | NOT NULL |
+| nombre_equipo | Nombre perteneciente al equipo de marketing | A(100) | VARCHAR(100) | NOT NULL |
+| cant_emp | Cantidad de empleados del equipo de marketing  | 9 | INT | >0 |
+
+Entidad: Cupón
+
+Descripción: Billete que puede ser intercambiado por el descuento de un producto.
+| Atributo | Descripción | Formato | Naturaleza | Valores |
+|:----------:|:--------------------------------:|:---------------:|:------------------:|:--------:|
+| Id_cupón | Identificador único del cupón | 9999 | INT | NOT NULL |
+| fecha_ini_cup | Fecha a partir de la cual es válido el cupón | AAAA/MM/DD | DATE | NOT NULL |
+| fecha_fin_cup | Fecha hasta la cual es válido el cupón  | AAAA/MM/DD | DATE | NOT NULL |
+| desc_cup | Descuento porcentual en forma decimal que aplica el cupón a un producto | 9.99 | FLOAT | >0 |
+| esta_activo | Respuesta a, ¿el estado del cupón es válido? | A(5) | BOOLEAN | NOT NULL |
+
+Entidad: Campaña
+
+Descripción: Proyecto de comunicación de los productos y sus promociones en la tienda.
+| Atributo | Descripción | Formato | Naturaleza | Valores |
+|:----------:|:--------------------------------:|:---------------:|:------------------:|:--------:|
+| Id_campaña | Identificador único de la campaña | 999999 | INT | NOT NULL |
+| fecha_ini | Fecha a partir de la cual es válida la campaña | AAAA/MM/DD | DATE | NOT NULL |
+| fecha_fin | Fecha hasta la cual es válida la campaña  | AAAA/MM/DD | DATE | NOT NULL |
+| canal_publi | Red social o página web en la que se transmite la campaña publicitaria | A(100) | VARCHAR(100) | NOT NULL |
+| dir_url | Dirección URL a la que se redirige al usuario al precionar en la publicidad | A(100) | VARCHAR(100) | NOT NULL |
+| modalidad | Modalidad de publicidad en la red social o página web | A(100) | VARCHAR(100) | NOT NULL |
+| archivo | Dirección URL que contiene el archivo jpg o mp4 de la publicidad | A(100) | VARCHAR(100) | NOT NULL |
+| desc_campaña | Descuento porcentual en forma decimal que realiza la campaña a los productos que contiene | 9.99 | FLOAT | >0 |
+| Id_equipo_mark | Identificador único del equipo de marketing que creó la campaña | 99 | INT | NOT NULL |
+| Id_gest_mark | Identificador único del gestor de marketing que gestionó la campaña | 9999999 | INT | NOT NULL |
 
 
 # 3. Creación de tablas
