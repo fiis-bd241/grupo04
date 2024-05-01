@@ -121,7 +121,6 @@ Descripcion : Persona que realiza la entrega de los pedidos
 |Id_repartidor|Codigo identificador del repartidor|9999999|INT|NOT NULL|
 |usuario|nombre del usuario de la cuenta del repartidor|A(100)|VARCHAR(100)|NOT NULL|
 |contraseña|contraseña de la cuenta del repartidor|A(100)|VARCHAR(100)|NOT NULL|
-|Nombre|Nombres del repartidor|A(100)|VARCHAR(100)|NOT NULL|
 |Apellido|Apellidos del repartidor|A(100)|VARCHAR(100)|NOT NULL|
 |id_zona|zona asignada al repartidor|99|INT|NOT NULL|
 
@@ -143,8 +142,8 @@ Descripcion: Metodo de traslado recomendable para la entrega
 |---------|-------|-------|----|-----------|
 |id_ruta|Codigo identificador de la ruta|99|INT|NOT NULL|
 |distrito_inicial|Distrito inicial de la ruta |A(100)|VARCHAR(100)|NOT NULL|
-|distrito_final|Cantidad de distritos en la zona|A(100)|VARCHAR(100)|NOT NULL|
-|Tiempo_prom|Tiempo estimado que demora trasladar del primer distrito al otro|AAAAAAAA|VARCHAR(100)|NOT NULL
+|distrito_final|Distrito final de la ruta|A(100)|VARCHAR(100)|NOT NULL|
+|Tiempo_prom|Tiempo estimado que demora trasladar del primer distrito al otro|AA:AA:AA|TIME|NOT NULL
 |medio_transporte|Medio de transporte |Medio de tranporte recomendo para trasladarse|A(100)|VARCHAR(100)|NOT NULL|
 
 Entidad: Pedido 
@@ -155,8 +154,7 @@ Descripcion: Registro de las entregas que se realizan
 |---------|-------|-------|----|-----------|
 |Id_pedido|Codigo identificador del pedido|9999|INT|NOT NULL|
 |fecha_entrega|Fecha que se va a realizar la entrega|DD/MM/AA|DATE|Valido en calendario|
-|estado|Estado en que se encuentra el pedido|99|INT|NOT NULL|
-|hora_entrega|Hora que se va a realizar la entrega|hh:mm|TIME|NOT NULL|
+|id_est_pedido|Estado en que se encuentra el pedido|99|INT|NOT NULL|
 |Id_ruta|Codigo de la ruta recomendada asignada a la entrega|99|INT|NOT NULL|
 |Id_repartidor|Codigo del repartidor encargado de realizar la entrega |9999999|INT|NOT NULL|
 |Id_vemta|Codigo de la venta realizada que se va a entregar|9999|INT|NOT NULL|
