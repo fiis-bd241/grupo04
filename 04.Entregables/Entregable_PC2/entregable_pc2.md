@@ -1225,6 +1225,8 @@ INSERT INTO Comentario (Id_comentario, descrip_comentario, fecha_comentario, hor
 # 5. Videos individuales
 [Quispe Mitma Cesar](../../06.Videos_Individuales/VideosPC2/Quispe_Mitma_Cesar_Fernando-VideoIndividual.md)
 
+[Damian Cutisaca Jhon Kenedy](../../06.Videos_Individuales/VideosPC2/2Damian_Cutisaca_Jhon_Kenedy_VideoIndividual.md)
+
 [Montes Lozano Diego](../../06.Videos_Individuales/VideosPC2/Montes_Lozano_Diego_Martín_VideoIndividual.md)
 
 # 6. ENTREVISTA
