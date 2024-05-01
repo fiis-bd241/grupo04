@@ -313,7 +313,7 @@ CREATE TABLE tipo_asiento_contable
 
 CREATE TABLE Tipo_Genero
 (
-  Id_tipo_genero VARCHAR(2) NOT NULL,
+  Id_tipo_genero CHAR(1) NOT NULL,
   tipo_genero VARCHAR(100) NOT NULL,
   PRIMARY KEY (Id_tipo_genero)
 );
@@ -372,7 +372,7 @@ CREATE TABLE Persona
   Id_cargo VARCHAR(20),
   Id_equipo_mark INT,
   Cod_area VARCHAR(100),
-  Id_tipo_genero VARCHAR(2) NOT NULL,
+  Id_tipo_genero CHAR(1) NOT NULL,
   PRIMARY KEY (Id_persona),
   FOREIGN KEY (Id_distrito) REFERENCES distrito(Id_distrito),
   FOREIGN KEY (Id_cargo) REFERENCES Rol(Id_rol),
