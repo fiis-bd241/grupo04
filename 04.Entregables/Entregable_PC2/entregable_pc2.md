@@ -754,7 +754,7 @@ CREATE TABLE Pedido
 
 [![Video](https://img.youtube.com/vi/ohOmEIjYwds/0.jpg)](https://www.youtube.com/watch?v=ohOmEIjYwds)
 
-
+[Montes Lozano Diego](../../06.Videos_Individuales/VideosPC2/Montes_Lozano_Diego_Martín_VideoIndividual.md)
 
 # 6. ENTREVISTA
 ## Link
