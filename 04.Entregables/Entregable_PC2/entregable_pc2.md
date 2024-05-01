@@ -752,6 +752,10 @@ CREATE TABLE Pedido
 # 5. Videos individuales
 [Quispe Mitma Cesar](../../06.Videos_Individuales/VideosPC2/Quispe_Mitma_Cesar_Fernando-VideoIndividual.md)
 
+[![Video](https://img.youtube.com/vi/ohOmEIjYwds/0.jpg)](https://www.youtube.com/watch?v=ohOmEIjYwds)
+
+
+
 # 6. ENTREVISTA
 ## Link
 - [Entrevista1](https://drive.google.com/drive/folders/1TTn2h-Z3sSz5ciMGMDi5mqIKiaWJ94f7?usp=sharing)
