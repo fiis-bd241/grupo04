@@ -223,7 +223,7 @@ Descripción: Registro de las transacciones comerciales realizadas por los clien
 | Atributo       | Descripción                                   | Formato     | Naturaleza | Valores    |
 |----------------|-----------------------------------------------|-------------|------------|------------|
 | id_venta       | Código identificador de la venta              | 9999        | INT        | NOT NULL   |
-| id_persona     | Identificador único del cliente               | 99999999    | VARCHAR(100)| NOT NULL   |
+| Id_persona     | Identificador único del cliente               | 99999999    | INT | NOT NULL   |
 | monto_final    | Monto total de la venta                       | 99.99       | FLOAT      | NOT NULL   |
 | id_detalle_pago| ID del detalle de pago asociado a la venta    | 9999        | INT        | NOT NULL   |
 
