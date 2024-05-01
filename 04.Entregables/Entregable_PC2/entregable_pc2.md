@@ -146,7 +146,7 @@ Descripcion: Metodo de traslado recomendable para la entrega
 
 Entidad: Pedido 
 
-Descripcion: 
+Descripcion: Registro de las entregas que se realizan 
 
 |Atributo|Descripcion|Formato|Naturaleza|Valores|
 |---------|-------|-------|----|-----------|
@@ -158,6 +158,13 @@ Descripcion:
 |Id_repartidor|Codigo del repartidor encargado de realizar la entrega |9999999|INT|NOT NULL|
 |Id_vemta|Codigo de la venta realizada que se va a entregar|9999|INT|NOT NULL|
 |Id_persona|Codigo de la persona/cliente que realizó compra|9999999|INT|NOT NULL|
+
+Entidad : Tipo_est_pedido
+
+|Atributo|Descripcion|Naturaleza|
+|--|--|--|
+|id_est_pedido|Codigo identificador del pedido|INT|
+|estado_pedido|Estado en que se encuentra el pedido|VARCHAR(100)|
 
 Entidad: Equipo marketing
 
