@@ -1,5 +1,5 @@
-#Montes Lozano Diego Martín- 20210251D
+# Montes Lozano Diego Martín- 20210251D
 
 [Video Individual](https://youtu.be/qljueE3R0nI)
 
-[![Video](https://img.youtube.com/vi/ohOmEIjYwds/0.jpg)](https://youtu.be/qljueE3R0nI)
+[![Video]()](https://youtu.be/qljueE3R0nI)
