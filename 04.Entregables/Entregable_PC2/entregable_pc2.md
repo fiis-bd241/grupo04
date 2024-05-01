@@ -750,5 +750,9 @@ CREATE TABLE Pedido
 # 4. Poblamiento inicial de datos
 
 # 5. Videos individuales
+[Quispe Mitma Cesar](../../06.Videos_Individuales/VideosPC2/Quispe_Mitma_Cesar_Fernando-VideoIndividual.md)
 
-
+# 6. ENTREVISTA
+## Link
+- [Entrevista1](https://drive.google.com/drive/folders/1TTn2h-Z3sSz5ciMGMDi5mqIKiaWJ94f7?usp=sharing)
+[![Video](https://img.youtube.com/vi/9kZT8WSCRc4/0.jpg)](https://www.youtube.com/watch?v=9kZT8WSCRc4)
