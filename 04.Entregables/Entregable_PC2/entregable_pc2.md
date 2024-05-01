@@ -973,12 +973,24 @@ select * from Producto
 insert into CotizaciónxProducto values (12, 10, 3);
 insert into CotizaciónxProducto values (11, 10, 2);
 insert into CotizaciónxProducto values (8, 10, 1);
+insert into CotizaciónxProducto values (12, 11, 3);
+insert into CotizaciónxProducto values (12, 11, 2);
+insert into CotizaciónxProducto values (8, 11, 1);
+insert into CotizaciónxProducto values (15, 13, 3);
+insert into CotizaciónxProducto values (15, 13, 2);
+insert into CotizaciónxProducto values (00, 13, 1);
 select * from CotizaciónxProducto
 
 --proveedorxproducto
 insert into ProveedorxProducto values (4.8, '3','20603302151');
 insert into ProveedorxProducto values (6.0, '2', '20603302151');
 insert into ProveedorxProducto values (11.0, '1', '20603302151');
+insert into ProveedorxProducto values (5.1, '3','20607504149');
+insert into ProveedorxProducto values (6.2, '2', '20607504149');
+insert into ProveedorxProducto values (12.0, '1', '20607504149');
+insert into ProveedorxProducto values (5.5, '3','20789101234');
+insert into ProveedorxProducto values (6.3, '2', '20789101234');
+insert into ProveedorxProducto values (12.2, '1', '20789101234');
 select * from ProveedorxProducto
 
 --Tipos_pago 
@@ -1051,8 +1063,6 @@ select * from Pedido;
 
 # 5. Videos individuales
 [Quispe Mitma Cesar](../../06.Videos_Individuales/VideosPC2/Quispe_Mitma_Cesar_Fernando-VideoIndividual.md)
-
-[![Video](https://img.youtube.com/vi/ohOmEIjYwds/0.jpg)](https://www.youtube.com/watch?v=ohOmEIjYwds)
 
 [Montes Lozano Diego](../../06.Videos_Individuales/VideosPC2/Montes_Lozano_Diego_Martín_VideoIndividual.md)
 
