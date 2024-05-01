@@ -396,7 +396,7 @@ CREATE TABLE Cupón
   Id_cupón INT NOT NULL,
   fecha_ini_cup DATE NOT NULL,
   fecha_fin_cup DATE NOT NULL,
-  desc_cup FLOAT NOT NULL,
+  desc_cup FLOAT,
   esta_activo BOOLEAN NOT NULL NOT NULL,
   PRIMARY KEY (Id_cupón)
 );
