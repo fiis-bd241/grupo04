@@ -290,7 +290,7 @@ CREATE TABLE Equipo_Marketing
 (
   Id_equipo_mark INT NOT NULL,
   nombre_equipo VARCHAR(100) NOT NULL,
-  cant_emp INT NOT NULL,
+  cant_emp INT,
   PRIMARY KEY (Id_equipo_mark)
 );
 
@@ -397,7 +397,7 @@ CREATE TABLE Cupón
   fecha_ini_cup DATE NOT NULL,
   fecha_fin_cup DATE NOT NULL,
   desc_cup FLOAT,
-  esta_activo BOOLEAN NOT NULL NOT NULL,
+  esta_activo BOOLEAN NOT NULL,
   PRIMARY KEY (Id_cupón)
 );
 
@@ -469,7 +469,7 @@ CREATE TABLE Campaña
   dir_url VARCHAR(100) NOT NULL,
   modalidad VARCHAR(100) NOT NULL,
   archivo VARCHAR(100) NOT NULL,
-  des_campaña FLOAT NOT NULL,
+  des_campaña FLOAT,
   Id_equipo_mark INT NOT NULL,
   Id_gest_mark INT NOT NULL,
   PRIMARY KEY (Id_campaña),
@@ -729,12 +729,17 @@ CREATE TABLE Inventario
   FOREIGN KEY (Id_ubicacion) REFERENCES Ubicacion(Id_ubicacion)
 );
 
+CREATE TABLE Tipo_est_pedido (
+    est_pedido VARCHAR(1) PRIMARY KEY,
+    descripcion VARCHAR(50) NOT NULL
+);
+
 CREATE TABLE Pedido
 (
   Id_pedido INT NOT NULL,
   fecha_entrega DATE NOT NULL,
   est_pedido VARCHAR(100) NOT NULL,
-  hora_entrega INT NOT NULL,
+  hora_entrega TIME,
   Id_ruta INT NOT NULL,
   Id_repartidor INT NOT NULL,
   Id_venta INT NOT NULL,
