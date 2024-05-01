@@ -1307,6 +1307,8 @@ INSERT INTO Comentario (Id_comentario, descrip_comentario, fecha_comentario, hor
 
 [Montes Lozano Diego](../../06.Videos_Individuales/VideosPC2/Montes_Lozano_Diego_Martín_VideoIndividual.md)
 
+[Taipe Sicha Ronny Andy](../../06.Videos_Individuales/VideosPC2/Taipe_Sicha_Ronny_Andy-VideoIndividual.md)
+
 # 6. ENTREVISTA
 ## Link
 - [Entrevista1](https://drive.google.com/drive/folders/1TTn2h-Z3sSz5ciMGMDi5mqIKiaWJ94f7?usp=sharing)
