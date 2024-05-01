@@ -306,7 +306,7 @@ CREATE TABLE Ruta
   Id_ruta INT NOT NULL,
   distrito_inicial VARCHAR(100) NOT NULL,
   distrito_final VARCHAR(100) NOT NULL,
-  Tiempo_prom  NOT NULL,
+  Tiempo_prom VARCHAR(100) NOT NULL,
   medio_transporte VARCHAR(100) NOT NULL,
   PRIMARY KEY (Id_ruta)
 );
