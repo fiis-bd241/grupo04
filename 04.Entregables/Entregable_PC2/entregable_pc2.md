@@ -4,6 +4,8 @@
 
 ## 2.1 Módelo Lógico
 
+![Módelo Lógico](Modelo_Logico_v1.png)
+[Módelo Lógico](Modelo_Logico_v1.png)
 ## 2.2 Diccionario de Datos
 
 Entidad: Proveedor
