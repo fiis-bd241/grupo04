@@ -195,6 +195,50 @@ Descripción: Proyecto de comunicación de los productos y sus promociones en la
 | Id_equipo_mark | Identificador único del equipo de marketing que creó la campaña | 99 | INT | NOT NULL |
 | Id_gest_mark | Identificador único del gestor de marketing que gestionó la campaña | 9999999 | INT | NOT NULL |
 
+Entidad: Tipo de Pago
+
+Descripción: Métodos de pago aceptados en el sistema de ventas
+
+| Atributo    | Descripción                                 | Formato     | Naturaleza | Valores    |
+|-------------|---------------------------------------------|-------------|------------|------------|
+| id_tipo_pago| Código identificador del tipo de pago       | 99          | INT        | NOT NULL   |
+| nombre_tipo | Nombre del tipo de pago                     | A(100)      | VARCHAR(100) | NOT NULL |
+| nro_tarjeta | Número de tarjeta asociado al tipo de pago | A(50)       | VARCHAR(50)  |     >0   |
+
+Entidad: Detalle de Pago
+
+Descripción: Registro detallado de los pagos realizados en el sistema de ventas
+
+| Atributo       | Descripción                            | Formato     | Naturaleza | Valores    |
+|----------------|----------------------------------------|-------------|------------|------------|
+| id_detalle_pago| Código identificador del detalle de pago | 9999      | INT        | NOT NULL   |
+| fecha_pago     | Fecha en la que se realizó el pago     | DD/MM/AAAA  | DATE       | NOT NULL   |
+| hora_pago      | Hora en la que se realizó el pago      | HH:MM       | VARCHAR(10)| NOT NULL   |
+| id_tipo_pago   | ID del tipo de pago utilizado          | 99          | INT        | NOT NULL   |
+
+Entidad: Venta
+
+Descripción: Registro de las transacciones comerciales realizadas por los clientes.
+
+| Atributo       | Descripción                                   | Formato     | Naturaleza | Valores    |
+|----------------|-----------------------------------------------|-------------|------------|------------|
+| id_venta       | Código identificador de la venta              | 9999        | INT        | NOT NULL   |
+| id_persona     | Identificador único del cliente               | 99999999    | VARCHAR(100)| NOT NULL   |
+| monto_final    | Monto total de la venta                       | 99.99       | FLOAT      | NOT NULL   |
+| id_detalle_pago| ID del detalle de pago asociado a la venta    | 9999        | INT        | NOT NULL   |
+
+Entidad: VentaXProd
+
+Descripción: Registro de los productos vendidos en cada transacción.
+
+| Atributo       | Descripción                                         | Formato   | Naturaleza | Valores  |
+|----------------|-----------------------------------------------------|-----------|------------|----------|
+| id_venta_prod  | Código identificador de la venta del producto       | 999999    | INT        | NOT NULL |
+| id_venta       | Identificador único de la venta asociada            | 9999      | INT        | NOT NULL |
+| id_producto    | Identificador único del producto vendido            | 9999      | INT        | NOT NULL |
+| cant_prod      | Cantidad del producto vendido                       | 9999      | INT        | NOT NULL |
+| monto_prod     | Monto total del producto vendido                    | 99.99     | FLOAT      | NOT NULL |
+
 
 # 3. Creación de tablas
 
