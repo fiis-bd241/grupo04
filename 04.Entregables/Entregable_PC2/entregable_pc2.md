@@ -338,6 +338,74 @@ Descripción: Entidad la cual almacena los comentarios de los usuarios que esten
 |Id_persona|Codigo identificador de la persona|99999999|INT|NOT NULL|
 |Id_producto|Codigo identificador del producto|99999999|INT|NOT NULL|
 
+# Diccionario de Datos
+
+## Tipo_presupuesto
+| Campo             | Tipo      | Descripción                            |
+|-------------------|-----------|----------------------------------------|
+| Id_tipo_presupuesto | INT     | Identificador único del tipo de presupuesto. |
+| nombre_tipo       | VARCHAR   | Nombre del tipo de presupuesto.        |
+
+## Tipo_item_est
+| Campo              | Tipo      | Descripción                            |
+|--------------------|-----------|----------------------------------------|
+| Id_tipo_item_est   | INT       | Identificador único del tipo de item del estado de resultados. |
+| nombre_tipo_item   | VARCHAR   | Nombre del tipo de item del estado de resultados. |
+| tipo_valor         | VARCHAR   | Tipo de valor del item del estado de resultados. |
+
+## tipo_asiento_contable
+| Campo                   | Tipo      | Descripción                            |
+|-------------------------|-----------|----------------------------------------|
+| id_tipo_asiento_contable | INT     | Identificador único del tipo de asiento contable. |
+| denominación_tipo       | INT       | Denominación del tipo de asiento contable. |
+| descripción_tipo        | VARCHAR   | Descripción del tipo de asiento contable. |
+
+## Estado_de_Resultados
+| Campo                   | Tipo      | Descripción                            |
+|-------------------------|-----------|----------------------------------------|
+| id_estado_de_resultados | INT     | Identificador único del estado de resultados. |
+| periodo                 | INT       | Periodo del estado de resultados.     |
+| mes                     | INT       | Mes del estado de resultados.         |
+
+## Factura
+| Campo            | Tipo      | Descripción                            |
+|------------------|-----------|----------------------------------------|
+| nro_factura      | INT       | Número único de factura.               |
+| fecha_emision    | DATE      | Fecha de emisión de la factura.       |
+| monto            | FLOAT     | Monto de la factura.                   |
+| RUC_proveedor    | CHAR(11)  | RUC del proveedor asociado a la factura. |
+| Id_persona       | VARCHAR   | Identificador único de la persona asociada a la factura. |
+
+## Presupuesto
+| Campo             | Tipo      | Descripción                            |
+|-------------------|-----------|----------------------------------------|
+| Id_presupuesto    | INT       | Identificador único del presupuesto.   |
+| fecha_elaboracion | DATE      | Fecha de elaboración del presupuesto. |
+| Id_tipo_presupuesto | INT     | Identificador del tipo de presupuesto asociado. |
+| Id_persona        | VARCHAR   | Identificador único de la persona asociada al presupuesto. |
+
+## Asiento_Contable
+| Campo                    | Tipo      | Descripción                            |
+|--------------------------|-----------|----------------------------------------|
+| Id_asiento_contable      | INT       | Identificador único del asiento contable. |
+| cant_debe                | FLOAT     | Cantidad a debitar en el asiento contable. |
+| cant_haber               | FLOAT     | Cantidad a acreditar en el asiento contable. |
+| nro_factura              | INT       | Número de factura asociado al asiento contable. |
+| id_tipo_asiento_contable | INT       | Identificador del tipo de asiento contable asociado. |
+
+## Item_estado_resultados
+| Campo                  | Tipo      | Descripción                            |
+|------------------------|-----------|----------------------------------------|
+| Id_item_est__resultados | INT      | Identificador único del item del estado de resultados. |
+| Id_asiento_contable   | INT       | Identificador del asiento contable asociado al item del estado de resultados. |
+| Id_tipo_item_est      | INT       | Identificador del tipo de item del estado de resultados asociado. |
+
+## EstadoxItem
+| Campo                  | Tipo      | Descripción                            |
+|------------------------|-----------|----------------------------------------|
+| Monto_                 | INT       | Monto asociado al item del estado de resultados. |
+| Id_item_est__resultados | INT      | Identificador del item del estado de resultados asociado. |
+| id_estado_de_resultados | INT       | Identificador del estado de resultados asociado. |
 
 
 
