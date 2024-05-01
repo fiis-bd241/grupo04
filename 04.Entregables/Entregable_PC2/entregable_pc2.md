@@ -1525,7 +1525,7 @@ select * from EstadoxItem
 [Taipe Sicha Ronny Andy](../../06.Videos_Individuales/VideosPC2/Taipe_Sicha_Ronny_Andy-VideoIndividual.md)
 
 [Loza Sanchez Gianmarco](../../06.Videos_Individuales/VideosPC2/Loza_Sanchez_Gianmarco_VideoIndividual.md)
-
+[Peralta Gil, Alexandra Valentina] (https://youtu.be/ZQ8QLYr6Hug)
 
 # 6. ENTREVISTA
 ## Link
