@@ -263,6 +263,8 @@ Entidad Pregunta
 
 Descripción: Entidad la cual almacena las preguntas que se van a usar en un formulario , este llama o toma en cuenta la alterntiva aunque no necesariamente.
 
+|Atributo|Descripcion|Formato|Naturaleza|Valores|
+|---------|-------|-------|----|-----------|
 |Id_pregunta|Codigo identificador de la Pregunta|99999|INT|NOT NULL|
 |Pregunta|Es la pregunta pero explicada , que es visible para el encuestado| A(200) |VARCHAR(200) |NOT NULL|
 |tipo_preg|Es el tipo de pregunta , dependiendo de este se llamara o no a la alternativa| A(100) |VARCHAR(100) |NOT NULL|
@@ -272,6 +274,8 @@ Entidad Respuesta
 
 Descripción: Entidad la cual almacena las respuestas a las preguntas del formulario.
 
+|Atributo|Descripcion|Formato|Naturaleza|Valores|
+|---------|-------|-------|----|-----------|
 |Id_respuesta|Codigo identificador de la Respuesta |99999|INT|NOT NULL|
 |Respuesta|Es la respuesta descrita como envio el encuestado| A(500) |VARCHAR(500) |NOT NULL|
 |Id_formulario|Codigo identificador del formulario |99999|INT|NOT NULL|
@@ -281,6 +285,8 @@ Entidad PreguntaxRespuesta
 
 Descripción: Entidad que almacena la relacion de respuestas por cada pregunta.
 
+|Atributo|Descripcion|Formato|Naturaleza|Valores|
+|---------|-------|-------|----|-----------|
 |Id_pregunta|Codigo identificador de la Pregunta|99999|INT|NOT NULL|
 |Id_respuesta|Codigo identificador de la Respuesta |99999|INT|NOT NULL|
 
@@ -288,6 +294,9 @@ Descripción: Entidad que almacena la relacion de respuestas por cada pregunta.
 Entidad FormularioxPregunta
 
 Descripción: Entidad la cual almacena la relacion de preguntas que pertenecen a un formulario.
+
+|Atributo|Descripcion|Formato|Naturaleza|Valores|
+|---------|-------|-------|----|-----------|
 |Id_pregunta|Codigo identificador de la Pregunta|99999|INT|NOT NULL|
 |Id_formulario|Codigo identificador del formulario|99999|INT|NOT NULL|
 
@@ -296,6 +305,8 @@ Entidad Formulario
 
 Descripción: Entidad la cual almacena los formularios asi como sus caracteristicas claves.
 
+|Atributo|Descripcion|Formato|Naturaleza|Valores|
+|---------|-------|-------|----|-----------|
 |Id_formulario|Codigo identificador del formulario|99999|INT|NOT NULL|
 |descrip_formulario|Es la explicación de que trata el formulario creado| A(500) |VARCHAR(500) |NOT NULL|
 |fecha_creacion|Fecha en la que se creo el formulario |DD/MM/AA|DATE|Valido en calendario|
@@ -307,6 +318,8 @@ Entidad Tipo_est_formulario
 
 Descripción: Entidad la cual almacena los estados en el que se encuentra o podria encontrarse el formulario.
 
+|Atributo|Descripcion|Formato|Naturaleza|Valores|
+|---------|-------|-------|----|-----------|
 |Id_est_formulario|Codigo identificador del estado en el que se encuentra el formulario |999|INT|NOT NULL|
 |est_formulario|Es la descripción del estado del formulario | A(100) |VARCHAR(100) |NOT NULL|
 
@@ -316,6 +329,8 @@ Entidad Comentario
 
 Descripción: Entidad la cual almacena los comentarios de los usuarios que esten registrados a la plataforma , estos comentarios estan referidos a un producto.
 
+|Atributo|Descripcion|Formato|Naturaleza|Valores|
+|---------|-------|-------|----|-----------|
 |Id_comentario|Codigo identificador del Comentario |99999|INT|NOT NULL|
 |descrip_comentario|Es la parte descriptiva el cual muestra lo que el usuario escribio sobre el producto| A(200) |VARCHAR(200) |NOT NULL|
 |fecha_comentario|Fecha en la que se envio el comentario del usuario |DD/MM/AA|DATE|Valido en calendario|
