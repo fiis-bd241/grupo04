@@ -494,19 +494,6 @@ CREATE TABLE Factura
   FOREIGN KEY (Id_persona) REFERENCES Persona(Id_persona)
 );
 
-
-CREATE TABLE Almacen
-(
-  id_almacen INT NOT NULL,
-  Cod_area VARCHAR(100) NOT NULL,
-  Id_persona INT NOT NULL,
-  Id_tipo_prod INT NOT NULL,
-  PRIMARY KEY (id_almacen),
-  FOREIGN KEY (Cod_area) REFERENCES Area(Cod_area),
-  FOREIGN KEY (Id_persona) REFERENCES Persona(Id_persona),
-  FOREIGN KEY (Id_tipo_prod) REFERENCES tipo_prod(Id_tipo_prod)
-);
-
 CREATE TABLE Presupuesto
 (
   Id_presupuesto INT NOT NULL,
@@ -547,30 +534,6 @@ CREATE TABLE Estado_de_resultado
   Id_item_est__resultados INT NOT NULL,
   PRIMARY KEY (id_est_resultados),
   FOREIGN KEY (Id_item_est__resultados) REFERENCES Item_estado_resultados(Id_item_est__resultados)
-);
-
-CREATE TABLE Secciones
-(
-  id_seccion CHAR(1) NOT NULL,
-  id_almacen INT NOT NULL,
-  PRIMARY KEY (id_seccion),
-  FOREIGN KEY (id_almacen) REFERENCES Almacen(id_almacen)
-);
-
-CREATE TABLE Estands
-(
-  id_estand INT NOT NULL,
-  id_almacen INT NOT NULL,
-  PRIMARY KEY (id_estand),
-  FOREIGN KEY (id_almacen) REFERENCES Almacen(id_almacen)
-);
-
-CREATE TABLE Repisas
-(
-  id_repisas INT NOT NULL,
-  id_almacen INT NOT NULL,
-  PRIMARY KEY (id_repisas),
-  FOREIGN KEY (id_almacen) REFERENCES Almacen(id_almacen)
 );
 
 CREATE TABLE Producto
@@ -631,46 +594,6 @@ CREATE TABLE VentaXProd
   PRIMARY KEY (id_prod_venta, id_producto, Id_venta),
   FOREIGN KEY (id_producto) REFERENCES Producto(id_producto),
   FOREIGN KEY (Id_venta) REFERENCES Venta(Id_venta)
-);
-
-CREATE TABLE Movimiento
-(
-  Id_mov INT NOT NULL,
-  fecha_mov DATE NOT NULL,
-  Id_tipo_mov CHAR(1) NOT NULL,
-  id_almacen INT NOT NULL,
-  Id_transportista INT NOT NULL,
-  PRIMARY KEY (Id_mov),
-  FOREIGN KEY (Id_tipo_mov) REFERENCES Tipo_mov(Id_tipo_mov),
-  FOREIGN KEY (id_almacen) REFERENCES Almacen(id_almacen),
-  FOREIGN KEY (Id_transportista) REFERENCES Transportista(Id_transportista)
-);
-
-CREATE TABLE Ubicacion
-(
-  Id_ubicacion INT NOT NULL,
-  id_repisas INT NOT NULL,
-  id_estand INT NOT NULL,
-  id_seccion CHAR(1) NOT NULL,
-  id_almacen INT NOT NULL,
-  PRIMARY KEY (Id_ubicacion),
-  FOREIGN KEY (id_repisas) REFERENCES Repisas(id_repisas),
-  FOREIGN KEY (id_estand) REFERENCES Estands(id_estand),
-  FOREIGN KEY (id_seccion) REFERENCES Secciones(id_seccion),
-  FOREIGN KEY (id_almacen) REFERENCES Almacen(id_almacen)
-);
-
-CREATE TABLE Inventario
-(
-  id_inventario INT NOT NULL,
-  Entradas INT NOT NULL,
-  Salidas INT NOT NULL,
-  Stock INT NOT NULL,
-  id_producto INT NOT NULL,
-  Id_ubicacion INT NOT NULL,
-  PRIMARY KEY (id_inventario),
-  FOREIGN KEY (id_producto) REFERENCES Producto(id_producto),
-  FOREIGN KEY (Id_ubicacion) REFERENCES Ubicacion(Id_ubicacion)
 );
 
 CREATE TABLE Tipo_est_pedido (
