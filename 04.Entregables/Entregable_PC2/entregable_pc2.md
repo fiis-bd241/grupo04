@@ -773,6 +773,29 @@ CREATE TABLE Comentario
   FOREIGN KEY (Id_persona) REFERENCES Persona(Id_persona)
 );
 
+CREATE TABLE Tipo_Mov
+(
+  Id_Tipo_Mov CHAR(1) NOT NULL,
+  Nombre_Tipo_Mov VARCHAR(250) NOT NULL
+  PRIMARY KEY (Id_Tipo_Mov)
+);
+
+CREATE TABLE Almacen
+(
+  Id_Almacen INT NOT NULL,
+  Tipo_Almacen VARCHAR(30) NOT NULL,
+  Descrip_Almacen VARCHAR(259) NOT NULL,
+  PRIMARY KEY (Id_Almacen)
+);
+
+CREATE TABLE Secciones
+(
+  Seccion CHAR(1) NOT NULL,
+  Id_Almacen INT NOT NULL,
+  PRIMARY KEY (Seccion),
+  FOREIGN KEY (Id_Almacen) REFERENCES Almacen(Id_Almacen)
+);
+
 ```
 
 # 4. Poblamiento inicial de datos
