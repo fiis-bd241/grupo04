@@ -496,26 +496,7 @@ CREATE TABLE Transportista
   PRIMARY KEY (Id_transportista)
 );
 
-CREATE TABLE Tipo_presupuesto
-(
-  Id_tipo_presupuesto INT NOT NULL,
-  nombre_tipo VARCHAR(100) NOT NULL,
-  PRIMARY KEY (Id_tipo_presupuesto)
-);
 
-CREATE TABLE Tipo_item_est
-(
-  Id_tipo_item_est INT NOT NULL,
-  nombre_tipo_item VARCHAR(100) NOT NULL,
-  PRIMARY KEY (Id_tipo_item_est)
-);
-
-CREATE TABLE tipo_asiento_contable
-(
-  id_tipo_asiento_contable INT NOT NULL,
-  nombre_tipo VARCHAR(100) NOT NULL,
-  PRIMARY KEY (id_tipo_asiento_contable)
-);
 
 CREATE TABLE Tipo_Genero
 (
@@ -643,59 +624,9 @@ CREATE TABLE Detalle_pago
 );
 
 
-CREATE TABLE Factura
-(
-  nro_factura INT NOT NULL,
-  fecha_emision DATE NOT NULL,
-  monto FLOAT NOT NULL,
-  RUC_proveedor CHAR(11),
-  Id_persona INT NOT NULL,
-  PRIMARY KEY (nro_factura),
-  FOREIGN KEY (RUC_proveedor) REFERENCES Proveedor(RUC_proveedor),
-  FOREIGN KEY (Id_persona) REFERENCES Persona(Id_persona)
-);
 
-CREATE TABLE Presupuesto
-(
-  Id_presupuesto INT NOT NULL,
-  fecha_elaboracion DATE NOT NULL,
-  Id_tipo_presupuesto INT NOT NULL,
-  Id_persona INT NOT NULL,
-  PRIMARY KEY (Id_presupuesto),
-  FOREIGN KEY (Id_tipo_presupuesto) REFERENCES Tipo_presupuesto(Id_tipo_presupuesto),
-  FOREIGN KEY (Id_persona) REFERENCES Persona(Id_persona)
-);
 
-CREATE TABLE Asiento_Contable
-(
-  Id_asiento_contable INT NOT NULL,
-  cant_debe FLOAT NOT NULL,
-  cant_haber FLOAT NOT NULL,
-  nro_factura INT NOT NULL,
-  id_tipo_asiento_contable INT NOT NULL,
-  PRIMARY KEY (Id_asiento_contable),
-  FOREIGN KEY (nro_factura) REFERENCES Factura(nro_factura),
-  FOREIGN KEY (id_tipo_asiento_contable) REFERENCES tipo_asiento_contable(id_tipo_asiento_contable)
-);
 
-CREATE TABLE Item_estado_resultados
-(
-  Id_item_est__resultados INT NOT NULL,
-  Id_asiento_contable INT NOT NULL,
-  Id_tipo_item_est INT NOT NULL,
-  PRIMARY KEY (Id_item_est__resultados),
-  FOREIGN KEY (Id_asiento_contable) REFERENCES Asiento_Contable(Id_asiento_contable),
-  FOREIGN KEY (Id_tipo_item_est) REFERENCES Tipo_item_est(Id_tipo_item_est)
-);
-
-CREATE TABLE Estado_de_resultado
-(
-  id_est_resultados INT NOT NULL,
-  monto FLOAT NOT NULL,
-  Id_item_est__resultados INT NOT NULL,
-  PRIMARY KEY (id_est_resultados),
-  FOREIGN KEY (Id_item_est__resultados) REFERENCES Item_estado_resultados(Id_item_est__resultados)
-);
 
 CREATE TABLE Producto
 (
@@ -967,7 +898,83 @@ CREATE TABLE Inventario
   PRIMARY KEY (Cod_Barra_Prod),
   FOREIGN KEY (Id_Producto) REFERENCES Producto(Id_Producto),
   FOREIGN KEY (Ubicacion_Prod) REFERENCES Ubicacion(Ubicacion_Prod)
-); 
+);
+CREATE TABLE Tipo_presupuesto
+(
+  Id_tipo_presupuesto INT NOT NULL,
+  nombre_tipo VARCHAR(100) NOT NULL,
+  PRIMARY KEY (Id_tipo_presupuesto)
+);
+
+CREATE TABLE Tipo_item_est
+(
+  Id_tipo_item_est INT NOT NULL,
+  nombre_tipo_item VARCHAR(100) NOT NULL,
+  tipo_valor VARCHAR(100) NOT NULL,
+  PRIMARY KEY (Id_tipo_item_est)
+);
+
+CREATE TABLE tipo_asiento_contable
+(
+  id_tipo_asiento_contable INT NOT NULL,
+  denominación_tipo INT NOT NULL,
+  descripción_tipo VARCHAR(100) NOT NULL,
+  PRIMARY KEY (id_tipo_asiento_contable)
+);   CREATE TABLE Estado_de_Resultados
+(
+  id_estado_de_resultados INT NOT NULL,
+  periodo INT NOT NULL,
+  mes INT NOT NULL,
+  PRIMARY KEY (id_estado_de_resultados)
+); CREATE TABLE Factura
+(
+  nro_factura INT NOT NULL,
+  fecha_emision DATE NOT NULL,
+  monto FLOAT NOT NULL,
+  RUC_proveedor CHAR(11),
+  Id_persona VARCHAR(100) NOT NULL,
+  PRIMARY KEY (nro_factura),
+  FOREIGN KEY (RUC_proveedor) REFERENCES Proveedor(RUC_proveedor),
+  FOREIGN KEY (Id_persona) REFERENCES Persona(Id_persona)
+); CREATE TABLE Presupuesto
+(
+  Id_presupuesto INT NOT NULL,
+  fecha_elaboracion DATE NOT NULL,
+  Id_tipo_presupuesto INT NOT NULL,
+  Id_persona VARCHAR(100) NOT NULL,
+  PRIMARY KEY (Id_presupuesto),
+  FOREIGN KEY (Id_tipo_presupuesto) REFERENCES Tipo_presupuesto(Id_tipo_presupuesto),
+  FOREIGN KEY (Id_persona) REFERENCES Persona(Id_persona)
+);
+
+CREATE TABLE Asiento_Contable
+(
+  Id_asiento_contable INT NOT NULL,
+  cant_debe FLOAT NOT NULL,
+  cant_haber FLOAT NOT NULL,
+  nro_factura INT NOT NULL,
+  id_tipo_asiento_contable INT NOT NULL,
+  PRIMARY KEY (Id_asiento_contable),
+  FOREIGN KEY (nro_factura) REFERENCES Factura(nro_factura),
+  FOREIGN KEY (id_tipo_asiento_contable) REFERENCES tipo_asiento_contable(id_tipo_asiento_contable)
+);
+
+CREATE TABLE Item_estado_resultados
+(
+  Id_item_est__resultados INT NOT NULL,
+  Id_asiento_contable INT NOT NULL,
+  Id_tipo_item_est INT NOT NULL,
+  PRIMARY KEY (Id_item_est__resultados),
+  FOREIGN KEY (Id_asiento_contable) REFERENCES Asiento_Contable(Id_asiento_contable),
+  FOREIGN KEY (Id_tipo_item_est) REFERENCES Tipo_item_est(Id_tipo_item_est)
+);  CREATE TABLE EstadoxItem
+(
+  Monto_ INT NOT NULL,
+  Id_item_est__resultados INT NOT NULL,
+  id_estado_de_resultados INT NOT NULL,
+  FOREIGN KEY (Id_item_est__resultados) REFERENCES Item_estado_resultados(Id_item_est__resultados),
+  FOREIGN KEY (id_estado_de_resultados) REFERENCES Estado_de_Resultados(id_estado_de_resultados)
+);
   
 ```
 
@@ -1380,7 +1387,132 @@ INSERT INTO Comentario (Id_comentario, descrip_comentario, fecha_comentario, hor
 (7, 'Excelente atención al cliente. El personal fue muy amable y servicial', '2024-04-05', '16:20', 5, '10000004'),
 (8, 'El producto llegó en malas condiciones. Estoy muy insatisfecho con el servicio', '2024-04-06', '13:45', 6, '10000009'),
 (9, 'La crema que compré es de muy buena calidad. Definitivamente volveré a comprarla', '2024-04-07', '10:10', 7, '10000008');
+--Tipo_Mov
+INSERT INTO Tipo_Mov VALUES ('E', 'Entrada de Productos'), ('R', 'Salida de Productos a Clientes'),('S','Salida de Productos a Áreas de la Empresa');
+select * from Tipo_Mov;
 
+--Almacen
+INSERT INTO Almacen VALUES (1,'Papeleria', 'Artículos de oficina, librería, útiles de escritorio'), (2,'Maquillaje', 'Artículos de belleza para damas y caballeros');
+select * from Almacen;
+
+--Secciones
+INSERT INTO Secciones VALUES ('A', 1),('B', 1),('C', 2),('D', 2) ;
+select * from Secciones;
+
+--Estands
+INSERT INTO Estands VALUES ('E1', 1,'A'),('E2', 1,'A'),('E3', 1,'A'),('E4', 1,'B') ;
+select * from Estands;
+
+--Repisas
+INSERT INTO Repisas VALUES ('R1', 1,'A'),('R2', 1,'A'),('R3', 1,'B'),('R4', 1,'B') ;
+select * from Repisas;
+
+--Ubicacion
+INSERT INTO Ubicacion VALUES ('A-E1-R11','A','E1',R1',1);
+select * from Ubicacion;
+
+--Orden Almacen
+INSERT INTO Orden Almacen VALUES ('OT-001',,'Lucía Castromonte',2,201,2);
+select * from Orden Almacen;
+
+--Inventario
+INSERT INTO Orden Inventario VALUES (1242300021,'Forrado',20,10,10,2,200.00,'A-E1-R11');
+select * from Orden Inventario;
+
+--Movimiento
+INSERT INTO Orden Movimiento VALUES (101,2/03/2024,'S',1,1001,,'OT-001');
+select * from Orden Movimiento;
+
+--Transportista
+INSERT INTO Transportista VALUES (1001,'Juan Carlos Ramirez','Disponible);
+select * from Transportista;
+
+--Tipo_item_est
+insert into Tipo_item_est values (301,'ventas','suma');
+insert into Tipo_item_est values (302,'costos','resta');
+insert into Tipo_item_est values (303,'gastos','resta');
+insert into Tipo_item_est values (304,'utilidad bruta','operación');
+insert into Tipo_item_est values (305,'utilidad antes de impuesto','operación');
+insert into Tipo_item_est values (306,'impuesto','resta');
+insert into Tipo_item_est values (307,'utilidad neta','operación');
+select * from Tipo_item_est
+
+--Tipo_presupuesto
+insert into Tipo_presupuesto values (1,'presupuesto compras');
+insert into Tipo_presupuesto values (2,'presupuesto inversiones');
+insert into Tipo_presupuesto values (3,'presupuesto ventas');
+insert into Tipo_presupuesto values (4,'presupuesto distribución');
+select * from Tipo_presupuesto
+
+--Tipo_asiento_contable
+insert into tipo_asiento_contable values (401,50,'apertura');
+insert into tipo_asiento_contable values (402,21,'operacional');
+insert into tipo_asiento_contable values (403,50, 'centralización');
+insert into tipo_asiento_contable values (404,30,'cierre');
+insert into tipo_asiento_contable values (405,24,'ajuste');
+select * from tipo_asiento_contable
+
+--Factura
+insert into Factura values (2022001,'01-01-2022',100.05,'12345678',null);
+insert into Factura values (2022002,'02-08-2022',250.75,null,'20603302151');
+insert into Factura values (2022003,'23-11-2022',500,'23456789',null);
+insert into Factura values (2022004,'12-04-2023',20.05,'12345678',null);
+insert into Factura values (2022005,'17-07-2021',660,null,'22890123456');
+insert into Factura values (2022006,'05-09-2022',13.05,'12345678',null);
+insert into Factura values (2022007,'01-01-2023',123.56,'67890123',null);
+insert into Factura values (2022008,'13-10-2021',1000,null,'20607504149');
+insert into Factura values (2022009,'04-06-2023',200.65,null,'20789101234');
+insert into Factura values (2022010,'01-01-2024',134.78,'89012345',null);
+select * from Factura
+--Presupuesto
+insert into Presupuesto values (601,'01-01-2022',1,'1007');
+insert into Presupuesto values (602,'15-01-2022',2,'1005');
+insert into Presupuesto values (603,'01-01-2023',3,'1006');
+insert into Presupuesto values (604,'22-01-2022',4,'1003');
+insert into Presupuesto values (605,'04-01-2021',3,'1002');
+insert into Presupuesto values (606,'01-01-2022',2,'1001');
+insert into Presupuesto values (607,'06-01-2021',1,'1004');
+insert into Presupuesto values (608,'11-01-2022',2,'1002');
+insert into Presupuesto values (609,'13-10-2023',2,'1001');
+insert into Presupuesto values (610,'02-10-2022',4,'1007');
+select * from Presupuesto
+--Asiento-contable
+insert into Asiento_Contable values (101,100.5, 0,2022001,401);
+insert into Asiento_Contable values (102,0,250.75,2022002,402);
+insert into Asiento_Contable values (103,500,0,2022003,403);
+insert into Asiento_Contable values (104,0,730.25,2022004,405);
+insert into Asiento_Contable values (105,0 , 567,2022005,405);
+insert into Asiento_Contable values (106,1067.5,0,2022006,404);
+insert into Asiento_Contable values (107,1200,0,2022007,405);
+insert into Asiento_Contable values (108,0,1000.2,2022008,403);
+insert into Asiento_Contable values (109,300.5,0,2022009,403);
+insert into Asiento_Contable values (110, 12500.25, 0,2022010,401);
+select * from Asiento_Contable
+
+---Item_estado_resultado
+insert into Item_estado_resultados values (1,101,301);
+insert into Item_estado_resultados values (2,102,302);
+insert into Item_estado_resultados values (3,103,303);
+insert into Item_estado_resultados values (4,103,304);
+insert into Item_estado_resultados values (5,101,305);
+insert into Item_estado_resultados values (6,102,306);
+insert into Item_estado_resultados values (7,102,307);
+insert into Item_estado_resultados values (8,101,303);
+insert into Item_estado_resultados values (9,109,302);
+insert into Item_estado_resultados values (10,103,305);
+select * from Item_estado_resultados
+
+--Estado de resultados
+insert into Estado_de_resultados values (201, 2004,1);
+insert into Estado_de_resultados values (202, 2000,2);
+insert into Estado_de_resultados values (203, 2003,3);
+insert into Estado_de_resultados values (204, 2018,4);
+select * from Estado_de_resultados
+ 
+--Estadoxitem
+insert into EstadoxItem values (1000, 1, 203);
+insert into EstadoxItem values (10670, 3, 202);
+select * from EstadoxItem
 ```
 
 # 5. Videos individuales
