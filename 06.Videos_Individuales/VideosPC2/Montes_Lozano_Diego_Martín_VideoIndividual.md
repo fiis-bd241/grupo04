@@ -2,4 +2,4 @@
 
 [Video Individual](https://youtu.be/qljueE3R0nI)
 
-[![Video]()](https://youtu.be/qljueE3R0nI)
+
