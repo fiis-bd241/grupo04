@@ -1,7 +1,7 @@
 # 1. Modelo Conceptual
 
-![Módelo Conceptual](modelo_conceptual.jpg)
-[Módelo Conceptual](modelo_conceptual.png)
+![Módelo Conceptual](modelo_conceptual1.png)
+[Módelo Conceptual](modelo_conceptual1.png)
 
 # 2. Modelamiento Lógico
 
