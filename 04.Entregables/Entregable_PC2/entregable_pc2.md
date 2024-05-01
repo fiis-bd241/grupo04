@@ -761,6 +761,53 @@ CREATE TABLE Transportista
   PRIMARY KEY (Id_Transportista)
 );
 
+CREATE TABLE Orden_Almacen
+(
+  Id_Orden_Almacen VARCHAR(20) NOT NULL,
+  Cod_Area CHAR(15),
+  Id_Persona CHAR(30),
+  Id_Tipo_Prod INT NOT NULL,
+  Id_Pedido INT,
+  ID_Almacen INT NOT NULL,
+  PRIMARY KEY (Id_Orden_Almacen),
+  FOREIGN KEY (Cod_Area) REFERENCES Area(Cod_Area),
+  FOREIGN KEY (Id_Persona) REFERENCES Persona(Id_Persona),
+  FOREIGN KEY (Id_Pedido) REFERENCES Pedido(Id_Pedido),
+  FOREIGN KEY (Id_Tipo_Prod) REFERENCES Tipo_Prod(Id_Tipo_Prod)
+);
+
+CREATE TABLE Movimiento
+(
+  Id_Mov INT NOT NULL,
+  Fecha_Mov DATE NOT NULL,
+  Id_Tipo_Mov CHAR(1) NOT NULL,
+  Id_Almacen INT NOT NULL,
+  Id_Transportista INT,
+  Id_Repartidor INT,
+  Id_Orden_Almacen VARCHAR(20) NOT NULL,
+  PRIMARY KEY (Id_Mov),
+  FOREIGN KEY (Id_Tipo_Mov) REFERENCES Tipo_Mov(Id_Tipo_Mov),
+  FOREIGN KEY (Id_Almacen) REFERENCES Almacen(Id_Almacen),
+  FOREIGN KEY (Id_Transportista) REFERENCES Transportista(Id_Transportista),
+  FOREIGN KEY (Id_Repartido) REFERENCES Repartidor(Id_Repartido),
+  FOREIGN KEY (Id_Orden_Almacen) REFERENCES Orden_Almacen(Id_Orden_Almacen)
+);
+
+CREATE TABLE Inventario
+(
+  Cod_Barra_Prod INT NOT NULL,
+  Descrip_Presentacion CHAR(20) NOT NULL,
+  Entradas INT NOT NULL,
+  Salidas INT,
+  Stock INT,
+  Id_Producto INT NOT NULL,
+  Importe_Invent DECIMAL,
+  Ubicacion_Prod VARCHAR(10) NOT NULL,
+  PRIMARY KEY (Cod_Barra_Prod),
+  FOREIGN KEY (Id_Producto) REFERENCES Producto(Id_Producto),
+  FOREIGN KEY (Ubicacion_Prod) REFERENCES Ubicacion(Ubicacion_Prod)
+); 
+  
 ```
 
 # 4. Poblamiento inicial de datos
