@@ -625,7 +625,6 @@ CREATE TABLE Producto
   Cant_max INT NOT NULL,
   Precio_unit FLOAT NOT NULL,
   descuento FLOAT NOT NULL,
-  Id_categoria_prod INT NOT NULL,
   Id_cupón INT NOT NULL,
   Id_campaña INT NOT NULL,
   PRIMARY KEY (id_producto),
