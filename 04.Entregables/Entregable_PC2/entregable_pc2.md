@@ -21,7 +21,7 @@ Descripción: Empresa o persona que proporciona productos a la empresa
 | telefono | Numero de contacto con el proveedor | A(15) | VARCHAR(15) | NOT NULL |
 | id_est_proveedor | Identificador único del estado del proveedor | A(10) | VARCHAR(10) | NOT NULL |
 
-Entidad: Tipo_est_cotizacion
+Entidad: Tipo_est_proveedor
 
 Descripción: Estado del proveedor en la empresa.
 | Atributo | Descripción | Formato | Naturaleza | Valores |
