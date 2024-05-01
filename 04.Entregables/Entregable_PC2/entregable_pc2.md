@@ -719,6 +719,48 @@ CREATE TABLE Secciones
   FOREIGN KEY (Id_Almacen) REFERENCES Almacen(Id_Almacen)
 );
 
+CREATE TABLE Estands
+(
+  Estand VARCHAR(2) NOT NULL,
+  Id_Almacen INT NOT NULL,
+  Seccion CHAR(1) NOT NULL,
+  PRIMARY KEY (Estand),
+  FOREIGN KEY (Id_Almacen) REFERENCES Almacen(Id_Almacen),
+  FOREIGN KEY (Seccion) REFERENCES Secciones(Seccion)
+);
+
+CREATE TABLE Repisas
+(
+  Repisa VARCHAR(2) NOT NULL,
+  Id_Almacen INT NOT NULL,
+  Seccion CHAR(1) NOT NULL,
+  PRIMARY KEY (Repisa),
+  FOREIGN KEY (Id_Almacen) REFERENCES Almacen(Id_Almacen),
+  FOREIGN KEY (Seccion) REFERENCES Secciones(Seccion)
+);
+
+CREATE TABLE Ubicacion
+(
+  Ubicacion_Prod VARCHAR(10) NOT NULL,
+  Seccion CHAR(1) NOT NULL,
+  Estand VARCHAR(2) NOT NULL,
+  Repisa VARCHAR(2) NOT NULL,
+  Id_Almacen INT NOT NULL,
+  PRIMARY KEY (Ubicacion_Prod),
+  FOREIGN KEY (Id_Almacen) REFERENCES Almacen(Id_Almacen),
+  FOREIGN KEY (Seccion) REFERENCES Secciones(Seccion),
+  FOREIGN KEY (Estand) REFERENCES Estands(Estand),
+  FOREIGN KEY (Repisa) REFERENCES Repisas(Repisa)
+);
+
+CREATE TABLE Transportista
+(
+  Id_Transportista INT NOT NULL,
+  Nombre_Transp CHAR(30) NOT NULL,
+  Estado CHAR(20) NOT NULL,
+  PRIMARY KEY (Id_Transportista)
+);
+
 ```
 
 # 4. Poblamiento inicial de datos
