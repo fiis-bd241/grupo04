@@ -754,6 +754,286 @@ CREATE TABLE Pedido
 
 # 4. Poblamiento inicial de datos
 
+```sql
+-- tipo_prod
+insert into tipo_prod values ('1', 'Maquillaje');
+insert into tipo_prod values ('2', 'Papelería');
+select * from tipo_prod;
+-- Categoria_prod
+insert into Categoria_prod (Id_categoria_prod, Nombre, Id_tipo_prod)
+values ('1', 'Cuadernos', '2'),('2', 'Lapiceros', '2');
+insert into Categoria_prod values ('Paletas', '3', '1');
+insert into Categoria_prod values ('Rubores', '4', '1');
+insert into Categoria_prod values ('Primers', '5', '1');
+insert into Categoria_prod values ('Glitter', '6', '1');
+insert into Categoria_prod values ('Máscara de pestañas', '7', '1');
+insert into Categoria_prod values ('Labiales', '8', '1');
+insert into Categoria_prod values ('Polvos', '9', '1');
+insert into Categoria_prod values ('Correctores', '10', '1');
+insert into Categoria_prod values ('Delineador', '11', '1');
+select * from Categoria_prod;
+-- Tipo_est_proveedor
+insert into Tipo_est_proveedor values ('A', 'Activo'),('N', 'No Activo');
+select * from Tipo_est_proveedor;
+-- Proveedor
+insert into Proveedor values ('20603302151', 'IMPORT EXPORT JAXU S.A.C','facebook.com/JAXUPERU', 'Papelería', 'Cal. Schell Nro. 255 Com. San  Miguel de Miraflores', '980520529', 'A'),
+('20607504149', 'STELLAX S.A.C.','facebook.com/STELLAX', 'Papelería', 'Jr. Ucayali Nro. 738 Int. 102g', '955978789', 'A'),
+('20789101234', 'YanbalPapeleríaSAC','facebook.com/Yanbal', 'Papelería', 'Av. Los Pinos 1014', '955978799', 'A'),
+('21012345678', 'AtlasBeautySAC','facebook.com/AtlasB', 'Maquillaje', 'Calle Los Olivos 2022', '995978799', 'A'),
+('22890123456', 'RuletaCosméticaSAC','facebook.com/RuletaCosmetica', 'Maquillaje', 'Calle Los Álamos 1414', '985978799', 'A');
+select * from Proveedor;
+-- Tipo_est_cotizacion
+insert into Tipo_est_cotizacion values ('A', 'Aceptado'),('N', 'No Aceptado');
+select * from Tipo_est_cotizacion;
+
+-- Cotizacion
+insert into Cotizacion values (10, '276.40','20603302151', 'A'),
+(11, '300.40','20607504149', 'N'),
+(12, '227.10','21012345678', 'A'),
+(13, '341.40','22890123456', 'N'),
+(14, '249.40','20789101234', 'A'),
+(15, '246.40','20603302151', 'A'),
+(16, '271.50','20607504149', 'N'),
+(17, '216.70','20789101234', 'A'),
+(18, '246.40','21012345678', 'A'),
+(19, '226.40','22890123456', 'A');
+select * from Cotizacion;
+
+-- Area
+insert into Area values ('CM','Compras','Area que realiza compra a proveedores'),
+('VT','Ventas','Area que gestiona las ventas'),
+('DT','Distribucion','Area que gestiona el envio de pedidos'),
+('FZ','Finanzas','Area que gestiona las finanzas'),
+('MK','Marketing','Area que gestiona las campañas de marketing'),
+('AM','Almacen','Area que recepciona las compras de la empresa'),
+('CRM','CRM','Area que gestiona la fidelizacion de los clientes');
+select * from Area;
+--Rol
+insert into Rol values ('GCM', 'Gestor de compras'),
+('GVT', 'Gestor de ventas'),
+('GMK', 'Gestor de marketing'),
+('GFZ', 'Gestor de finanzas'),
+('GDT', 'Gestor de distribucion'),
+('GAM', 'Gestor de almacen'),
+('GCR', 'Gestor de CRM'),
+('CLI', 'Cliente'),
+('EMP', 'Empleado');
+select * from Rol;
+--zona
+INSERT INTO zona VALUES (1, 'Norte', 8);
+INSERT INTO zona VALUES (2, 'Este', 8);
+INSERT INTO zona VALUES (3, 'Sur', 5);
+INSERT INTO zona VALUES (4, 'Central', 10);
+INSERT INTO zona VALUES (5, 'Central Sur', 7);
+INSERT INTO zona VALUES (6, 'Balnearios del sur', 5);
+select * from zona;
+--distrito
+INSERT INTO distrito VALUES (1, 'Ancon', '150102', '02', 1);
+INSERT INTO distrito VALUES (2, 'Ate', '150103', '03', 2);
+INSERT INTO distrito VALUES (3, 'Barranco', '150104', '04', 5);
+INSERT INTO distrito VALUES (4, 'Independencia', '150102', '02', 1);
+INSERT INTO distrito VALUES (5, 'Comas', '150110', '03', 1);
+INSERT INTO distrito VALUES (6, 'San Martin de Porres', '150112', '04', 1);
+INSERT INTO distrito VALUES (7, 'San Juan de Lurigancho', '150132', '04', 2);
+INSERT INTO distrito VALUES (8, 'Miraflores', '150122', '18', 5);
+INSERT INTO distrito VALUES (9, 'La Victoria', '150115', '13', 4);
+INSERT INTO distrito VALUES (10,'San Isidro', '150131', '27', 5);
+INSERT INTO distrito VALUES (11,'San Borja', '150130', '41', 5);
+INSERT INTO distrito VALUES (12,'Surco', '150140', '33', 5);
+INSERT INTO distrito VALUES (13,'San Miguel', '150136', '32', 4);
+INSERT INTO distrito VALUES (14,'Magdalena del Mar', '150120', '17', 4);
+INSERT INTO distrito VALUES (15,'La Molina', '150114', '12', 2);
+INSERT INTO distrito VALUES (16,'Lince', '150116', '14', 4);
+INSERT INTO distrito VALUES (17,'Pueblo Libre', '150121', '21', 4);
+select * from distrito;
+--Repartidor
+INSERT INTO Repartidor VALUES (4851677, 'Juan.Martinez', 'Juan123','Martinez',1);
+INSERT INTO Repartidor VALUES (7851678, 'David.Suarez', 'David123','Suarez',2);
+INSERT INTO Repartidor VALUES (4859677, 'Roman.Reings','Roman123','Reigns',3);
+INSERT INTO Repartidor VALUES (7523677, 'Seth.Rollins','Seth123','Rollins',4);
+INSERT INTO Repartidor VALUES (9561677, 'Dean.Ambrose','Dean123','Ambrose',5);
+INSERT INTO Repartidor VALUES (1564677, 'Cody.Rodhes', 'Cody123','Rodhes',6);
+select * from Repartidor;
+--RUTA
+INSERT INTO Ruta VALUES (1, 'San Juan de Lurigancho','La Victoria','00:30:00','Tren electrico');
+INSERT INTO Ruta VALUES (2, 'San Juan de Lurigancho','Miraflores','01:30:00','Metropolitano');
+INSERT INTO Ruta VALUES (3, 'San Juan de Lurigancho','San Isidro','01:15:00','Metropolitano');
+INSERT INTO Ruta VALUES (4, 'San Juan de Lurigancho','San Borja','00:45:00','Tren electrico');
+INSERT INTO Ruta VALUES (5, 'San Juan de Lurigancho','Surco','01:00:00','Tren electrico');
+INSERT INTO Ruta VALUES (6, 'San Juan de Lurigancho','San Miguel','01:15:00','Metropolitano');
+INSERT INTO Ruta VALUES (7, 'San Juan de Lurigancho','Magdalena del Mar','01:15:00','Metropolitano');
+INSERT INTO Ruta VALUES (8, 'San Juan de Lurigancho','La Molina','01:10:00','Tren electrico');
+INSERT INTO Ruta VALUES (9, 'San Juan de Lurigancho','Barranco','02:00:00','Metropolitano');
+INSERT INTO Ruta VALUES (10,'San Juan de Lurigancho','Lince','01:05:00','Metropolitano');
+INSERT INTO Ruta VALUES (11,'San Juan de Lurigancho','Pueblo Libre','01:15:00','Metropolitano');
+INSERT INTO Ruta VALUES (12,'San Juan de Lurigancho','San Juan de Lurigancho','00:25:00','Motocicleta');
+select * from Ruta;
+
+--Tipo_Genero
+INSERT INTO Tipo_Genero VALUES ('M', 'Masculino'),('F', 'Femenino');
+select * from Tipo_Genero;
+
+--Equipo_Marketing
+INSERT INTO Equipo_Marketing (Id_equipo_mark, nombre_equipo, cant_emp)
+VALUES
+    (10, 'Equipo A', 4),
+    (11, 'Equipo B', 6),
+    (12, 'Equipo C', 5),
+    (13, 'Equipo D', 5),
+    (14, 'Equipo E', 6),
+    (15, 'Equipo F', 4),
+    (16, 'Equipo G', 5),
+    (17, 'Equipo H', 5),
+    (18, 'Equipo I', 3),
+    (19, 'Equipo J', 4);
+select * from Equipo_Marketing;
+
+--Persona
+INSERT INTO Persona VALUES 
+('María','Gonzales', 'Ramírez', 'maria.gonzales@gmail.com','984562135','10000001','Av. Los Laureles 123','mariagr', 'mmmaaria',8,'CLI',NULL,NULL,'F');
+INSERT INTO Persona VALUES 
+('Juan','Pérez', 'Flores', 'juan.perez@gmail.com', '984562235','10000002','Jr. Los Cedros 456','juanpr', 'mjuanria',10,'CLI',NULL,NULL,'M'),
+('Rosa','Mendoza', 'Díaz', 'rosa.mendoza@gmail.com', '984562335','10000003','Calle Las Flores 789','rosagr', 'mrosaia',11,'CLI',NULL,NULL,'F'),
+('Carlos','Torres', 'Chávez', 'carlos.torres@gmail.com', '984562435','10000004','Av. Los Pinos 1011','carlosgr', 'mcarlosa',12,'CLI',NULL,NULL,'M'),
+('Patricia','Huamaní', 'Álvarez', 'patricia.huamani@gmail.com', '984862135','10000005','Jr. Las Rosas 1213','patriciagr', 'mpatriciaa',13,'CLI',NULL,NULL,'F'),
+('Luis','Sánchez', 'Cruz', 'luis.sanchez@gmail.com', '987456235','10000006','Calle Los Álamos 1415','luisgr', 'mluisr',14,'CLI',NULL,NULL,'M'),
+('Ana','Castillo', 'Villanueva', 'ana.castillo@gmail.com', '994562135','10000007','Av. Los Cerezos 1617','anagr', 'anarg',15,'CLI',NULL,NULL,'F'),
+('Patricia','Alvarez', 'Valencia', 'patricia.alvarez@gmail.com', '987562135','10000008','r. Las Palmeras 1819','patriciagr', 'patriciarmg',3,'CLI',NULL,NULL,'F'),
+('Eduardo','Cruz', 'Salas', 'eduardo.cruz@gmail.com', '984962135','10000009','Calle Los Olivos 2021','eduardogr', 'eeduer',16,'CLI',NULL,NULL,'M'),
+('Sandra','Valencia', 'León', 'sandra.valencia@gmail.com', '983562135','10000010','Av. Las Acacias 2223','sandragr', 'sandragr',17,'CLI',NULL,NULL,'F');
+INSERT INTO Persona VALUES 
+('María','Gonzales', 'Ramírez', 'pilar.gonzales@gmail.com', '989962135','1001','Av. Los Laureles 102','pilargr', 'pilargr',5,'GCM',NULL,'CM','F'),
+('Juan','Quispe', 'Villaverde', 'juan.quispe@gmail.com', '997962135','1002','Jr. Los Cedros 425','juanq', 'juanq',1,'GVT',NULL,'VT','M'),
+('Camila','Hidalgo', 'Laureano', 'camila.hidalgo@gmail.com', '949962135','1003','Calle Las Flores 748','camilah', 'camilah',2,'GDT',NULL,'DT','F'),
+('Steven','Gutierrez', 'Calderon', 'steven.gutierrez@gmail.com', '939962135','1004','Av. Los Pinos 1021','steveng', 'steveng',3,'GFZ',NULL,'FZ','M'),
+('Ariana','Del Rio', 'Rojas', 'ariana.delrio@gmail.com', '929962135','1005','Jr. Las Rosas 1022','ariand', 'ariand',4,'GMK',10,'MK','F'),
+('Manuel','Ramirez', 'Herberth', 'manuel.ramirez@gmail.com', '919962135','1006','Calle Los Álamos 1082','manuelr', 'manuelr',5,'GAM',NULL,'AM','M'),
+('Sandra','Calderon', 'Sosaya', 'sandra.calderon@gmail.com', '990962135','1007','Av. Las Acacias 2102','sandrac', 'sandrac',6,'GCR',NULL,'CRM','F');
+select * from Persona;
+
+--Cupón
+INSERT INTO Cupón (Id_cupón, fecha_ini_cup, fecha_fin_cup, desc_cup, esta_activo)
+VALUES
+    (1000, '2022-01-01', '2122-02-01', null, TRUE),
+    (1001, '2022-02-01', '2022-03-01', 0.20, FALSE),
+    (1002, '2022-03-01', '2022-04-01', 0.50, FALSE),
+    (1003, '2022-04-01', '2022-05-01', 0.40, FALSE),
+    (1004, '2022-05-01', '2022-06-01', 0.40, FALSE),
+    (1005, '2022-06-01', '2022-07-01', 0.30, FALSE),
+    (1006, '2022-07-01', '2022-08-01', 0.25, FALSE),
+    (1007, '2022-08-01', '2022-09-01', 0.20, FALSE),
+    (1008, '2022-09-01', '2022-10-01', 0.15, FALSE),
+    (1009, '2022-10-01', '2022-11-01', 0.20, FALSE);
+select * from Cupón;
+
+-- Campaña
+INSERT INTO Campaña (Id_campaña, fecha_ini, fecha_fin, canal_publi, dir_url, modalidad, archivo, des_campaña, Id_equipo_mark, Id_gest_mark)
+VALUES
+    (100000, '2022-01-04', '2022-01-11', 'instagram', 'https://linktr.ee/Migni_Store', 'native ad', 'https://marketingmigni.com/campaña100000.mp4', null, 10, 1002),
+    (100001, '2022-01-11', '2022-01-18', 'facebook', 'https://linktr.ee/Migni_Store', 'post', 'https://marketingmigni.com/campaña100001.jpg', 0.25, 12, 1002),
+    (100002, '2022-01-18', '2022-02-18', 'marketplace', 'https://linktr.ee/Migni_Store', 'post', 'https://marketingmigni.com/campaña100002.jpg', 0.10, 11, 1002),
+    (100003, '2022-02-18', '2022-02-25', 'twitter', 'https://linktr.ee/Migni_Store', 'post', 'https://marketingmigni.com/campaña100003.jpg', 0.15, 16, 1002),
+    (100004, '2022-02-25', '2022-03-25', 'facebook', 'https://linktr.ee/Migni_Store', 'post', 'https://marketingmigni.com/campaña100004.mp4', 0.25, 17, 1002),
+    (100005, '2022-03-25', '2022-04-01', 'marketplace', 'https://linktr.ee/Migni_Store', 'post', 'https://marketingmigni.com/campaña100005.jpg', 0.30, 17, 1002),
+    (100006, '2022-04-01', '2022-04-08', 'marketplace', 'https://linktr.ee/Migni_Store', 'post', 'https://marketingmigni.com/campaña100006.jpg', 0.30, 19, 1002),
+    (100007, '2022-04-08', '2022-05-08', 'instagram', 'https://linktr.ee/Migni_Store', 'native ad', 'https://marketingmigni.com/campaña100007.jpg', 0.10, 18, 1002),
+    (100008, '2022-05-08', '2022-06-08', 'instagram', 'https://linktr.ee/Migni_Store', 'native ad', 'https://marketingmigni.com/campaña100008.jpg', 0.25, 14, 1002),
+    (100009, '2022-06-08', '2022-06-15', 'youtube', 'https://linktr.ee/Migni_Store', 'video ad', 'https://marketingmigni.com/campaña100009.mp4', 0.35, 11, 1002);
+select * from Campaña;
+
+--Producto
+insert into Producto values (1, 'Cuaderno clear blinder', 'Cuaderno A4 tipo blinder con 60 hojas rayadas', 0, 100, 25.0, 1, 1000,100000);
+insert into Producto values (2, 'Bear Notebook B5', 'Cuaderno B5 tipo blinder con 60 hojas rayadas', 0, 100,20.0, 1, 1001,100001);
+insert into Producto values (3, 'Diamond pen', 'Incluye protector, Tinta:negra', 0, 100,6.5, 2, 1002,100002);
+insert into Producto values (4, 'Releaf Primer', 'Primer de Italia deluxe', 0, 100,28.5, 5, 1003,100003);
+insert into Producto values (5, 'Corrector HD Pro', 'Corrector de Italia deluxe, con cobertura media a graduable', 0, 100, 16.0, 10, 1004,100004);
+insert into Producto values (6, 'Super Stay Matter Maybelline', 'Labial con efecto matte instransferible por 24h', 0, 100, 45.0, 8, 1005,100005);
+insert into Producto values (7, 'Profesional Silicón PROSA', 'Mascara de pestañas que aporta demasiada longitud ', 0, 100, 30.0, 11, 1006,100006);
+insert into Producto values (8, 'Gliterally', 'Delineador con glitter extra brillante de Beauty creation', 0, 100,22.0, 6, 1007,100007);
+insert into Producto values (9, 'Ultrafine lipliner', 'Delineadores de labios de Italia deluxe', 0, 100, 6.0, 8, 1008,100008);
+insert into Producto values (10, 'Fill in thirsty gloss', 'Gloss de Italia deluxe con efecto mentolado', 0, 100, 18.0, 8, 1009,100009);
+select * from Producto
+
+--cotizacionxproducto
+insert into CotizaciónxProducto values (12, 10, 3);
+insert into CotizaciónxProducto values (11, 10, 2);
+insert into CotizaciónxProducto values (8, 10, 1);
+select * from CotizaciónxProducto
+
+--proveedorxproducto
+insert into ProveedorxProducto values (4.8, '3','20603302151');
+insert into ProveedorxProducto values (6.0, '2', '20603302151');
+insert into ProveedorxProducto values (11.0, '1', '20603302151');
+select * from ProveedorxProducto
+
+--Tipos_pago 
+INSERT INTO Tipos_pago (id_tipo_pago, nombre_tipo, nro_tarjeta) VALUES
+(11, 'Tarjeta de crédito', '12345678'),
+(12, 'Tarjeta de débito', '98765432'),
+(13, 'Efectivo', NULL),
+(14, 'A contra entrega', '11112222'),
+(15, 'Yape/Plin', NULL);
+select * from Tipos_pago;
+
+--Detalle_pago
+INSERT INTO Detalle_pago (Id_detalle_pago, fecha_pago, hora_pago, id_tipo_pago) VALUES
+(2001, '2022-01-01', '09:15', 11),
+(2002, '2022-04-15', '10:30', 12),
+(2003, '2022-08-22', '11:45', 13),
+(2004, '2022-11-05', '13:20', 14),
+(2005, '2023-02-03', '14:50', 15),
+(2006, '2023-06-18', '15:55', 14),
+(2007, '2023-09-09', '16:10', 11),
+(2008, '2023-12-25', '17:25', 12),
+(2009, '2024-03-07', '18:40', 11),
+(2010, '2024-07-12', '19:55', 13);
+select * from Detalle_pago;
+--Venta
+INSERT INTO Venta (Id_venta, id_persona, monto_final, Id_detalle_pago) VALUES
+(1234, '10000001', 50.0, 2001),
+(5678, '10000002', 20.0, 2002),
+(9012, '10000003', 6.5, 2003),
+(3456, '10000004', 114.0, 2004),
+(7890, '10000005', 112.0, 2005),
+(2345, '10000006', 45.0, 2006),
+(6789, '10000007', 60.0, 2007),
+(123, '10000008', 22.0, 2008),
+(4567, '10000009', 18.0, 2009),
+(8901, '10000010', 72.0, 2010);
+select * from Venta;
+--VentaXProd
+INSERT INTO VentaXProd (id_prod_venta, Id_venta, id_producto, cant_prod, monto_total) VALUES
+(12341, 1234, 1, 2, 50.0),
+(56782, 5678, 2, 1, 20.0),
+(90123, 9012, 3, 1, 6.5),
+(34564, 3456, 4, 4, 114.0),
+(78905, 7890, 5, 7, 112.0),
+(23456, 2345, 6, 1, 45.0),
+(67897, 6789, 7, 2, 60.0),
+(1238, 123, 8, 1, 22.0),
+(45679, 4567, 9, 3, 18.0),
+(890110, 8901, 10, 4, 72.0);
+select * from VentaXProd;
+
+--Tipo_est_pedido
+INSERT INTO Tipo_est_pedido VALUES ('E', 'ENTREGADO'), ('P', 'PENDIENTE');
+select * from Tipo_est_pedido;
+
+--Pedido
+INSERT INTO Pedido (id_pedido, fecha_entrega, est_pedido, hora_entrega, id_ruta ,id_persona ,id_repartidor,id_venta) VALUES 
+(1215,'8/1/2022','E','12:30', 2,'10000001',9561677,1234),
+(1365,'19/04/2022','E','12:30', 3,'10000002',9561677,5678),
+(1549,'27/08/2022','E','12:30', 4,'10000003',9561677,9012),
+(1816,'9/11/2022','E','12:30', 5,'10000004',9561677,3456),
+(2465,'8/02/2023','E','12:30', 6,'10000005',7523677,7890),
+(2964,'25/06/2023','E','12:30', 7,'10000006',7523677,2345),
+(3415,'15/09/2023','E','12:30', 8,'10000007',7851678,6789),
+(4315,'29/12/2023','E','12:30', 9,'10000008',9561677,123),
+(4516,'11/3/2024','E','12:30', 10,'10000009',7523677,4567),
+(4585,'23/07/2024','P','12:30', 11,'10000010',7523677,8901);
+select * from Pedido;
+```
+
 # 5. Videos individuales
 [Quispe Mitma Cesar](../../06.Videos_Individuales/VideosPC2/Quispe_Mitma_Cesar_Fernando-VideoIndividual.md)
 
