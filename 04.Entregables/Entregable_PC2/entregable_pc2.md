@@ -1066,6 +1066,124 @@ INSERT INTO Pedido (id_pedido, fecha_entrega, est_pedido, hora_entrega, id_ruta 
 (4516,'11/3/2024','E','12:30', 10,'10000009',7523677,4567),
 (4585,'23/07/2024','P','12:30', 11,'10000010',7523677,8901);
 select * from Pedido;
+
+
+INSERT INTO Alternativa (id_alternativa, alternativa) VALUES
+(1, ARRAY['Sí', 'No']),
+(2, ARRAY['Excelente', 'Bueno', 'Regular', 'Malo', 'Muy malo']),
+(3, ARRAY['Rojo', 'Azul', 'Verde', 'Negro', 'Blanco', 'Amarillo', 'Naranja', 'Morado']),
+(4, ARRAY['Pequeño', 'Mediano', 'Grande', 'Extra grande']),
+(5, ARRAY['Lápiz', 'Bolígrafo', 'Pluma', 'Marcador', 'Goma de borrar']),
+(6, ARRAY['Seco', 'Graso', 'Mixto']),
+(7, ARRAY['Líquido', 'Crema', 'Gel', 'Spray', 'Polvo']),
+(8, ARRAY['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']),
+(9, ARRAY['Extremadamente insatisfecho', 'Muy insatisfecho', 'Insatisfecho', 'Neutral', 'Satisfecho', 'Muy satisfecho', 'Extremadamente satisfecho']);
+
+INSERT INTO Pregunta (Id_pregunta, pregunta, tipo_preg, id_alternativa) VALUES
+(1, '¿Está satisfecho con su compra?', 'Opción única', 1),
+(2, '¿Qué tal le pareció la calidad del producto?', 'Opción única', 2),
+(3, '¿Cuál es su color favorito?', 'Opción única', 3),
+(4, '¿Prefiere tamaños pequeños, medianos, grandes o extra grandes?', 'Opción múltiple', 4),
+(5, '¿Cuál es su artículo de papelería favorito?', 'Opción única', 5),
+(6, '¿Cómo describiría su tipo de piel?', 'Libre', NULL),
+(7, '¿Qué tipo de producto cosmético prefiere?', 'Opción múltiple', 7),
+(8, 'Por favor, califique del 1 al 10 la calidad del producto', 'Opción única', 8),
+(9, '¿Cómo calificaría su satisfacción general con el servicio?', 'Opción única', 9);
+
+INSERT INTO Respuesta (Id_respuesta, respuesta, Id_formulario) VALUES
+(1, 'Sí, estoy muy satisfecho con mi compra', 1),
+(2, 'No, el producto no cumplió mis expectativas', 1),
+(3, 'Excelente', 2),
+(4, 'Regular', 2),
+(5, 'Azul, siempre me ha gustado ese color', 3),
+(6, 'Grande, necesito espacio para tomar apuntes', 4),
+(7, 'Bolígrafo, es versátil y fácil de usar', 5),
+(8, 'Tengo la piel mixta, algunas zonas son grasas y otras secas', 6),
+(9, 'Prefiero cremas para el cuidado facial', 7),
+(10, '8', 1),
+(11, '3', 2),
+(12, 'Rojo', 3),
+(13, 'Pequeño', 4),
+(14, 'Pluma', 5),
+(15, 'Mi piel es grasa en la zona T y mixta en el resto', 6),
+(16, 'Gel', 7),
+(17, '9', 1),
+(18, 'Satisfecho', 1),
+(19, 'Neutral', 1),
+(20, 'Insatisfecho', 1),
+(21, '5', 2),
+(22, 'Amarillo', 3),
+(23, 'Extra grande', 4),
+(24, 'Goma de borrar', 5),
+(25, 'Mixto', 6),
+(26, 'Polvo', 7),
+(27, '7', 1),
+(28, 'satisfecho', 1);
+
+INSERT INTO PreguntaxRespuesta (Id_pregunta, Id_respuesta) VALUES
+(1, 1),
+(1, 2),
+(2, 3),
+(2, 4),
+(3, 5),
+(4, 6),
+(4, 7),
+(5, 8),
+(6, 9),
+(8, 10),
+(8, 11),
+(8, 12),
+(8, 13),
+(8, 14),
+(8, 15),
+(8, 16),
+(8, 17),
+(9, 18),
+(9, 19),
+(9, 20),
+(9, 21),
+(9, 22),
+(9, 23),
+(9, 24),
+(9, 25),
+(9, 26),
+(9, 27),
+(9, 28);
+
+INSERT INTO FormularioxPregunta (Id_formulario, Id_pregunta) VALUES
+(1, 1),
+(1, 2),
+(1, 3),
+(1, 4),
+(1, 5),
+(2, 6),
+(2, 7),
+(2, 8),
+(2, 9);
+
+INSERT INTO Formulario (Id_formulario, descrip_formulario, fecha_creacion, Id_persona, Id_est_formulario) VALUES
+(1, 'Encuesta de satisfacción', '2024-04-25', '1007', 1),
+(2, 'Encuesta de preferencias', '2024-04-26', '1007', 2),
+(3, 'Encuesta de productos', '2024-04-27', '1007', 1),
+(4, 'Encuesta de opiniones', '2024-05-28', '1007', 2),
+(5, 'Encuesta de experiencia', '2024-05-01', '1007', 1);
+
+
+INSERT INTO Tipo_est_formulario (Id_est_formulario, est_formulario) VALUES
+(1, 'Activo'),
+(2, 'Inactivo');
+
+INSERT INTO Comentario (Id_comentario, descrip_comentario, fecha_comentario, hora_comentario, id_producto, Id_persona) VALUES
+(1, 'El servicio al cliente fue excepcional, y el producto llegó antes de lo esperado. ¡Muy satisfecho!', '2024-04-01', '09:30', 1, '10000001'),
+(2, 'La calidad del producto es regular. Creo que podrían mejorar en ese aspecto', '2024-04-01', '14:00', 2, '10000003'),
+(3, 'El color azul es mi favorito desde siempre. ¡Me encanta!', '2024-05-02', '10:15', 3, '10000005'),
+(4, 'El tamaño grande es perfecto para mí, ya que me gusta tener mucho espacio para escribir', '2024-04-02', '15:45', 1, '10000007'),
+(5, 'Siempre he sido fanático de los bolígrafos. Son prácticos y versátiles', '2024-04-03', '11:30', 4, '10000001'),
+(6, 'Mi piel es mixta, así que necesito productos específicos para controlar las zonas grasas', '2024-04-04', '08:00', 3, '10000003'),
+(7, 'Excelente atención al cliente. El personal fue muy amable y servicial', '2024-04-05', '16:20', 5, '10000004'),
+(8, 'El producto llegó en malas condiciones. Estoy muy insatisfecho con el servicio', '2024-04-06', '13:45', 6, '10000009'),
+(9, 'La crema que compré es de muy buena calidad. Definitivamente volveré a comprarla', '2024-04-07', '10:10', 7, '10000008');
+
 ```
 
 # 5. Videos individuales
