@@ -688,35 +688,12 @@ CREATE TABLE Pedido
 );
 
 
-CREATE TABLE Tipo_est_formulario
-(
-  Id_est_formulario VARCHAR(100) NOT NULL,
-  est_formulario VARCHAR(100) NOT NULL,
-  PRIMARY KEY (Id_est_formulario)
-);
-
-
 CREATE TABLE Alternativa
 (
   id_alternativa INT NOT NULL,
-  alternativa  NOT NULL,
+  alternativa VARCHAR[]  NOT NULL,
   PRIMARY KEY (id_alternativa)
 );
-
-
-
-CREATE TABLE Formulario
-(
-  Id_formulario INT NOT NULL,
-  descrip_formulario VARCHAR(500) NOT NULL,
-  fecha_creacion DATE NOT NULL,
-  Id_persona VARCHAR(100) NOT NULL,
-  Id_est_formulario VARCHAR(100) NOT NULL,
-  PRIMARY KEY (Id_formulario),
-  FOREIGN KEY (Id_persona) REFERENCES Persona(Id_persona),
-  FOREIGN KEY (Id_est_formulario) REFERENCES Tipo_est_formulario(Id_est_formulario)
-);
-
 
 CREATE TABLE Pregunta
 (
@@ -737,6 +714,15 @@ CREATE TABLE Respuesta
   FOREIGN KEY (Id_formulario) REFERENCES Formulario(Id_formulario)
 );
 
+CREATE TABLE PreguntaxRespuesta
+(
+  Id_pregunta INT NOT NULL,
+  Id_respuesta INT NOT NULL,
+  PRIMARY KEY (Id_pregunta, Id_respuesta),
+  FOREIGN KEY (Id_pregunta) REFERENCES Pregunta(Id_pregunta),
+  FOREIGN KEY (Id_respuesta) REFERENCES Respuesta(Id_respuesta)
+);
+
 CREATE TABLE FormularioxPregunta
 (
   Id_formulario INT NOT NULL,
@@ -746,14 +732,24 @@ CREATE TABLE FormularioxPregunta
   FOREIGN KEY (Id_pregunta) REFERENCES Pregunta(Id_pregunta)
 );
 
-
-CREATE TABLE PreguntaxRespuesta
+CREATE TABLE Formulario
 (
-  Id_pregunta INT NOT NULL,
-  Id_respuesta INT NOT NULL,
-  PRIMARY KEY (Id_pregunta, Id_respuesta),
-  FOREIGN KEY (Id_pregunta) REFERENCES Pregunta(Id_pregunta),
-  FOREIGN KEY (Id_respuesta) REFERENCES Respuesta(Id_respuesta)
+  Id_formulario INT NOT NULL,
+  descrip_formulario VARCHAR(500) NOT NULL,
+  fecha_creacion DATE NOT NULL,
+  Id_persona VARCHAR(100) NOT NULL,
+  Id_est_formulario VARCHAR(100) NOT NULL,
+  PRIMARY KEY (Id_formulario),
+  FOREIGN KEY (Id_persona) REFERENCES Persona(Id_persona),
+  FOREIGN KEY (Id_est_formulario) REFERENCES Tipo_est_formulario(Id_est_formulario)
+);
+
+
+CREATE TABLE Tipo_est_formulario
+(
+  Id_est_formulario INT NOT NULL,
+  est_formulario VARCHAR(100) NOT NULL,
+  PRIMARY KEY (Id_est_formulario)
 );
 
 CREATE TABLE Comentario
@@ -768,8 +764,6 @@ CREATE TABLE Comentario
   FOREIGN KEY (id_producto) REFERENCES Producto(id_producto),
   FOREIGN KEY (Id_persona) REFERENCES Persona(Id_persona)
 );
-
-
 
 ```
 
