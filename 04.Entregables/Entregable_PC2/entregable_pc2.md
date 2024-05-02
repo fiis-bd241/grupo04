@@ -248,6 +248,84 @@ Descripción: Registro de los productos vendidos en cada transacción.
 | monto_prod     | Monto total del producto vendido                    | 99.99     | FLOAT      | NOT NULL |
 
 
+Entidad: Alternativa
+
+Descripcion: Entidad el cual almacena en forma de catalogo las alternativas de la pregunta, son opcionales y depende del tipo de pregunta.
+
+
+|Atributo|Descripcion|Formato|Naturaleza|Valores|
+|---------|-------|-------|----|-----------|
+|id_alternativa|Codigo identificador de la alternativa|999|INT|NOT NULL|
+|alternativa|son las alternativas en forma de array| [A,B,C,..] |VARCHAR[] |NOT NULL|
+
+
+Entidad Pregunta
+
+Descripción: Entidad la cual almacena las preguntas que se van a usar en un formulario , este llama o toma en cuenta la alterntiva aunque no necesariamente.
+
+|Id_pregunta|Codigo identificador de la Pregunta|99999|INT|NOT NULL|
+|Pregunta|Es la pregunta pero explicada , que es visible para el encuestado| A(200) |VARCHAR(200) |NOT NULL|
+|tipo_preg|Es el tipo de pregunta , dependiendo de este se llamara o no a la alternativa| A(100) |VARCHAR(100) |NOT NULL|
+|Id_alternativa|Codigo identificador de la alternativa|999|INT|NOT NULL|
+
+Entidad Respuesta
+
+Descripción: Entidad la cual almacena las respuestas a las preguntas del formulario.
+
+|Id_respuesta|Codigo identificador de la Respuesta |99999|INT|NOT NULL|
+|Respuesta|Es la respuesta descrita como envio el encuestado| A(500) |VARCHAR(500) |NOT NULL|
+|Id_formulario|Codigo identificador del formulario |99999|INT|NOT NULL|
+
+
+Entidad PreguntaxRespuesta
+
+Descripción: Entidad que almacena la relacion de respuestas por cada pregunta.
+
+|Id_pregunta|Codigo identificador de la Pregunta|99999|INT|NOT NULL|
+|Id_respuesta|Codigo identificador de la Respuesta |99999|INT|NOT NULL|
+
+
+Entidad FormularioxPregunta
+
+Descripción: Entidad la cual almacena la relacion de preguntas que pertenecen a un formulario.
+|Id_pregunta|Codigo identificador de la Pregunta|99999|INT|NOT NULL|
+|Id_formulario|Codigo identificador del formulario|99999|INT|NOT NULL|
+
+
+Entidad Formulario
+
+Descripción: Entidad la cual almacena los formularios asi como sus caracteristicas claves.
+
+|Id_formulario|Codigo identificador del formulario|99999|INT|NOT NULL|
+|descrip_formulario|Es la explicación de que trata el formulario creado| A(500) |VARCHAR(500) |NOT NULL|
+|fecha_creacion|Fecha en la que se creo el formulario |DD/MM/AA|DATE|Valido en calendario|
+|Id_est_formulario|Codigo identificador del estado en el que se encuentra el formulario |999|INT|NOT NULL|
+|Id_persona|Codigo identificador de la persona|99999999|INT|NOT NULL|
+
+
+Entidad Tipo_est_formulario
+
+Descripción: Entidad la cual almacena los estados en el que se encuentra o podria encontrarse el formulario.
+
+|Id_est_formulario|Codigo identificador del estado en el que se encuentra el formulario |999|INT|NOT NULL|
+|est_formulario|Es la descripción del estado del formulario | A(100) |VARCHAR(100) |NOT NULL|
+
+
+
+Entidad Comentario
+
+Descripción: Entidad la cual almacena los comentarios de los usuarios que esten registrados a la plataforma , estos comentarios estan referidos a un producto.
+
+|Id_comentario|Codigo identificador del Comentario |99999|INT|NOT NULL|
+|descrip_comentario|Es la parte descriptiva el cual muestra lo que el usuario escribio sobre el producto| A(200) |VARCHAR(200) |NOT NULL|
+|fecha_comentario|Fecha en la que se envio el comentario del usuario |DD/MM/AA|DATE|Valido en calendario|
+|hora_entrega|Hora que se entrego el comentario del usuario|hh:mm|TIME|NOT NULL|
+|Id_persona|Codigo identificador de la persona|99999999|INT|NOT NULL|
+|Id_producto|Codigo identificador del producto|99999999|INT|NOT NULL|
+
+
+
+
 # 3. Creación de tablas
 
 ```sql
@@ -834,7 +912,7 @@ select * from Categoria_prod;
 insert into Tipo_est_proveedor values ('A', 'Activo'),('N', 'No Activo');
 select * from Tipo_est_proveedor;
 -- Proveedor
-insert into Proveedor values ('20603302151', 'IMPORT EXPORT JAXU S.A.C','facebook.com/JAXUPERU', 'Papelería', 'Cal. Schell Nro. 255 Com. San  Miguel de Miraflores', '980520529', 'A'),
+insert into Proveedor values ('20603302151', 'IMPORT EXPORT JAXU S.A.C','facebook.com/JAXUPERU', 'Papelería', 'Cal. Schell Nro. 255 Com. San Miguel de Miraflores', '980520529', 'A'),
 ('20607504149', 'STELLAX S.A.C.','facebook.com/STELLAX', 'Papelería', 'Jr. Ucayali Nro. 738 Int. 102g', '955978789', 'A'),
 ('20789101234', 'YanbalPapeleríaSAC','facebook.com/Yanbal', 'Papelería', 'Av. Los Pinos 1014', '955978799', 'A'),
 ('21012345678', 'AtlasBeautySAC','facebook.com/AtlasB', 'Maquillaje', 'Calle Los Olivos 2022', '995978799', 'A'),
