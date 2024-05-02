@@ -1,11 +1,14 @@
 # 1. Modelo Conceptual
 
+![Módelo Conceptual](modelo_conceptual.jpg)
+[Módelo Conceptual](modelo_conceptual.png)
+
 # 2. Modelamiento Lógico
 
 ## 2.1 Módelo Lógico
 
-![Módelo Lógico](Modelo_Logico_v1.png)
-[Módelo Lógico](Modelo_Logico_v1.png)
+![Módelo Lógico](Modelo_Logico_v2.png)
+[Módelo Lógico](Modelo_Logico_v2.png)
 ## 2.2 Diccionario de Datos
 
 Entidad: Proveedor
