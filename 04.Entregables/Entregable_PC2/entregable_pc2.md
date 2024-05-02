@@ -311,13 +311,6 @@ CREATE TABLE Ruta
   PRIMARY KEY (Id_ruta)
 );
 
-CREATE TABLE Pregunta
-(
-  Id_pregunta INT NOT NULL,
-  pregunta VARCHAR(200) NOT NULL,
-  tipo_preg VARCHAR(100) NOT NULL,
-  PRIMARY KEY (Id_pregunta)
-);
 
 CREATE TABLE Tipo_mov
 (
@@ -374,13 +367,6 @@ CREATE TABLE Tipo_est_proveedor
   Id_est_proveedor VARCHAR(10) NOT NULL,
   est_proveedor VARCHAR(100) NOT NULL,
   PRIMARY KEY (Id_est_proveedor)
-);
-
-CREATE TABLE Tipo_est_formulario
-(
-  Id_est_formulario VARCHAR(100) NOT NULL,
-  est_formulario VARCHAR(100) NOT NULL,
-  PRIMARY KEY (Id_est_formulario)
 );
 
 CREATE TABLE Tipos_pago
@@ -487,26 +473,6 @@ CREATE TABLE Detalle_pago
   FOREIGN KEY (id_tipo_pago) REFERENCES Tipos_pago(id_tipo_pago)
 );
 
-CREATE TABLE Formulario
-(
-  Id_formulario INT NOT NULL,
-  descrip_formulario VARCHAR(500) NOT NULL,
-  fecha_creacion DATE NOT NULL,
-  Id_persona INT NOT NULL,
-  Id_est_formulario VARCHAR(100) NOT NULL,
-  PRIMARY KEY (Id_formulario),
-  FOREIGN KEY (Id_persona) REFERENCES Persona(Id_persona),
-  FOREIGN KEY (Id_est_formulario) REFERENCES Tipo_est_formulario(Id_est_formulario)
-);
-
-CREATE TABLE Respuesta
-(
-  Id_respuesta INT NOT NULL,
-  respuesta VARCHAR(300) NOT NULL,
-  Id_formulario INT NOT NULL,
-  PRIMARY KEY (Id_respuesta),
-  FOREIGN KEY (Id_formulario) REFERENCES Formulario(Id_formulario)
-);
 
 CREATE TABLE Factura
 (
@@ -520,14 +486,6 @@ CREATE TABLE Factura
   FOREIGN KEY (Id_persona) REFERENCES Persona(Id_persona)
 );
 
-CREATE TABLE FormularioxPregunta
-(
-  Id_formulario INT NOT NULL,
-  Id_pregunta INT NOT NULL,
-  PRIMARY KEY (Id_formulario, Id_pregunta),
-  FOREIGN KEY (Id_formulario) REFERENCES Formulario(Id_formulario),
-  FOREIGN KEY (Id_pregunta) REFERENCES Pregunta(Id_pregunta)
-);
 
 CREATE TABLE Almacen
 (
@@ -581,15 +539,6 @@ CREATE TABLE Estado_de_resultado
   Id_item_est__resultados INT NOT NULL,
   PRIMARY KEY (id_est_resultados),
   FOREIGN KEY (Id_item_est__resultados) REFERENCES Item_estado_resultados(Id_item_est__resultados)
-);
-
-CREATE TABLE PreguntaxRespuesta
-(
-  Id_pregunta INT NOT NULL,
-  Id_respuesta INT NOT NULL,
-  PRIMARY KEY (Id_pregunta, Id_respuesta),
-  FOREIGN KEY (Id_pregunta) REFERENCES Pregunta(Id_pregunta),
-  FOREIGN KEY (Id_respuesta) REFERENCES Respuesta(Id_respuesta)
 );
 
 CREATE TABLE Secciones
@@ -676,19 +625,6 @@ CREATE TABLE VentaXProd
   FOREIGN KEY (Id_venta) REFERENCES Venta(Id_venta)
 );
 
-CREATE TABLE Comentario
-(
-  Id_comentario INT NOT NULL,
-  descrip_comentario VARCHAR(200) NOT NULL,
-  fecha_comentario DATE NOT NULL,
-  hora_comentario VARCHAR(10) NOT NULL,
-  id_producto INT NOT NULL,
-  Id_persona INT NOT NULL,
-  PRIMARY KEY (Id_comentario),
-  FOREIGN KEY (id_producto) REFERENCES Producto(id_producto),
-  FOREIGN KEY (Id_persona) REFERENCES Persona(Id_persona)
-);
-
 CREATE TABLE Movimiento
 (
   Id_mov INT NOT NULL,
@@ -750,6 +686,91 @@ CREATE TABLE Pedido
   FOREIGN KEY (Id_venta) REFERENCES Venta(Id_venta),
   FOREIGN KEY (Id_persona) REFERENCES Persona(Id_persona)
 );
+
+
+CREATE TABLE Tipo_est_formulario
+(
+  Id_est_formulario VARCHAR(100) NOT NULL,
+  est_formulario VARCHAR(100) NOT NULL,
+  PRIMARY KEY (Id_est_formulario)
+);
+
+
+CREATE TABLE Alternativa
+(
+  id_alternativa INT NOT NULL,
+  alternativa  NOT NULL,
+  PRIMARY KEY (id_alternativa)
+);
+
+
+
+CREATE TABLE Formulario
+(
+  Id_formulario INT NOT NULL,
+  descrip_formulario VARCHAR(500) NOT NULL,
+  fecha_creacion DATE NOT NULL,
+  Id_persona VARCHAR(100) NOT NULL,
+  Id_est_formulario VARCHAR(100) NOT NULL,
+  PRIMARY KEY (Id_formulario),
+  FOREIGN KEY (Id_persona) REFERENCES Persona(Id_persona),
+  FOREIGN KEY (Id_est_formulario) REFERENCES Tipo_est_formulario(Id_est_formulario)
+);
+
+
+CREATE TABLE Pregunta
+(
+  Id_pregunta INT NOT NULL,
+  pregunta VARCHAR(200) NOT NULL,
+  tipo_preg VARCHAR(100) NOT NULL,
+  id_alternativa INT,
+  PRIMARY KEY (Id_pregunta),
+  FOREIGN KEY (id_alternativa) REFERENCES Alternativa(id_alternativa)
+);
+
+CREATE TABLE Respuesta
+(
+  Id_respuesta INT NOT NULL,
+  respuesta  NOT NULL,
+  Id_formulario INT NOT NULL,
+  PRIMARY KEY (Id_respuesta),
+  FOREIGN KEY (Id_formulario) REFERENCES Formulario(Id_formulario)
+);
+
+CREATE TABLE FormularioxPregunta
+(
+  Id_formulario INT NOT NULL,
+  Id_pregunta INT NOT NULL,
+  PRIMARY KEY (Id_formulario, Id_pregunta),
+  FOREIGN KEY (Id_formulario) REFERENCES Formulario(Id_formulario),
+  FOREIGN KEY (Id_pregunta) REFERENCES Pregunta(Id_pregunta)
+);
+
+
+CREATE TABLE PreguntaxRespuesta
+(
+  Id_pregunta INT NOT NULL,
+  Id_respuesta INT NOT NULL,
+  PRIMARY KEY (Id_pregunta, Id_respuesta),
+  FOREIGN KEY (Id_pregunta) REFERENCES Pregunta(Id_pregunta),
+  FOREIGN KEY (Id_respuesta) REFERENCES Respuesta(Id_respuesta)
+);
+
+CREATE TABLE Comentario
+(
+  Id_comentario INT NOT NULL,
+  descrip_comentario VARCHAR(200) NOT NULL,
+  fecha_comentario DATE NOT NULL,
+  hora_comentario VARCHAR(10) NOT NULL,
+  id_producto INT NOT NULL,
+  Id_persona VARCHAR(100) NOT NULL,
+  PRIMARY KEY (Id_comentario),
+  FOREIGN KEY (id_producto) REFERENCES Producto(id_producto),
+  FOREIGN KEY (Id_persona) REFERENCES Persona(Id_persona)
+);
+
+
+
 ```
 
 # 4. Poblamiento inicial de datos
