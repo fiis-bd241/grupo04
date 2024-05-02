@@ -1524,6 +1524,9 @@ select * from EstadoxItem
 
 [Taipe Sicha Ronny Andy](../../06.Videos_Individuales/VideosPC2/Taipe_Sicha_Ronny_Andy-VideoIndividual.md)
 
+[Loza Sanchez Gianmarco](../../06.Videos_Individuales/VideosPC2/Loza_Sanchez_Gianmarco_VideoIndividual.md)
+
+
 # 6. ENTREVISTA
 ## Link
 - [Entrevista1](https://drive.google.com/drive/folders/1TTn2h-Z3sSz5ciMGMDi5mqIKiaWJ94f7?usp=sharing)
