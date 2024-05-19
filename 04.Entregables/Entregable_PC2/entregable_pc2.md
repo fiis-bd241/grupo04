@@ -488,16 +488,6 @@ CREATE TABLE Tipo_mov
   PRIMARY KEY (Id_tipo_mov)
 );
 
-CREATE TABLE Transportista
-(
-  Id_transportista INT NOT NULL,
-  nombre_transp VARCHAR(100) NOT NULL,
-  nro_licencia VARCHAR(100) NOT NULL,
-  PRIMARY KEY (Id_transportista)
-);
-
-
-
 CREATE TABLE Tipo_Genero
 (
   Id_tipo_genero CHAR(1) NOT NULL,
@@ -527,24 +517,14 @@ CREATE TABLE Tipos_pago
   PRIMARY KEY (id_tipo_pago)
 );
 
-CREATE TABLE Cupón
-(
-  Id_cupón INT NOT NULL,
-  fecha_ini_cup DATE NOT NULL,
-  fecha_fin_cup DATE NOT NULL,
-  desc_cup FLOAT,
-  esta_activo BOOLEAN NOT NULL,
-  PRIMARY KEY (Id_cupón)
-);
-
 CREATE TABLE Persona
 (
+  Id_persona INT NOT NULL,
   Nombre VARCHAR(100) NOT NULL,
   Primer_apell VARCHAR(100) NOT NULL,
   Segundo_apell VARCHAR(100) NOT NULL,
   Correo VARCHAR(100) NOT NULL,
   Telefono INT NOT NULL,
-  Id_persona INT NOT NULL,
   Direccion VARCHAR(200) NOT NULL,
   Usuario VARCHAR(100),
   Contraseña VARCHAR(100),
@@ -599,13 +579,13 @@ CREATE TABLE Repartidor
 CREATE TABLE Campaña
 (
   Id_campaña INT NOT NULL,
+  nom_campaña VARCHAR(100) NOT NULL,
   fecha_ini DATE NOT NULL,
   fecha_fin DATE NOT NULL,
-  canal_publi VARCHAR(100) NOT NULL,
   dir_url VARCHAR(100) NOT NULL,
   modalidad VARCHAR(100) NOT NULL,
   archivo VARCHAR(100) NOT NULL,
-  des_campaña FLOAT,
+  desc_campaña FLOAT NOT NULL,
   Id_equipo_mark INT NOT NULL,
   Id_gest_mark INT NOT NULL,
   PRIMARY KEY (Id_campaña),
@@ -623,11 +603,6 @@ CREATE TABLE Detalle_pago
   FOREIGN KEY (id_tipo_pago) REFERENCES Tipos_pago(id_tipo_pago)
 );
 
-
-
-
-
-
 CREATE TABLE Producto
 (
   id_producto INT NOT NULL,
@@ -637,12 +612,34 @@ CREATE TABLE Producto
   Cant_max INT NOT NULL,
   Precio_unit FLOAT NOT NULL,
   Id_categoria_prod INT NOT NULL,
-  Id_cupón INT NOT NULL,
-  Id_campaña INT NOT NULL,
   PRIMARY KEY (id_producto),
-  FOREIGN KEY (Id_categoria_prod) REFERENCES Categoria_prod(Id_categoria_prod),
-  FOREIGN KEY (Id_cupón) REFERENCES Cupón(Id_cupón),
+  FOREIGN KEY (Id_categoria_prod) REFERENCES Categoria_prod(Id_categoria_prod)
+);
+
+CREATE TABLE CampañaXProd
+(
+  id_producto INT NOT NULL,
+  Id_campaña INT NOT NULL,
+  PRIMARY KEY (id_producto, Id_campaña),
+  FOREIGN KEY (id_producto) REFERENCES Producto(id_producto),
   FOREIGN KEY (Id_campaña) REFERENCES Campaña(Id_campaña)
+);
+
+CREATE TABLE Canal
+(
+  Id_canal INT NOT NULL,
+  nombre_canal VARCHAR(100) NOT NULL,
+  PRIMARY KEY (Id_canal)
+);
+
+
+CREATE TABLE CampañaXCanal
+(
+  Id_campaña INT NOT NULL,
+  Id_canal INT NOT NULL,
+  PRIMARY KEY (Id_campaña, Id_canal),
+  FOREIGN KEY (Id_campaña) REFERENCES Campaña(Id_campaña),
+  FOREIGN KEY (Id_canal) REFERENCES Canal(Id_canal)
 );
 
 CREATE TABLE CotizaciónxProducto
@@ -676,6 +673,16 @@ CREATE TABLE Venta
   FOREIGN KEY (Id_persona) REFERENCES Persona(Id_persona)
 );
 
+CREATE TABLE Cupón
+(
+  Id_cupón INT NOT NULL,
+  fecha_ini_cup DATE NOT NULL,
+  fecha_fin_cup DATE NOT NULL,
+  desc_cup FLOAT NOT NULL,
+  esta_activo BOOLEAN NOT NULL,
+  PRIMARY KEY (Id_cupón)
+);
+
 CREATE TABLE VentaXProd
 (
   cant_prod INT NOT NULL,
@@ -683,6 +690,7 @@ CREATE TABLE VentaXProd
   id_prod_venta INT NOT NULL,
   id_producto INT NOT NULL,
   Id_venta INT NOT NULL,
+  Id_cupón INT,
   PRIMARY KEY (id_prod_venta, id_producto, Id_venta),
   FOREIGN KEY (id_producto) REFERENCES Producto(id_producto),
   FOREIGN KEY (Id_venta) REFERENCES Venta(Id_venta)
@@ -728,22 +736,32 @@ CREATE TABLE Pregunta
   FOREIGN KEY (id_alternativa) REFERENCES Alternativa(id_alternativa)
 );
 
+CREATE TABLE Tipo_est_formulario
+(
+  Id_est_formulario INT NOT NULL,
+  est_formulario VARCHAR(100) NOT NULL,
+  PRIMARY KEY (Id_est_formulario)
+);
+
+CREATE TABLE Formulario
+(
+  Id_formulario INT NOT NULL,
+  descrip_formulario VARCHAR(500) NOT NULL,
+  fecha_creacion DATE NOT NULL,
+  Id_persona INT NOT NULL,
+  Id_est_formulario INT NOT NULL,
+  PRIMARY KEY (Id_formulario),
+  FOREIGN KEY (Id_persona) REFERENCES Persona(Id_persona),
+  FOREIGN KEY (Id_est_formulario) REFERENCES Tipo_est_formulario(Id_est_formulario)
+);
+
 CREATE TABLE Respuesta
 (
   Id_respuesta INT NOT NULL,
-  respuesta  NOT NULL,
-  Id_formulario INT NOT NULL,
-  PRIMARY KEY (Id_respuesta),
-  FOREIGN KEY (Id_formulario) REFERENCES Formulario(Id_formulario)
-);
-
-CREATE TABLE PreguntaxRespuesta
-(
+  respuesta VARCHAR(200) NOT NULL,
   Id_pregunta INT NOT NULL,
-  Id_respuesta INT NOT NULL,
-  PRIMARY KEY (Id_pregunta, Id_respuesta),
-  FOREIGN KEY (Id_pregunta) REFERENCES Pregunta(Id_pregunta),
-  FOREIGN KEY (Id_respuesta) REFERENCES Respuesta(Id_respuesta)
+  PRIMARY KEY (Id_respuesta),
+  FOREIGN KEY (Id_pregunta) REFERENCES Pregunta(Id_pregunta)
 );
 
 CREATE TABLE FormularioxPregunta
@@ -754,27 +772,14 @@ CREATE TABLE FormularioxPregunta
   FOREIGN KEY (Id_formulario) REFERENCES Formulario(Id_formulario),
   FOREIGN KEY (Id_pregunta) REFERENCES Pregunta(Id_pregunta)
 );
-
-CREATE TABLE Formulario
+CREATE TABLE PreguntaxRespuesta
 (
-  Id_formulario INT NOT NULL,
-  descrip_formulario VARCHAR(500) NOT NULL,
-  fecha_creacion DATE NOT NULL,
-  Id_persona VARCHAR(100) NOT NULL,
-  Id_est_formulario VARCHAR(100) NOT NULL,
-  PRIMARY KEY (Id_formulario),
-  FOREIGN KEY (Id_persona) REFERENCES Persona(Id_persona),
-  FOREIGN KEY (Id_est_formulario) REFERENCES Tipo_est_formulario(Id_est_formulario)
+  Id_pregunta INT NOT NULL,
+  Id_respuesta INT NOT NULL,
+  PRIMARY KEY (Id_pregunta, Id_respuesta),
+  FOREIGN KEY (Id_pregunta) REFERENCES Pregunta(Id_pregunta),
+  FOREIGN KEY (Id_respuesta) REFERENCES Respuesta(Id_respuesta)
 );
-
-
-CREATE TABLE Tipo_est_formulario
-(
-  Id_est_formulario INT NOT NULL,
-  est_formulario VARCHAR(100) NOT NULL,
-  PRIMARY KEY (Id_est_formulario)
-);
-
 CREATE TABLE Comentario
 (
   Id_comentario INT NOT NULL,
@@ -782,17 +787,10 @@ CREATE TABLE Comentario
   fecha_comentario DATE NOT NULL,
   hora_comentario VARCHAR(10) NOT NULL,
   id_producto INT NOT NULL,
-  Id_persona VARCHAR(100) NOT NULL,
+  Id_persona INT NOT NULL,
   PRIMARY KEY (Id_comentario),
   FOREIGN KEY (id_producto) REFERENCES Producto(id_producto),
   FOREIGN KEY (Id_persona) REFERENCES Persona(Id_persona)
-);
-
-CREATE TABLE Tipo_Mov
-(
-  Id_Tipo_Mov CHAR(1) NOT NULL,
-  Nombre_Tipo_Mov VARCHAR(250) NOT NULL
-  PRIMARY KEY (Id_Tipo_Mov)
 );
 
 CREATE TABLE Almacen
@@ -856,8 +854,8 @@ CREATE TABLE Transportista
 CREATE TABLE Orden_Almacen
 (
   Id_Orden_Almacen VARCHAR(20) NOT NULL,
-  Cod_Area CHAR(15),
-  Id_Persona CHAR(30),
+  Cod_Area VARCHAR(100),
+  Id_Persona INT,
   Id_Tipo_Prod INT NOT NULL,
   Id_Pedido INT,
   ID_Almacen INT NOT NULL,
@@ -875,13 +873,11 @@ CREATE TABLE Movimiento
   Id_Tipo_Mov CHAR(1) NOT NULL,
   Id_Almacen INT NOT NULL,
   Id_Transportista INT,
-  Id_Repartidor INT,
   Id_Orden_Almacen VARCHAR(20) NOT NULL,
   PRIMARY KEY (Id_Mov),
   FOREIGN KEY (Id_Tipo_Mov) REFERENCES Tipo_Mov(Id_Tipo_Mov),
   FOREIGN KEY (Id_Almacen) REFERENCES Almacen(Id_Almacen),
   FOREIGN KEY (Id_Transportista) REFERENCES Transportista(Id_Transportista),
-  FOREIGN KEY (Id_Repartido) REFERENCES Repartidor(Id_Repartido),
   FOREIGN KEY (Id_Orden_Almacen) REFERENCES Orden_Almacen(Id_Orden_Almacen)
 );
 
@@ -920,28 +916,32 @@ CREATE TABLE tipo_asiento_contable
   denominación_tipo INT NOT NULL,
   descripción_tipo VARCHAR(100) NOT NULL,
   PRIMARY KEY (id_tipo_asiento_contable)
-);   CREATE TABLE Estado_de_Resultados
+);   
+CREATE TABLE Estado_de_Resultados
 (
   id_estado_de_resultados INT NOT NULL,
   periodo INT NOT NULL,
   mes INT NOT NULL,
   PRIMARY KEY (id_estado_de_resultados)
-); CREATE TABLE Factura
+); 
+CREATE TABLE Factura
 (
   nro_factura INT NOT NULL,
   fecha_emision DATE NOT NULL,
   monto FLOAT NOT NULL,
+  Id_persona INT,
   RUC_proveedor CHAR(11),
-  Id_persona VARCHAR(100) NOT NULL,
   PRIMARY KEY (nro_factura),
   FOREIGN KEY (RUC_proveedor) REFERENCES Proveedor(RUC_proveedor),
   FOREIGN KEY (Id_persona) REFERENCES Persona(Id_persona)
-); CREATE TABLE Presupuesto
+); 
+
+CREATE TABLE Presupuesto
 (
   Id_presupuesto INT NOT NULL,
   fecha_elaboracion DATE NOT NULL,
   Id_tipo_presupuesto INT NOT NULL,
-  Id_persona VARCHAR(100) NOT NULL,
+  Id_persona INT NOT NULL,
   PRIMARY KEY (Id_presupuesto),
   FOREIGN KEY (Id_tipo_presupuesto) REFERENCES Tipo_presupuesto(Id_tipo_presupuesto),
   FOREIGN KEY (Id_persona) REFERENCES Persona(Id_persona)
@@ -959,15 +959,15 @@ CREATE TABLE Asiento_Contable
   FOREIGN KEY (id_tipo_asiento_contable) REFERENCES tipo_asiento_contable(id_tipo_asiento_contable)
 );
 
-CREATE TABLE Item_estado_resultados
-(
+CREATE TABLE Item_estado_resultados(
   Id_item_est__resultados INT NOT NULL,
   Id_asiento_contable INT NOT NULL,
   Id_tipo_item_est INT NOT NULL,
   PRIMARY KEY (Id_item_est__resultados),
   FOREIGN KEY (Id_asiento_contable) REFERENCES Asiento_Contable(Id_asiento_contable),
   FOREIGN KEY (Id_tipo_item_est) REFERENCES Tipo_item_est(Id_tipo_item_est)
-);  CREATE TABLE EstadoxItem
+);  
+CREATE TABLE EstadoxItem
 (
   Monto_ INT NOT NULL,
   Id_item_est__resultados INT NOT NULL,
@@ -1102,45 +1102,45 @@ select * from Tipo_Genero;
 --Equipo_Marketing
 INSERT INTO Equipo_Marketing (Id_equipo_mark, nombre_equipo, cant_emp)
 VALUES
-    (10, 'Equipo A', 4),
-    (11, 'Equipo B', 6),
-    (12, 'Equipo C', 5),
-    (13, 'Equipo D', 5),
-    (14, 'Equipo E', 6),
-    (15, 'Equipo F', 4),
-    (16, 'Equipo G', 5),
-    (17, 'Equipo H', 5),
+    (10, 'Equipo A', 2),
+    (11, 'Equipo B', 3),
+    (12, 'Equipo C', 4),
+    (13, 'Equipo D', 2),
+    (14, 'Equipo E', 2),
+    (15, 'Equipo F', 3),
+    (16, 'Equipo G', 3),
+    (17, 'Equipo H', 2),
     (18, 'Equipo I', 3),
-    (19, 'Equipo J', 4);
+    (19, 'Equipo J', 3);
 select * from Equipo_Marketing;
 
 --Persona
 INSERT INTO Persona VALUES 
-('María','Gonzales', 'Ramírez', 'maria.gonzales@gmail.com','984562135','10000001','Av. Los Laureles 123','mariagr', 'mmmaaria',8,'CLI',NULL,NULL,'F');
+('10000001','María','Gonzales', 'Ramírez', 'maria.gonzales@gmail.com','984562135','Av. Los Laureles 123','mariagr', 'mmmaaria',8,'CLI',NULL,NULL,'F');
 INSERT INTO Persona VALUES 
-('Juan','Pérez', 'Flores', 'juan.perez@gmail.com', '984562235','10000002','Jr. Los Cedros 456','juanpr', 'mjuanria',10,'CLI',NULL,NULL,'M'),
-('Rosa','Mendoza', 'Díaz', 'rosa.mendoza@gmail.com', '984562335','10000003','Calle Las Flores 789','rosagr', 'mrosaia',11,'CLI',NULL,NULL,'F'),
-('Carlos','Torres', 'Chávez', 'carlos.torres@gmail.com', '984562435','10000004','Av. Los Pinos 1011','carlosgr', 'mcarlosa',12,'CLI',NULL,NULL,'M'),
-('Patricia','Huamaní', 'Álvarez', 'patricia.huamani@gmail.com', '984862135','10000005','Jr. Las Rosas 1213','patriciagr', 'mpatriciaa',13,'CLI',NULL,NULL,'F'),
-('Luis','Sánchez', 'Cruz', 'luis.sanchez@gmail.com', '987456235','10000006','Calle Los Álamos 1415','luisgr', 'mluisr',14,'CLI',NULL,NULL,'M'),
-('Ana','Castillo', 'Villanueva', 'ana.castillo@gmail.com', '994562135','10000007','Av. Los Cerezos 1617','anagr', 'anarg',15,'CLI',NULL,NULL,'F'),
-('Patricia','Alvarez', 'Valencia', 'patricia.alvarez@gmail.com', '987562135','10000008','r. Las Palmeras 1819','patriciagr', 'patriciarmg',3,'CLI',NULL,NULL,'F'),
-('Eduardo','Cruz', 'Salas', 'eduardo.cruz@gmail.com', '984962135','10000009','Calle Los Olivos 2021','eduardogr', 'eeduer',16,'CLI',NULL,NULL,'M'),
-('Sandra','Valencia', 'León', 'sandra.valencia@gmail.com', '983562135','10000010','Av. Las Acacias 2223','sandragr', 'sandragr',17,'CLI',NULL,NULL,'F');
+('10000002','Juan','Pérez', 'Flores', 'juan.perez@gmail.com', '984562235','Jr. Los Cedros 456','juanpr', 'mjuanria',10,'CLI',NULL,NULL,'M'),
+('10000003','Rosa','Mendoza', 'Díaz', 'rosa.mendoza@gmail.com', '984562335','Calle Las Flores 789','rosagr', 'mrosaia',11,'CLI',NULL,NULL,'F'),
+('10000004','Carlos','Torres', 'Chávez', 'carlos.torres@gmail.com', '984562435','Av. Los Pinos 1011','carlosgr', 'mcarlosa',12,'CLI',NULL,NULL,'M'),
+('10000005','Patricia','Huamaní', 'Álvarez', 'patricia.huamani@gmail.com', '984862135','Jr. Las Rosas 1213','patriciagr', 'mpatriciaa',13,'CLI',NULL,NULL,'F'),
+('10000006','Luis','Sánchez', 'Cruz', 'luis.sanchez@gmail.com', '987456235','Calle Los Álamos 1415','luisgr', 'mluisr',14,'CLI',NULL,NULL,'M'),
+('10000007','Ana','Castillo', 'Villanueva', 'ana.castillo@gmail.com', '994562135','Av. Los Cerezos 1617','anagr', 'anarg',15,'CLI',NULL,NULL,'F'),
+('10000008','Patricia','Alvarez', 'Valencia', 'patricia.alvarez@gmail.com', '987562135','Jr. Las Palmeras 1819','patriciagr', 'patriciarmg',3,'CLI',NULL,NULL,'F'),
+('10000009','Eduardo','Cruz', 'Salas', 'eduardo.cruz@gmail.com', '984962135','Calle Los Olivos 2021','eduardogr', 'eeduer',16,'CLI',NULL,NULL,'M'),
+('10000010','Sandra','Valencia', 'León', 'sandra.valencia@gmail.com', '983562135','Av. Las Acacias 2223','sandragr', 'sandragr',17,'CLI',NULL,NULL,'F');
 INSERT INTO Persona VALUES 
-('María','Gonzales', 'Ramírez', 'pilar.gonzales@gmail.com', '989962135','1001','Av. Los Laureles 102','pilargr', 'pilargr',5,'GCM',NULL,'CM','F'),
-('Juan','Quispe', 'Villaverde', 'juan.quispe@gmail.com', '997962135','1002','Jr. Los Cedros 425','juanq', 'juanq',1,'GVT',NULL,'VT','M'),
-('Camila','Hidalgo', 'Laureano', 'camila.hidalgo@gmail.com', '949962135','1003','Calle Las Flores 748','camilah', 'camilah',2,'GDT',NULL,'DT','F'),
-('Steven','Gutierrez', 'Calderon', 'steven.gutierrez@gmail.com', '939962135','1004','Av. Los Pinos 1021','steveng', 'steveng',3,'GFZ',NULL,'FZ','M'),
-('Ariana','Del Rio', 'Rojas', 'ariana.delrio@gmail.com', '929962135','1005','Jr. Las Rosas 1022','ariand', 'ariand',4,'GMK',10,'MK','F'),
-('Manuel','Ramirez', 'Herberth', 'manuel.ramirez@gmail.com', '919962135','1006','Calle Los Álamos 1082','manuelr', 'manuelr',5,'GAM',NULL,'AM','M'),
-('Sandra','Calderon', 'Sosaya', 'sandra.calderon@gmail.com', '990962135','1007','Av. Las Acacias 2102','sandrac', 'sandrac',6,'GCR',NULL,'CRM','F');
+('1001','María','Gonzales', 'Ramírez', 'pilar.gonzales@gmail.com', '989962135','Av. Los Laureles 102','pilargr', 'pilargr',5,'GCM',NULL,'CM','F'),
+('1002','Juan','Quispe', 'Villaverde', 'juan.quispe@gmail.com', '997962135','Jr. Los Cedros 425','juanq', 'juanq',1,'GVT',NULL,'VT','M'),
+('1003','Camila','Hidalgo', 'Laureano', 'camila.hidalgo@gmail.com', '949962135','Calle Las Flores 748','camilah', 'camilah',2,'GDT',NULL,'DT','F'),
+('1004','Steven','Gutierrez', 'Calderon', 'steven.gutierrez@gmail.com', '939962135','Av. Los Pinos 1021','steveng', 'steveng',3,'GFZ',NULL,'FZ','M'),
+('1005','Ariana','Del Rio', 'Rojas', 'ariana.delrio@gmail.com', '929962135','Jr. Las Rosas 1022','ariand', 'ariand',4,'GMK',10,'MK','F'),
+('1006','Manuel','Ramirez', 'Herberth', 'manuel.ramirez@gmail.com', '919962135','Calle Los Álamos 1082','manuelr', 'manuelr',5,'GAM',NULL,'AM','M'),
+('1007','Sandra','Calderon', 'Sosaya', 'sandra.calderon@gmail.com', '990962135','Av. Las Acacias 2102','sandrac', 'sandrac',6,'GCR',NULL,'CRM','F');
 select * from Persona;
 
 --Cupón
 INSERT INTO Cupón (Id_cupón, fecha_ini_cup, fecha_fin_cup, desc_cup, esta_activo)
 VALUES
-    (1000, '2022-01-01', '2122-02-01', null, TRUE),
+    (1000, '2022-01-01', '2022-02-01', 0.10, FALSE),
     (1001, '2022-02-01', '2022-03-01', 0.20, FALSE),
     (1002, '2022-03-01', '2022-04-01', 0.50, FALSE),
     (1003, '2022-04-01', '2022-05-01', 0.40, FALSE),
@@ -1153,32 +1153,72 @@ VALUES
 select * from Cupón;
 
 -- Campaña
-INSERT INTO Campaña (Id_campaña, fecha_ini, fecha_fin, canal_publi, dir_url, modalidad, archivo, des_campaña, Id_equipo_mark, Id_gest_mark)
+INSERT INTO Campaña (Id_campaña, nom_campaña, fecha_ini, fecha_fin, dir_url, modalidad, archivo, desc_campaña, Id_equipo_mark, Id_gest_mark)
 VALUES
-    (100000, '2022-01-04', '2022-01-11', 'instagram', 'https://linktr.ee/Migni_Store', 'native ad', 'https://marketingmigni.com/campaña100000.mp4', null, 10, 1002),
-    (100001, '2022-01-11', '2022-01-18', 'facebook', 'https://linktr.ee/Migni_Store', 'post', 'https://marketingmigni.com/campaña100001.jpg', 0.25, 12, 1002),
-    (100002, '2022-01-18', '2022-02-18', 'marketplace', 'https://linktr.ee/Migni_Store', 'post', 'https://marketingmigni.com/campaña100002.jpg', 0.10, 11, 1002),
-    (100003, '2022-02-18', '2022-02-25', 'twitter', 'https://linktr.ee/Migni_Store', 'post', 'https://marketingmigni.com/campaña100003.jpg', 0.15, 16, 1002),
-    (100004, '2022-02-25', '2022-03-25', 'facebook', 'https://linktr.ee/Migni_Store', 'post', 'https://marketingmigni.com/campaña100004.mp4', 0.25, 17, 1002),
-    (100005, '2022-03-25', '2022-04-01', 'marketplace', 'https://linktr.ee/Migni_Store', 'post', 'https://marketingmigni.com/campaña100005.jpg', 0.30, 17, 1002),
-    (100006, '2022-04-01', '2022-04-08', 'marketplace', 'https://linktr.ee/Migni_Store', 'post', 'https://marketingmigni.com/campaña100006.jpg', 0.30, 19, 1002),
-    (100007, '2022-04-08', '2022-05-08', 'instagram', 'https://linktr.ee/Migni_Store', 'native ad', 'https://marketingmigni.com/campaña100007.jpg', 0.10, 18, 1002),
-    (100008, '2022-05-08', '2022-06-08', 'instagram', 'https://linktr.ee/Migni_Store', 'native ad', 'https://marketingmigni.com/campaña100008.jpg', 0.25, 14, 1002),
-    (100009, '2022-06-08', '2022-06-15', 'youtube', 'https://linktr.ee/Migni_Store', 'video ad', 'https://marketingmigni.com/campaña100009.mp4', 0.35, 11, 1002);
+    (100000, 'campaña enero 1', '2022-01-04', '2022-01-11', 'https://linktr.ee/Migni_Store', 'native ad', 'https://marketingmigni.com/campaña100000.mp4', 0.10, 10, 1005),
+    (100001, 'campaña enero 2', '2022-01-11', '2022-01-18', 'https://linktr.ee/Migni_Store', 'post', 'https://marketingmigni.com/campaña100001.jpg', 0.25, 12, 1005),
+    (100002, 'campaña enero 3', '2022-01-18', '2022-02-18', 'https://linktr.ee/Migni_Store', 'post', 'https://marketingmigni.com/campaña100002.jpg', 0.10, 11, 1005),
+    (100003, 'campaña escolar 1', '2022-02-18', '2022-02-25', 'https://linktr.ee/Migni_Store', 'post', 'https://marketingmigni.com/campaña100003.jpg', 0.15, 16, 1005),
+    (100004, 'campaña escolar 2', '2022-02-25', '2022-03-25', 'https://linktr.ee/Migni_Store', 'post', 'https://marketingmigni.com/campaña100004.mp4', 0.25, 17, 1005),
+    (100005, 'campaña escolar 3', '2022-03-25', '2022-04-01', 'https://linktr.ee/Migni_Store', 'post', 'https://marketingmigni.com/campaña100005.jpg', 0.30, 17, 1005),
+    (100006, 'campaña abril 1', '2022-04-01', '2022-04-08', 'https://linktr.ee/Migni_Store', 'post', 'https://marketingmigni.com/campaña100006.jpg', 0.30, 19, 1005),
+    (100007, 'campaña abril 2', '2022-04-08', '2022-05-08', 'https://linktr.ee/Migni_Store', 'native ad', 'https://marketingmigni.com/campaña100007.jpg', 0.10, 18, 1005),
+    (100008, 'campaña dia de la madre 2022', '2022-05-08', '2022-06-08', 'https://linktr.ee/Migni_Store', 'native ad', 'https://marketingmigni.com/campaña100008.jpg', 0.25, 14, 1005),
+    (100009, 'campaña dia del padre 2022', '2022-06-08', '2022-06-15', 'https://linktr.ee/Migni_Store', 'video ad', 'https://marketingmigni.com/campaña100009.mp4', 0.35, 11, 1005);
 select * from Campaña;
 
 --Producto
-insert into Producto values (1, 'Cuaderno clear blinder', 'Cuaderno A4 tipo blinder con 60 hojas rayadas', 0, 100, 25.0, 1, 1000,100000);
-insert into Producto values (2, 'Bear Notebook B5', 'Cuaderno B5 tipo blinder con 60 hojas rayadas', 0, 100,20.0, 1, 1001,100001);
-insert into Producto values (3, 'Diamond pen', 'Incluye protector, Tinta:negra', 0, 100,6.5, 2, 1002,100002);
-insert into Producto values (4, 'Releaf Primer', 'Primer de Italia deluxe', 0, 100,28.5, 5, 1003,100003);
-insert into Producto values (5, 'Corrector HD Pro', 'Corrector de Italia deluxe, con cobertura media a graduable', 0, 100, 16.0, 10, 1004,100004);
-insert into Producto values (6, 'Super Stay Matter Maybelline', 'Labial con efecto matte instransferible por 24h', 0, 100, 45.0, 8, 1005,100005);
-insert into Producto values (7, 'Profesional Silicón PROSA', 'Mascara de pestañas que aporta demasiada longitud ', 0, 100, 30.0, 11, 1006,100006);
-insert into Producto values (8, 'Gliterally', 'Delineador con glitter extra brillante de Beauty creation', 0, 100,22.0, 6, 1007,100007);
-insert into Producto values (9, 'Ultrafine lipliner', 'Delineadores de labios de Italia deluxe', 0, 100, 6.0, 8, 1008,100008);
-insert into Producto values (10, 'Fill in thirsty gloss', 'Gloss de Italia deluxe con efecto mentolado', 0, 100, 18.0, 8, 1009,100009);
-select * from Producto
+insert into Producto values (1, 'Cuaderno clear blinder', 'Cuaderno A4 tipo blinder con 60 hojas rayadas', 0, 100, 25.0, 1);
+insert into Producto values (2, 'Bear Notebook B5', 'Cuaderno B5 tipo blinder con 60 hojas rayadas', 0, 100,20.0, 1);
+insert into Producto values (3, 'Diamond pen', 'Incluye protector, Tinta:negra', 0, 100,6.5, 2);
+insert into Producto values (4, 'Releaf Primer', 'Primer de Italia deluxe', 0, 100,28.5, 5);
+insert into Producto values (5, 'Corrector HD Pro', 'Corrector de Italia deluxe, con cobertura media a graduable', 0, 100, 16.0, 10);
+insert into Producto values (6, 'Super Stay Matter Maybelline', 'Labial con efecto matte instransferible por 24h', 0, 100, 45.0, 8);
+insert into Producto values (7, 'Profesional Silicón PROSA', 'Mascara de pestañas que aporta demasiada longitud ', 0, 100, 30.0, 11);
+insert into Producto values (8, 'Gliterally', 'Delineador con glitter extra brillante de Beauty creation', 0, 100,22.0, 6);
+insert into Producto values (9, 'Ultrafine lipliner', 'Delineadores de labios de Italia deluxe', 0, 100, 6.0, 8);
+insert into Producto values (10, 'Fill in thirsty gloss', 'Gloss de Italia deluxe con efecto mentolado', 0, 100, 18.0, 8);
+select * from Producto;
+
+--CampañaXProd
+INSERT INTO CampañaXProd (id_producto, Id_campaña)
+VALUES
+    (1, 100000),
+    (2, 100001),
+    (5, 100002),
+    (7, 100003),
+    (7, 100004),
+    (2, 100005),
+    (8, 100006),
+    (9, 100007),
+    (10, 100008),
+    (2, 100009);
+select * from CampañaXProd;
+
+--Canal
+INSERT INTO Canal (Id_canal, nombre_canal)
+VALUES
+    (100, 'youtube'),
+    (101, 'twitter'),
+    (102, 'marketplace'),
+    (103, 'instagram'),
+    (104, 'facebook');
+select * from Canal;
+
+--CampañaXCanal
+INSERT INTO CampañaXCanal (Id_campaña, Id_canal)
+VALUES
+    (100000, 102),
+    (100001, 101),
+    (100002, 103),
+    (100003, 101),
+    (100004, 100),
+    (100005, 100),
+    (100006, 102),
+    (100007, 101),
+    (100008, 104),
+    (100009, 103);
+select * from CampañaXCanal;
 
 --cotizacionxproducto
 insert into CotizaciónxProducto values (12, 10, 3);
@@ -1190,7 +1230,7 @@ insert into CotizaciónxProducto values (8, 11, 1);
 insert into CotizaciónxProducto values (15, 13, 3);
 insert into CotizaciónxProducto values (15, 13, 2);
 insert into CotizaciónxProducto values (00, 13, 1);
-select * from CotizaciónxProducto
+select * from CotizaciónxProducto;
 
 --proveedorxproducto
 insert into ProveedorxProducto values (4.8, '3','20603302151');
@@ -1202,7 +1242,7 @@ insert into ProveedorxProducto values (12.0, '1', '20607504149');
 insert into ProveedorxProducto values (5.5, '3','20789101234');
 insert into ProveedorxProducto values (6.3, '2', '20789101234');
 insert into ProveedorxProducto values (12.2, '1', '20789101234');
-select * from ProveedorxProducto
+select * from ProveedorxProducto;
 
 --Tipos_pago 
 INSERT INTO Tipos_pago (id_tipo_pago, nombre_tipo, nro_tarjeta) VALUES
@@ -1240,18 +1280,22 @@ INSERT INTO Venta (Id_venta, id_persona, monto_final, Id_detalle_pago) VALUES
 (8901, '10000010', 72.0, 2010);
 select * from Venta;
 --VentaXProd
-INSERT INTO VentaXProd (id_prod_venta, Id_venta, id_producto, cant_prod, monto_total) VALUES
-(12341, 1234, 1, 2, 50.0),
-(56782, 5678, 2, 1, 20.0),
-(90123, 9012, 3, 1, 6.5),
-(34564, 3456, 4, 4, 114.0),
-(78905, 7890, 5, 7, 112.0),
-(23456, 2345, 6, 1, 45.0),
-(67897, 6789, 7, 2, 60.0),
-(1238, 123, 8, 1, 22.0),
-(45679, 4567, 9, 3, 18.0),
-(890110, 8901, 10, 4, 72.0);
+INSERT INTO VentaXProd (id_prod_venta, Id_venta, id_producto, cant_prod, monto_total, Id_cupón) VALUES
+(12341, 1234, 1, 2, 50.0, 1000),
+(56782, 5678, 2, 1, 20.0, 1001),
+(90123, 9012, 3, 1, 6.5, NULL),
+(34564, 3456, 4, 4, 114.0, NULL),
+(78905, 7890, 5, 7, 112.0, 1003),
+(23456, 2345, 6, 1, 45.0, 1002),
+(67897, 6789, 7, 2, 60.0, 1009),
+(1238, 123, 8, 1, 22.0, 1006),
+(45679, 4567, 9, 3, 18.0, 1007),
+(890110, 8901, 10, 4, 72.0, NULL);
 select * from VentaXProd;
+
+INSERT INTO Tipo_est_formulario (Id_est_formulario, est_formulario) VALUES
+(1, 'Activo'),
+(2, 'Inactivo');
 
 --Tipo_est_pedido
 INSERT INTO Tipo_est_pedido VALUES ('E', 'ENTREGADO'), ('P', 'PENDIENTE');
@@ -1269,8 +1313,15 @@ INSERT INTO Pedido (id_pedido, fecha_entrega, est_pedido, hora_entrega, id_ruta 
 (4315,'29/12/2023','E','12:30', 9,'10000008',9561677,123),
 (4516,'11/3/2024','E','12:30', 10,'10000009',7523677,4567),
 (4585,'23/07/2024','P','12:30', 11,'10000010',7523677,8901);
+
 select * from Pedido;
 
+INSERT INTO Formulario (Id_formulario, descrip_formulario, fecha_creacion, Id_persona, Id_est_formulario) VALUES
+(1, 'Encuesta de satisfacción', '2024-04-25', '1007', 1),
+(2, 'Encuesta de preferencias', '2024-04-26', '1007', 2),
+(3, 'Encuesta de productos', '2024-04-27', '1007', 1),
+(4, 'Encuesta de opiniones', '2024-05-28', '1007', 2),
+(5, 'Encuesta de experiencia', '2024-05-01', '1007', 1);
 
 INSERT INTO Alternativa (id_alternativa, alternativa) VALUES
 (1, ARRAY['Sí', 'No']),
@@ -1294,7 +1345,7 @@ INSERT INTO Pregunta (Id_pregunta, pregunta, tipo_preg, id_alternativa) VALUES
 (8, 'Por favor, califique del 1 al 10 la calidad del producto', 'Opción única', 8),
 (9, '¿Cómo calificaría su satisfacción general con el servicio?', 'Opción única', 9);
 
-INSERT INTO Respuesta (Id_respuesta, respuesta, Id_formulario) VALUES
+INSERT INTO Respuesta (Id_respuesta, respuesta, Id_pregunta) VALUES
 (1, 'Sí, estoy muy satisfecho con mi compra', 1),
 (2, 'No, el producto no cumplió mis expectativas', 1),
 (3, 'Excelente', 2),
@@ -1365,18 +1416,6 @@ INSERT INTO FormularioxPregunta (Id_formulario, Id_pregunta) VALUES
 (2, 8),
 (2, 9);
 
-INSERT INTO Formulario (Id_formulario, descrip_formulario, fecha_creacion, Id_persona, Id_est_formulario) VALUES
-(1, 'Encuesta de satisfacción', '2024-04-25', '1007', 1),
-(2, 'Encuesta de preferencias', '2024-04-26', '1007', 2),
-(3, 'Encuesta de productos', '2024-04-27', '1007', 1),
-(4, 'Encuesta de opiniones', '2024-05-28', '1007', 2),
-(5, 'Encuesta de experiencia', '2024-05-01', '1007', 1);
-
-
-INSERT INTO Tipo_est_formulario (Id_est_formulario, est_formulario) VALUES
-(1, 'Activo'),
-(2, 'Inactivo');
-
 INSERT INTO Comentario (Id_comentario, descrip_comentario, fecha_comentario, hora_comentario, id_producto, Id_persona) VALUES
 (1, 'El servicio al cliente fue excepcional, y el producto llegó antes de lo esperado. ¡Muy satisfecho!', '2024-04-01', '09:30', 1, '10000001'),
 (2, 'La calidad del producto es regular. Creo que podrían mejorar en ese aspecto', '2024-04-01', '14:00', 2, '10000003'),
@@ -1387,6 +1426,9 @@ INSERT INTO Comentario (Id_comentario, descrip_comentario, fecha_comentario, hor
 (7, 'Excelente atención al cliente. El personal fue muy amable y servicial', '2024-04-05', '16:20', 5, '10000004'),
 (8, 'El producto llegó en malas condiciones. Estoy muy insatisfecho con el servicio', '2024-04-06', '13:45', 6, '10000009'),
 (9, 'La crema que compré es de muy buena calidad. Definitivamente volveré a comprarla', '2024-04-07', '10:10', 7, '10000008');
+
+
+
 --Tipo_Mov
 INSERT INTO Tipo_Mov VALUES ('E', 'Entrada de Productos'), ('R', 'Salida de Productos a Clientes'),('S','Salida de Productos a Áreas de la Empresa');
 select * from Tipo_Mov;
@@ -1408,24 +1450,20 @@ INSERT INTO Repisas VALUES ('R1', 1,'A'),('R2', 1,'A'),('R3', 1,'B'),('R4', 1,'B
 select * from Repisas;
 
 --Ubicacion
-INSERT INTO Ubicacion VALUES ('A-E1-R11','A','E1',R1',1);
+INSERT INTO Ubicacion VALUES ('A-E1-R11','A','E1','R1',1);
 select * from Ubicacion;
 
---Orden Almacen
-INSERT INTO Orden Almacen VALUES ('OT-001',,'Lucía Castromonte',2,201,2);
-select * from Orden Almacen;
+--Transportista
+INSERT INTO Transportista VALUES (1001,'Juan Carlos Ramirez','Disponible');
+select * from Transportista;
+
 
 --Inventario
-INSERT INTO Orden Inventario VALUES (1242300021,'Forrado',20,10,10,2,200.00,'A-E1-R11');
-select * from Orden Inventario;
+INSERT INTO Inventario VALUES (1242300021,'Forrado',20,10,10,2,200.00,'A-E1-R11');
+select * from Inventario;
 
---Movimiento
-INSERT INTO Orden Movimiento VALUES (101,2/03/2024,'S',1,1001,,'OT-001');
-select * from Orden Movimiento;
 
---Transportista
-INSERT INTO Transportista VALUES (1001,'Juan Carlos Ramirez','Disponible);
-select * from Transportista;
+
 
 --Tipo_item_est
 insert into Tipo_item_est values (301,'ventas','suma');
@@ -1435,14 +1473,14 @@ insert into Tipo_item_est values (304,'utilidad bruta','operación');
 insert into Tipo_item_est values (305,'utilidad antes de impuesto','operación');
 insert into Tipo_item_est values (306,'impuesto','resta');
 insert into Tipo_item_est values (307,'utilidad neta','operación');
-select * from Tipo_item_est
+select * from Tipo_item_est;
 
 --Tipo_presupuesto
 insert into Tipo_presupuesto values (1,'presupuesto compras');
 insert into Tipo_presupuesto values (2,'presupuesto inversiones');
 insert into Tipo_presupuesto values (3,'presupuesto ventas');
 insert into Tipo_presupuesto values (4,'presupuesto distribución');
-select * from Tipo_presupuesto
+select * from Tipo_presupuesto;
 
 --Tipo_asiento_contable
 insert into tipo_asiento_contable values (401,50,'apertura');
@@ -1450,20 +1488,21 @@ insert into tipo_asiento_contable values (402,21,'operacional');
 insert into tipo_asiento_contable values (403,50, 'centralización');
 insert into tipo_asiento_contable values (404,30,'cierre');
 insert into tipo_asiento_contable values (405,24,'ajuste');
-select * from tipo_asiento_contable
+select * from tipo_asiento_contable;
 
 --Factura
-insert into Factura values (2022001,'01-01-2022',100.05,'12345678',null);
+insert into Factura values (2022001,'01-01-2022',100.05,'10000001',null);
 insert into Factura values (2022002,'02-08-2022',250.75,null,'20603302151');
-insert into Factura values (2022003,'23-11-2022',500,'23456789',null);
-insert into Factura values (2022004,'12-04-2023',20.05,'12345678',null);
+insert into Factura values (2022003,'23-11-2022',500,'10000002',null);
+insert into Factura values (2022004,'12-04-2023',20.05,'10000003',null);
 insert into Factura values (2022005,'17-07-2021',660,null,'22890123456');
-insert into Factura values (2022006,'05-09-2022',13.05,'12345678',null);
-insert into Factura values (2022007,'01-01-2023',123.56,'67890123',null);
+insert into Factura values (2022006,'05-09-2022',13.05,'10000004',null);
+insert into Factura values (2022007,'01-01-2023',123.56,'10000005',null);
 insert into Factura values (2022008,'13-10-2021',1000,null,'20607504149');
 insert into Factura values (2022009,'04-06-2023',200.65,null,'20789101234');
-insert into Factura values (2022010,'01-01-2024',134.78,'89012345',null);
-select * from Factura
+insert into Factura values (2022010,'01-01-2024',134.78,'10000006',null);
+select * from Factura;
+
 --Presupuesto
 insert into Presupuesto values (601,'01-01-2022',1,'1007');
 insert into Presupuesto values (602,'15-01-2022',2,'1005');
@@ -1475,7 +1514,7 @@ insert into Presupuesto values (607,'06-01-2021',1,'1004');
 insert into Presupuesto values (608,'11-01-2022',2,'1002');
 insert into Presupuesto values (609,'13-10-2023',2,'1001');
 insert into Presupuesto values (610,'02-10-2022',4,'1007');
-select * from Presupuesto
+select * from Presupuesto;
 --Asiento-contable
 insert into Asiento_Contable values (101,100.5, 0,2022001,401);
 insert into Asiento_Contable values (102,0,250.75,2022002,402);
@@ -1487,7 +1526,7 @@ insert into Asiento_Contable values (107,1200,0,2022007,405);
 insert into Asiento_Contable values (108,0,1000.2,2022008,403);
 insert into Asiento_Contable values (109,300.5,0,2022009,403);
 insert into Asiento_Contable values (110, 12500.25, 0,2022010,401);
-select * from Asiento_Contable
+select * from Asiento_Contable;
 
 ---Item_estado_resultado
 insert into Item_estado_resultados values (1,101,301);
@@ -1500,19 +1539,29 @@ insert into Item_estado_resultados values (7,102,307);
 insert into Item_estado_resultados values (8,101,303);
 insert into Item_estado_resultados values (9,109,302);
 insert into Item_estado_resultados values (10,103,305);
-select * from Item_estado_resultados
+select * from Item_estado_resultados;
 
 --Estado de resultados
 insert into Estado_de_resultados values (201, 2004,1);
 insert into Estado_de_resultados values (202, 2000,2);
 insert into Estado_de_resultados values (203, 2003,3);
 insert into Estado_de_resultados values (204, 2018,4);
-select * from Estado_de_resultados
+select * from Estado_de_resultados;
  
 --Estadoxitem
 insert into EstadoxItem values (1000, 1, 203);
 insert into EstadoxItem values (10670, 3, 202);
-select * from EstadoxItem
+select * from EstadoxItem;
+
+
+
+--Almacen
+INSERT INTO Orden_Almacen VALUES ('OT-001','AM','1006',2,1215,2);
+select * from Orden_Almacen;
+
+--Movimiento
+INSERT INTO Movimiento VALUES (101,'2/03/2024','S',1,1001,'OT-001');
+select * from Movimiento;
 ```
 
 # 5. Videos individuales
