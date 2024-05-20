@@ -62,8 +62,6 @@ Descripción: Son los bienes que la empresa tiene en venta
 | cant_max | Cantidad maxima que puede haber de un producto | 999 | Int | >0 |
 | precio_unit | Precio unitario que la empresa asigno a un producto | 999 | Int | >0 |
 | id_categoria_prod | Identificador unico de la categoria de un producto | 999 | Int | >0 |
-| Id_cupón | Identificador unico del cupón aplicado al producto | 9999 | Int | NOT NULL |
-| Id_campaña | Identificador unico de la campaña activa que promociona al producto | 999999 | Int | NOT NULL |
 
 Entidad: Categoria_prod
 
@@ -193,15 +191,39 @@ Descripción: Proyecto de comunicación de los productos y sus promociones en la
 | Atributo | Descripción | Formato | Naturaleza | Valores |
 |:----------:|:--------------------------------:|:---------------:|:------------------:|:--------:|
 | Id_campaña | Identificador único de la campaña | 999999 | INT | NOT NULL |
+| nom_campaña | mo,bre de la campaña | A(100) | VARCHAR | NOT NULL |
 | fecha_ini | Fecha a partir de la cual es válida la campaña | AAAA/MM/DD | DATE | NOT NULL |
 | fecha_fin | Fecha hasta la cual es válida la campaña  | AAAA/MM/DD | DATE | NOT NULL |
-| canal_publi | Red social o página web en la que se transmite la campaña publicitaria | A(100) | VARCHAR(100) | NOT NULL |
 | dir_url | Dirección URL a la que se redirige al usuario al precionar en la publicidad | A(100) | VARCHAR(100) | NOT NULL |
 | modalidad | Modalidad de publicidad en la red social o página web | A(100) | VARCHAR(100) | NOT NULL |
 | archivo | Dirección URL que contiene el archivo jpg o mp4 de la publicidad | A(100) | VARCHAR(100) | NOT NULL |
 | desc_campaña | Descuento porcentual en forma decimal que realiza la campaña a los productos que contiene | 9.99 | FLOAT | >0 |
 | Id_equipo_mark | Identificador único del equipo de marketing que creó la campaña | 99 | INT | NOT NULL |
 | Id_gest_mark | Identificador único del gestor de marketing que gestionó la campaña | 9999999 | INT | NOT NULL |
+
+Entidad: CampañaXProd
+
+Descripción: Es la campaña relacionada con el producto que promociona.
+| Atributo | Descripción | Formato | Naturaleza | Valores |
+|:----------:|:--------------------------------:|:---------------:|:------------------:|:--------:|
+| id_producto | identificador único del producto | 99999 | INT | NOT NULL |
+| Id_campaña | Identificador único de la campaña | 999999 | INT | NOT NULL |
+
+Entidad: Canal
+
+Descripción: Canal por el cual se transmite la publicidad a los posibles compradores.
+| Atributo | Descripción | Formato | Naturaleza | Valores |
+|:----------:|:--------------------------------:|:---------------:|:------------------:|:--------:|
+| Id_canal | Identificador único del canal | 999 | INT | NOT NULL |
+| nombre_canal | Nombre perteneciente al canal | A(100) | VARCHAR(100) | NOT NULL |
+
+Entidad: CampañaXCanal
+
+Descripción: Relación entre el canal y las campañas transmitidas en este.
+| Atributo | Descripción | Formato | Naturaleza | Valores |
+|:----------:|:--------------------------------:|:---------------:|:------------------:|:--------:|
+| Id_campaña | Identificador único de la campaña | 999999 | INT | NOT NULL |
+| Id_canal | Identificador único del canal | 999 | INT | NOT NULL |
 
 Entidad: Tipo de Pago
 
@@ -239,13 +261,14 @@ Entidad: VentaXProd
 
 Descripción: Registro de los productos vendidos en cada transacción.
 
-| Atributo       | Descripción                                         | Formato   | Naturaleza | Valores  |
-|----------------|-----------------------------------------------------|-----------|------------|----------|
-| id_venta_prod  | Código identificador de la venta del producto       | 999999    | INT        | NOT NULL |
-| id_venta       | Identificador único de la venta asociada            | 9999      | INT        | NOT NULL |
-| id_producto    | Identificador único del producto vendido            | 9999      | INT        | NOT NULL |
-| cant_prod      | Cantidad del producto vendido                       | 9999      | INT        | NOT NULL |
-| monto_prod     | Monto total del producto vendido                    | 99.99     | FLOAT      | NOT NULL |
+| Atributo       | Descripción                                            | Formato   | Naturaleza | Valores  |
+|----------------|--------------------------------------------------------|-----------|------------|----------|
+| id_venta_prod  | Código identificador de la venta del producto          | 999999    | INT        | NOT NULL |
+| id_venta       | Identificador único de la venta asociada               | 9999      | INT        | NOT NULL |
+| id_producto    | Identificador único del producto vendido               | 9999      | INT        | NOT NULL |
+| cant_prod      | Cantidad del producto vendido                          | 9999      | INT        | NOT NULL |
+| monto_prod     | Monto total del producto vendido                       | 99.99     | FLOAT      | NOT NULL |
+| Id_cupón       | Identificador del cupón usado en la venta del producto | 9999      | INT        |    >0    |
 
 
 Entidad: Alternativa
