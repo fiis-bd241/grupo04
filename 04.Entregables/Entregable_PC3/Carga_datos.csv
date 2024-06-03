@@ -158,6 +158,5 @@ id,nombre,primer_apell,segundo_apell,correo,telefono,direccion,usuario,contrase�
 1055,Marleah,Simond,Pippard,mpippard4@godaddy.com,998962707,8 Mallard Park,mpippard4,xS2TXbn,17,CLI,,,F
 1056,Cody,Hartop,Roadknight,croadknight5@sohu.com,946638499,775 Lake View Way,croadknight5,xK6D'tLq.s,12,CLI,,,F
 1057,Shirley,Coldridge,Haquin,shaquin6@oracle.com,957242958,2 Rowland Drive,shaquin6x,R716P,7,CLI,,,F
-
 id,nombre,primer_apell,segundo_apell,correo,telefono,direccion,usuario,contraseÃ±a,id_distrito,id_cargo,id_equipo_mark,cod_area
 
