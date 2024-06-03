@@ -5,8 +5,10 @@
 # 3. Sentencias SQL por cada prototipo
 
 # 4. Carga de Datos
+La carga de datos se ha hecho mediante archivos .csv
 
-[Tabla Personas](Personas.csv)
+[Tabla tipo_prod](ArchivosCSV/Tipo_prod.csv)
+[Tabla Persona](ArchivosCSV/Personas.csv)
 
 # 5. Funcionalidad Primaria Elegida (por módulo)
 
