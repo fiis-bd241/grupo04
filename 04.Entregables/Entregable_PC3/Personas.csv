@@ -1,4 +1,4 @@
-id,nombre,primer_apell,segundo_apell,correo,telefono,direccion,usuario,contrase√±a,id_distrito,id_cargo,id_equipo_mark,cod_area,id_tipo_genero
+id,nombre,primer_apell,segundo_apell,correo,telefono,direccion,usuario,contrase√É¬±a,id_distrito,id_cargo,id_equipo_mark,cod_area,id_tipo_genero
 10001,Randolf,Blade,Abdy,rabdy0@indiatimes.com,904659512,70169 Sutteridge Park,rabdy0,xT5JlmO,10,GCM,,CM,M
 10002,Carmelle,Blucher,Manns,cmanns1@uol.com.br,926445183,91328 Eagle Crest Road,cmanns1,xA3uU0=,14,GVT,,VT,F
 10003,Sammy,Bonefant,Reston,sreston2@ocn.ne.jp,953495867,8 Union Street,sreston2,yI8*@,15,GDT,,DT,F
@@ -101,13 +101,13 @@ id,nombre,primer_apell,segundo_apell,correo,telefono,direccion,usuario,contrase√
 10100,Tate,Priddle,Betancourt,tbetancourt7@google.com.hk,926684628,04096 Green Ridge Hill,tbetancourt7,kF52d{jWCL,7,EMP,12,MK,M
 10101,Pollyanna,O' Hern,Bainbrigge,pbainbrigge8@java.com,921350572,1696 Green Center,pbainbrigge8,eG4ZE.)}y,1,EMP,10,MK,F
 10102,Mabel,Batrick,Kenealy,mkenealy9@ca.gov,940344330,060 Prentice Alley,mkenealy9,vR2#g!4,8,EMP,19,MK,F
-1001,MarÌa,Gonzales, RamÌrez, pilar.gonzales@gmail.com, 989962135,Av. Los Laureles 102,pilargr, pilargr,5,GCM,,CM,F),
-1002,Juan,Quispe,Villaverde,juan.quispe@gmail.com, 997962135,Jr. Los Cedros 425,juanq, juanq,1,GVT,,VT,M),
-1003,Camila,Hidalgo, Laureano, camila.hidalgo@gmail.com,949962135,Calle Las Flores 748,camilah, camilah,2,GDT,,DT,F),
-1004,Steven,Gutierrez, Calderon,steven.gutierrez@gmail.com,939962135,Av. Los Pinos 1021,steveng, steveng,3,GFZ,,FZ,M),
-1005,Ariana,Del Rio, Rojas, ariana.delrio@gmail.com,929962135,Jr. Las Rosas 1022,ariand,ariand,4,GMK,10,MK,F),
-1006,Manuel,Ramirez,Herberth,manuel.ramirez@gmail.com,919962135,Calle Los ¡lamos 1082,manuelr,manuelr,5,GAM,,AM,M),
-"1007,Sandra,Calderon, Sosaya, sandra.calderon@gmail.com,990962135,Av. Las Acacias 2102,sandrac,sandrac,6,GCR,,CRM,F);"
+1001,Mar√≠a,Gonzales, Ram√≠rez, pilar.gonzales@gmail.com, 989962135,Av. Los Laureles 102,pilargr, pilargr,5,GCM,,CM,F
+1002,Juan,Quispe,Villaverde,juan.quispe@gmail.com, 997962135,Jr. Los Cedros 425,juanq, juanq,1,GVT,,VT,M
+1003,Camila,Hidalgo, Laureano, camila.hidalgo@gmail.com,949962135,Calle Las Flores 748,camilah, camilah,2,GDT,,DT,F
+1004,Steven,Gutierrez, Calderon,steven.gutierrez@gmail.com,939962135,Av. Los Pinos 1021,steveng, steveng,3,GFZ,,FZ,M
+1005,Ariana,Del Rio, Rojas, ariana.delrio@gmail.com,929962135,Jr. Las Rosas 1022,ariand,ariand,4,GMK,10,MK,F
+1006,Manuel,Ramirez,Herberth,manuel.ramirez@gmail.com,919962135,Calle Los √Ålamos 1082,manuelr,manuelr,5,GAM,,AM,M
+1007,Sandra,Calderon, Sosaya, sandra.calderon@gmail.com,990962135,Av. Las Acacias 2102,sandrac,sandrac,6,GCR,,CRM,F
 1008,Brittney,Leyland,Filipic,bfilipic7@livejournal.com,976395162,14544 Troy Park,bfilipic7,yS5M&|{pqz,3,CLI,,,F
 1009,Erasmus,Walkingshaw,Vennart,evennart8@adobe.com,945992616,90 Arapahoe Plaza,evennart8,qM9xv_,14,CLI,,,M
 1010,Nicolina,Espley,Hylton,nhylton9@wordpress.org,946954270,52 Grim Junction,nhylton9,zE3'wo@k,6,CLI,,,F
