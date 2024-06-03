@@ -6,7 +6,7 @@
 
 # 4. Carga de Datos
 
-[Tabla Empleados](Persona(Empleado).csv)
+[Tabla Empleados](Personas.csv)
 
 # 5. Funcionalidad Primaria Elegida (por módulo)
 
