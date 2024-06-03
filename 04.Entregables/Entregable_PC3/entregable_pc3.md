@@ -6,6 +6,8 @@
 
 # 4. Carga de Datos
 
+[Tabla Empleados](Persona(Empleado).csv)
+
 # 5. Funcionalidad Primaria Elegida (por módulo)
 
 # 6. Stack Tecnológico elegido para su aplicación
