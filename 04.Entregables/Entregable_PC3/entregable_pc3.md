@@ -9,9 +9,9 @@ Se agregaron más tablas en coordinación con el módulo de marketing, se hicier
 
 | Código | R001  |
 |----------|----------|
-|Nombre  |Registro de proveedores|
-|Objetivo  ||
-| Descripción   | |
+|Nombre  |Visualizar proveedores|
+|Objetivo  |Permitir a los gestores poder visualizar los proveedores que estan registrados.|
+| Descripción   | Proceso mediante el cual los gestores pueden acceder a la visualización de todos los proveedores dentro de los registros|
 | Actor primario    | Gestor de compras |
 | Actor secundario    | -  |
 | Precondiciones    | El proveedor ya debe haber contactado con la empresa previamente |
@@ -163,7 +163,7 @@ Se agregaron más tablas en coordinación con el módulo de marketing, se hicier
 ![image](Pantallas/ModCompras/MP6.png)
 ### Sentecias SQL:
 ### Eventos: 
-* **** 
+* **Pantalla Visualizar Proveedores: Se mostrará todos los proveedores dentro de la empresa con un estado de activo**
 ```
 
 ```
