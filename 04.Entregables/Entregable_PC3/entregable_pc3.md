@@ -278,7 +278,7 @@ VALUES
 
 INSERT INTO CampañaXCanal (Id_campaña, Id_canal)
 VALUES
-    (<1>, <11>),
+    (<1>, <11>);
     
 ```
 
@@ -312,10 +312,22 @@ WHERE Id_campaña = <1>;
 ![image](Pantallas/ModMarketing/I009.png)
 ### Sentecias SQL:
 ### Eventos: 
-* **BOTON Aceptar Oferta: Actualiza el estado de una cotizacion pendiente a un estado de Aceptado**
-* **BOTON Rechazar Oferta: Actualiza el estado de una cotizacion pendiente a un estado de No Aceptado** 
+* **Carga de pantalla: La pantalla se llena con el Id_observacion siguiente al último registro en la tabla observaciones y con el Id de la campaña asociada**
+* **BOTON Enviar: Se inserta una nueva fila en la tabla Observacion, el estado_atendido estará en FALSE porque aun no se atiende**
+* **BOTON Cancelar:No se realiza ningun cambio a las tablas, se vuelve a la pantalla anterior** 
 ```
+--CARGA:
+SELECT MAX(Id_observacion) + 1 AS nuevo_Id_observacion
+FROM Observacion;
 
+SELECT Id_campaña
+FROM Campaña
+WHERE Id_campaña = <2>;
+
+--BOTÓN ENVIAR:
+INSERT INTO Observacion (Id_observacion, descripcion, Id_campaña, estado_atendido)
+VALUES
+    (<1>,<3> , <2>, FALSE);
 ```
 
 ### Código Requerimiento : R - 010
