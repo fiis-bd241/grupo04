@@ -14,7 +14,8 @@ Se agregaron más tablas en coordinación con el módulo de marketing, se hicier
 ### Eventos: 
 * **** 
 ```
-
+INSERT INTO proveedor(ruc_proveedor, razon_social, web_proveedor, rubro, direccion, telefono, id_est_proveedor)
+VALUES (<1>, <2>, <3>, <4>, <5>, <6>, 'A');
 ```
 
 ### Código Requerimiento : R - 002
@@ -25,7 +26,9 @@ Se agregaron más tablas en coordinación con el módulo de marketing, se hicier
 ### Eventos: 
 * **** 
 ```
-
+SELECT ruc_proveedor, razon_social, web_proveedor, rubro, direccion
+FROM proveedor
+WHERE ruc_proveedor = <1> AND razon_social = <2> AND web_proveedor = <3> AND rubro = <4> AND direccion = <5>;
 ```
 
 ### Código Requerimiento : R - 003
@@ -36,7 +39,9 @@ Se agregaron más tablas en coordinación con el módulo de marketing, se hicier
 ### Eventos: 
 * **** 
 ```
-
+SELECT id_cotizacion, id_est_cotizacion, monto_total, rubro, ruc_proveedor
+FROM proveedor
+WHERE id_cotizacion = <1>
 ```
 
 ### Código Requerimiento : R - 004
@@ -47,7 +52,17 @@ Se agregaron más tablas en coordinación con el módulo de marketing, se hicier
 ### Eventos: 
 * **** 
 ```
+SELECT p.ruc_proveedor, p.razon_social, p.rubro, p.direccion, p.telefono, p.web_proveedor, c.monto_total
+FROM proveedor p
+INNER JOIN cotizacion c ON c.ruc_proveedor = p.ruc_proveedor
+WHERE c.id_cotizacion = <1>;
 
+SELECT pd.nombre_producto, cx.cantidad
+FROM proveedor p
+INNER JOIN cotizacion c ON c.ruc_proveedor = p.ruc_proveedor
+INNER JOIN cotizaciónxproducto cx ON cx.id_cotizacion = c.id_cotizacion
+INNER JOIN producto pd ON pd.id_producto = cx.id_producto
+WHERE c.id_cotizacion = <1>;
 ```
 
 ### Código Requerimiento : R - 005
@@ -58,7 +73,15 @@ Se agregaron más tablas en coordinación con el módulo de marketing, se hicier
 ### Eventos: 
 * **** 
 ```
+-- BOTON Aceptar Oferta
+UPDATE cotizacion 
+SET id_est_cotizacion = 'A'
+WHERE id_cotizacion = <1>;
 
+-- BOTON Rechazar Oferta
+UPDATE cotizacion 
+SET id_est_cotizacion = 'N'
+WHERE id_cotizacion = <1>;
 ```
 
 
