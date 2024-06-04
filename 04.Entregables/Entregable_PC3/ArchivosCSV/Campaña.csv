@@ -1,0 +1,101 @@
+Id_campaña, nom_campaña, fecha_ini, fecha_fin, dir_url, modalidad, archivo, desc_campaña, Id_equipo_mark, Id_gest_mark
+100000,'campaña enero 1','2022-01-04','2022-01-11','https://linktr.ee/Migni_Store','native ad','https://marketingmigni.com/campaña100000.mp4',0.10,10,1005
+100001,'campaña enero 2','2022-01-11','2022-01-18','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100001.jpg',0.25,12,1005
+100002,'campaña enero 3','2022-01-18','2022-02-18','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100002.jpg',0.10,11,1005
+100003,'campaña escolar 1','2022-02-18','2022-02-25','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100003.jpg',0.15,16,1005
+100004,'campaña escolar 2','2022-02-25','2022-03-25','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100004.mp4',0.25,17,1005
+100005,'campaña escolar 3','2022-03-25','2022-04-01','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100005.jpg',0.30,17,1005
+100006,'campaña abril 1','2022-04-01','2022-04-08','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100006.jpg',0.30,19,1005
+100007,'campaña abril 2','2022-04-08','2022-05-08','https://linktr.ee/Migni_Store','native ad','https://marketingmigni.com/campaña100007.jpg',0.10,18,1005
+100008,'campaña dia de la madre 2022','2022-05-08','2022-06-08','https://linktr.ee/Migni_Store','native ad','https://marketingmigni.com/campaña100008.jpg',0.25,14,1005
+100009,'campaña dia del padre 2022','2022-06-08','2022-06-15','https://linktr.ee/Migni_Store','video ad','https://marketingmigni.com/campaña100009.mp4',0.35,11,1005
+100010,'campaña junio 2022','2022-06-15','2022-06-22','https://linktr.ee/Migni_Store','video ad','https://marketingmigni.com/campaña100010.mp4',0.20,14,1005
+100011,'campaña san juan 2022','2022-06-22','2022-06-29','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100011.jpg',0.30,12,1005
+100012,'campaña escolar 2022','2022-06-29','2022-07-29','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100012.mp4',0.40,15,1005
+100013,'campaña independencia peruana 2022','2022-07-29','2022-08-05','https://linktr.ee/Migni_Store','native ad','https://marketingmigni.com/campaña100013.mp4',0.25,11,1005
+100014,'campaña agosto 2022','2022-08-05','2022-08-12','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100014.jpg',0.35,18,1005
+100015,'campaña día de la madre 2022','2022-08-12','2022-09-12','https://linktr.ee/Migni_Store','video ad','https://marketingmigni.com/campaña100015.jpg',0.15,17,1005
+100016,'campaña regreso a clases 2022','2022-09-12','2022-09-19','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100016.jpg',0.50,13,1005
+100017,'campaña septiembre 2022','2022-09-19','2022-09-26','https://linktr.ee/Migni_Store','native ad','https://marketingmigni.com/campaña100017.mp4',0.30,15,1005
+100018,'campaña halloween 2022','2022-09-26','2022-10-31','https://linktr.ee/Migni_Store','video ad','https://marketingmigni.com/campaña100018.jpg',0.45,12,1005
+100019,'campaña inicio noviembre 2022','2022-10-31','2022-11-07','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100019.jpg',0.40,19,1005
+100020,'campaña noviembre 2022','2022-11-07','2022-11-14','https://linktr.ee/Migni_Store','native ad','https://marketingmigni.com/campaña100020.mp4',0.35,16,1005
+100021,'campaña black friday 2022','2022-11-14','2022-11-21','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100021.jpg',0.20,18,1005
+100022,'campaña fin de año 2022','2022-11-21','2022-12-19','https://linktr.ee/Migni_Store','video ad','https://marketingmigni.com/campaña100022.mp4',0.45,15,1005
+100023,'campaña navidad 2022','2022-12-19','2022-12-26','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100023.jpg',0.30,17,1005
+100024,'campaña año nuevo 2022','2022-12-26','2023-01-02','https://linktr.ee/Migni_Store','native ad','https://marketingmigni.com/campaña100024.mp4',0.25,13,1005
+100025,'campaña inicio año 2023','2023-01-02','2023-01-09','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100025.jpg',0.40,14,1005
+100026,'campaña enero 2023','2023-01-09','2023-01-16','https://linktr.ee/Migni_Store','video ad','https://marketingmigni.com/campaña100026.mp4',0.35,15,1005
+100027,'campaña inicio febrero 2023','2023-01-16','2023-02-06','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100027.jpg',0.20,12,1005
+100028,'campaña amor y amistad 2023','2023-02-06','2023-02-14','https://linktr.ee/Migni_Store','native ad','https://marketingmigni.com/campaña100028.jpg',0.30,18,1005
+100029,'campaña febrero 2023','2023-02-14','2023-02-21','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100029.mp4',0.45,16,1005
+100030,'campaña marzo 2023','2023-02-21','2023-02-28','https://linktr.ee/Migni_Store','video ad','https://marketingmigni.com/campaña100030.mp4',0.25,13,1005
+100031,'campaña inicio marzo 2023','2023-02-28','2023-03-07','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100031.jpg',0.40,19,1005
+100032,'campaña día de la mujer 2023','2023-03-07','2023-03-14','https://linktr.ee/Migni_Store','native ad','https://marketingmigni.com/campaña100032.mp4',0.35,15,1005
+100033,'campaña marzo 2 2023','2023-03-14','2023-03-21','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100033.jpg',0.20,14,1005
+100034,'campaña fin de marzo 2023','2023-03-21','2023-03-28','https://linktr.ee/Migni_Store','video ad','https://marketingmigni.com/campaña100034.mp4',0.30,16,1005
+100035,'campaña abril 2023','2023-03-28','2023-04-04','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100035.jpg',0.45,18,1005
+100036,'campaña semana santa 2023','2023-04-04','2023-04-11','https://linktr.ee/Migni_Store','native ad','https://marketingmigni.com/campaña100036.jpg',0.40,17,1005
+100037,'campaña abril 2 2023','2023-04-11','2023-04-18','https://linktr.ee/Migni_Store','video ad','https://marketingmigni.com/campaña100037.mp4',0.25,12,1005
+100038,'campaña abril 3 2023','2023-04-18','2023-04-25','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100038.jpg',0.30,13,1005
+100039,'campaña abril 4 2023','2023-04-25','2023-05-02','https://linktr.ee/Migni_Store','native ad','https://marketingmigni.com/campaña100039.mp4',0.20,16,1005
+100040,'campaña inicio mayo 2023','2023-05-02','2023-05-09','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100040.jpg',0.35,18,1005
+100041,'campaña día de la madre 2023','2023-05-09','2023-05-16','https://linktr.ee/Migni_Store','video ad','https://marketingmigni.com/campaña100041.mp4',0.25,14,1005
+100042,'campaña mayo 2023','2023-05-16','2023-05-23','https://linktr.ee/Migni_Store','native ad','https://marketingmigni.com/campaña100042.jpg',0.40,17,1005
+100043,'campaña fin de mayo 2023','2023-05-23','2023-05-30','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100043.jpg',0.30,15,1005
+100044,'campaña junio 2023','2023-05-30','2023-06-06','https://linktr.ee/Migni_Store','video ad','https://marketingmigni.com/campaña100044.mp4',0.45,12,1005
+100045,'campaña día del padre 2023','2023-06-06','2023-06-13','https://linktr.ee/Migni_Store','native ad','https://marketingmigni.com/campaña100045.jpg',0.20,19,1005
+100046,'campaña inicio verano 2023','2023-06-13','2023-06-20','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100046.jpg',0.30,16,1005
+100047,'campaña junio 2 2023','2023-06-20','2023-06-27','https://linktr.ee/Migni_Store','video ad','https://marketingmigni.com/campaña100047.mp4',0.25,13,1005
+100048,'campaña fin de junio 2023','2023-06-27','2023-07-04','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100048.jpg',0.35,14,1005
+100049,'campaña julio 2023','2023-07-04','2023-07-11','https://linktr.ee/Migni_Store','native ad','https://marketingmigni.com/campaña100049.mp4',0.40,17,1005
+100050,'campaña mitad de año 2023','2023-07-11','2023-07-18','https://linktr.ee/Migni_Store','video ad','https://marketingmigni.com/campaña100050.mp4',0.25,15,1005
+100051,'campaña julio 2 2023','2023-07-18','2023-07-25','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100051.jpg',0.30,16,1005
+100052,'campaña fin de julio 2023','2023-07-25','2023-08-01','https://linktr.ee/Migni_Store','native ad','https://marketingmigni.com/campaña100052.jpg',0.45,18,1005
+100053,'campaña agosto 2023','2023-08-01','2023-08-08','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100053.mp4',0.40,17,1005
+100054,'campaña vuelta a clases 2023','2023-08-08','2023-08-15','https://linktr.ee/Migni_Store','video ad','https://marketingmigni.com/campaña100054.jpg',0.35,14,1005
+100055,'campaña agosto 2 2023','2023-08-15','2023-08-22','https://linktr.ee/Migni_Store','native ad','https://marketingmigni.com/campaña100055.mp4',0.20,13,1005
+100056,'campaña fin de agosto 2023','2023-08-22','2023-08-29','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100056.jpg',0.30,12,1005
+100057,'campaña septiembre 2023','2023-08-29','2023-09-05','https://linktr.ee/Migni_Store','video ad','https://marketingmigni.com/campaña100057.mp4',0.25,19,1005
+100058,'campaña inicio septiembre 2023','2023-09-05','2023-09-12','https://linktr.ee/Migni_Store','native ad','https://marketingmigni.com/campaña100058.jpg',0.35,16,1005
+100059,'campaña día del niño 2023','2023-09-12','2023-09-19','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100059.mp4',0.40,18,1005
+100060,'campaña septiembre 2 2023','2023-09-19','2023-09-26','https://linktr.ee/Migni_Store','video ad','https://marketingmigni.com/campaña100060.mp4',0.45,15,1005
+100061,'campaña fin de septiembre 2023','2023-09-26','2023-10-03','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100061.jpg',0.25,14,1005
+100062,'campaña octubre 2023','2023-10-03','2023-10-10','https://linktr.ee/Migni_Store','native ad','https://marketingmigni.com/campaña100062.mp4',0.30,17,1005
+100063,'campaña día de la raza 2023','2023-10-10','2023-10-17','https://linktr.ee/Migni_Store','video ad','https://marketingmigni.com/campaña100063.jpg',0.35,16,1005
+100064,'campaña octubre 2 2023','2023-10-17','2023-10-24','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100064.mp4',0.20,13,1005
+100065,'campaña fin de octubre 2023','2023-10-24','2023-10-31','https://linktr.ee/Migni_Store','native ad','https://marketingmigni.com/campaña100065.jpg',0.40,18,1005
+100066,'campaña noviembre 2023','2023-10-31','2023-11-07','https://linktr.ee/Migni_Store','video ad','https://marketingmigni.com/campaña100066.mp4',0.25,15,1005
+100067,'campaña inicio noviembre 2023','2023-11-07','2023-11-14','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100067.jpg',0.30,16,1005
+100068,'campaña black friday 2023','2023-11-14','2023-11-21','https://linktr.ee/Migni_Store','native ad','https://marketingmigni.com/campaña100068.mp4',0.45,17,1005
+100069,'campaña fin de noviembre 2023','2023-11-21','2023-11-28','https://linktr.ee/Migni_Store','video ad','https://marketingmigni.com/campaña100069.jpg',0.35,18,1005
+100070,'campaña inicio diciembre 2023','2023-11-28','2023-12-05','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100070.jpg',0.30,16,1005
+100071,'campaña navidad 2023','2023-12-05','2023-12-12','https://linktr.ee/Migni_Store','native ad','https://marketingmigni.com/campaña100071.mp4',0.25,14,1005
+100072,'campaña diciembre 2 2023','2023-12-12','2023-12-19','https://linktr.ee/Migni_Store','video ad','https://marketingmigni.com/campaña100072.jpg',0.35,17,1005
+100073,'campaña fin de diciembre 2023','2023-12-19','2023-12-26','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100073.jpg',0.40,18,1005
+100074,'campaña inicio año nuevo 2024','2023-12-26','2024-01-02','https://linktr.ee/Migni_Store','native ad','https://marketingmigni.com/campaña100074.jpg',0.45,15,1005
+100075,'campaña enero 2024','2024-01-02','2024-01-09','https://linktr.ee/Migni_Store','video ad','https://marketingmigni.com/campaña100075.mp4',0.30,16,1005
+100076,'campaña inicio enero 2024','2024-01-09','2024-01-16','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100076.jpg',0.25,14,1005
+100077,'campaña año nuevo chino 2024','2024-01-16','2024-01-23','https://linktr.ee/Migni_Store','native ad','https://marketingmigni.com/campaña100077.mp4',0.20,13,1005
+100078,'campaña fin de enero 2024','2024-01-23','2024-01-30','https://linktr.ee/Migni_Store','video ad','https://marketingmigni.com/campaña100078.jpg',0.35,15,1005
+100079,'campaña inicio febrero 2024','2024-01-30','2024-02-06','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100079.jpg',0.40,17,1005
+100080,'campaña día de la amistad 2024','2024-02-06','2024-02-13','https://linktr.ee/Migni_Store','native ad','https://marketingmigni.com/campaña100080.mp4',0.45,18,1005
+100081,'campaña febrero 2024','2024-02-13','2024-02-20','https://linktr.ee/Migni_Store','video ad','https://marketingmigni.com/campaña100081.jpg',0.30,16,1005
+100082,'campaña fin de febrero 2024','2024-02-20','2024-02-27','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100082.jpg',0.25,14,1005
+100083,'campaña marzo 2024','2024-02-27','2024-03-05','https://linktr.ee/Migni_Store','native ad','https://marketingmigni.com/campaña100083.mp4',0.20,13,1005
+100084,'campaña inicio marzo 2024','2024-03-05','2024-03-12','https://linktr.ee/Migni_Store','video ad','https://marketingmigni.com/campaña100084.jpg',0.35,15,1005
+100085,'campaña día de la mujer 2024','2024-03-12','2024-03-19','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100085.mp4',0.40,17,1005
+100086,'campaña marzo 2 2024','2024-03-19','2024-03-26','https://linktr.ee/Migni_Store','native ad','https://marketingmigni.com/campaña100086.jpg',0.45,18,1005
+100087,'campaña fin de marzo 2024','2024-03-26','2024-04-02','https://linktr.ee/Migni_Store','video ad','https://marketingmigni.com/campaña100087.mp4',0.30,16,1005
+100088,'campaña abril 2024','2024-04-02','2024-04-09','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100088.jpg',0.25,14,1005
+100089,'campaña inicio abril 2024','2024-04-09','2024-04-16','https://linktr.ee/Migni_Store','native ad','https://marketingmigni.com/campaña100089.mp4',0.20,13,1005
+100090,'campaña semana santa 2024','2024-04-16','2024-04-23','https://linktr.ee/Migni_Store','video ad','https://marketingmigni.com/campaña100090.jpg',0.35,15,1005
+100091,'campaña abril 2 2024','2024-04-23','2024-04-30','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100091.mp4',0.40,16,1005
+100092,'campaña fin de abril 2024','2024-04-30','2024-05-07','https://linktr.ee/Migni_Store','native ad','https://marketingmigni.com/campaña100092.jpg',0.45,17,1005
+100093,'campaña mayo 2024','2024-05-07','2024-05-14','https://linktr.ee/Migni_Store','video ad','https://marketingmigni.com/campaña100093.mp4',0.30,18,1005
+100094,'campaña inicio mayo 2024','2024-05-14','2024-05-21','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100094.jpg',0.25,14,1005
+100095,'campaña día de la madre 2024','2024-05-21','2024-05-28','https://linktr.ee/Migni_Store','native ad','https://marketingmigni.com/campaña100095.mp4',0.20,13,1005
+100096,'campaña mayo 2 2024','2024-05-28','2024-06-04','https://linktr.ee/Migni_Store','video ad','https://marketingmigni.com/campaña100096.jpg',0.35,15,1005
+100097,'campaña fin de mayo 2024','2024-06-04','2024-06-11','https://linktr.ee/Migni_Store','post','https://marketingmigni.com/campaña100097.mp4',0.40,16,1005
+100098,'campaña junio 2024','2024-06-11','2024-06-18','https://linktr.ee/Migni_Store','native ad','https://marketingmigni.com/campaña100098.jpg',0.45,17,1005
+100099,'campaña inicio junio 2024','2024-06-18','2024-06-25','https://linktr.ee/Migni_Store','video ad','https://marketingmigni.com/campaña100099.mp4',0.30,18,1005

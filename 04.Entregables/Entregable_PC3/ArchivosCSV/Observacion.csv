@@ -1,0 +1,101 @@
+Id_observacion, descripcion, Id_campaña, estado_atendido
+10000,'aumentar en una semana la duracion de la campaña y agregar un producto más',100000,TRUE
+10001,'Lanzar una nueva campaña de marketing para el producto 2',100001,TRUE
+10002,'Reducir el descuento en un 10%',100002,TRUE
+10003,'Lanzar una nueva campaña de marketing para el producto 7',100003,TRUE
+10004,'Extender la fecha de inicio de la campaña en tres días',100004,TRUE
+10005,'Ofrecer un descuento del 15%',100005,TRUE
+10006,'Actualizar las fechas de la campaña',100006,TRUE
+10007,'Cambiar a una promoción especial',100007,TRUE
+10008,'Incluir un regalo con la compra del producto durante la campaña',100008,TRUE
+10009,'Extender la campaña hasta fin de mes y aumentar el presupuesto publicitario',100009,TRUE
+10010,'Realizar un evento de lanzamiento en línea para el nuevo producto',100010,TRUE
+10011,'Implementar una estrategia de redes sociales para aumentar la visibilidad',100011,TRUE
+10012,'Ofrecer envío gratuito durante toda la campaña',100012,TRUE
+10013,'Aumentar la duración de la campaña en una semana y agregar un producto más',100013,TRUE
+10014,'Reducir el precio del producto en un 5% durante la campaña',100014,TRUE
+10015,'Lanzar una nueva campaña de marketing para el producto 4',100015,TRUE
+10016,'Extender la fecha de inicio de la campaña en cinco días',100016,TRUE
+10017,'Ofrecer un descuento del 20% para los primeros 50 compradores',100017,TRUE
+10018,'Actualizar las fechas de la campaña según el calendario de marketing',100018,TRUE
+10019,'Agregar una promoción especial para nuevos clientes',100019,TRUE
+10020,'Incluir una oferta 2x1 en productos seleccionados durante la campaña',100020,TRUE
+10021,'Extender la campaña hasta fin de mes y aumentar el presupuesto publicitario',100021,TRUE
+10022,'Realizar un evento de lanzamiento en línea para el nuevo producto',100022,TRUE
+10023,'Implementar una estrategia de redes sociales para aumentar la visibilidad',100023,TRUE
+10024,'Ofrecer envío gratuito durante toda la campaña',100024,TRUE
+10025,'Aumentar la duración de la campaña en una semana y agregar un producto más',100025,TRUE
+10026,'Reducir el precio del producto en un 15% durante la campaña',100026,TRUE
+10027,'Lanzar una nueva campaña de marketing para el producto 1',100027,TRUE
+10028,'Extender la fecha de inicio de la campaña en tres días',100028,TRUE
+10029,'Ofrecer un descuento del 10% para los primeros 100 compradores',100029,TRUE
+10030,'Actualizar las fechas de la campaña según el calendario de marketing',100030,TRUE
+10031,'Agregar una promoción especial para clientes frecuentes',100031,TRUE
+10032,'Incluir un regalo con la compra del producto durante la campaña',100032,TRUE
+10033,'Extender la campaña hasta fin de mes y aumentar el presupuesto publicitario',100033,TRUE
+10034,'Realizar un evento de lanzamiento en línea para el nuevo producto',100034,TRUE
+10035,'Implementar una estrategia de redes sociales para aumentar la visibilidad',100035,TRUE
+10036,'Ofrecer envío gratuito durante toda la campaña',100036,TRUE
+10037,'Aumentar la duración de la campaña en una semana y agregar un producto más',100037,TRUE
+10038,'Reducir el precio del producto en un 5% durante la primera semana',100038,TRUE
+10039,'Lanzar una nueva campaña de marketing para el producto 17',100039,TRUE
+10040,'Extender la fecha de inicio de la campaña en dos días',100040,TRUE
+10041,'Ofrecer un descuento del 20% para los primeros 50 compradores',100041,TRUE
+10042,'Actualizar las fechas de la campaña según el calendario de marketing',100042,TRUE
+10043,'Agregar una promoción especial para nuevos clientes',100043,TRUE
+10044,'Incluir una oferta 2x1 en productos seleccionados durante la campaña',100044,TRUE
+10045,'Extender la campaña hasta fin de mes y aumentar el presupuesto publicitario',100045,TRUE
+10046,'Realizar un evento de lanzamiento en línea para el nuevo producto',100046,TRUE
+10047,'Implementar una estrategia de redes sociales para aumentar la visibilidad',100047,TRUE
+10048,'Ofrecer envío gratuito durante toda la campaña',100048,TRUE
+10049,'Aumentar la duración de la campaña en una semana y agregar un producto más',100049,TRUE
+10050,'Reducir el precio del producto en un 15% durante la primera semana',100050,TRUE
+10051,'Lanzar una nueva campaña de marketing para el producto 3',100051,TRUE
+10052,'Extender la fecha de inicio de la campaña en cinco días',100052,TRUE
+10053,'Ofrecer un descuento del 20% para los primeros 100 compradores',100053,TRUE
+10054,'Actualizar las fechas de la campaña según el calendario de marketing',100054,TRUE
+10055,'Agregar una promoción especial para clientes frecuentes',100055,TRUE
+10056,'Incluir un regalo con la compra del producto durante la campaña',100056,TRUE
+10057,'Extender la campaña hasta fin de mes y aumentar el presupuesto publicitario',100057,TRUE
+10058,'Realizar un evento de lanzamiento en línea para el nuevo producto',100058,TRUE
+10059,'Implementar una estrategia de redes sociales para aumentar la visibilidad',100059,TRUE
+10060,'Ofrecer envío gratuito durante toda la campaña',100060,TRUE
+10061,'Aumentar la duración de la campaña en una semana y agregar un producto más',100061,TRUE
+10062,'Reducir el precio del producto en un 10% durante la campaña',100062,TRUE
+10063,'Lanzar una nueva campaña de marketing para el producto 5',100063,TRUE
+10064,'Extender la fecha de inicio de la campaña en tres días',100064,TRUE
+10065,'Ofrecer un descuento del 15% para los primeros 50 compradores',100065,TRUE
+10066,'Actualizar las fechas de la campaña según el calendario de marketing',100066,TRUE
+10067,'Agregar una promoción especial para nuevos clientes',100067,TRUE
+10068,'Incluir una oferta 2x1 en productos seleccionados durante la campaña',100070,TRUE
+10069,'Extender la campaña hasta fin de mes y aumentar el presupuesto publicitario',100071,TRUE
+10070,'Realizar un evento de lanzamiento en línea para el nuevo producto',100072,TRUE
+10071,'Implementar una estrategia de redes sociales para aumentar la visibilidad',100073,TRUE
+10072,'Ofrecer envío gratuito durante toda la campaña',100074,TRUE
+10073,'Aumentar la duración de la campaña en una semana y agregar un producto más',100075,TRUE
+10074,'Reducir el precio del producto en un 10% durante la primera semana',100076,TRUE
+10075,'Lanzar una nueva campaña de marketing para el producto 10',100077,TRUE
+10076,'Extender la fecha de inicio de la campaña en dos días',100078,TRUE
+10077,'Ofrecer un descuento del 20% para los primeros 100 compradores',100079,TRUE
+10078,'Actualizar las fechas de la campaña según el calendario de marketing',100080,TRUE
+10079,'Agregar una promoción especial para nuevos clientes',100081,TRUE
+10080,'Incluir una oferta 2x1 en productos seleccionados durante la campaña',100082,TRUE
+10081,'Extender la campaña hasta fin de mes y aumentar el presupuesto publicitario',100083,TRUE
+10082,'Realizar un evento de lanzamiento en línea para el nuevo producto',100084,TRUE
+10083,'Implementar una estrategia de redes sociales para aumentar la visibilidad',100085,TRUE
+10084,'Ofrecer envío gratuito durante toda la campaña',100086,FALSE
+10085,'Aumentar la duración de la campaña en una semana y agregar un producto más',100087,FALSE
+10086,'Reducir el precio del producto en un 5% durante la campaña',100088,FALSE
+10087,'Lanzar una nueva campaña de marketing para el producto 2',100089,FALSE
+10088,'Extender la fecha de inicio de la campaña en cinco días',100090,FALSE
+10089,'Ofrecer un descuento del 20% para los primeros 50 compradores',100091,TRUE
+10090,'Actualizar las fechas de la campaña según el calendario de marketing',100091,FALSE
+10091,'Agregar una promoción especial para clientes frecuentes',100092,FALSE
+10092,'Incluir un regalo con la compra del producto durante la campaña',100093,TRUE
+10093,'Extender la campaña hasta fin de mes y aumentar el presupuesto publicitario',100093,FALSE
+10094,'Realizar un evento de lanzamiento en línea para el nuevo producto',100096,TRUE
+10095,'Implementar una estrategia de redes sociales para aumentar la visibilidad',100096,FALSE
+10096,'Ofrecer envío gratuito durante toda la campaña',100097,FALSE
+10097,'Aumentar la duración de la campaña en una semana y agregar un producto más',100098,TRUE
+10098,'Reducir el precio del producto en un 15% durante la primera semana',100098,FALSE
+10099,'Extender la duración de la campaña en dos semanas y añadir un producto adicional',100099,FALSE
