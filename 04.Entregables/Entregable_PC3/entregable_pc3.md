@@ -4,6 +4,43 @@ Se agregaron más tablas en coordinación con el módulo de marketing, se hicier
 
 # 2. Asignación de Códigos por Requerimientos y Prototipos de Interfaces de Usuario
 
+## 2.1. Codificacion de Requerimientos
+### 2.1.1. Modulo de Compras
+
+| Código | R001  |
+|----------|----------|
+|Nombre  ||
+|Objetivo  |V|
+| Descripción   |    |
+| Actor primario    |   |
+| Actor secundario    | -  |
+| Precondiciones    |   |
+
+
+
+## 2.2. Codificación de prototipos de interfaz
+### 2.2.1. Modulo de Compras
+
+| Código Interfaz | I001  |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModCompras/MP1.png)|
+
+| Código Interfaz | I002  |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModCompras/MP2.png)|
+
+| Código Interfaz | I003  |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModCompras/MP3-.png)|
+
+| Código Interfaz | I004  |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModCompras/MP4.png)|
+
+| Código Interfaz | I005  |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModCompras/MP5.png)|
+
 # 3. Sentencias SQL por cada prototipo
 ## 3.1 Modulo de Compras
 ### Código Requerimiento : R - 001
