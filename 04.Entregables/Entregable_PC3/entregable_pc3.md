@@ -248,6 +248,66 @@ SET id_est_cotizacion = 'N'
 WHERE id_cotizacion = <1>;
 ```
 
+### Código Requerimiento : R - 007
+### Codigo interfaz : I - 007
+### Imagen interfaz : 
+![image](Pantallas/ModCompras/I007.png)
+### Sentecias SQL:
+### Eventos: 
+* **BOTON Aceptar Oferta: Actualiza el estado de una cotizacion pendiente a un estado de Aceptado**
+* **BOTON Rechazar Oferta: Actualiza el estado de una cotizacion pendiente a un estado de No Aceptado** 
+```
+
+```
+
+### Código Requerimiento : R - 008
+### Codigo interfaz : I - 008
+### Imagen interfaz : 
+![image](Pantallas/ModCompras/I008.png)
+### Sentecias SQL:
+### Eventos: 
+* **BOTON Aceptar Oferta: Actualiza el estado de una cotizacion pendiente a un estado de Aceptado**
+* **BOTON Rechazar Oferta: Actualiza el estado de una cotizacion pendiente a un estado de No Aceptado** 
+```
+
+```
+
+### Código Requerimiento : R - 009
+### Codigo interfaz : I - 009
+### Imagen interfaz : 
+![image](Pantallas/ModCompras/I009.png)
+### Sentecias SQL:
+### Eventos: 
+* **BOTON Aceptar Oferta: Actualiza el estado de una cotizacion pendiente a un estado de Aceptado**
+* **BOTON Rechazar Oferta: Actualiza el estado de una cotizacion pendiente a un estado de No Aceptado** 
+```
+
+```
+
+### Código Requerimiento : R - 010
+### Codigo interfaz : I - 010
+### Imagen interfaz : 
+![image](Pantallas/ModCompras/I010.png)
+### Sentecias SQL:
+### Eventos: 
+* **BOTON Aceptar Oferta: Actualiza el estado de una cotizacion pendiente a un estado de Aceptado**
+* **BOTON Rechazar Oferta: Actualiza el estado de una cotizacion pendiente a un estado de No Aceptado** 
+```
+
+```
+
+### Código Requerimiento : R - 011
+### Codigo interfaz : I - 011
+### Imagen interfaz : 
+![image](Pantallas/ModCompras/I011.png)
+### Sentecias SQL:
+### Eventos: 
+* **BOTON Aceptar Oferta: Actualiza el estado de una cotizacion pendiente a un estado de Aceptado**
+* **BOTON Rechazar Oferta: Actualiza el estado de una cotizacion pendiente a un estado de No Aceptado** 
+```
+
+```
+
 
 # 4. Carga de Datos
 La carga de datos se ha hecho mediante archivos .csv
