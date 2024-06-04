@@ -9,10 +9,10 @@ Se agregaron más tablas en coordinación con el módulo de marketing, se hicier
 ### Código Requerimiento : R - 001
 ### Codigo interfaz : I - 001
 ### Imagen interfaz : 
-![image](Pantallas/ModuloCompras/MP1.png)
+![image](Pantallas/ModCompras/MP1.png)
 ### Sentecias SQL:
 ### Eventos: 
-* **** 
+* **Boton Añadir Proveedor: Nos permite ingresar los datos de un proveedor para ser guardado en la base de datos** 
 ```
 INSERT INTO proveedor(ruc_proveedor, razon_social, web_proveedor, rubro, direccion, telefono, id_est_proveedor)
 VALUES (<1>, <2>, <3>, <4>, <5>, <6>, 'A');
@@ -21,36 +21,52 @@ VALUES (<1>, <2>, <3>, <4>, <5>, <6>, 'A');
 ### Código Requerimiento : R - 002
 ### Codigo interfaz : I - 002
 ### Imagen interfaz : 
-![image](Pantallas/ModuloCompras/MP2.png)
+![image](Pantallas/ModCompras/MP2.png)
 ### Sentecias SQL:
 ### Eventos: 
-* **** 
+* **Pantalla Detalle Proveedores: Se mostrará todos los datos de los proveedores activos en la empresa**
 ```
-SELECT ruc_proveedor, razon_social, web_proveedor, rubro, direccion
+SELECT ruc_proveedor, razon_social, web_proveedor, rubro, direccion, telefono, id_est_proveedor
 FROM proveedor
-WHERE ruc_proveedor = <1> AND razon_social = <2> AND web_proveedor = <3> AND rubro = <4> AND direccion = <5>;
+WHERE ruc_proveedor = <1> AND razon_social = <2> AND web_proveedor = <3> AND rubro = <4> 
+AND direccion = <5> AND telefono = <6> AND id_est_proveedor = 'A';
 ```
 
 ### Código Requerimiento : R - 003
 ### Codigo interfaz : I - 003
 ### Imagen interfaz : 
-![image](Pantallas/ModuloCompras/MP3.png)
+![image](Pantallas/ModCompras/MP3.png)
 ### Sentecias SQL:
 ### Eventos: 
-* **** 
+* **Pantalla Historial Cotizaciones: Se mostrará el historial de todas las cotizaciones aceptadas, no aceptadas y pendientes** 
 ```
 SELECT id_cotizacion, id_est_cotizacion, monto_total, rubro, ruc_proveedor
 FROM proveedor
 WHERE id_cotizacion = <1>
+SELECT id_cotizacion, id_est_cotizacion, monto_total, rubro, ruc_proveedor
+FROM proveedor
+WHERE id_cotizacion = <2>
+SELECT id_cotizacion, id_est_cotizacion, monto_total, rubro, ruc_proveedor
+FROM proveedor
+WHERE id_cotizacion = <3>
+SELECT id_cotizacion, id_est_cotizacion, monto_total, rubro, ruc_proveedor
+FROM proveedor
+WHERE id_cotizacion = <4>
+SELECT id_cotizacion, id_est_cotizacion, monto_total, rubro, ruc_proveedor
+FROM proveedor
+WHERE id_cotizacion = <5>
+SELECT id_cotizacion, id_est_cotizacion, monto_total, rubro, ruc_proveedor
+FROM proveedor
+WHERE id_cotizacion = <6>
 ```
 
 ### Código Requerimiento : R - 004
 ### Codigo interfaz : I - 004
 ### Imagen interfaz : 
-![image](Pantallas/ModuloCompras/MP4.png)
+![image](Pantallas/ModCompras/MP4.png)
 ### Sentecias SQL:
 ### Eventos: 
-* **** 
+* **Pantalla Detalle Cotización: Nos permite visualizar todos los datos de una cotizacion, los productos y sus cantidades, ademas de los datos del proveedor.** 
 ```
 SELECT p.ruc_proveedor, p.razon_social, p.rubro, p.direccion, p.telefono, p.web_proveedor, c.monto_total
 FROM proveedor p
@@ -68,10 +84,11 @@ WHERE c.id_cotizacion = <1>;
 ### Código Requerimiento : R - 005
 ### Codigo interfaz : I - 005
 ### Imagen interfaz : 
-![image](Pantallas/ModuloCompras/MP5.png)
+![image](Pantallas/ModCompras/MP5.png)
 ### Sentecias SQL:
 ### Eventos: 
-* **** 
+* **BOTON Aceptar Oferta: Actualiza el estado de una cotizacion pendiente a un estado de Aceptado**
+* **BOTON Rechazar Oferta: Actualiza el estado de una cotizacion pendiente a un estado de No Aceptado** 
 ```
 -- BOTON Aceptar Oferta
 UPDATE cotizacion 
