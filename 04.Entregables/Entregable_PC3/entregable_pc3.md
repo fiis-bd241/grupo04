@@ -139,6 +139,22 @@ Se agregaron más tablas en coordinación con el módulo de marketing, se hicier
 |----------|----------|
 |Imagen interfaz|![image](Pantallas/ModMarketing/I007.png)|
 
+| Código Interfaz | I008  |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModMarketing/I008.png)|
+
+| Código Interfaz | I009  |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModMarketing/I009.png)|
+
+| Código Interfaz | I010  |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModMarketing/I010.png)|
+
+| Código Interfaz | I011  |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModMarketing/I011.png)|
+
 # 3. Sentencias SQL por cada prototipo
 ## 3.1 Modulo de Compras
 ### Código Requerimiento : R - 001
