@@ -254,10 +254,32 @@ WHERE id_cotizacion = <1>;
 ![image](Pantallas/ModMarketing/I007.png)
 ### Sentecias SQL:
 ### Eventos: 
-* **BOTON Aceptar Oferta: Actualiza el estado de una cotizacion pendiente a un estado de Aceptado**
-* **BOTON Rechazar Oferta: Actualiza el estado de una cotizacion pendiente a un estado de No Aceptado** 
+* **Carga de pantalla: la pantalla se llena con el Id_campaña siguiente al último registro y con el Id_equipo_mark con el que se entró a la página**
+* **BOTON Enviar: Inserta una nueva fila en la tabla Campaña, además de insertar nuevas filas en la tabla CampañaXProd y CampañaXCanal**
+* **BOTON Cancelar: No se realizan cambios en la tabla** 
 ```
+--CARGA:
+SELECT MAX(Id_campaña) + 1 AS nuevo_Id_campaña
+FROM Campaña;
 
+SELECT id_equipo_mark
+FROM persona
+WHERE usuario=<12>
+AND contraseña=<13>;
+
+-- BOTON Enviar
+INSERT INTO Campaña (Id_campaña, nom_campaña, fecha_ini, fecha_fin, dir_url, modalidad, archivo, desc_campaña, Id_equipo_mark, Id_gest_mark)
+VALUES
+    (<1>, <2>, <3>, <4>, <5>, <6>, <7>, <8>, <9>, 1005);
+
+INSERT INTO CampañaXProd (id_producto, Id_campaña)
+VALUES
+    (<10>, <1>);
+
+INSERT INTO CampañaXCanal (Id_campaña, Id_canal)
+VALUES
+    (<1>, <11>),
+    
 ```
 
 ### Código Requerimiento : R - 008
