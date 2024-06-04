@@ -35,7 +35,7 @@ AND direccion = <5> AND telefono = <6> AND id_est_proveedor = 'A';
 ### Código Requerimiento : R - 003
 ### Codigo interfaz : I - 003
 ### Imagen interfaz : 
-![image](Pantallas/ModCompras/MP3.png)
+![image](Pantallas/ModCompras/MP3-.png)
 ### Sentecias SQL:
 ### Eventos: 
 * **Pantalla Historial Cotizaciones: Se mostrará el historial de todas las cotizaciones aceptadas, no aceptadas y pendientes** 
