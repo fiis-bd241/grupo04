@@ -11,6 +11,20 @@ La carga de datos se ha hecho mediante archivos .csv
 
 [Tabla Persona](ArchivosCSV/Personas.csv)
 
+[Tabla Equipo de marketing](ArchivosCSV/Equipo_Marketing.csv)
+
+[Tabla Cupón](ArchivosCSV/Cupón.csv)
+
+[Tabla Campaña](ArchivosCSV/Campaña.csv)
+
+[Tabla CampañaXProd](ArchivosCSV/CampañaXProd.csv)
+
+[Tabla Canal](ArchivosCSV/Canal.csv)
+
+[Tabla CampañaXCanal](ArchivosCSV/CampañaXCanal.csv)
+
+[Tabla Observacion](ArchivosCSV/Observacion.csv)
+
 # 5. Funcionalidad Primaria Elegida (por módulo)
 
 # 6. Stack Tecnológico elegido para su aplicación
