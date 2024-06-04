@@ -9,7 +9,7 @@ Se agregaron más tablas en coordinación con el módulo de marketing, se hicier
 ### Código Requerimiento : R - 001
 ### Codigo interfaz : I - 001
 ### Imagen interfaz : 
-![image](Pantallas/Compra/MP1.png)
+![image](Pantallas/ModuloCompras/MP1.png)
 ### Sentecias SQL:
 ### Eventos: 
 * **** 
@@ -20,7 +20,7 @@ Se agregaron más tablas en coordinación con el módulo de marketing, se hicier
 ### Código Requerimiento : R - 002
 ### Codigo interfaz : I - 002
 ### Imagen interfaz : 
-![image](Pantallas/Compra/MP2.png)
+![image](Pantallas/ModuloCompras/MP2.png)
 ### Sentecias SQL:
 ### Eventos: 
 * **** 
@@ -31,7 +31,7 @@ Se agregaron más tablas en coordinación con el módulo de marketing, se hicier
 ### Código Requerimiento : R - 003
 ### Codigo interfaz : I - 003
 ### Imagen interfaz : 
-![image](Pantallas/Compra/MP3.png)
+![image](Pantallas/ModuloCompras/MP3.png)
 ### Sentecias SQL:
 ### Eventos: 
 * **** 
@@ -42,7 +42,7 @@ Se agregaron más tablas en coordinación con el módulo de marketing, se hicier
 ### Código Requerimiento : R - 004
 ### Codigo interfaz : I - 004
 ### Imagen interfaz : 
-![image](Pantallas/Compra/MP4.png)
+![image](Pantallas/ModuloCompras/MP4.png)
 ### Sentecias SQL:
 ### Eventos: 
 * **** 
@@ -53,7 +53,7 @@ Se agregaron más tablas en coordinación con el módulo de marketing, se hicier
 ### Código Requerimiento : R - 005
 ### Codigo interfaz : I - 005
 ### Imagen interfaz : 
-![image](Pantallas/Compra/MP5.png)
+![image](Pantallas/ModuloCompras/MP5.png)
 ### Sentecias SQL:
 ### Eventos: 
 * **** 
