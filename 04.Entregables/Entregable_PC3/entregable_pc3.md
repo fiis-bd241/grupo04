@@ -288,10 +288,22 @@ VALUES
 ![image](Pantallas/ModMarketing/I008.png)
 ### Sentecias SQL:
 ### Eventos: 
-* **BOTON Aceptar Oferta: Actualiza el estado de una cotizacion pendiente a un estado de Aceptado**
-* **BOTON Rechazar Oferta: Actualiza el estado de una cotizacion pendiente a un estado de No Aceptado** 
+* **Carga de pantalla: La pantalla se llena con los datos correspondientes a la campaña a revisar**
+* **Botón Aceptar: No se realizan cambios en las tablas**
+* **Botón Rechazar: No se realizan cambios en las tablas, pero se abre la pantalla de envío de observaciones**
 ```
+--CARGA:
+SELECT Id_campaña, nom_campaña, fecha_ini, fecha_fin, dir_url, modalidad, archivo, desc_campaña, Id_equipo_mark
+FROM Campaña
+WHERE Id_campaña = <1>;
 
+SELECT id_producto
+FROM CampañaXProd
+WHERE Id_campaña = <1>;
+
+SELECT Id_canal
+FROM CampañaXCanal
+WHERE Id_campaña = <1>;
 ```
 
 ### Código Requerimiento : R - 009
