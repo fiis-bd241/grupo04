@@ -5,6 +5,18 @@ Se agregaron más tablas en coordinación con el módulo de marketing, se hicier
 # 2. Asignación de Códigos por Requerimientos y Prototipos de Interfaces de Usuario
 
 # 3. Sentencias SQL por cada prototipo
+## 3.1 Modulo de Compras
+### Código Requerimiento : R - 001
+### Codigo interfaz : I - 001
+### Imagen interfaz : 
+![image](Pantallas/Compra/P1.png)
+### Sentecias SQL:
+### Eventos: 
+* **** 
+```
+
+```
+
 
 # 4. Carga de Datos
 La carga de datos se ha hecho mediante archivos .csv
