@@ -9,35 +9,82 @@ Se agregaron más tablas en coordinación con el módulo de marketing, se hicier
 
 | Código | R001  |
 |----------|----------|
-|Nombre  ||
-|Objetivo  |V|
-| Descripción   |    |
-| Actor primario    |   |
+|Nombre  |Registro de proveedores|
+|Objetivo  ||
+| Descripción   | |
+| Actor primario    | Gestor de compras |
 | Actor secundario    | -  |
-| Precondiciones    |   |
+| Precondiciones    | El proveedor ya debe haber contactado con la empresa previamente |
 
+| Código | R002  |
+|----------|----------|
+|Nombre  |Añadir proveedor|
+|Objetivo  |Permitir que el Gestor de compras pueda añadir proveedores a la página de Migni Store|
+| Descripción   | Proceso de registro de proveedores en la aplicación, con datos de empresa ya sea ruc, razon social, dirección, telefono, rubro, correo y sitio web|
+| Actor primario    | Gestor de compras |
+| Actor secundario    | -  |
+| Precondiciones    | El proveedor ya debe haber contactado con la empresa previamente |
 
+| Código | R003  |
+|----------|----------|
+|Nombre  |Detalle proveedores|
+|Objetivo  |Permitir a los gestores poder acceder y visualizar de un proveedor específico dentro de los registros|
+| Descripción   | Proceso mediante el cual los gestores pueden acceder a la visualización de un proveedor específico dentro de los registros |
+| Actor primario    | Gestor de compras|
+| Actor secundario    | -  |
+| Precondiciones    | El proveedor ya debe haber contactado con la empresa previamente |
+
+| Código | R004  |
+|----------|----------|
+|Nombre  |Historial cotizaciones|
+| Objetivo  |Permitir a los gestores poder acceder y visualizar las cotizaciones realizadas por un proveedor|
+| Descripción   |Proceso mediante el cual los gestores pueden acceder a la visualización de las cotizaciones, con sus respectivos datos|
+| Actor primario    | Gestor de compras|
+| Actor secundario    | -  |
+| Precondiciones    | El proveedor ya debe haber contactado con la empresa previamente |
+
+| Código | R005  |
+|----------|----------|
+|Nombre  |Detalle Cotizaciones|
+|Objetivo  |Permitir a los gestores poder acceder y visualizar de una cotizacion específica dentro del historial|
+| Descripción   | Proceso mediante el cual los gestores pueden acceder a la visualización de una cotizacion específica dentro del historial|
+| Actor primario    | Gestor de compras|
+| Actor secundario    | -  |
+| Precondiciones    | El proveedor ya debe haber contactado con la empresa previamente|
+
+| Código | R006  |
+|----------|----------|
+|Nombre  |Aceptar/Rechazar cotizacion del proveedor|
+|Objetivo  |Permitir que el gestor de compras pueda aceptar o rechazar la cotizacion realizada por el proveedor |
+| Descripción   | Proceso en el cual se puede visualizar la cotizacion, con estado pendiente y aceptar o rechazar dicha cotizacion|
+| Actor primario    | Gestor de compras |
+| Actor secundario    | -  |
+| Precondiciones    | El proveedor debe haber sido registrado por el gestor de compras |
 
 ## 2.2. Codificación de prototipos de interfaz
 ### 2.2.1. Modulo de Compras
 
-| Código Interfaz | I001  |
+| Código Interfaz | I001 |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModCompras/MP6.png)|
+
+| Código Interfaz | I002 |
 |----------|----------|
 |Imagen interfaz|![image](Pantallas/ModCompras/MP1.png)|
 
-| Código Interfaz | I002  |
+| Código Interfaz | I003  |
 |----------|----------|
 |Imagen interfaz|![image](Pantallas/ModCompras/MP2.png)|
 
-| Código Interfaz | I003  |
+| Código Interfaz | I004  |
 |----------|----------|
 |Imagen interfaz|![image](Pantallas/ModCompras/MP3-.png)|
 
-| Código Interfaz | I004  |
+| Código Interfaz | I005  |
 |----------|----------|
 |Imagen interfaz|![image](Pantallas/ModCompras/MP4.png)|
 
-| Código Interfaz | I005  |
+| Código Interfaz | I006  |
 |----------|----------|
 |Imagen interfaz|![image](Pantallas/ModCompras/MP5.png)|
 
@@ -45,6 +92,17 @@ Se agregaron más tablas en coordinación con el módulo de marketing, se hicier
 ## 3.1 Modulo de Compras
 ### Código Requerimiento : R - 001
 ### Codigo interfaz : I - 001
+### Imagen interfaz : 
+![image](Pantallas/ModCompras/MP6.png)
+### Sentecias SQL:
+### Eventos: 
+* **** 
+```
+
+```
+
+### Código Requerimiento : R - 002
+### Codigo interfaz : I - 002
 ### Imagen interfaz : 
 ![image](Pantallas/ModCompras/MP1.png)
 ### Sentecias SQL:
@@ -55,8 +113,8 @@ INSERT INTO proveedor(ruc_proveedor, razon_social, web_proveedor, rubro, direcci
 VALUES (<1>, <2>, <3>, <4>, <5>, <6>, 'A');
 ```
 
-### Código Requerimiento : R - 002
-### Codigo interfaz : I - 002
+### Código Requerimiento : R - 003
+### Codigo interfaz : I - 003
 ### Imagen interfaz : 
 ![image](Pantallas/ModCompras/MP2.png)
 ### Sentecias SQL:
@@ -69,8 +127,8 @@ WHERE ruc_proveedor = <1> AND razon_social = <2> AND web_proveedor = <3> AND rub
 AND direccion = <5> AND telefono = <6> AND id_est_proveedor = 'A';
 ```
 
-### Código Requerimiento : R - 003
-### Codigo interfaz : I - 003
+### Código Requerimiento : R - 004
+### Codigo interfaz : I - 004
 ### Imagen interfaz : 
 ![image](Pantallas/ModCompras/MP3-.png)
 ### Sentecias SQL:
@@ -82,8 +140,8 @@ FROM cotizacion
 WHERE id_cotizacion = <1> OR id_cotizacion = <2> OR id_cotizacion = <3> OR id_cotizacion = <4> OR id_cotizacion = <5> OR id_cotizacion = <6>
 ```
 
-### Código Requerimiento : R - 004
-### Codigo interfaz : I - 004
+### Código Requerimiento : R - 005
+### Codigo interfaz : I - 005
 ### Imagen interfaz : 
 ![image](Pantallas/ModCompras/MP4.png)
 ### Sentecias SQL:
@@ -103,8 +161,8 @@ INNER JOIN producto pd ON pd.id_producto = cx.id_producto
 WHERE c.id_cotizacion = <1>;
 ```
 
-### Código Requerimiento : R - 005
-### Codigo interfaz : I - 005
+### Código Requerimiento : R - 006
+### Codigo interfaz : I - 006
 ### Imagen interfaz : 
 ![image](Pantallas/ModCompras/MP5.png)
 ### Sentecias SQL:
