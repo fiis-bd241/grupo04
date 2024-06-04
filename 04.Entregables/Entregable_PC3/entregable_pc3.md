@@ -380,6 +380,19 @@ La carga de datos se ha hecho mediante archivos .csv
 
 # 6. Stack Tecnológico elegido para su aplicación
 
+## 6.1 Stack Tecnológico
+| Stack                         | Detalle                                               |
+|-------------------------------|-------------------------------------------------------|
+| Lenguaje de programación      | Python <br>![Python](https://img.shields.io/badge/Python-3.9-yellow.svg?style=for-the-badge&logo=python&logoColor=white)|
+| Librería GUI                  | Tkinter <br> ![Tkinter](https://img.shields.io/badge/Tkinter-blue.svg?style=for-the-badge&logo=python&logoColor=white)|
+| Editor de código              | Visual Studio Code <br> ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-1.89.0-skyblue.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)|
+| Base de datos                 | PostgreSQL <br> ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14.0-skyblue.svg?style=for-the-badge&logo=postgresql&logoColor=white)|
+| Controlador de base de datos  | pgAdmin <br> ![pgadmin](https://img.shields.io/badge/pgAdmin-4-blue.svg?style=for-the-badge&logo=pgadmin)|
+
+## 6.2 Diagrama de componentes
+
+
+
 # 7. Primera Versión de su Aplicación (BONUS)
 
 # 8. Videos individuales
