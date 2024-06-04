@@ -40,24 +40,9 @@ AND direccion = <5> AND telefono = <6> AND id_est_proveedor = 'A';
 ### Eventos: 
 * **Pantalla Historial Cotizaciones: Se mostrará el historial de todas las cotizaciones aceptadas, no aceptadas y pendientes** 
 ```
-SELECT id_cotizacion, id_est_cotizacion, monto_total, rubro, ruc_proveedor
-FROM proveedor
-WHERE id_cotizacion = <1>
-SELECT id_cotizacion, id_est_cotizacion, monto_total, rubro, ruc_proveedor
-FROM proveedor
-WHERE id_cotizacion = <2>
-SELECT id_cotizacion, id_est_cotizacion, monto_total, rubro, ruc_proveedor
-FROM proveedor
-WHERE id_cotizacion = <3>
-SELECT id_cotizacion, id_est_cotizacion, monto_total, rubro, ruc_proveedor
-FROM proveedor
-WHERE id_cotizacion = <4>
-SELECT id_cotizacion, id_est_cotizacion, monto_total, rubro, ruc_proveedor
-FROM proveedor
-WHERE id_cotizacion = <5>
-SELECT id_cotizacion, id_est_cotizacion, monto_total, rubro, ruc_proveedor
-FROM proveedor
-WHERE id_cotizacion = <6>
+SELECT id_cotizacion, id_est_cotizacion, monto_total, ruc_proveedor
+FROM cotizacion
+WHERE id_cotizacion = <1> OR id_cotizacion = <2> OR id_cotizacion = <3> OR id_cotizacion = <4> OR id_cotizacion = <5> OR id_cotizacion = <6>
 ```
 
 ### Código Requerimiento : R - 004
