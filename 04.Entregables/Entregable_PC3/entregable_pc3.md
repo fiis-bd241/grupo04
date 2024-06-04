@@ -9,7 +9,51 @@ Se agregaron más tablas en coordinación con el módulo de marketing, se hicier
 ### Código Requerimiento : R - 001
 ### Codigo interfaz : I - 001
 ### Imagen interfaz : 
-![image](Pantallas/Compra/P1.png)
+![image](Pantallas/Compra/MP1.png)
+### Sentecias SQL:
+### Eventos: 
+* **** 
+```
+
+```
+
+### Código Requerimiento : R - 002
+### Codigo interfaz : I - 002
+### Imagen interfaz : 
+![image](Pantallas/Compra/MP2.png)
+### Sentecias SQL:
+### Eventos: 
+* **** 
+```
+
+```
+
+### Código Requerimiento : R - 003
+### Codigo interfaz : I - 003
+### Imagen interfaz : 
+![image](Pantallas/Compra/MP3.png)
+### Sentecias SQL:
+### Eventos: 
+* **** 
+```
+
+```
+
+### Código Requerimiento : R - 004
+### Codigo interfaz : I - 004
+### Imagen interfaz : 
+![image](Pantallas/Compra/MP4.png)
+### Sentecias SQL:
+### Eventos: 
+* **** 
+```
+
+```
+
+### Código Requerimiento : R - 005
+### Codigo interfaz : I - 005
+### Imagen interfaz : 
+![image](Pantallas/Compra/MP5.png)
 ### Sentecias SQL:
 ### Eventos: 
 * **** 
