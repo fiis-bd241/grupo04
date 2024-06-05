@@ -781,6 +781,8 @@ Esta funcionalidad permitirá cumplir con los requerimientos Proponer campaña (
 
 ![image](APLICATIVOMC.png)
 
+[Aplicativo](04.Entregables/Entregable_PC3/AplicativoV1/Proveedores/prueba/client/gui_app.py)
+
 # 8. Videos individuales
 
 [Quispe Mitma Cesar](../../06.Videos_Individuales/VideosPC3/Quispe_Mitma_Cesar_Fernando-VideoIndividual.md)
