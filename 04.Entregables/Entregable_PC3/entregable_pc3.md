@@ -471,7 +471,7 @@ La carga de datos se ha hecho mediante archivos .csv
 
 ## 6.2 Diagrama de componentes
 
-
+![image](DIAGCOMP.png)
 
 # 7. Primera Versión de su Aplicación (BONUS)
 
