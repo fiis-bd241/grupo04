@@ -802,7 +802,10 @@ where ve.id_venta = 900001
 ### Eventos: Elegir método de pago
 * **Pantalla Visualizar posibles tipos de pago a elección del cliente**
 ```
-
+select t.nombre_tipo as tipo_pago,nro_tarjeta from Tipos_pago T
+join detalle_pago D on T.ID_TIPO_PAGO = D.ID_TIPO_PAGO
+JOIN venta v on v.id_detalle_pago = d.id_detalle_pago
+where v.id_venta = <900001>
 ```
 
 
