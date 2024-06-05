@@ -797,7 +797,7 @@ where ve.id_venta = 900001
 ### Código Requerimiento : R - 015
 ### Codigo interfaz : I - 015
 ### Imagen interfaz : 
-![image](Pantallas/ModVentas/catalogo.png)
+![image](Pantallas/ModVentas/tipo_pago.png)
 ### Sentecias SQL:
 ### Eventos: Elegir método de pago
 * **Pantalla Visualizar posibles tipos de pago a elección del cliente**
