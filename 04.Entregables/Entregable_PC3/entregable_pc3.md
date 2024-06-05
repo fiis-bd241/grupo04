@@ -1120,7 +1120,7 @@ Esta funcionalidad permitirá cumplir con los requerimientos Establecer fecha de
 **Funcionalidad primaria elegida:** Gestionar el flujo de compra de prodcutos por parte de cliente<br>
 **Sustentación:** Como se trata de una página web que permite ventas online, es muy importante manejar y controlar el flujo de ventas que al dia recibe la empresa por parte de numerosos clientes.<br>
 
-Esta funcionalidad permitirá cumplir con los requerimientos de las pantallas relacionadas a Ver Cátalogo de productos(R012), Realizar una compra (R014), Elegir método de pago (R015) y consultar el historial de ventas y de cliente (R018 Y R019).Dichas funcionalidades  se encuentran relacionados con las interfaces I-0012, I-014, I-005, I-018, I-019
+Esta funcionalidad permitirá cumplir con los requerimientos de las pantallas relacionadas a Ver Cátalogo de productos(R012), Realizar una compra (R014), Elegir método de pago (R015) y consultar el historial de ventas y de cliente (R018 Y R019).Dichas funcionalidades  se encuentran relacionados con las interfaces I-0012, I-014, I-0015, I-018, I-019
 
 | Actividad     | Descripción        | 
 |:-------------:|:---------------:|
