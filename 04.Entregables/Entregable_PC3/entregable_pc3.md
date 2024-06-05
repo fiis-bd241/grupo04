@@ -14,7 +14,7 @@ Se configuro una lookup table para identificar a los diferentes tipos de pago qu
 Se configuraron y se agregaron tablas para poder identificar mejor las categorías, los colores, las clases de cada producto (como sub productos), la marca; para poder filtrar con palabras claves y agilizar la búsqueda y hacerla más general, se agregaron sub tipos de productos para poder compararlo con los sub tipos existentes en el mercado y así se pueda alcanzar a más necesidades de clientes con productos nuevos. Se agregaron tablas para saber la ubicación de cada producto y calcular el espacio disponible para nuevas compras. Modificar la tabla inventario para tener en tiempo real (con una variable Timestamp) el stock disponible y el área de ventas puede ofrecer el stock real. Y se agregó una tabla imágenes para poder saber la cantidad aproximada de memoria, en la carga de imágenes, que se utilizará en el aplicativo.
 
 ![image](AlmacenER.png)
-![image](AlmacenRS.png)
+![image](AlmacenRS.png) 
 
 # 2. Asignación de Códigos por Requerimientos y Prototipos de Interfaces de Usuario
 
