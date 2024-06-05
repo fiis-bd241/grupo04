@@ -746,13 +746,23 @@ DELETE FROM Campaña WHERE Id_campaña =<1>;
 ### Eventos: 
 * **Pantalla Visualizar Catálogo productos: Se mostrará todos los productos al cliente**
 ```
+
+```
+
+### Código Requerimiento : R - 013
+### Codigo interfaz : I - 013
+### Imagen interfaz : 
+![image](Pantallas/ModVentas/catalogo.png)
+### Sentecias SQL:
+### Eventos: 
+* **Pantalla Visualizar información detallada del producto**
+```
 SELECT P.id_producto,nombre_producto,descripcion_prod,precio_unit,cant_max as cantidad_en_stock,t.nombre as Tipo_Producto,c.nombre as categoria_prod FROM PRODUCTO P
 JOIN CATEGORIA_PROD C ON C.ID_CATEGORIA_PROD = P.ID_CATEGORIA_PROD
 JOIN TIPO_PROD T ON C.ID_tipo_prod = T.id_tipo_prod;
 SELECT * FROM CATEGORIA_PROD;
 SELECT * FROM TIPO_PROD;
 ```
-
 
 
 # 4. Carga de Datos
