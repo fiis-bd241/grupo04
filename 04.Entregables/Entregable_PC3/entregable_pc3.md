@@ -16,6 +16,13 @@ Se configuraron y se agregaron tablas para poder identificar mejor las categorí
 ![image](AlmacenER.png)
 ![image](AlmacenRS.png) 
 
+## Módulo de Finanzas
+Se modificó tanto el modelo conceptual con el modelo E-R ya que para la Entidad Item de Estados de Resultados se tiene un atributo que es compuesto que se refiere al tipo de Estado de Resultado en el que se considera ademas del nombre del tipo se considera que tipo de operación será en el Estado de Resultados ya que las Utilidades harán operaciones compuestas mientras que ventas, costo de ventas serán operaciones simples además se tiene un atributo que es tipo_valor que hace referencia a que puede sumar o restar que se representa con positivo o negativo respectivamente.
+
+Por otro lado, en el modelo E-R se modificaron los atributos nuevos considerados del modelo E-R además que se normalizó hasta la 3 f, entonces tenemos para factura dos atributos nuevos que son el estado, tipo_factura ya que era importane considerar que tipo de factura es y el estado que es si lo ha pagado, si falta pagar o si no pagó nada por lo que se consideraron tablas que son Estado, Tipo_Factura además para los atributos del Estado de Resultados se consideró dos tablas que indican el tipo_valor con valores si es negativo o positivo y el tipo_operacion si es operación compuesta o simple.
+# 2. Asignación de Códigos por Requerimientos y Prototipos de Interfaces de Usuario
+
+
 # 2. Asignación de Códigos por Requerimientos y Prototipos de Interfaces de Usuario
 
 ## 2.1. Codificacion de Requerimientos
