@@ -737,6 +737,17 @@ DELETE FROM CampañaXCanal WHERE Id_campaña=<1>;
 DELETE FROM Observacion WHERE Id_campaña=<1>;
 DELETE FROM Campaña WHERE Id_campaña =<1>; 
 ```
+## 3.3 Modulo de Ventas
+### Código Requerimiento : R - 012
+### Codigo interfaz : I - 012
+### Imagen interfaz : 
+![image](Pantallas/ModVentas/catalogo.png)
+### Sentecias SQL:
+### Eventos: 
+* **Pantalla Visualizar Catálogo productos: Se mostrará todos los productos al cliente**
+```
+ACA VA EL CODIGO
+```
 
 
 
