@@ -23,6 +23,7 @@ Por otro lado, en el modelo E-R se modificaron los atributos nuevos considerados
 
 
 
+
 # 2. Asignación de Códigos por Requerimientos y Prototipos de Interfaces de Usuario
 
 ## 2.1. Codificacion de Requerimientos
@@ -288,6 +289,82 @@ Por otro lado, en el modelo E-R se modificaron los atributos nuevos considerados
 | Actor secundario    | -  |
 | Precondiciones    | Debe existir el pedido, con la fecha establecidad previamente |
 
+
+### 2.1.5. Modulo de CRM
+
+| Código | R029  |
+|----------|----------|
+|Nombre  |Agregar comentario usuario|
+|Objetivo  |Permite al usuario ingresar un comentario|
+| Descripción   | importante recalcar que esta subida de informacion es hecha solo desde que el usuario se registro anteriormente
+| Actor primario    | usuario|
+| Actor secundario    | -  |
+| Precondiciones    | debe haber un inicio de sesion anteriormente|
+
+
+| Código | R030  |
+|----------|----------|
+|Nombre  |Comentario general|
+|Objetivo  |permite a las personas ingresar un comentario|
+| Descripción   | este ingreso de informacion a modo de comentario es hecho 
+| Actor primario    | Gestor de distribucion y repartidor |
+| Actor secundario    | -  |
+| Precondiciones    | Debe existir el pedido, con la fecha establecidad previamente |
+
+
+| Código | R031  |
+|----------|----------|
+|Nombre  |Ver detalles/ver mas|
+|Objetivo  |Permitir al gestor de distribucion y el repartidor ver los detalles del pedido.|
+| Descripción   | Proceso mediante el cual el gerente de distribucion y el repartidor pueden visualizar mas detalles acerca del pedido
+| Actor primario    | Gestor de distribucion y repartidor |
+| Actor secundario    | -  |
+| Precondiciones    | Debe existir el pedido, con la fecha establecidad previamente |
+
+| Código | R032  |
+|----------|----------|
+|Nombre  |Ver detalles/ver mas|
+|Objetivo  |Permitir al gestor de distribucion y el repartidor ver los detalles del pedido.|
+| Descripción   | Proceso mediante el cual el gerente de distribucion y el repartidor pueden visualizar mas detalles acerca del pedido
+| Actor primario    | Gestor de distribucion y repartidor |
+| Actor secundario    | -  |
+| Precondiciones    | Debe existir el pedido, con la fecha establecidad previamente |
+
+| Código | R033  |
+|----------|----------|
+|Nombre  |Ver detalles/ver mas|
+|Objetivo  |Permitir al gestor de distribucion y el repartidor ver los detalles del pedido.|
+| Descripción   | Proceso mediante el cual el gerente de distribucion y el repartidor pueden visualizar mas detalles acerca del pedido
+| Actor primario    | Gestor de distribucion y repartidor |
+| Actor secundario    | -  |
+| Precondiciones    | Debe existir el pedido, con la fecha establecidad previamente |
+
+| Código | R034  |
+|----------|----------|
+|Nombre  |Ver detalles/ver mas|
+|Objetivo  |Permitir al gestor de distribucion y el repartidor ver los detalles del pedido.|
+| Descripción   | Proceso mediante el cual el gerente de distribucion y el repartidor pueden visualizar mas detalles acerca del pedido
+| Actor primario    | Gestor de distribucion y repartidor |
+| Actor secundario    | -  |
+| Precondiciones    | Debe existir el pedido, con la fecha establecidad previamente |
+
+| Código | R035  |
+|----------|----------|
+|Nombre  |Ver detalles/ver mas|
+|Objetivo  |Permitir al gestor de distribucion y el repartidor ver los detalles del pedido.|
+| Descripción   | Proceso mediante el cual el gerente de distribucion y el repartidor pueden visualizar mas detalles acerca del pedido
+| Actor primario    | Gestor de distribucion y repartidor |
+| Actor secundario    | -  |
+| Precondiciones    | Debe existir el pedido, con la fecha establecidad previamente |
+
+| Código | R036  |
+|----------|----------|
+|Nombre  |Ver detalles/ver mas|
+|Objetivo  |Permitir al gestor de distribucion y el repartidor ver los detalles del pedido.|
+| Descripción   | Proceso mediante el cual el gerente de distribucion y el repartidor pueden visualizar mas detalles acerca del pedido
+| Actor primario    | Gestor de distribucion y repartidor |
+| Actor secundario    | -  |
+| Precondiciones    | Debe existir el pedido, con la fecha establecidad previamente |
 
 ## 2.2. Codificación de prototipos de interfaz
 ### 2.2.1. Modulo de Compras
