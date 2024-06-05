@@ -3,7 +3,7 @@
 El módulo no fue alterado, se mantuvieron las tablas ya presentadas anteriormente de Proveedor, Cotizacion, CotizacionxProducto, tipo_est_proveedor, tipo_est_cotizacion estas serán las tablas definitivas que se usaran en el módulo de compras.
 
 ## Módulo de Marketing
-Se agregaron más tablas en coordinación con el módulo de marketing, se hicieron cambios en el modelo conceptual y lógico, afectando a las tablas y consecuentemente al códigl generador de las  tablas en nuestra base de datos (Postgresql), se trastocaron funcionamientos en el figma y se agregaron funciones faltantes para el equipo de marketing y el gestor de marketing.
+Se agregaron más tablas en coordinación con el módulo de marketing, se hicieron cambios en el modelo conceptual y lógico, afectando a las tablas y consecuentemente al códigl generador de las tablas en nuestra base de datos (Postgresql), se trastocaron funcionamientos en el figma y se agregaron funciones faltantes para el equipo de marketing y el gestor de marketing.
 
 ## Módulo de Ventas
 Se configuro una lookup table para identificar a los diferentes tipos de pago que puede realizar el cliente. Estos pagos pueden realizarse mediante tarjetas de crédito o débito, efectivo,a contraentrega, yaple/plin. Por lo demas,se mantienen las relaciones y tablas que se vieron en anteriores informes: Venta, VentaxProd,detalle_pago(se le agregó el atributo nro_tarjeta y puede ser null en casos de que que el pago sea en efectivo), tipos_pago(lookup table)
@@ -1536,16 +1536,52 @@ INSERT INTO Comentario (Id_comentario, descrip_comentario, fecha_comentario, hor
 ```
 
 
+
 ### Código Requerimiento : R - 030
 ### Codigo interfaz : I - 030
 ### Imagen interfaz : 
-![image](Pantallas/ModCRM/1.png)
+![image](Pantallas/ModCRM/2.png)
 ### Sentecias SQL:
 ### Eventos: 
-* **COMENTAR: El usuario podra subir su comentario mientras previamente este registrado**
+* **Contacto: El usuario podra subir su comentario a modo de contacto con la empresa , este es atendido por el gestor de CRM**
 ```
 INSERT INTO Comentario (Id_comentario, descrip_comentario, fecha_comentario, hora_comentario, id_producto, Id_persona)
+
 ```
+### Código Requerimiento : R - 031
+### Codigo interfaz : I - 031
+### Imagen interfaz : 
+![image](Pantallas/ModCRM/3.png)
+### Sentecias SQL:
+### Eventos: 
+* **Formularios: El gestor de CRM podra enviar formularios personalizados a las personas o grupos de esta que sean usuarios , asi como asignar cupones**
+```
+INSERT INTO Formulario (Id_formulario, descrip_formulario, fecha_creacion, Id_persona, Id_est_formulario) VALUES
+(<9>, <3>, <1>, <8>,<9> );
+
+
+SELECT * FROM Cupón
+WHERE activo = TRUE
+  AND CURRENT_DATE BETWEEN fecha_inicio AND fecha_fin;
+
+DELETE FROM FormularioxPregunta WHERE Id_formulario = <9>;
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # 4. Carga de Datos
 La carga de datos se ha hecho mediante archivos .csv
