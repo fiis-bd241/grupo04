@@ -660,6 +660,18 @@ Esta funcionalidad permitirá cumplir con los requerimientos de las pantallas re
 | 2    | En el caso que le dé en ver más en una cotización que ya tiene un estado de aceptado o no aceptado, no aparecerán los botones (botones deshabilitados), de aceptar o rechazar oferta <br> ![image]( Pantallas/ModCompras/MP4.png) | 
 | 3 | En el caso que le dé en ver más en una cotización que tiene un estado de pendiente, tendrá habilitado los botones de aceptar o rechazar oferta, al presionar el botón de aceptar la cotizacion cambia a estado de aceptado y le mostrara una pantalla de oferta aceptada, en el otro caso que rechace la cotizacion, la cotizacion cambiara a estado de no aceptado y saldrá una ventana de oferta rechazada.<br> ![image](Pantallas/ModCompras/MP5.png) ![image](Pantallas/ModCompras/MP5-1.png) ![image](Pantallas/ModCompras/MP5-2.png) |
 
+## MÓDULO : MARKETING
+**Funcionalidad primaria elegida:** Flujo de creación de campañas de marketing<br>
+**Sustentación:** Para el área de marketing o para el negocio en general, es indispensable que las campañas de marketing tengan un nivel de calidad alto, es por ello que pasan por revisiones a cargo del gestor de marketing y modificaciones hechas por el equipo de marketing al que se le encargó.<br>
+
+Esta funcionalidad permitirá cumplir con los requerimientos Proponer campaña (R007), Revisar campañas (R008), Observar campañas (R009) y atender observaciones (RO1O), estas tienen como interfaces a I007, I008, I009 e I010 respectivamente.
+
+| Actividad     | Descripción        | 
+|:-------------:|:---------------:|
+| 1       | Al ingresar en la opción de cotizaciones en el sistema (desde un correo autotizado), se podrá verificar el historial de cotizaciones que tenemos, dentro de este podemos ver en primer lugar los que están en estado pendiente, entonces el gestor de compras le dará en el botón de ver más, para poder ver el detalle de la cotización.<br>![image](Pantallas/ModMarketing/HomeEquipoMarketing.png) ![image](Pantallas/ModMarketing/MP3-.png) | 
+| 2    | En el caso que le dé en ver más en una cotización que ya tiene un estado de aceptado o no aceptado, no aparecerán los botones (botones deshabilitados), de aceptar o rechazar oferta <br> ![image]( Pantallas/ModMarketing/MP4.png) | 
+| 3 | En el caso que le dé en ver más en una cotización que tiene un estado de pendiente, tendrá habilitado los botones de aceptar o rechazar oferta, al presionar el botón de aceptar la cotizacion cambia a estado de aceptado y le mostrara una pantalla de oferta aceptada, en el otro caso que rechace la cotizacion, la cotizacion cambiara a estado de no aceptado y saldrá una ventana de oferta rechazada.<br> ![image](Pantallas/ModMarketing/MP5.png) ![image](Pantallas/ModMarketing/MP5-1.png) ![image](Pantallas/ModMarketing/MP5-2.png) |
+
 
 # 6. Stack Tecnológico elegido para su aplicación
 
