@@ -1646,6 +1646,25 @@ JOIN
 ### Eventos: 
 * **Dashboards para analisis: El gestor de CRM puede hacer analisis respectivos para aumentar el incentivo hacia un producto**
 ```
+SELECT 
+    p.nombre AS Nombre,
+    p.correo AS Correo,
+    p.telefono AS Telefono,
+    tp.tipo_producto AS TipoProducto,
+    pr.nombre_producto AS Producto,
+    c.fecha_compra AS FechaCompra,
+    c.cantidad AS Cantidad,
+    c.precio_total AS PrecioTotal
+FROM 
+    Compra c
+JOIN 
+    Persona p ON c.id_persona = p.Id_persona
+JOIN 
+    Producto pr ON c.id_producto = pr.id_producto
+JOIN 
+    TipoProducto tp ON pr.id_tipo_producto = tp.id_tipo_producto
+ORDER BY 
+    c.fecha_compra;
 
 
 
@@ -1660,6 +1679,25 @@ JOIN
 * **Pantalla de inicio : para el gestor de CRM pueda ver todas las opciones a hacer asi como dashboards hechos anteriormente**
 ```
 
+SELECT 
+    p.nombre AS Nombre,
+    p.correo AS Correo,
+    p.telefono AS Telefono,
+    tp.tipo_producto AS TipoProducto,
+    pr.nombre_producto AS Producto,
+    c.fecha_compra AS FechaCompra,
+    c.cantidad AS Cantidad,
+    c.precio_total AS PrecioTotal
+FROM 
+    Compra c
+JOIN 
+    Persona p ON c.id_persona = p.Id_persona
+JOIN 
+    Producto pr ON c.id_producto = pr.id_producto
+JOIN 
+    TipoProducto tp ON pr.id_tipo_producto = tp.id_tipo_producto
+ORDER BY 
+    c.fecha_compra;
 
 
 ```
