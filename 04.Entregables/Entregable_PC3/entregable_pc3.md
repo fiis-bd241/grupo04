@@ -1116,7 +1116,7 @@ Esta funcionalidad permitirá cumplir con los requerimientos Establecer fecha de
 | 7    |  Tanto el gerente de distribucion como el repartidor pueden ver los detalles del pedido <br> ![image](  Pantallas/ModDistribucion/I0027.png) | 
 
 
-## MÓDULO : COMPRAS
+## MÓDULO : VENTAS
 **Funcionalidad primaria elegida:** Gestionar el flujo de compra de prodcutos por parte de cliente<br>
 **Sustentación:** Como se trata de una página web que permite ventas online, es muy importante manejar y controlar el flujo de ventas que al dia recibe la empresa por parte de numerosos clientes.<br>
 
