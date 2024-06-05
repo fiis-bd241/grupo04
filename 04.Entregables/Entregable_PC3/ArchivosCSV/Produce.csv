@@ -1,0 +1,36 @@
+"id_producto","id_marca","valoración"
+"PAL001","Beauty Creations",5
+"PAL002","Beauty Creations",5
+"PAL003","Beauty Creations",5
+"PAL004","Beauty Creations",4
+"PRI001","Italia Deluxe",NULL
+"POL001","Beauty Creations",3
+"POL002","Beauty Creations",4
+"COR001","Italia Deluxe",2
+"COR002","Italia Deluxe",5
+"RUB001","Italia Deluxe",5
+"RUB002","Beauty Creations",5
+"RUB003","Italia Deluxe",NULL
+"LAB001","Italia Deluxe",5
+"LAB002","Super Stay",4
+"LAB003","Super Stay",3
+"GLI001","Beauty Creations",5
+"GLI002","Italia Deluxe",5
+"DEL001","Prosa",2
+"DEL002","Italia Deluxe",5
+"RIM001","Prosa",5
+"RIM002","Prosa",3
+"RIM003","Prosa",5
+"RIM004","Prosa",5
+"CUA001","Looes-Leaf",3
+"CUA002","Looes-Leaf",4
+"CUA003","Looes-Leaf",4
+"LAP001","Diamond",5
+"LAP002","Diamond",4
+"LAP003","Diamond",1
+"LAP004","Diamond",5
+"LAP005","Diamond",4
+"LAP006","Diamond",5
+"LAP007","Diamond",2
+"LAP008","Diamond",NULL
+"LAP009","Diamond",5
