@@ -700,3 +700,4 @@ Esta funcionalidad permitirá cumplir con los requerimientos Proponer campaña (
 
 # 8. Videos individuales
 
+[Quispe Mitma Cesar](../../06.Videos_Individuales/VideosPC3/Quispe_Mitma_Cesar_Fernando-VideoIndividual.md)
