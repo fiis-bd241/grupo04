@@ -353,6 +353,10 @@ Se configuro una lookup table para identificar a los diferentes tipos de pago qu
 |----------|----------|
 |Imagen interfaz|![image](Pantallas/ModVentas/historial_ventas_gestor.png)|
 
+| Código Interfaz | I018 |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModVentas/historial_cliente.png)|
+
 ### 2.2.4. Modulo de distribucion
 
 | Código Interfaz | I020 |
