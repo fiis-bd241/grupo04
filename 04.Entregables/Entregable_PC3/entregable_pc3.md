@@ -813,11 +813,25 @@ where v.id_venta = <900001>
 ### Eventos: Elegir método de pago
 * **Pantalla Visualizar posibles tipos de pago a elección del cliente**
 ```
-SELECT P.id_producto,nombre_producto,descripcion_prod,precio_unit,cant_max as cantidad_en_stock,t.nombre as Tipo_Producto,c.nombre as categoria_prod FROM PRODUCTO P
-JOIN CATEGORIA_PROD C ON C.ID_CATEGORIA_PROD = P.ID_CATEGORIA_PROD
-JOIN TIPO_PROD T ON C.ID_tipo_prod = T.id_tipo_prod;
-SELECT * FROM CATEGORIA_PROD;
-SELECT * FROM TIPO_PROD;
+select nombre_producto,descripcion_prod,pe.direccion,cant_prod,(cant_max-cant_prod) as stock_restante,cant_prod*precio_unit as precio,
+d.fecha_pago as fecha_en_el_carrito,t.nombre_tipo
+from producto p
+join ventaxprod V ON  p.id_producto = v.id_producto
+JOIN venta ve on ve.id_venta=v.id_venta
+join persona pe on ve.id_persona = pe.id_persona
+join detalle_pago  d on ve.id_detalle_pago = d.id_detalle_pago
+join tipos_pago t on t.id_tipo_pago = d.id_tipo_pago
+where ve.id_venta = 900001 and p.id_producto=2
+```
+### Código Requerimiento : R - 017
+### Codigo interfaz : I - 017
+### Imagen interfaz : 
+![image](Pantallas/ModVentas/cambio_direccion.png)
+### Sentecias SQL:
+### Eventos: Elegir (si lo desea) cambiar la direccion de envió antes de registrar su compra
+* **Pantalla Visualizar cambio de dirección del cliente**
+```
+
 ```
 
 # 4. Carga de Datos
