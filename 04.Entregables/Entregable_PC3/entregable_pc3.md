@@ -2,6 +2,8 @@
 ## Módulo de Marketing
 Se agregaron más tablas en coordinación con el módulo de marketing, se hicieron cambios en el modelo conceptual y lógico, afectando a las tablas y consecuentemente al códigl generador de las tablas en nuestra base de datos (Postgresql), se trastocaron funcionamientos en el figma y se agregaron funciones faltantes para el equipo de marketing y el gestor de marketing.
 
+![image](MODLOG.png)
+
 # 2. Asignación de Códigos por Requerimientos y Prototipos de Interfaces de Usuario
 
 ## 2.1. Codificacion de Requerimientos
