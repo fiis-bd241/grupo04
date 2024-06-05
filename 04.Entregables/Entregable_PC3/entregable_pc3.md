@@ -575,6 +575,34 @@ Por otro lado, en el modelo E-R se modificaron los atributos nuevos considerados
 |----------|----------|
 |Imagen interfaz|![image](Pantallas/ModCRM/8.png)|
 
+### 2.2.6. Modulo de Finanzas
+| Código Interfaz | I037 |
+|-----------------|------|
+|Imagen interfaz|![image](Pantallas/Home_Contador.PNG)|
+
+| Código Interfaz | I038 |
+|-----------------|------|
+|Imagen interfaz|![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/Pantallas/Factura%20Estados.PNG)|
+
+| Código Interfaz | I039 |
+|-----------------|------|
+|Imagen interfaz|![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/Pantallas/HistorialFactura.PNG)|
+
+| Código Interfaz | I040 |
+|-----------------|------|
+|Imagen interfaz|![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/Pantallas/VerFactura.PNG)|
+
+| Código Interfaz | I041 |
+|-----------------|------|
+|Imagen interfaz|![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/Pantallas/A%C3%B1adirFactura.PNG)|
+
+| Código Interfaz | I042 |
+|-----------------|------|
+|Imagen interfaz|![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/Pantallas/HistorialdeAsientos.PNG)|
+
+| Código Interfaz | I043 |
+|-----------------|------|
+|Imagen interfaz|![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/Pantallas/EstadodeResultados.PNG)|
 
 
 
