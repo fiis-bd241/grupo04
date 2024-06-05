@@ -379,7 +379,7 @@ Por otro lado, en el modelo E-R se modificaron los atributos nuevos considerados
 
 | Código | R032  |
 |----------|----------|
-|Nombre  |Ver detalles/ver mas|
+|Nombre  |Correos personalizados|
 |Objetivo  |Permitir al gestor de CRM enviar correos personalizados |
 | Descripción   | Proceso mediante el cual el gestor de CRM informa a los usuarios sobre los productos , pudiendo entregar determinados cupones que el area de Marketing asigno
 | Actor primario    | Gestor de CRM |
