@@ -3,7 +3,7 @@
 El módulo no fue alterado, se mantuvieron las tablas ya presentadas anteriormente de Proveedor, Cotizacion, CotizacionxProducto, tipo_est_proveedor, tipo_est_cotizacion estas serán las tablas definitivas que se usaran en el módulo de compras.
 
 ## Módulo de Marketing
-Se agregaron más tablas en coordinación con el módulo de marketing, se hicieron cambios en el modelo conceptual y lógico, afectando a las tablas y consecuentemente al códigl generador de las tablas en nuestra base de datos (Postgresql), se trastocaron funcionamientos en el figma y se agregaron funciones faltantes para el equipo de marketing y el gestor de marketing.
+Se agregaron más tablas en coordinación con el módulo de marketing, se hicieron cambios en el modelo conceptual y lógico, afectando a las tablas y consecuentemente al códigl generador de las  tablas en nuestra base de datos (Postgresql), se trastocaron funcionamientos en el figma y se agregaron funciones faltantes para el equipo de marketing y el gestor de marketing.
 
 ## Módulo de Ventas
 Se configuro una lookup table para identificar a los diferentes tipos de pago que puede realizar el cliente. Estos pagos pueden realizarse mediante tarjetas de crédito o débito, efectivo,a contraentrega, yaple/plin. Por lo demas,se mantienen las relaciones y tablas que se vieron en anteriores informes: Venta, VentaxProd,detalle_pago(se le agregó el atributo nro_tarjeta y puede ser null en casos de que que el pago sea en efectivo), tipos_pago(lookup table)
