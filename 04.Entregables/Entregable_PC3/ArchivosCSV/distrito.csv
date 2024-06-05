@@ -1,0 +1,44 @@
+﻿id_distrito;nombre;ubigeo;cod_postal;id_zona
+1;Ancon;150102;02;1
+2;Ate;150103;03;2
+3;Barranco;150104;04;5
+4;Independencia;150102;02;1
+5;Comas;150110;03;1
+6;San Martin de Porres;150112;04;1
+7;San Juan de Lurigancho;150132;04;2
+8;Miraflores;150122;18;5
+9;La Victoria;150115;13;4
+10;San Isidro;150131;27;5
+11;San Borja;150130;41;5
+12;Surco;150140;33;5
+13;San Miguel;150136;32;4
+14;Magdalena del Mar;150120;17;4
+15;La Molina;150114;12;2
+16;Lince;150116;14;4
+17;Pueblo Libre;150121;21;4
+18;Breña;150105;05;4
+19;Carabayllo;150106;06;1
+20;Chaclacayo;150107;08;2
+21;Chorrillos;150108;09;5
+22;Cieneguilla;150109;40;2
+23;El Agustino;150111;10;2
+24;Jesús María;150113;11;4
+25;Cercado de lima;150101;01;4
+26;Los Olivos;150117;39;1
+27;Lurigancho;150118;15;2
+28;Lurín;150119;16;3
+29;Pachacámac;150123;19;3
+30;Pucusana;150124;20;6
+31;Puente Piedra;150125;22;1
+32;Punta Hermosa;150126;24;6
+33;Punta Negra;150127;23;6
+34;Rímac;150128;25;4
+35;San Bartolo;150129;26;6
+36;San Juan de Miraflores;150133;29;3
+37;San Luis;150134;30;4
+38;Santa Anita;150137;43;2
+39;Santa María del Mar;150138;37;6
+40;Santa Rosa;150139;38;1
+41;Surquillo;150141;34;5
+42;Villa El Salvador;150142;42;3
+43;Villa María del Triunfo;150143;35;3
