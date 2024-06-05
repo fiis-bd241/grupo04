@@ -154,7 +154,7 @@ Se agregaron más tablas en coordinación con el módulo de marketing, se hicier
 | Código | R016 |
 |----------|----------|
 |Nombre  | Ver Detalles del Producto|
-| Objetivo | <p align="left"> Permitir que el cliente acceda a una vista detallada del producto en la plataforma de ventas después de rellenar los datos de su tarjeta.</p> | 
+| Objetivo | <p align="left"> Permitir que el cliente acceda a una vista detallada del producto en la plataforma de ventas después de elegir su método de pago correspondiente.</p> | 
 | Descripción | Facilitar al cliente la visualización de información detallada sobre un producto seleccionado, incluyendo descripción, código, marca, catálogo, tipo de producto, venta, stock restante, precio y cantidad disponible. | 
 | Actor primario   | Cliente | 
 |Actor secundario| Plataforma de Ventas|
