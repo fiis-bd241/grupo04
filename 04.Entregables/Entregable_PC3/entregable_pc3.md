@@ -588,6 +588,19 @@ La carga de datos se ha hecho mediante archivos .csv
 
 # 5. Funcionalidad Primaria Elegida (por módulo)
 
+## MÓDULO : COMPRAS
+**Funcionalidad primaria elegida:** Gestionar todas las cotizaciones hechas por los proveedores<br>
+**Sustentación:** La gestión de cotizaciones en una empresa de venta de productos es una funcionalidad importante debido a que se requiere un análisis de la viabilidad de la cantidad de productos entregados y los precios de cada uno.<br>
+
+Esta funcionalidad permitirá cumplir con los requerimientos de las pantallas relacionadas a Cotizaciones Historial cotizaciones (R004), Detalle Cotizaciones (R005), Aceptar/Rechazar cotización del proveedor (R006) los cuales se encuentran relacionados con las interfaces I-004, I-005, I-006.
+
+| Actividad     | Descripción        | 
+|:-------------:|:---------------:|
+| 1       | Al ingresar en la opción de cotizaciones en el sistema (desde un correo autotizado), se podrá verificar el historial de cotizaciones que tenemos, dentro de este podemos ver en primer lugar los que están en estado pendiente, entonces el gestor de compras le dará en el botón de ver más, para poder ver el detalle de la cotización.<br>![image](Pantallas/ModCompras/HOMEC.png) ![image](Pantallas/ModCompras/MP3-.png) | 
+| 2    | En el caso que le dé en ver más en una cotización que ya tiene un estado de aceptado o no aceptado, no aparecerán los botones (botones deshabilitados), de aceptar o rechazar oferta <br> ![image]( Pantallas/ModCompras/MP4.png) | 
+| 3 | En el caso que le dé en ver más en una cotización que tiene un estado de pendiente, tendrá habilitado los botones de aceptar o rechazar oferta, al presionar el botón de aceptar la cotizacion cambia a estado de aceptado y le mostrara una pantalla de oferta aceptada, en el otro caso que rechace la cotizacion, la cotizacion cambiara a estado de no aceptado y saldrá una ventana de oferta rechazada.<br> ![image](Pantallas/ModCompras/MP5.png) ![image](Pantallas/ModCompras/MP5-1.png) ![image](Pantallas/ModCompras/MP5-2.png) |
+
+
 # 6. Stack Tecnológico elegido para su aplicación
 
 ## 6.1 Stack Tecnológico
