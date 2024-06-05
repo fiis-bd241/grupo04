@@ -1115,6 +1115,23 @@ Esta funcionalidad permitirá cumplir con los requerimientos Establecer fecha de
 | 6    | El repartidor acepta el pedido cuando este realizar la entrega puede confirmarlo,y asi actualizar el estado del pedido <br> ![image](  Pantallas/ModDistribucion/I0025.png) |
 | 7    |  Tanto el gerente de distribucion como el repartidor pueden ver los detalles del pedido <br> ![image](  Pantallas/ModDistribucion/I0027.png) | 
 
+
+## MÓDULO : VENTAS
+**Funcionalidad primaria elegida:** Gestionar el flujo de compra de prodcutos por parte de cliente<br>
+**Sustentación:** Como se trata de una página web que permite ventas online, es muy importante manejar y controlar el flujo de ventas que al dia recibe la empresa por parte de numerosos clientes.<br>
+
+Esta funcionalidad permitirá cumplir con los requerimientos de las pantallas relacionadas a Ver Cátalogo de productos(R012), Realizar una compra (R014), Elegir método de pago (R015) y consultar el historial de ventas y de cliente (R018 Y R019).Dichas funcionalidades  se encuentran relacionados con las interfaces I-0012, I-014, I-0015, I-018, I-019
+
+| Actividad     | Descripción        | 
+|:-------------:|:---------------:|
+| 1       | Al ingresar a la web el cliente podra ver todo el arsenal de productos con los que cuenta la empresa para que pueda encontrar el que desee comprar.<br>![image](Pantallas/ModVentas/catalogo.png)| 
+| 2    | Luego de escojer sus productos, el cliente pasa a la seccion del carrito de compras donde puede configurar ciertos aspectos de los porductos que esta comprando. Se le detalla los precios que va a tener que pagar y  tambien se le informa que prosiga con el proceso de pago con un método de pago permitido.<br> ![image]( Pantallas/ModVentas/carrito.png) | 
+| 3 | Se procede a elegir un método de pago y luego rellenar los datos correpsondientes a dicho pago.entonces ya podria procesarse y registrarse la compra en los historiales de venta de la empresa.<br> ![image](Pantallas/ModVentas/tipo_pago.png) ! |
+| 4 | Despues de la venta, se puede visualizar tanto los historiales de venta del cliente y de la empresa en general.Lo que permite visualizar los registros de venta de algún periodo en la empresa y asi poder darles seguimiento.<br> ![image](Pantallas/ModCompras/MP5.png) ![image](Pantallas/ModVentas/historial_ventas_gestor.png) ![image](Pantallas/ModVentas/historial_cliente.png) |
+
+
+
+
 # 6. Stack Tecnológico elegido para su aplicación
 
 ## 6.1 Stack Tecnológico
