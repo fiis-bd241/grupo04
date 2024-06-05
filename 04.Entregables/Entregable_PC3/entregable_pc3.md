@@ -772,7 +772,7 @@ JOIN TIPO_PROD T ON C.ID_tipo_prod = T.id_tipo_prod;
 ### Imagen interfaz : 
 ![image](Pantallas/ModVentas/carrito.png)
 ### Sentecias SQL:
-### Eventos: 
+### Eventos: Decidir comprar algo en el carro de compras
 * **Pantalla carrito de compras**
 ```
 select nombre_producto,descripcion_prod,cant_prod,cant_prod*precio_unit as precio ,c.esta_activo,direccion,
@@ -810,8 +810,8 @@ where v.id_venta = <900001>
 ### Imagen interfaz : 
 ![image](Pantallas/ModVentas/info_despues_comprar.png)
 ### Sentecias SQL:
-### Eventos: Elegir método de pago
-* **Pantalla Visualizar posibles tipos de pago a elección del cliente**
+### Eventos: Decidir ver información mas detallada mientras esta en el carrito de compras
+* **Pantalla Visualizar los detalles del producto que esta comprando en específico**
 ```
 select nombre_producto,descripcion_prod,pe.direccion,cant_prod,(cant_max-cant_prod) as stock_restante,cant_prod*precio_unit as precio,
 d.fecha_pago as fecha_en_el_carrito,t.nombre_tipo
@@ -848,8 +848,8 @@ WHERE id_persona = 1008
 ### Imagen interfaz : 
 ![image](Pantallas/ModVentas/historial_ventas_gestor.png)
 ### Sentecias SQL:
-### Eventos: Elegir (si lo desea) cambiar la direccion de envió antes de registrar su compra
-* **Pantalla Visualizar cambio de dirección del cliente**
+### Eventos: Decidir ver el historial de ventas de la empresa para dar seguimiento
+* **Pantalla Visualizar historial de ventas**
 ```
 
 ```
