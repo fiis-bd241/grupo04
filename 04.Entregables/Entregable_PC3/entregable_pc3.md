@@ -1370,6 +1370,14 @@ JOIN
 JOIN 
     Clase_Maquillaje cm ON i.Id_Producto = cm.Id_Producto AND i.Id_Clase_Maquillaje = cm.Id_Clase_Maquillaje;
 
+##3.6. Módulo de finanza
+### Código Requerimiento : R - 038
+### Imagen interfaz : 
+![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/Pantallas/A%C3%B1adirFactura.PNG)
+### Sentecias SQL:
+### Eventos: 
+* **BOTON AÑADIR MAS: El contador agrega una factura del cliente.
+
 # 4. Carga de Datos
 La carga de datos se ha hecho mediante archivos .csv
 
