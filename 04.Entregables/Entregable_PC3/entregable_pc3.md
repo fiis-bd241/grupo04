@@ -227,6 +227,38 @@ Se agregaron más tablas en coordinación con el módulo de marketing, se hicier
 |----------|----------|
 |Imagen interfaz|![image](Pantallas/ModMarketing/I011.png)|
 
+### 2.2.3. Modulo de Ventas
+
+| Código Interfaz | I012 |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModVentas/catalogo.png)|
+
+| Código Interfaz | I013 |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModVentas/info_prod_catalogo.png)|
+
+| Código Interfaz | I014 |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModVentas/carrito.png)|
+
+| Código Interfaz | I015 |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModVentas/tipo_pago.png)|
+
+| Código Interfaz | I016 |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModVentas/info_despues_comprar.png)|
+
+| Código Interfaz | I017 |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModVentas/cambio_direccion.png)|
+
+| Código Interfaz | I018 |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModVentas/historial_ventas_empresa.png)|
+
+
+
 # 3. Sentencias SQL por cada prototipo
 ## 3.1 Modulo de Compras
 ### Código Requerimiento : R - 001
@@ -545,6 +577,14 @@ La carga de datos se ha hecho mediante archivos .csv
 [Tabla CampañaXCanal](ArchivosCSV/CampañaXCanal.csv)
 
 [Tabla Observacion](ArchivosCSV/Observacion.csv)
+
+[Tabla detalle_pago](ArchivosCSV/detalle_pago.csv)
+
+[Tabla tipos_pago](ArchivosCSV/tipos_pago.csv)
+
+[Tabla Venta](ArchivosCSV/venta.csv)
+
+[Tabla VentaxProd](ArchivosCSV/ventaxprod.csv)
 
 # 5. Funcionalidad Primaria Elegida (por módulo)
 
