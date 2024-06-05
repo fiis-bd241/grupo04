@@ -1127,7 +1127,7 @@ Esta funcionalidad permitirá cumplir con los requerimientos de las pantallas re
 | 1       | Al ingresar a la web el cliente podra ver todo el arsenal de productos con los que cuenta la empresa para que pueda encontrar el que desee comprar.<br>![image](Pantallas/ModVentas/catalogo.png)| 
 | 2    | Luego de escojer sus productos, el cliente pasa a la seccion del carrito de compras donde puede configurar ciertos aspectos de los porductos que esta comprando. Se le detalla los precios que va a tener que pagar y  tambien se le informa que prosiga con el proceso de pago con un método de pago permitido.<br> ![image]( Pantallas/ModVentas/carrito.png) | 
 | 3 | Se procede a elegir un método de pago y luego rellenar los datos correpsondientes a dicho pago.entonces ya podria procesarse y registrarse la compra en los historiales de venta de la empresa.<br> ![image](Pantallas/ModVentas/tipo_pago.png) ! |
-| 4 | Despues de la venta, se puede visualizar tanto los historiales de venta del cliente y de la empresa en general.Lo que permite visualizar los registros de venta de algún periodo en la empresa y asi poder darles seguimiento.<br> ![image](Pantallas/ModCompras/MP5.png) ![image](Pantallas/ModVentas/historial_ventas_gestor.png) ![image](Pantallas/ModVentas/historial_cliente.png) |
+| 4 | Despues de la venta, se puede visualizar tanto los historiales de venta del cliente y de la empresa en general.Lo que permite visualizar los registros de venta de algún periodo en la empresa y asi poder darles seguimiento.<br> ![image](Pantallas/ModVentas/historial_ventas_gestor.png) ![image](Pantallas/ModVentas/historial_cliente.png) |
 
 
 
