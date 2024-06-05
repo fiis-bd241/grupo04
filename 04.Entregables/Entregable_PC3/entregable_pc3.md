@@ -1099,7 +1099,21 @@ Esta funcionalidad permitirá cumplir con los requerimientos Proponer campaña (
 | 8    | Ya en la pantalla de atender observaciones, el equipo de marketing puede visualizar todas aquellas observaciones que ha realizado el Gestor de marketing y que aún no han sido atendidas, el equipo de marketing presionará en una de ellas para visualizar los detalles y corregir la campaña. <br> ![image]( Pantallas/ModMarketing/Observaciones.png) | 
 | 9    | El equipo de marketing lee las observaciones realizadas a la campaña y realiza las correcciones respectivas, al presionar en enviar se actualizarán aquellos datos de la campaña que han sido cambiados, además de actualizar el estado de la observación a atendido, en el caso de presionar en cancelar, no se realiza ningún cambio y se regresa a la pantalla anterior . <br> ![image]( Pantallas/ModMarketing/I010.png) | 
 
+## MÓDULO : Distribucion
+**Funcionalidad primaria elegida:** Flujo de entrega de pedido <br>
+**Sustentación:** Para la empresa, el área de distribucion  es indispensable puesto que es una necesidad hacer llegar los productos a los cliente, es por ello que estara area se encargara de la gestion de distribucion desde la creacion del pedido hasta la entrega.<br>
 
+Esta funcionalidad permitirá cumplir con los requerimientos Establecer fecha de entrega (R021), asignar repartidor y ruta (R023), visualizar el historial de pedidos (R024 y R027) y confirmar la entrega (RO26), estas tienen como interfaces a I021, I023, I024,I027 e I026 respectivamente.
+
+| Actividad     | Descripción        | 
+|:-------------:|:---------------:|
+| 1       | El cliente ingresa a la página principal con una cuenta autorizada y se dirige al apartado de "ver mis pedidos".<br>![image](Pantallas/ModDistribucion/I0019.png) | 
+| 2    | Ya en la pantalla de "ver mis pedidos", el cliente escoge uno de los pedidos que le faltan entregar y selecciona la fecha de entrega. <br> ![image]( Pantallas/ModDistribucion/I0020.png) | 
+| 3 | Una vez seleccionada la fecha de entrega,esto creara el pedido y aparecera en el apartado de gestionar pedidos del gestor de distribucion. <br>![image](Pantallas/ModDistribucion/I0021.png) |
+| 4    |El gestor de distribucion accede al apartado de gestionar pedidos y escoge uno de los pedidos para asignarle un repartidor y una ruta <br> ![image]( Pantallas/ModDistribucion/I0022.png) | 
+| 5    | Cuando es seleccionado el repartidor este pedido aparecera en el apartado de "gestionar pedidos" del repartidor. <br> ![image]( Pantallas/ModDistribucion/I0024.png) | 
+| 6    | El repartidor acepta el pedido cuando este realizar la entrega puede confirmarlo,y asi actualizar el estado del pedido <br> ![image](  Pantallas/ModDistribucion/I0025.png) |
+| 7    |  Tanto el gerente de distribucion como el repartidor pueden ver los detalles del pedido <br> ![image](  Pantallas/ModDistribucion/I0027.png) | 
 
 # 6. Stack Tecnológico elegido para su aplicación
 
