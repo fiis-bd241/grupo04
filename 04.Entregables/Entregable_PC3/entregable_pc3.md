@@ -431,6 +431,12 @@ La carga de datos se ha hecho mediante archivos .csv
 
 [Tabla tipo_prod](ArchivosCSV/Tipo_prod.csv)
 
+[Tabla categoria_prod](ArchivosCSV/categoria_prod.csv)
+
+[Tabla Proveedores](ArchivosCSV/Proveedores.csv)
+
+[Tabla Cotizaciones](ArchivosCSV/Cotizaciones.csv)
+
 [Tabla Persona](ArchivosCSV/Personas.csv)
 
 [Tabla Equipo de marketing](ArchivosCSV/Equipo_Marketing.csv)
