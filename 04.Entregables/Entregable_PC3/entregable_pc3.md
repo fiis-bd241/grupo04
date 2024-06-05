@@ -1,11 +1,11 @@
 # 1. Ajustes al Modelamiento
 ## Módulo de Compras
-El módulo no fue alterado, se mantuvieron las tablas ya presentadas anteriormente de Proveedor, Cotizacion, ProveedorxProducto, CotizacionxProducto, tipo_est_proveedor, tipo_est_cotizacion estas serán las tablas definitivas que se usaran en el módulo de compras
+El módulo no fue alterado, se mantuvieron las tablas ya presentadas anteriormente de Proveedor, Cotizacion, CotizacionxProducto, tipo_est_proveedor, tipo_est_cotizacion estas serán las tablas definitivas que se usaran en el módulo de compras.
 
 ## Módulo de Marketing
 Se agregaron más tablas en coordinación con el módulo de marketing, se hicieron cambios en el modelo conceptual y lógico, afectando a las tablas y consecuentemente al códigl generador de las tablas en nuestra base de datos (Postgresql), se trastocaron funcionamientos en el figma y se agregaron funciones faltantes para el equipo de marketing y el gestor de marketing.
 
-![image](MODLOG.png)
+![image](MODLOG-.png)
 
 # 2. Asignación de Códigos por Requerimientos y Prototipos de Interfaces de Usuario
 
