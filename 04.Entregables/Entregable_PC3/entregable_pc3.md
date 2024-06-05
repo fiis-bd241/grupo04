@@ -1179,6 +1179,167 @@ INNER JOIN persona per on per.id_persona = ven.id_persona
 INNER JOIN repartidor rep on rep.id_repartidor = ped.id_repartidor
 WHERE id_pedido = <1>
 ```
+## 3.5 Modulo de Alamcén
+### Sentecias SQL:
+
+--Mostrar el Stock, el precio unitario y el Valor en el inventario de cada producto
+SELECT pr.Nombre_Producto,pr.Precio_Unitario_Producto,
+       SUM(i.Entradas - COALESCE(i.Salidas, 0)) AS Stock_Disponible,
+		(( SUM(i.Entradas - COALESCE(i.Salidas, 0)))*pr.Precio_Unitario_Producto) AS Importe_Inventario
+FROM Inventario i
+JOIN Producto pr ON i.Id_Producto = pr.Id_Producto
+GROUP BY pr.Nombre_Producto,pr.Precio_Unitario_Producto
+ORDER BY pr.Nombre_Producto;
+
+--Mostrar la Ubicación vacía dentro del almacén y su Volumen Disponible en cm3
+SELECT 
+    CONCAT(A.Seccion,'-',A.Id_Stand,'-',A.Id_Repisas) AS Ubicacion,
+    (E.Largo*E.Ancho*R.Altura) AS Volumen_Disponible
+FROM 
+    Acopla A
+JOIN Estands E ON A.Id_Stand = E.Id_Stand
+JOIN Repisas R ON A.Id_Repisas = R.Id_Repisas
+LEFT JOIN 
+    Inventario I ON A.Id_Stand = I.Id_Stand 
+                    AND A.Id_Repisas = I.Id_Repisas 
+                    AND A.Seccion = I.Seccion
+WHERE I.Id_Inventario IS NULL
+ORDER BY A.Seccion;
+
+--Mostrar el Volumen Restante por cada Ubicación que se haya ingresado un producto
+SELECT 
+    CONCAT(A.Seccion,'-',A.Id_Stand,'-',A.Id_Repisas) AS Ubicacion,
+    (E.Largo * E.Ancho * R.Altura) AS Volumen_Total,
+    (E.Largo * E.Ancho * R.Altura) - COALESCE(SUM(I.Entradas - I.Salidas), 0) AS Volumen_Restante
+FROM 
+    Acopla AS A
+INNER JOIN 
+    Estands AS E ON A.Id_Stand = E.Id_Stand
+INNER JOIN 
+    Repisas AS R ON A.Id_Repisas = R.Id_Repisas
+LEFT JOIN 
+    Inventario AS I ON A.Id_Stand = I.Id_Stand 
+                    AND A.Id_Repisas = I.Id_Repisas 
+                    AND A.Seccion = I.Seccion
+GROUP BY 
+    A.Id_Stand, A.Id_Repisas, A.Seccion, E.Largo, E.Ancho, R.Altura;
+
+--Mostrar los productos que se aplican en el rostro, como busqueda con palabra clave
+SELECT p.Nombre_Producto,  
+       (i.Entradas - COALESCE(i.Salidas, 0)) AS Stock_Disponible,
+		m.Id_Marca
+FROM Producto p
+JOIN Produce pr ON p.Id_Producto = pr.Id_Producto
+JOIN Marca m ON pr.Id_Marca = m.Id_Marca
+JOIN Inventario i ON p.Id_Producto = i.Id_Producto
+WHERE p.Zona_Uso = 'Rostro';
+
+--Mostrar productos que son labiales con características de colores, marca, subtipos y clases
+SELECT 
+    p.Nombre_Producto AS Producto,
+    STRING_AGG(DISTINCT c.Nombre_Color, ', ') AS Colores_Disponibles,
+    m.Id_Marca AS Marca,
+    STRING_AGG(DISTINCT st.Nombre_Sub_Tipo, ', ') AS Subtipos,
+    STRING_AGG(DISTINCT cm.Nombre_Clase_Maquillaje, ', ') AS Clases_Maquillaje
+FROM 
+    Producto p
+JOIN 
+    Categoria_Producto cp ON p.Nombre_Categoria = cp.Nombre_Categoria
+JOIN 
+    Disponible d ON p.Id_Producto = d.Id_Producto
+JOIN 
+    Colores c ON d.Id_Color = c.Id_Color
+JOIN 
+    Produce pr ON p.Id_Producto = pr.Id_Producto
+JOIN 
+    Marca m ON pr.Id_Marca = m.Id_Marca
+JOIN 
+    Presenta pre ON p.Id_Producto = pre.Id_Producto
+JOIN 
+    Sub_Tipo st ON pre.Id_Sub_Tipo = st.Id_Sub_Tipo
+LEFT JOIN 
+    Clase_Maquillaje cm ON p.Id_Producto = cm.Id_Producto
+WHERE 
+    cp.Nombre_Categoria = 'Labiales'
+GROUP BY 
+    p.Nombre_Producto, m.Id_Marca;
+
+--Mostrar dónde se ubican los Rimels y su stock
+SELECT CONCAT(a.Seccion, '-', a.Id_Stand, '-', a.Id_Repisas) AS Ubicacion,
+		p.Nombre_Producto,
+       (i.Entradas - COALESCE(i.Salidas, 0)) AS Stock_Disponible
+FROM Producto p
+JOIN Inventario i ON p.Id_Producto = i.Id_Producto
+JOIN Acopla a ON a.Id_Stand = i.Id_Stand AND a.Seccion = i.Seccion AND a.Id_Repisas = i.Id_Repisas
+JOIN Categoria_Producto cp ON p.Nombre_Categoria = cp.Nombre_Categoria
+WHERE cp.Nombre_Categoria = 'Rimels';
+
+--Mostrar el peso que soporta cada seccion de mis almacenes
+SELECT s.Seccion,a.Id_Almacen,s.Peso_Soporta
+FROM Almacen a
+JOIN Secciones s ON a.Id_Almacen = s.Id_Almacen;
+
+--Mostrar el peso y volumen unitario de cada producto, para la distribución
+SELECT
+	pr.Nombre_Producto,pr.Peso_Unitario_Producto,
+	(pr.Ancho_Present*pr.Largo_Present*pr.Alto_Present) AS Volumen_Unitario
+FROM Producto pr;
+
+--Mostrar el peso que se puede adicionar todavía a una sección
+SELECT s.Seccion,
+       s.Peso_Soporta - COALESCE(SUM(p.Peso_Unitario_Producto * i.Entradas), 0) AS Peso_Restante,
+       COALESCE(SUM(p.Peso_Unitario_Producto * i.Entradas), 0) AS Peso_Soportado_Actualmente
+FROM Secciones s
+LEFT JOIN Inventario i ON s.Seccion = i.Seccion
+LEFT JOIN Producto p ON i.Id_Producto = p.Id_Producto
+GROUP BY s.Seccion, s.Peso_Soporta
+ORDER BY s.Seccion;
+
+--Mostrar la ubicación donde el volumen sea menor o igual a un volumen dado en cm3
+--Cuando llega nueva mercancia
+SELECT CONCAT(a.Seccion,'-',a.Id_Stand,'-',a.Id_Repisas) AS Ubicacion,
+	(e.Largo*e.Ancho*r.Altura) AS Volumen
+FROM Acopla a
+JOIN Estands e ON a.Id_Stand=e.Id_Stand
+JOIN Repisas r ON a.Seccion=r.Seccion AND a.Id_Repisas=r.Id_Repisas
+WHERE (e.Largo * e.Ancho * r.Altura)<=200000.0;
+
+--Mostrar las zonas en donde aplica cada categoría (en especial de maquillaje)
+SELECT c.Nombre_Categoria, string_agg(cz.Zona,', ') AS Zonas
+FROM Categoria_Producto c
+JOIN Categoria_Producto_Zona cz ON c.Nombre_Categoria=cz.Nombre_Categoria
+GROUP BY c.Nombre_Categoria;
+
+--Mostrar los Sub Tipos que existen en el mercado por cada categoría
+SELECT c.Nombre_Categoria, string_agg(cs.Sub_Tipo_Existe,', ') AS Sub_Tipo_Existen
+FROM Categoria_Producto c
+JOIN Categoria_Producto_Sub_Tipo_Existe cs ON c.Nombre_Categoria=cs.Nombre_Categoria
+GROUP BY c.Nombre_Categoria;
+
+--Mostrar el tamaño en KB de cada imagen subido por cada producto
+SELECT p.Nombre_Producto, 
+       ROUND(SUM((i.Largo_Imagen * i.Alto_Imagen * i.Profundidad_Bits) / 8192.0), 2) AS Tamaño_Imagen_KB
+FROM Producto p
+JOIN Imagenes i ON p.Id_Producto = i.Id_Producto
+GROUP BY p.Nombre_Producto;
+
+--Mostrar el tamaño en KB de cada imagen subido por cada clase de maquillaje
+SELECT cm.Nombre_Clase_Maquillaje, 
+       ROUND(SUM((i.Largo_Imagen * i.Alto_Imagen * i.Profundidad_Bits) / 8192.0), 2) AS Tamaño_Imagen_KB
+FROM Clase_Maquillaje cm
+JOIN Imagenes i ON cm.Id_Producto = i.Id_Producto AND cm.Id_Clase_Maquillaje = i.Id_Clase_Maquillaje
+GROUP BY cm.Nombre_Clase_Maquillaje;
+
+--Mostrar el total de memoria de todas las imagenes
+SELECT 
+    ROUND(SUM((i.Largo_Imagen * i.Alto_Imagen * i.Profundidad_Bits) / 8192.0), 2) AS Suma_Total_Imagenes_KB
+FROM 
+    Imagenes i
+JOIN 
+    Producto p ON i.Id_Producto = p.Id_Producto
+JOIN 
+    Clase_Maquillaje cm ON i.Id_Producto = cm.Id_Producto AND i.Id_Clase_Maquillaje = cm.Id_Clase_Maquillaje;
+
 # 4. Carga de Datos
 La carga de datos se ha hecho mediante archivos .csv
 
