@@ -775,13 +775,34 @@ SELECT * FROM TIPO_PROD;
 ![image](Pantallas/ModVentas/carrito.png)
 ### Sentecias SQL:
 ### Eventos: 
-* **Pantalla Visualizar información detallada del producto**
+* **Pantalla carrito de compras**
 ```
-SELECT P.id_producto,nombre_producto,descripcion_prod,precio_unit,cant_max as cantidad_en_stock,t.nombre as Tipo_Producto,c.nombre as categoria_prod FROM PRODUCTO P
-JOIN CATEGORIA_PROD C ON C.ID_CATEGORIA_PROD = P.ID_CATEGORIA_PROD
-JOIN TIPO_PROD T ON C.ID_tipo_prod = T.id_tipo_prod;
-SELECT * FROM CATEGORIA_PROD;
-SELECT * FROM TIPO_PROD;
+select nombre_producto,descripcion_prod,cant_prod,cant_prod*precio_unit as precio ,c.esta_activo,direccion,
+(select sum(cant_prod*precio_unit) AS PRECIO_FINAL from producto p
+ join ventaxprod V ON  p.id_producto = v.id_producto
+JOIN venta ve on ve.id_venta=v.id_venta
+join persona pe on ve.id_persona = pe.id_persona
+join cupón c on c.id_cupón=v.id_cupón
+ where ve.id_venta = <900001>
+ group by ve.id_venta
+ )
+
+from producto p
+join ventaxprod V ON  p.id_producto = v.id_producto
+JOIN venta ve on ve.id_venta=v.id_venta
+join persona pe on ve.id_persona = pe.id_persona
+join cupón c on c.id_cupón=v.id_cupón
+where ve.id_venta = 900001
+```
+### Código Requerimiento : R - 015
+### Codigo interfaz : I - 015
+### Imagen interfaz : 
+![image](Pantallas/ModVentas/catalogo.png)
+### Sentecias SQL:
+### Eventos: Elegir método de pago
+* **Pantalla Visualizar posibles tipos de pago a elección del cliente**
+```
+
 ```
 
 
