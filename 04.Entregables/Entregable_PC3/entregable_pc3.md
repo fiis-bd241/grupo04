@@ -1666,7 +1666,28 @@ JOIN
 ORDER BY 
     c.fecha_compra;
 
+CREATE VIEW VistaComprasPorPersona AS
+SELECT 
+    p.nombre AS Nombre,
+    p.correo AS Correo,
+    p.telefono AS Telefono,
+    tp.tipo_producto AS TipoProducto,
+    pr.nombre_producto AS Producto,
+    c.fecha_compra AS FechaCompra,
+    c.cantidad AS Cantidad,
+    c.precio_total AS PrecioTotal
+FROM 
+    Compra c
+JOIN 
+    Persona p ON c.id_persona = p.Id_persona
+JOIN 
+    Producto pr ON c.id_producto = pr.id_producto
+JOIN 
+    TipoProducto tp ON pr.id_tipo_producto = tp.id_tipo_producto
+ORDER BY 
+    c.fecha_compra;
 
+SELECT * FROM VistaComprasPorPersona;
 
 ```
 
