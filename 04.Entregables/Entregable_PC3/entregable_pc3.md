@@ -234,7 +234,9 @@ Se agregaron más tablas en coordinación con el módulo de marketing, se hicier
 ### Eventos: 
 * **Pantalla Visualizar Proveedores: Se mostrará todos los proveedores dentro de la empresa con un estado de activo**
 ```
-
+SELECT razon_social 
+FROM proveedor
+WHERE id_est_proveedor = 'A'
 ```
 
 ### Código Requerimiento : R - 002
