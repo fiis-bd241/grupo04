@@ -185,7 +185,7 @@ Se agregaron más tablas en coordinación con el módulo de marketing, se hicier
 
 | Código Interfaz | I001 |
 |----------|----------|
-|Imagen interfaz|![image](Pantallas/ModCompras/MP6.png)|
+|Imagen interfaz|![image](Pantallas/ModCompras/MP6-.png)|
 
 | Código Interfaz | I002 |
 |----------|----------|
@@ -264,7 +264,7 @@ Se agregaron más tablas en coordinación con el módulo de marketing, se hicier
 ### Código Requerimiento : R - 001
 ### Codigo interfaz : I - 001
 ### Imagen interfaz : 
-![image](Pantallas/ModCompras/MP6.png)
+![image](Pantallas/ModCompras/MP6-.png)
 ### Sentecias SQL:
 ### Eventos: 
 * **Pantalla Visualizar Proveedores: Se mostrará todos los proveedores dentro de la empresa con un estado de activo**
@@ -611,6 +611,10 @@ La carga de datos se ha hecho mediante archivos .csv
 [Tabla tipo_prod](ArchivosCSV/Tipo_prod.csv)
 
 [Tabla categoria_prod](ArchivosCSV/categoria_prod.csv)
+
+[Tabla tipo_est_cotizacion](ArchivosCSV/tipo_est_cotizacion.csv)
+
+[Tabla tipo_est_proveedor](ArchivosCSV/tipo_est_proveedor.csv)
 
 [Tabla Proveedores](ArchivosCSV/Proveedores.csv)
 
