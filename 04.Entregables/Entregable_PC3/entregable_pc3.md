@@ -1716,3 +1716,6 @@ Esta funcionalidad permitirá cumplir con los requerimientos de las pantallas re
 [Taipe Sicha Ronny Andy](../../06.Videos_Individuales/VideosPC3/VideoIndividualPC3TaipeSichaRonnyAndy.md)
 
 [Montes Lozano Diego Martín](../../06.Videos_Individuales/VideosPC3/Montes_Lozano_Diego_VideoIndividual.md)
+
+[Damian Cutisaca Jhon Kenedy](../../06.Videos_Individuales/VideosPC3/Damian_cutisaca.md)
+
