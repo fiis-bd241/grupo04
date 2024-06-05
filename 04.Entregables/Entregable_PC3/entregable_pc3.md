@@ -440,6 +440,8 @@ La carga de datos se ha hecho mediante archivos .csv
 
 [Tabla Cotizaciones](ArchivosCSV/Cotizaciones.csv)
 
+[Tabla CotizacionxProducto](ArchivosCSV/CotizacionxProducto.csv)
+
 [Tabla Persona](ArchivosCSV/Personas.csv)
 
 [Tabla Equipo de marketing](ArchivosCSV/Equipo_Marketing.csv)
