@@ -696,5 +696,7 @@ Esta funcionalidad permitirá cumplir con los requerimientos Proponer campaña (
 
 # 7. Primera Versión de su Aplicación (BONUS)
 
+![image](APLICATIVOMC.png)
+
 # 8. Videos individuales
 
