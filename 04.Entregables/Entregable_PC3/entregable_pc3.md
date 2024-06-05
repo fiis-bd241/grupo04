@@ -831,6 +831,26 @@ where ve.id_venta = 900001 and p.id_producto=2
 ### Eventos: Elegir (si lo desea) cambiar la direccion de envió antes de registrar su compra
 * **Pantalla Visualizar cambio de dirección del cliente**
 ```
+Primero actualizamos
+
+UPDATE persona
+SET direccion = 'Av. Siempre Viva 123'
+WHERE id_persona = 1008
+
+Luego verificamos dicha actualización
+
+select direccion ,d.nombre as nombre_distrito from persona P
+JOIN DISTRITO D ON P.ID_DISTRITO=D.ID_DISTRITO
+WHERE id_persona = 1008
+```
+### Código Requerimiento : R - 018
+### Codigo interfaz : I - 018
+### Imagen interfaz : 
+![image](Pantallas/ModVentas/historial_ventas_gestor.png)
+### Sentecias SQL:
+### Eventos: Elegir (si lo desea) cambiar la direccion de envió antes de registrar su compra
+* **Pantalla Visualizar cambio de dirección del cliente**
+```
 
 ```
 
