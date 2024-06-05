@@ -1754,5 +1754,8 @@ Esta funcionalidad permitirá cumplir con los requerimientos de las pantallas re
 [Montes Lozano Diego Martín](../../06.Videos_Individuales/VideosPC3/Montes_Lozano_Diego_VideoIndividual.md)
 
 [Damian Cutisaca Jhon Kenedy](../../06.Videos_Individuales/VideosPC3/Damian_cutisaca.md)
+
 [Peralta Gil, Al](https://youtu.be/GtyqabAFZWA)
+
+[Christian Salazar Uribe](../../06.Videos_Individuales/VideosPC3/Salazar_Uribe_Christian_VideoPC3.md)
 
