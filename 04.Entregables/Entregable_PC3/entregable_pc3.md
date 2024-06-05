@@ -807,7 +807,20 @@ join detalle_pago D on T.ID_TIPO_PAGO = D.ID_TIPO_PAGO
 JOIN venta v on v.id_detalle_pago = d.id_detalle_pago
 where v.id_venta = <900001>
 ```
-
+### Código Requerimiento : R - 016
+### Codigo interfaz : I - 016
+### Imagen interfaz : 
+![image](Pantallas/ModVentas/info_despues_comprar.png)
+### Sentecias SQL:
+### Eventos: Elegir método de pago
+* **Pantalla Visualizar posibles tipos de pago a elección del cliente**
+```
+SELECT P.id_producto,nombre_producto,descripcion_prod,precio_unit,cant_max as cantidad_en_stock,t.nombre as Tipo_Producto,c.nombre as categoria_prod FROM PRODUCTO P
+JOIN CATEGORIA_PROD C ON C.ID_CATEGORIA_PROD = P.ID_CATEGORIA_PROD
+JOIN TIPO_PROD T ON C.ID_tipo_prod = T.id_tipo_prod;
+SELECT * FROM CATEGORIA_PROD;
+SELECT * FROM TIPO_PROD;
+```
 
 # 4. Carga de Datos
 La carga de datos se ha hecho mediante archivos .csv
