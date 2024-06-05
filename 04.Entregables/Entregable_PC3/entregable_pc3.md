@@ -542,11 +542,67 @@ WHERE
 ![image](Pantallas/ModMarketing/I011.png)
 ### Sentecias SQL:
 ### Eventos: 
-* **BOTON Aceptar Oferta: Actualiza el estado de una cotizacion pendiente a un estado de Aceptado**
-* **BOTON Rechazar Oferta: Actualiza el estado de una cotizacion pendiente a un estado de No Aceptado** 
+* **Carga de pantalla: La pantalla se carga con el id_campaña correspondiente a la campaña a editar y tambien se cargan los datos asociados a esta**
+* **BOTON Guardar: Se actualizan los datos de las tablas según los cambios realizados**
+* **BOTON Cancelar: No se realizan cambios en las tablas**
+* **BOTON Eliminar: Se elimina la campaña y todas las filas de lastablas asociadas que contangan este id_campaña**
+```
+--CARGA
+SELECT
+    Id_campaña,
+    nom_campaña,
+    fecha_ini,
+    fecha_fin,
+    dir_url,
+    modalidad,
+    archivo,
+    desc_campaña
+FROM Campaña
+WHERE Id_campaña=<1>;
+
+SELECT id_producto
+FROM CampañaXProd
+WHERE Id_campaña=<1>;
+
+SELECT Id_canal
+FROM CampañaXCanal
+WHERE Id_campaña=<1>;
+
+--BOTON ENVIAR
+UPDATE Campaña
+SET 
+ nom_campaña= <2>,
+ fecha_ini= <3>,
+ fecha_fin= <4>,
+ dir_url= <5>,
+ modalidad= <6>,
+ archivo= <7>,
+ desc_campaña <8>
+WHERE Id_campaña = <1>;
+
+UPDATE CampañaXProd
+SET
+ id_producto= <9>
+WHERE Id_campaña = <1>
+AND id_producto= (SELECT id_producto
+FROM CampañaXProd
+WHERE Id_campaña=<1>);
+
+UPDATE CampañaXCanal
+SET
+ id_canal=<10>
+WHERE Id_campaña= <1>
+AND Id_canal=(SELECT Id_canal
+FROM CampañaXCanal
+WHERE Id_campaña=<1>);
+
+--BOTON ELIMINAR
+DELETE FROM CampañaXProd WHERE Id_campaña=<1>;
+DELETE FROM CampañaXCanal WHERE Id_campaña=<1>;
+DELETE FROM Observacion WHERE Id_campaña=<1>;
+DELETE FROM Campaña WHERE Id_campaña =<1>; 
 ```
 
-```
 
 
 # 4. Carga de Datos
