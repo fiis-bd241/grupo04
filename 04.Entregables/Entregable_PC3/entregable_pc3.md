@@ -340,7 +340,43 @@ Se agregaron más tablas en coordinación con el módulo de marketing, se hicier
 |----------|----------|
 |Imagen interfaz|![image](Pantallas/ModVentas/historial_ventas_gestor.png)|
 
+### 2.2.4. Modulo de distribucion
 
+| Código Interfaz | I019 |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModDistribucion/I0019.png)|
+
+| Código Interfaz | I020 |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModDistribucion/I0020.png)|
+
+| Código Interfaz | I021 |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModDistribucion/I0021.png)|
+
+| Código Interfaz | I022 |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModDistribucion/I0022.png)|
+
+| Código Interfaz | I023 |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModDistribucion/I0023.png)|
+
+| Código Interfaz | I024 |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModDistribucion/I0024.png)|
+
+| Código Interfaz | I025 |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModDistribucion/I0025.png)|
+
+| Código Interfaz | I026 |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModDistribucion/I0026.png)|
+
+| Código Interfaz | I027 |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModDistribucion/I0027.png)|
 
 # 3. Sentencias SQL por cada prototipo
 ## 3.1 Modulo de Compras
