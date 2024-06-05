@@ -857,10 +857,6 @@ WHERE id_persona = 1008
 # 4. Carga de Datos
 La carga de datos se ha hecho mediante archivos .csv
 
-[Tabla tipo_prod](ArchivosCSV/Tipo_prod.csv)
-
-[Tabla categoria_prod](ArchivosCSV/categoria_prod.csv)
-
 [Tabla tipo_est_cotizacion](ArchivosCSV/tipo_est_cotizacion.csv)
 
 [Tabla tipo_est_proveedor](ArchivosCSV/tipo_est_proveedor.csv)
@@ -870,6 +866,34 @@ La carga de datos se ha hecho mediante archivos .csv
 [Tabla Cotizaciones](ArchivosCSV/Cotizaciones.csv)
 
 [Tabla CotizacionxProducto](ArchivosCSV/CotizacionxProducto.csv)
+
+[Tabla Almacen](ArchivosCSV/Almacen.csv)
+
+[Tabla Secciones](ArchivosCSV/Secciones.csv)
+
+[Tabla Estands](ArchivosCSV/Estands.csv)
+
+[Tabla Repisas](ArchivosCSV/Repisas.csv)
+
+[Tabla Acopla](ArchivosCSV/Acopla.csv)
+
+[Tabla Tipo_Movimiento](ArchivosCSV/Tipo_Movimiento.csv)
+
+[Tabla Tipo_Producto](ArchivosCSV/Tipo_Producto.csv)
+
+[Tabla Categoria_Producto](ArchivosCSV/Categoria_Producto.csv)
+
+[Tabla Funciones_Categoria](ArchivosCSV/Funciones_Categoria.csv)
+
+[Tabla Caracteriza](ArchivosCSV/Caracteriza.csv)
+
+[Tabla Categoria_Producto_Zona](ArchivosCSV/Categoria_Producto_Zona.csv)
+
+[Tabla Categoria_Producto_Sub_Tipo_Existe](ArchivosCSV/Categoria_Producto_Sub_Tipo_Existe.csv)
+
+[Tabla Sub_Tipo](ArchivosCSV/Sub_Tipo.csv)
+
+[Tabla Producto](ArchivosCSV/Producto.csv)
 
 [Tabla Persona](ArchivosCSV/Personas.csv)
 
