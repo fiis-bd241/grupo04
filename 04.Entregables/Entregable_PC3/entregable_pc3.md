@@ -1788,6 +1788,22 @@ La carga de datos se ha hecho mediante archivos .csv
 
 [Tabla Producto](ArchivosCSV/Producto.csv)
 
+[Tabla Presenta](ArchivosCSV/Presenta.csv)
+
+[Tabla Colores](ArchivosCSV/Colores.csv)
+
+[Tabla Disponible](ArchivosCSV/Disponible.csv)
+
+[Tabla Marca](ArchivosCSV/Marca.csv)
+
+[Tabla Produce](ArchivosCSV/Produce.csv)
+
+[Tabla Clase_Maquillaje](ArchivosCSV/Clase_Maquillaje.csv)
+
+[Tabla Imagenes](ArchivosCSV/Imagenes.csv)
+
+[Tabla Inventario](ArchivosCSV/Inventario.csv)
+
 [Tabla Persona](ArchivosCSV/Personas.csv)
 
 [Tabla Equipo de marketing](ArchivosCSV/Equipo_Marketing.csv)
