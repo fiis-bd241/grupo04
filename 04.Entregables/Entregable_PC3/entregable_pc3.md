@@ -288,6 +288,58 @@ Por otro lado, en el modelo E-R se modificaron los atributos nuevos considerados
 | Actor secundario    | -  |
 | Precondiciones    | Debe existir el pedido, con la fecha establecidad previamente |
 
+### 2.2.5. Módulo de Finanzas
+
+| Código             | R037 |
+|--------------------|----------|
+| Nombre             | Añadir Factura |
+| Objetivo           | Permitir al contador ingresar facturas. |
+| Descripción        | PRoceso mediante el contador agrega una factura según la transacciones que tiene la Empresa. |
+| Actor primario | Contador |
+| Actor secundario | - |
+| *Precondiciones* | - El usuario ha iniciado sesión en el sistema.<br>- El usuario tiene permisos para añadir facturas. |
+| *Flujo Alternativo* | - Si hay errores en los datos ingresados, el sistema muestra mensajes de error y permite al usuario corregir la información. |
+
+| Código             | R038 |
+|--------------------|------|
+| Nombre             | Ver Historial de Facturas |
+| Objetivo           | Permitir al contador general y al gerente general consultar el historial de facturas. |
+| Descripción        | Proceso mediante el cual se muestra el historial completo de facturas de la empresa. |
+| Actor primario     | Contador General, Gerente General |
+| Actor secundario   | - |
+| *Precondiciones*   | - El usuario ha iniciado sesión en el sistema.<br>- El usuario tiene permisos para ver el historial de facturas. |
+| *Flujo Alternativo*| - Si no hay facturas registradas, el sistema muestra un mensaje indicando la ausencia de facturas. |
+
+| Código             | R039 |
+|--------------------|------|
+| Nombre             | Ver estado de Facturas |
+| Objetivo           | Permitir al contador general y al gerente general consultar el estado de las facturas. |
+| Descripción        | Proceso mediante el cual se muestra el estado actual de las facturas (pendientes, pagadas, vencidas, etc.). |
+| Actor primario     | Contador General, Gerente General |
+| Actor secundario   | - |
+| *Precondiciones*   | - El usuario ha iniciado sesión en el sistema.<br>- El usuario tiene permisos para ver el estado de las facturas. |
+| *Flujo Alternativo*| - Si no hay facturas con el estado seleccionado, el sistema muestra un mensaje indicando la ausencia de facturas en ese estado. |
+
+| Código             | R040 |
+|--------------------|------|
+| Nombre             | Ver asientos contables |
+| Objetivo           | Permitir al contador general y al gerente general consultar los asientos contables. |
+| Descripción        | Proceso mediante el cual se muestran los asientos contables registrados en el sistema. |
+| Actor primario     | Contador General, Gerente General |
+| Actor secundario   | - |
+| *Precondiciones*   | - El usuario ha iniciado sesión en el sistema.<br>- El usuario tiene permisos para ver los asientos contables. |
+| *Flujo Alternativo*| - Si no hay asientos contables registrados, el sistema muestra un mensaje indicando la ausencia de asientos contables. |
+
+| Código             | R041 |
+|--------------------|------|
+| Nombre             | Ver estado de resultados |
+| Objetivo           | Permitir al contador general y al gerente general consultar el estado de resultados de la empresa. |
+| Descripción        | Proceso mediante el cual se muestra el estado de resultados, incluyendo ingresos, gastos y utilidades de la empresa. |
+| Actor primario     | Contador General, Gerente General |
+| Actor secundario   | - |
+| *Precondiciones*   | - El usuario ha iniciado sesión en el sistema.<br>- El usuario tiene permisos para ver el estado de resultados. |
+| *Flujo Alternativo*| - Si no hay datos disponibles para el estado de resultados, el sistema muestra un mensaje indicando la ausencia de información. |
+
 
 ## 2.2. Codificación de prototipos de interfaz
 ### 2.2.1. Modulo de Compras
