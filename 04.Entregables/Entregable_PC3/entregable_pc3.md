@@ -338,7 +338,7 @@ Se agregaron más tablas en coordinación con el módulo de marketing, se hicier
 
 | Código Interfaz | I018 |
 |----------|----------|
-|Imagen interfaz|![image](Pantallas/ModVentas/historial_ventas_empresa.png)|
+|Imagen interfaz|![image](Pantallas/ModVentas/historial_ventas_gestor.png)|
 
 
 
