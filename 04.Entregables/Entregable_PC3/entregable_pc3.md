@@ -401,6 +401,43 @@ Se configuraron y se agregaron tablas para poder identificar mejor las categorí
 |----------|----------|
 |Imagen interfaz|![image](Pantallas/ModDistribucion/I0027.png)|
 
+### 2.2.5. Modulo de CRM
+
+| Código Interfaz | I029 |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModCRM/1.png)|
+
+| Código Interfaz | I030 |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModCRM/2.png)|
+
+| Código Interfaz | I031 |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModCRM/3.png)|
+
+| Código Interfaz | I032 |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModCRM/4.png)|
+
+| Código Interfaz | I033 |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModCRM/5.png)|
+
+| Código Interfaz | I034 |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModCRM/6.png)|
+
+| Código Interfaz | I035 |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModCRM/7.png)|
+
+| Código Interfaz | I036 |
+|----------|----------|
+|Imagen interfaz|![image](Pantallas/ModCRM/8.png)|
+
+
+
+
 # 3. Sentencias SQL por cada prototipo
 ## 3.1 Modulo de Compras
 ### Código Requerimiento : R - 001
