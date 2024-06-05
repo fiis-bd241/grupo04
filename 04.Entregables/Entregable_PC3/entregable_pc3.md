@@ -10,6 +10,10 @@ Se configuro una lookup table para identificar a los diferentes tipos de pago qu
 
 ![image](MODLOG2.png)
 
+## Módulo de Distribucion
+El módulo tuvo que alterarse,los pedidos se reasignan por zonas y cada repartidor entrega en una zona especifica,se ubica la ruta por el distrito del cliente.El gerente de distribucion aun sigue asignando los repartidores pero se reducen la cantidad disponible al trabajar solo por zonas.
+
+
 ## Módulo de Almacén
 Se configuraron y se agregaron tablas para poder identificar mejor las categorías, los colores, las clases de cada producto (como sub productos), la marca; para poder filtrar con palabras claves y agilizar la búsqueda y hacerla más general, se agregaron sub tipos de productos para poder compararlo con los sub tipos existentes en el mercado y así se pueda alcanzar a más necesidades de clientes con productos nuevos. Se agregaron tablas para saber la ubicación de cada producto y calcular el espacio disponible para nuevas compras. Modificar la tabla inventario para tener en tiempo real (con una variable Timestamp) el stock disponible y el área de ventas puede ofrecer el stock real. Y se agregó una tabla imágenes para poder saber la cantidad aproximada de memoria, en la carga de imágenes, que se utilizará en el aplicativo.
 
@@ -1240,6 +1244,17 @@ La carga de datos se ha hecho mediante archivos .csv
 
 [Tabla VentaxProd](ArchivosCSV/ventaxprod.csv)
 
+[Tabla ruta](ArchivosCSV/ruta.csv)
+
+[Tabla pedido](ArchivosCSV/pedido.csv)
+
+[Tabla repartidor](ArchivosCSV/repartidor.csv)
+
+[Tabla zona](ArchivosCSV/zona.csv)
+
+[Tabla distrito](ArchivosCSV/distrito.csv)
+
+
 # 5. Funcionalidad Primaria Elegida (por módulo)
 
 ## MÓDULO : COMPRAS
@@ -1331,3 +1346,5 @@ Esta funcionalidad permitirá cumplir con los requerimientos de las pantallas re
 [Quispe Mitma Cesar](../../06.Videos_Individuales/VideosPC3/Quispe_Mitma_Cesar_Fernando-VideoIndividual.md)
 
 [Taipe Sicha Ronny Andy](../../06.Videos_Individuales/VideosPC3/VideoIndividualPC3TaipeSichaRonnyAndy.md)
+
+[Montes Lozano Diego Martín](../../06.Videos_Individuales/VideosPC3/Montes_Lozano_Diego_VideoIndividual.md)
