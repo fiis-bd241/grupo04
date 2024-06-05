@@ -296,8 +296,7 @@ VALUES (<1>, <2>, <3>, <4>, <5>, <6>, 'A');
 ```
 SELECT ruc_proveedor, razon_social, web_proveedor, rubro, direccion, telefono, id_est_proveedor
 FROM proveedor
-WHERE ruc_proveedor = <1> AND razon_social = <2> AND web_proveedor = <3> AND rubro = <4> 
-AND direccion = <5> AND telefono = <6> AND id_est_proveedor = 'A';
+WHERE ruc_proveedor = <1>;
 ```
 
 ### Código Requerimiento : R - 004
