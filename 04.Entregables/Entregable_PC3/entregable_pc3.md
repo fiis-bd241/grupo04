@@ -1566,13 +1566,103 @@ WHERE activo = TRUE
 
 DELETE FROM FormularioxPregunta WHERE Id_formulario = <9>;
 
+```
 
+### Código Requerimiento : R - 032
+### Codigo interfaz : I - 032
+### Imagen interfaz : 
+![image](Pantallas/ModCRM/4.png)
+### Sentecias SQL:
+### Eventos: 
+* **Correos : permite enviar varios correos personalizados a los usuarios respectivos**
+```
+-- Insertar el correo masivo
+INSERT INTO CorreoMasivo (Id_correo, nombre_campania, asunto, cuerpo, fecha_envio)
+VALUES (1001, 'Campaña Promocional Verano', 'Promociones de Verano', '¡Aprovecha nuestras ofertas de verano en cosméticos y papelería!', CURRENT_DATE);
+
+-- Seleccionar los IDs de los usuarios registrados en los últimos 30 días
+WITH recent_users AS (
+    SELECT Id_persona FROM Persona
+    WHERE fecha_registro > (CURRENT_DATE - INTERVAL '30 days')
+)
+-- Insertar las relaciones entre el correo masivo y los usuarios seleccionados
+INSERT INTO CorreoPersona (Id_correo, Id_persona)
+SELECT 1001, Id_persona FROM recent_users;
+
+```
+
+### Código Requerimiento : R - 033
+### Codigo interfaz : I - 033
+### Imagen interfaz : 
+![image](Pantallas/ModCRM/5.png)
+### Sentecias SQL:
+### Eventos: 
+* **Correos : permite ver los registros de las llamadas que se han hecho y poder asignar quien responde cada uno de ellos**
+```
+-- Ver el registro de llamadas
+SELECT l.Id_llamada, p.nombre, l.fecha_llamada, l.duracion, e.estado
+FROM Llamada l
+JOIN Persona p ON l.Id_persona = p.Id_persona
+JOIN EstadoLlamada e ON l.Id_estado_llamada = e.Id_estado_llamada;
+
+-- Asignar estado y fecha (mes y año) a una llamada específica
+UPDATE Llamada
+SET Id_estado_llamada = 2,  -- Suponiendo que el estado 2 es "Completado"
+    fecha_llamada = '2024-06-05'  -- Fecha especificada
+WHERE Id_llamada = 1001;
+
+
+```
+
+### Código Requerimiento : R - 034
+### Codigo interfaz : I - 034
+### Imagen interfaz : 
+![image](Pantallas/ModCRM/6.png)
+### Sentecias SQL:
+### Eventos: 
+* **Gestion de comentarios : permite al gestor de CRM gestionar estos comentarios**
+```
+SELECT 
+    p.nombre,
+    p.correo,
+    p.telefono,
+    c.descrip_comentario,
+    c.fecha_comentario,
+    c.hora_comentario
+FROM 
+    Comentario c
+JOIN 
+    Persona p ON c.Id_persona = p.Id_persona;
+
+
+
+```
+
+### Código Requerimiento : R - 035
+### Codigo interfaz : I - 035
+### Imagen interfaz : 
+![image](Pantallas/ModCRM/7.png)
+### Sentecias SQL:
+### Eventos: 
+* **Dashboards para analisis: El gestor de CRM puede hacer analisis respectivos para aumentar el incentivo hacia un producto**
 ```
 
 
 
+```
+
+### Código Requerimiento : R - 036
+### Codigo interfaz : I - 036
+### Imagen interfaz : 
+![image](Pantallas/ModCRM/8.png)
+### Sentecias SQL:
+### Eventos: 
+* **Pantalla de inicio : para el gestor de CRM pueda ver todas las opciones a hacer asi como dashboards hechos anteriormente**
+```
 
 
+
+```
 
 
 
