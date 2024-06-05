@@ -1331,3 +1331,5 @@ Esta funcionalidad permitirá cumplir con los requerimientos de las pantallas re
 [Quispe Mitma Cesar](../../06.Videos_Individuales/VideosPC3/Quispe_Mitma_Cesar_Fernando-VideoIndividual.md)
 
 [Taipe Sicha Ronny Andy](../../06.Videos_Individuales/VideosPC3/VideoIndividualPC3TaipeSichaRonnyAndy.md)
+
+[Montes Lozano Diego Martín](../../06.Videos_Individuales/VideosPC3/Montes_Lozano_Diego_VideoIndividual.md)
