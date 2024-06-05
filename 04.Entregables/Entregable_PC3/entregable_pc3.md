@@ -182,9 +182,19 @@ Se configuro una lookup table para identificar a los diferentes tipos de pago qu
 |Actor secundario| Plataforma de Ventas|
 |Precondiciones |El gestor ha accedido a la plataforma de ventas|
 
+
+| Código | R019 |
+|----------|----------|
+|Nombre  | Consultar Historial de ventas de algun cliente|
+| Objetivo | <p align="left"> Permitir que el gestor acceda al historial de ventas del cliente para realizar seguimientos.</p> | 
+| Descripción | Facilitar al gestor el acceso a información detallada sobre las ventas realizadas por el cliente. | 
+| Actor primario   | Gestor de Ventas | 
+|Actor secundario| Plataforma de Ventas|
+|Precondiciones |El gestor ha accedido a la plataforma de ventas|
+
 ### 2.1.4. Modulo de distribucion
 
-| Código | R019  |
+| Código | R020  |
 |----------|----------|
 |Nombre  |Visualizar compras|
 |Objetivo  |Permitir a los clientes poder ver sus compras y entregas pendientes.|
@@ -193,7 +203,7 @@ Se configuro una lookup table para identificar a los diferentes tipos de pago qu
 | Actor secundario    | -  |
 | Precondiciones    | El cliente debe haber realizado una compra previamente |
 
-| Código | R020  |
+| Código | R021  |
 |----------|----------|
 |Nombre  |Establecer fecha de la entrega|
 |Objetivo  |Permitir a los clientes definir la fecha que desean que se le entregue su compra.|
@@ -202,7 +212,7 @@ Se configuro una lookup table para identificar a los diferentes tipos de pago qu
 | Actor secundario    | -  |
 | Precondiciones    | El cliente debe haber realizado una compra previamente |
 
-| Código | R021  |
+| Código | R022  |
 |----------|----------|
 |Nombre  |Visualizar pedidos|
 |Objetivo  |Permitir al gestor de distribucion visualizar los pedidos pendientes.|
@@ -211,7 +221,7 @@ Se configuro una lookup table para identificar a los diferentes tipos de pago qu
 | Actor secundario    | -  |
 | Precondiciones    | El cliente debe haber establecido una fecha de entrega previamente |
 
-| Código | R022  |
+| Código | R023  |
 |----------|----------|
 |Nombre  |Asignar|
 |Objetivo  |Permitir al gestor de distribucion asignar un repartidor a un pedido  y una ruta segun la zona establecida.|
@@ -220,7 +230,7 @@ Se configuro una lookup table para identificar a los diferentes tipos de pago qu
 | Actor secundario    | -  |
 | Precondiciones    | El cliente debe haber establecido una fecha de entrega previamente y los pedidos debe estar pendientes |
 
-| Código | R023  |
+| Código | R024  |
 |----------|----------|
 |Nombre  |Visualizar el historial de pedidos|
 |Objetivo  |Permitir al gestor de distribucion visualizar todas los pedidos y entregas realizadas.|
@@ -229,7 +239,7 @@ Se configuro una lookup table para identificar a los diferentes tipos de pago qu
 | Actor secundario    | -  |
 | Precondiciones    | Deben haber existido entregas realizadas con exito |
 
-| Código | R024  |
+| Código | R025  |
 |----------|----------|
 |Nombre  |Visualizar las entregas pendientes|
 |Objetivo  |Permitir al repartidor visualizar todos los pedidos pendientes.|
@@ -238,7 +248,7 @@ Se configuro una lookup table para identificar a los diferentes tipos de pago qu
 | Actor secundario    | -  |
 | Precondiciones    | El repartidor se le debe haber asignado pedidos |
 
-| Código | R025  |
+| Código | R026  |
 |----------|----------|
 |Nombre  |Entregado|
 |Objetivo  |Permitir al repartidor confirmar que la entrega se realizó con exito.|
@@ -247,7 +257,7 @@ Se configuro una lookup table para identificar a los diferentes tipos de pago qu
 | Actor secundario    | -  |
 | Precondiciones    | El repartidor debe haber aceptado el pedido |
 
-| Código | R026  |
+| Código | R027  |
 |----------|----------|
 |Nombre  |Visualizar el historial de pedidos|
 |Objetivo  |Permitir al repartidor visualizar sus pedidos y entregas realizadas.|
@@ -256,7 +266,7 @@ Se configuro una lookup table para identificar a los diferentes tipos de pago qu
 | Actor secundario    | -  |
 | Precondiciones    | Deben haber existido entregas realizadas con exito |
 
-| Código | R027  |
+| Código | R028  |
 |----------|----------|
 |Nombre  |Ver detalles/ver mas|
 |Objetivo  |Permitir al gestor de distribucion y el repartidor ver los detalles del pedido.|
@@ -345,39 +355,39 @@ Se configuro una lookup table para identificar a los diferentes tipos de pago qu
 
 ### 2.2.4. Modulo de distribucion
 
-| Código Interfaz | I019 |
+| Código Interfaz | I020 |
 |----------|----------|
 |Imagen interfaz|![image](Pantallas/ModDistribucion/I0019.png)|
 
-| Código Interfaz | I020 |
+| Código Interfaz | I021 |
 |----------|----------|
 |Imagen interfaz|![image](Pantallas/ModDistribucion/I0020.png)|
 
-| Código Interfaz | I021 |
+| Código Interfaz | I022 |
 |----------|----------|
 |Imagen interfaz|![image](Pantallas/ModDistribucion/I0021.png)|
 
-| Código Interfaz | I022 |
+| Código Interfaz | I023 |
 |----------|----------|
 |Imagen interfaz|![image](Pantallas/ModDistribucion/I0022.png)|
 
-| Código Interfaz | I023 |
+| Código Interfaz | I024 |
 |----------|----------|
 |Imagen interfaz|![image](Pantallas/ModDistribucion/I0023.png)|
 
-| Código Interfaz | I024 |
+| Código Interfaz | I025 |
 |----------|----------|
 |Imagen interfaz|![image](Pantallas/ModDistribucion/I0024.png)|
 
-| Código Interfaz | I025 |
+| Código Interfaz | I026 |
 |----------|----------|
 |Imagen interfaz|![image](Pantallas/ModDistribucion/I0025.png)|
 
-| Código Interfaz | I026 |
+| Código Interfaz | I027 |
 |----------|----------|
 |Imagen interfaz|![image](Pantallas/ModDistribucion/I0026.png)|
 
-| Código Interfaz | I027 |
+| Código Interfaz | I028 |
 |----------|----------|
 |Imagen interfaz|![image](Pantallas/ModDistribucion/I0027.png)|
 
