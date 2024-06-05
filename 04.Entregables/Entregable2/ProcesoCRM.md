@@ -27,9 +27,7 @@
 | 4      |revisión de llamadas |Se hace una revisión de las llamadas principalmente de las perdidas , ya que pudieron ser pedidos potenciales y tal vez por descuido se perdio , se hace un tratamiento | gestor CRM |
 | 5        |analisis de dashboard y reportes|ya preparado los reportes y dashboard se hace un analisis de las ventas y como varian dependiendo del segmento del cliente y tipo de producto que se brinda| gestor CRM  |
 | 6        | revisión del stock de producto | se hace una repisión de las cantidades de productos que hay escaces y se analiza si es factible o no comprar dependiendo del analisis | gestor CRM|
-
 | 7         | actuar despues del analisis |  si hay poco producto se puede hacer una solicitud , dependiendo si se vende rapido y no se queda estancado , en el caso de que si haya mucho se trata de promocionar mas e incluso si es posible generar más cupones | gestor CRM|
-
 | 8         | busqueda de tendencias del segmento |en base al documento de tendencias generado de los formularios hechos , se pasa a investigar y buscar tendencias y que es lo que nuestro segmento necesita en este periodo  | gestor CRM|
 | 9         | proceso de compra del nuevo producto  | En caso se halle una tendencia se procede a buscar proveedores , y de se hace una comparativa con los precios de los nuevos y antiguos proveedores , hasta dar con la mejor oferta a comprar | gestor CRM|
 | 10        | conformidad |en este proceso se verifica que si está conforme el area de compras , para este caso nos envian un documento para verificar esto , segun sea el caso igual se prepara una campaña incluso si no hay nuevos productos(colaboración con marketing)  | gestor CRM|
