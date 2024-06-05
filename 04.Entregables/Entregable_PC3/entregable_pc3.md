@@ -410,10 +410,98 @@ VALUES
 ![image](Pantallas/ModMarketing/I010.png)
 ### Sentecias SQL:
 ### Eventos: 
-* **BOTON Aceptar Oferta: Actualiza el estado de una cotizacion pendiente a un estado de Aceptado**
-* **BOTON Rechazar Oferta: Actualiza el estado de una cotizacion pendiente a un estado de No Aceptado** 
+* **Carga de pantalla: La pantalla se llena con el Id_observacion con, el Id_campaña relacionado con sus datos correspondientes, el Id_equipo_marketing que propuso la campaña**
+* **BOTON Enviar: Se registran los cambios realizados en la pantalla, además de actualizar el estado_atendido de la observacion a TRUE**
+* **BOTON Cancelar: No se realizan cambios en las tablas** 
 ```
+--CARGA
+SELECT 
+    o.Id_observacion,
+    o.descripcion,
+    o.Id_campaña,
+    c.Id_equipo_mark,
+    c.nom_campaña,
+    c.fecha_ini,
+    c.fecha_fin,
+    c.dir_url,
+    c.modalidad,
+    c.archivo,
+    c.desc_campaña
+FROM 
+    Observacion o
+JOIN 
+    Campaña c ON o.Id_campaña = c.Id_campaña
+WHERE Id_observacion= <1>;
 
+SELECT 
+    cxp.id_producto
+FROM 
+    Observacion o
+JOIN 
+    Campaña c ON o.Id_campaña = c.Id_campaña
+JOIN 
+    CampañaXProd cxp ON c.Id_campaña = cxp.Id_campaña
+WHERE 
+    o.Id_observacion = <1>;
+
+SELECT 
+    cxc.id_canal
+FROM 
+    Observacion o
+JOIN 
+    Campaña c ON o.Id_campaña = c.Id_campaña
+JOIN 
+    CampañaXCanal cxc ON c.Id_campaña = cxc.Id_campaña
+WHERE 
+    o.Id_observacion = <1>;
+
+--BOTON ENVIAR
+UPDATE Campaña
+SET 
+ nom_campaña= <2>,
+ fecha_ini= <3>,
+ fecha_fin= <4>,
+ dir_url= <5>,
+ modalidad= <6>,
+ archivo= <7>,
+ desc_campaña <8>
+WHERE Id_campaña = (SELECT Id_campaña FROM Observacion WHERE Id_observacion = <1>);
+
+UPDATE CampañaXProd
+SET
+ id_producto= <9>
+WHERE Id_campaña = (SELECT Id_campaña FROM Observacion WHERE Id_observacion = <1>)
+AND id_producto= (SELECT 
+    cxp.id_producto
+FROM 
+    Observacion o
+JOIN 
+    Campaña c ON o.Id_campaña = c.Id_campaña
+JOIN 
+    CampañaXProd cxp ON c.Id_campaña = cxp.Id_campaña
+WHERE 
+    o.Id_observacion = <1>);
+
+UPDATE CampañaXCanal
+SET
+ Id_canal =<10>
+WHERE Id_campaña = (SELECT Id_campaña FROM Observacion WHERE Id_observacion = <1>)
+AND id_canal = (SELECT 
+    cxc.id_canal
+FROM 
+    Observacion o
+JOIN 
+    Campaña c ON o.Id_campaña = c.Id_campaña
+JOIN 
+    CampañaXCanal cxc ON c.Id_campaña = cxc.Id_campaña
+WHERE 
+    o.Id_observacion = <1>);
+
+UPDATE Observacion
+SET
+ estado_atendido =TRUE
+WHERE
+ Id_observacion=<1>;
 ```
 
 ### Código Requerimiento : R - 011
