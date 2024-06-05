@@ -179,6 +179,89 @@ Se agregaron más tablas en coordinación con el módulo de marketing, se hicier
 |Actor secundario| Plataforma de Ventas|
 |Precondiciones |El gestor ha accedido a la plataforma de ventas|
 
+### 2.1.4. Modulo de distribucion
+
+| Código | R019  |
+|----------|----------|
+|Nombre  |Visualizar compras|
+|Objetivo  |Permitir a los clientes poder ver sus compras y entregas pendientes.|
+| Descripción   | Proceso mediante el cual los clientes pueden acceder a la visualización de todas sus compras sin entregar|
+| Actor primario    | Cliente |
+| Actor secundario    | -  |
+| Precondiciones    | El cliente debe haber realizado una compra previamente |
+
+| Código | R020  |
+|----------|----------|
+|Nombre  |Establecer fecha de la entrega|
+|Objetivo  |Permitir a los clientes definir la fecha que desean que se le entregue su compra.|
+| Descripción   | Proceso mediante el cual los clientes pueden establecer la fecha de su entrega y ademas se crea el pedido|
+| Actor primario    | Cliente |
+| Actor secundario    | -  |
+| Precondiciones    | El cliente debe haber realizado una compra previamente |
+
+| Código | R021  |
+|----------|----------|
+|Nombre  |Visualizar pedidos|
+|Objetivo  |Permitir al gestor de distribucion visualizar los pedidos pendientes.|
+| Descripción   | Proceso mediante el cual el gestor de distribucion pueden ver los pedidos que se encuentran pendientes|
+| Actor primario    | Gestor de distribucion |
+| Actor secundario    | -  |
+| Precondiciones    | El cliente debe haber establecido una fecha de entrega previamente |
+
+| Código | R022  |
+|----------|----------|
+|Nombre  |Asignar|
+|Objetivo  |Permitir al gestor de distribucion asignar un repartidor a un pedido  y una ruta segun la zona establecida.|
+| Descripción   | Proceso mediante el cual el gestor de distribucion pueden establecer los repartidores y las rutas a cada pedido|
+| Actor primario    | Gestor de distribucion |
+| Actor secundario    | -  |
+| Precondiciones    | El cliente debe haber establecido una fecha de entrega previamente y los pedidos debe estar pendientes |
+
+| Código | R023  |
+|----------|----------|
+|Nombre  |Visualizar el historial de pedidos|
+|Objetivo  |Permitir al gestor de distribucion visualizar todas los pedidos y entregas realizadas.|
+| Descripción   | Proceso mediante el cual el gestor de distribucion pueden visualizar todos los pedidos y entregas realizadas en un lapso de tiempo|
+| Actor primario    | Gestor de distribucion |
+| Actor secundario    | -  |
+| Precondiciones    | Deben haber existido entregas realizadas con exito |
+
+| Código | R024  |
+|----------|----------|
+|Nombre  |Visualizar las entregas pendientes|
+|Objetivo  |Permitir al repartidor visualizar todos los pedidos pendientes.|
+| Descripción   | Proceso mediante el cual el repartidor pueden visualizar todos los pedidos que se encuentra aun pendientes|
+| Actor primario    | Repartidor |
+| Actor secundario    | -  |
+| Precondiciones    | El repartidor se le debe haber asignado pedidos |
+
+| Código | R025  |
+|----------|----------|
+|Nombre  |Entregado|
+|Objetivo  |Permitir al repartidor confirmar que la entrega se realizó con exito.|
+| Descripción   | Proceso el cual el repartidor confirma que ha realizado la entrega y actualiza el estado del pedido |
+| Actor primario    | Repartidor |
+| Actor secundario    | -  |
+| Precondiciones    | El repartidor debe haber aceptado el pedido |
+
+| Código | R026  |
+|----------|----------|
+|Nombre  |Visualizar el historial de pedidos|
+|Objetivo  |Permitir al repartidor visualizar sus pedidos y entregas realizadas.|
+| Descripción   | Proceso mediante el cual el repartidor puede visualizar todos los sus pedidos y entregas realizadas en un lapso de tiempo|
+| Actor primario    | Gestor de distribucion |
+| Actor secundario    | -  |
+| Precondiciones    | Deben haber existido entregas realizadas con exito |
+
+| Código | R027  |
+|----------|----------|
+|Nombre  |Ver detalles/ver mas|
+|Objetivo  |Permitir al gestor de distribucion y el repartidor ver los detalles del pedido.|
+| Descripción   | Proceso mediante el cual el gerente de distribucion y el repartidor pueden visualizar mas detalles acerca del pedido
+| Actor primario    | Gestor de distribucion y repartidor |
+| Actor secundario    | -  |
+| Precondiciones    | Debe existir el pedido, con la fecha establecidad previamente |
+
 
 ## 2.2. Codificación de prototipos de interfaz
 ### 2.2.1. Modulo de Compras
