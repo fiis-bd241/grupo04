@@ -348,7 +348,7 @@ Por otro lado, en el modelo E-R se modificaron los atributos nuevos considerados
 |----------|----------|
 |Nombre  |Agregar comentario usuario|
 |Objetivo  |Permite al usuario ingresar un comentario|
-| Descripción   | importante recalcar que esta subida de informacion es hecha solo desde que el usuario se registro anteriormente
+| Descripción   | importante recalcar que esta subida de informacion es hecha solo desde que el usuario se registro anteriormente , ademas es relacionado a un producto en especifico
 | Actor primario    | usuario|
 | Actor secundario    | -  |
 | Precondiciones    | debe haber un inicio de sesion anteriormente|
@@ -358,65 +358,65 @@ Por otro lado, en el modelo E-R se modificaron los atributos nuevos considerados
 |----------|----------|
 |Nombre  |Comentario general|
 |Objetivo  |permite a las personas ingresar un comentario|
-| Descripción   | este ingreso de informacion a modo de comentario es hecho 
-| Actor primario    | Gestor de distribucion y repartidor |
+| Descripción   | este ingreso de informacion a modo de comentario es hecho ingresando informacion personal y referente a un producto en especifico
+| Actor primario    |usuario |
 | Actor secundario    | -  |
-| Precondiciones    | Debe existir el pedido, con la fecha establecidad previamente |
+| Precondiciones    | - |
 
 
 | Código | R031  |
 |----------|----------|
-|Nombre  |Ver detalles/ver mas|
-|Objetivo  |Permitir al gestor de distribucion y el repartidor ver los detalles del pedido.|
-| Descripción   | Proceso mediante el cual el gerente de distribucion y el repartidor pueden visualizar mas detalles acerca del pedido
-| Actor primario    | Gestor de distribucion y repartidor |
+|Nombre  |Formularios|
+|Objetivo  |Permitir al gestor de CRM enviar formularios a los usuarios |
+| Descripción   | Proceso mediante el cual el gestor de CRM entrega los formularios a grupos de usuarios respectivos en el cual califican determinados productos o calidad de servicio entre otros
+| Actor primario    | Gestor de CRM
 | Actor secundario    | -  |
-| Precondiciones    | Debe existir el pedido, con la fecha establecidad previamente |
+| Precondiciones    | Debe existir los usuarios registrados con su correo email |
 
 | Código | R032  |
 |----------|----------|
 |Nombre  |Ver detalles/ver mas|
-|Objetivo  |Permitir al gestor de distribucion y el repartidor ver los detalles del pedido.|
-| Descripción   | Proceso mediante el cual el gerente de distribucion y el repartidor pueden visualizar mas detalles acerca del pedido
-| Actor primario    | Gestor de distribucion y repartidor |
+|Objetivo  |Permitir al gestor de CRM enviar correos personalizados |
+| Descripción   | Proceso mediante el cual el gestor de CRM informa a los usuarios sobre los productos , pudiendo entregar determinados cupones que el area de Marketing asigno
+| Actor primario    | Gestor de CRM |
 | Actor secundario    | -  |
-| Precondiciones    | Debe existir el pedido, con la fecha establecidad previamente |
+| Precondiciones    | Debe existir los usuarios registrados con su correo email|
 
 | Código | R033  |
 |----------|----------|
-|Nombre  |Ver detalles/ver mas|
-|Objetivo  |Permitir al gestor de distribucion y el repartidor ver los detalles del pedido.|
-| Descripción   | Proceso mediante el cual el gerente de distribucion y el repartidor pueden visualizar mas detalles acerca del pedido
-| Actor primario    | Gestor de distribucion y repartidor |
-| Actor secundario    | -  |
-| Precondiciones    | Debe existir el pedido, con la fecha establecidad previamente |
+|Nombre  |Registro de llamadas |
+|Objetivo  |Permitir al gestor de CRM poder atender determinadas llamadas que no han sido respondidas , para evitar la salida de potenciales compradores |
+| Descripción   | Proceso mediante el gestor de CRM  puede atender llamadas que los de venta no han podido responder 
+| Actor primario    | Gestor de CRM |
+| Actor secundario    | Gestor de ventas  |
+| Precondiciones    | Debe existir un registro de llamadas |
 
 | Código | R034  |
 |----------|----------|
-|Nombre  |Ver detalles/ver mas|
-|Objetivo  |Permitir al gestor de distribucion y el repartidor ver los detalles del pedido.|
-| Descripción   | Proceso mediante el cual el gerente de distribucion y el repartidor pueden visualizar mas detalles acerca del pedido
-| Actor primario    | Gestor de distribucion y repartidor |
+|Nombre  |Clasificacion de comentarios|
+|Objetivo  |Permitir al gestor de CRM poder clasificar comentarios|
+| Descripción   | Proceso mediante el cual el gestor de CRM clasifica sus potenciales clientes , haciendo que tenga una venta asegurada o los cuales estan aprobados a un seguimientos por record de compras, asi como comentarios SPAM
+| Actor primario    | Gestor de CRM |
 | Actor secundario    | -  |
-| Precondiciones    | Debe existir el pedido, con la fecha establecidad previamente |
+| Precondiciones    |debe existir un registro de usuarios ademas de sus respectivos comentarios |
 
 | Código | R035  |
 |----------|----------|
-|Nombre  |Ver detalles/ver mas|
-|Objetivo  |Permitir al gestor de distribucion y el repartidor ver los detalles del pedido.|
-| Descripción   | Proceso mediante el cual el gerente de distribucion y el repartidor pueden visualizar mas detalles acerca del pedido
-| Actor primario    | Gestor de distribucion y repartidor |
+|Nombre  |Dashboards y reportes|
+|Objetivo  |Permitir al gestor de CRM poder orientarse |
+| Descripción   | Proceso mediante el cual el gestor de CRM hacer analisis , se puede orientar para ofrecer determinado producto para incentivar a su compra o para poder darle mas visibilidad 
+| Actor primario    | Gestor de CRM |
 | Actor secundario    | -  |
-| Precondiciones    | Debe existir el pedido, con la fecha establecidad previamente |
+| Precondiciones    | Debe existir la carga de informacion de los usuarios y ventas |
 
 | Código | R036  |
 |----------|----------|
-|Nombre  |Ver detalles/ver mas|
-|Objetivo  |Permitir al gestor de distribucion y el repartidor ver los detalles del pedido.|
-| Descripción   | Proceso mediante el cual el gerente de distribucion y el repartidor pueden visualizar mas detalles acerca del pedido
-| Actor primario    | Gestor de distribucion y repartidor |
+|Nombre  |Pantalla de inicio|
+|Objetivo  |Permitir al gestor de CRM localizar los diferentes modulos|
+| Descripción   | Es la pantalla de inicio el cual se visualiza todas las opciones que puede realizar el gestor de CRM , asi como un pequeño modulo donde puede ver sus dashboards hechos y cargados 
+| Actor primario    | Gestor de CRM |
 | Actor secundario    | -  |
-| Precondiciones    | Debe existir el pedido, con la fecha establecidad previamente |
+| Precondiciones    | Debe existir la cuenta del gestor de CRM ademas para poder visualizar los datos del dashboard haber cargado informacion con anterioridad |
 
 ## 2.2. Codificación de prototipos de interfaz
 ### 2.2.1. Modulo de Compras
