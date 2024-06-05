@@ -868,13 +868,18 @@ order by d.fecha_pago desc
 ### Eventos: Decidir ver el historial de ventas de algun cliente en especifico
 * **Pantalla Visualizar historial de ventas de clientes**
 ```
-select vp.id_venta,p.nombre,sum(vp.monto_total) as monto_final,t.nombre_tipo,d.fecha_pago,d.hora_pago from VentaXProd  vp
+
+select vp.id_venta,pr.id_producto,pr.nombre_producto,vp.cant_prod as cantidad,pr.precio_unit as precio_unitario,
+vp.cant_prod*pr.precio_unit as sub_total,c.esta_activo,vp.cant_prod*pr.precio_unit as monto,
+t.nombre_tipo as tipo_pago from VentaXProd  vp
 JOIN venta v on vp.id_venta=v.id_venta
+join producto pr on pr.id_producto=vp.id_producto
 join persona p on p.id_persona=v.id_persona
+join cupón c on c.id_cupón=vp.id_cupón
 join detalle_pago  d on v.id_detalle_pago = d.id_detalle_pago
 join tipos_pago t on t.id_tipo_pago = d.id_tipo_pago
-group by vp.id_venta,p.nombre,t.nombre_tipo,d.fecha_pago,d.hora_pago
-order by d.fecha_pago desc
+where p.nombre = 'Brittney'
+
 ```
 ## 3.4 Modulo de Distribucion
 ### Código Requerimiento : R - 020
