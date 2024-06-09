@@ -1119,14 +1119,20 @@ VALUES (TO_DATE(CONCAT(<3>, '-', <2>, '-', <1>), 'YYYY-MM-DD'),<4>,'P');
 ![image](Pantallas/ModDistribucion/I0021.png)
 ### Sentecias SQL:
 ### Eventos: 
-* **Pantalla Visualizar pedidos: El gestor de distribucion podra visualizar los pedidos pendientes**
+* **Pantalla Visualizar pedidos: El gestor de distribucion podra visualizar los pedidos pendientes de la zona <A>,en este caso la 1**
 ```
-SELECT pedido.id_venta,pedido.fecha_entrega, persona.CONCAT(nombre, ' ', primer_apell),tipo_est_pedido.estado_pedido
-FROM pedido 
-INNER JOIN venta ON pedido.id_venta = venta.id_venta
-INNER JOIN persona  ON venta.id_persona = persona.id_persona
-INNER JOIN tipo_est_pedido ON pedido.id_est_pedido = tipo_est_pedido.id_est_pedido
-WHERE id_persona = <1> AND id_est_pedido = 'P';
+SELECT 
+    p.id_venta,
+    p.fecha_entrega,
+    pe.Nombre || ' ' || pe.Primer_apell || ' ' || pe.Segundo_apell AS nombre_cliente,
+    p.id_est_pedido AS estado_pedido
+FROM pedido p
+INNER JOIN venta v ON p.id_venta = v.id_venta
+INNER JOIN persona pe ON v.id_persona = pe.id_persona
+INNER JOIN distrito d ON pe.id_distrito = d.id_distrito
+INNER JOIN zona z ON d.id_zona = z.id_zona
+WHERE z.id_zona = 1
+AND p.id_est_pedido = 'P'
 ```
 ### Código Requerimiento : R - 023
 ### Codigo interfaz : I - 023
