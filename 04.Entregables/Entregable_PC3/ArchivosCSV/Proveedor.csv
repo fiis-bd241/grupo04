@@ -1,0 +1,6 @@
+"ruc_proveedor","razon_social","contacto","telefono_contacto","correo_proveedor","ciudad_proveedor","direccion_proveedor","sitio_web","id_tipo_producto","fecha_registro","observaciones"
+"20603302151","IMPORT EXPORT JAXU S.A.C","Fernando Quiroz","980520529",NULL,"Lima","Cal. Schell Nro. 255 San Miguel de Miraflores","facebook.com/JAXUPERU",2,"2023-06-09 15:30:00",NULL
+"20607504149","STELLAX S.A.C.","Lucía Cabanillas","955978789",NULL,"Lima","Jr. Ucayali Nro. 738 Int. 102g","facebook.com/STELLAX",2,"2023-08-09 14:00:00",NULL
+"20789101234","YanbalPapeleríaSAC","Marisol Rodriguez","955978799",NULL,"Lima","Av. Los Pinos 1014","facebook.com/Yanbal",2,"2024-01-21 11:00:00",NULL
+"21012345678","AtlasBeautySAC","José Manrique","995978799",NULL,"Lima","Calle Los Olivos 2022","facebook.com/AtlasB",1,"2024-02-15 10:45:00",NULL
+"22890123456","RuletaCosméticaSAC","Fátima Romero","985978799",NULL,"Lima","Calle Los Álamos 1414","facebook.com/RuletaCosmetica",1,"2024-04-21 18:45:00",NULL
