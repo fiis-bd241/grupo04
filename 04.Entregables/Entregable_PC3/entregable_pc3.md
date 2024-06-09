@@ -1851,7 +1851,7 @@ La carga de datos se ha hecho mediante archivos .csv
 
 [Tabla Repisas](ArchivosCSV/Repisas.csv)
 
-[Tabla Acopla](ArchivosCSV/Acopla.csv)
+[Tabla Ubicacion](ArchivosCSV/Ubicacion.csv)
 
 [Tabla Tipo_Movimiento](ArchivosCSV/Tipo_Movimiento.csv)
 
