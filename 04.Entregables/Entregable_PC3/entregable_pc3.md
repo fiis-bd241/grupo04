@@ -1867,7 +1867,7 @@ La carga de datos se ha hecho mediante archivos .csv
 
 [Tabla Categoria_Producto_Sub_Tipo_Existe](ArchivosCSV/Categoria_Producto_Sub_Tipo_Existe.csv)
 
-[Tabla Sub_Tipo](ArchivosCSV/Sub_Tipo.csv)
+[Tabla Presentacion](ArchivosCSV/Presentacion.csv)
 
 [Tabla Producto](ArchivosCSV/Producto.csv)
 
@@ -1880,8 +1880,6 @@ La carga de datos se ha hecho mediante archivos .csv
 [Tabla Marca](ArchivosCSV/Marca.csv)
 
 [Tabla Produce](ArchivosCSV/Produce.csv)
-
-[Tabla Clase_Maquillaje](ArchivosCSV/Clase_Maquillaje.csv)
 
 [Tabla Imagenes](ArchivosCSV/Imagenes.csv)
 
