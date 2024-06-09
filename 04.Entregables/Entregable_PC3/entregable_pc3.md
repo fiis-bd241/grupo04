@@ -1923,6 +1923,18 @@ La carga de datos se ha hecho mediante archivos .csv
 
 [Tabla tipo de estado de pedido](ArchivosCSV/tipo_est_pedido.csv)
 
+[Tabla Factura](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/ArchivosCSV/Factura.csv)
+
+[Tabla tipo de Factura](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/ArchivosCSV/TABLA%20TIPO%20FACTURA.csv)
+
+[Tabla estado de Factura](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/ArchivosCSV/Tabla%20Estado_Factura.csv)
+
+[Tabla tipo_asiento_contable](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/ArchivosCSV/Tabla%20tipo_asiento%20contable.csv)
+
+[Tabla tipo_presupuesto](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/ArchivosCSV/Tipo_presupuesto.csv)
+
+
+
 
 # 5. Funcionalidad Primaria Elegida (por módulo)
 
