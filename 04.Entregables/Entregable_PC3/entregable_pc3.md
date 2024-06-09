@@ -1239,6 +1239,16 @@ SELECT s.seccion, s.peso_soporta, a.id_almacen
 	WHERE s.peso_soporta BETWEEN 250.0 AND 320.0
 	ORDER BY s.peso_soporta DESC;
 ```
+--Mostrar todos los productos con su fecha de la última actualización y cuántos días han pasado hasta hoy
+```
+SELECT 
+    CONCAT(pr.nombre_producto, ' (', pre.tipo_presentacion, ', ', co.nombre_color, ')') AS producto_info,
+    pr.fecha_actualizacion,
+    EXTRACT(DAY FROM (CURRENT_DATE - pr.fecha_actualizacion)) AS dias_desde_actualizacion
+	FROM Producto pr
+		JOIN Presentacion pre ON pr.id_presentacion = pre.id_presentacion
+		JOIN Colores co ON pr.id_color = co.id_color
+```
 --Mostrar la ubicación donde el volumen sea mayor o igual a un volumen dado en cm3
 ```
 SELECT CONCAT(u.seccion,'-',u.id_stand,'-',u.id_repisas) AS Ubicacion,
