@@ -1,0 +1,4 @@
+id_tipo_factura,tipo_factura
+111,Compra
+112,Ventas
+113,Gasto
