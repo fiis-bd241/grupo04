@@ -1226,6 +1226,88 @@ WHERE id_pedido = <1>
 ## 3.5 Modulo de Alamcén
 ### Sentecias SQL:
 
+--Mostrar los tipo de almacenes
+```
+SELECT a.id_almacen,tipo_almacen
+	FROM Almacen a;
+```
+--Mostrar las secciones que puede soportar un intervalo de peso
+```
+SELECT s.seccion, s.peso_soporta, a.id_almacen
+	FROM Secciones s
+		JOIN Almacen a ON s.id_almacen = a.id_almacen
+	WHERE s.peso_soporta BETWEEN 250.0 AND 320.0
+	ORDER BY s.peso_soporta DESC;
+```
+--Mostrar la ubicación donde el volumen sea mayor o igual a un volumen dado en cm3
+```
+SELECT CONCAT(u.seccion,'-',u.id_stand,'-',u.id_repisas) AS Ubicacion,
+	(e.largo*e.ancho*r.altura) AS Volumen
+	FROM Ubicacion u
+		JOIN Estands e ON u.seccion = e.seccion AND u.id_stand = e.id_stand
+		JOIN Repisas r ON u.seccion = r.seccion AND u.id_repisas = r.id_repisas
+	WHERE (e.Largo*e.Ancho*r.Altura)>=45000.0;
+```
+--Mostrar las categorías por la búsqueda de 'Proteger la Piel'
+```
+SELECT cp.nombre_categoria, cp.funcion_principal, fc.caracteristica_general
+	FROM Categoria_Producto cp
+		INNER JOIN CategoriaxFunciones cf ON cp.nombre_categoria = cf.nombre_categoria
+		INNER JOIN Funciones_Categoria fc ON cf.id_funcion = fc.id_funcion
+	WHERE fc.nombre_funcion = 'Proteger la Piel'
+```
+--Mostrar las categorías por la búsqueda de la palabra 'Piel'
+```
+SELECT cp.nombre_categoria, cp.funcion_principal
+	FROM Categoria_Producto cp
+		INNER JOIN CategoriaxFunciones cf ON cp.nombre_categoria = cf.nombre_categoria
+		INNER JOIN Funciones_Categoria fc ON cf.id_funcion = fc.id_funcion
+	WHERE fc.nombre_funcion LIKE '%Piel%'
+	GROUP BY cp.nombre_categoria
+	ORDER BY cp.nombre_categoria;
+```
+--Mostrar toda la información general por cada categoría
+```
+SELECT cp.nombre_categoria,
+    STRING_AGG(fc.caracteristica_general, '. ') AS caracteristicas_generales
+	FROM Categoria_Producto cp
+		LEFT JOIN CategoriaxFunciones cf ON cp.nombre_categoria = cf.nombre_categoria
+		LEFT JOIN Funciones_Categoria fc ON cf.id_funcion = fc.id_funcion
+	GROUP BY cp.nombre_categoria
+	ORDER BY cp.nombre_categoria;
+```
+--Mostrar toda la información especifica por cada categoría que tenga esa información
+```
+SELECT cp.nombre_categoria,
+    STRING_AGG(cf.caracteristica_especifica, '. ') AS caracteristicas_especificas
+	FROM Categoria_Producto cp
+		JOIN CategoriaxFunciones cf ON cp.nombre_categoria = cf.nombre_categoria
+	WHERE 
+    	cf.caracteristica_especifica IS NOT NULL AND cf.caracteristica_especifica <> ''
+	GROUP BY cp.nombre_categoria
+	ORDER BY cp.nombre_categoria;
+```
+--Mostrar las categorías que se usan para la zona 'Ojos'
+```
+SELECT cp.nombre_categoria, cp.funcion_principal
+	FROM Categoria_Producto cp
+		JOIN Categoria_Producto_Zona cpz ON cp.nombre_categoria = cpz.nombre_categoria
+	WHERE cpz.zona='Ojos';
+```
+--Mostrar cada categoría y los sub tipos que existen en el mercado
+```
+SELECT cpste.nombre_categoria,
+    STRING_AGG(cpste.sub_tipo_existe, ', ') AS sub_tipos_existentes
+	FROM Categoria_Producto_Sub_Tipo_Existe cpste
+	GROUP BY cpste.nombre_categoria
+	ORDER BY cpste.nombre_categoria;
+```
+--Mostrar los proveedores que me ofertar artículos de papelería
+```
+SELECT ruc_proveedor, razon_social, contacto, telefono_contacto
+	FROM Proveedor
+	WHERE id_tipo_producto = 2;
+```
 --Mostrar el Stock, el precio unitario y el Valor en el inventario de cada producto
 ```
 SELECT pr.Nombre_Producto,pr.Precio_Unitario_Producto,
@@ -1252,6 +1334,33 @@ LEFT JOIN
 WHERE I.Id_Inventario IS NULL
 ORDER BY A.Seccion;
 ```
+--Mostrar el tamaño en KB de cada imagen subido por cada producto
+```
+SELECT p.Nombre_Producto, 
+       ROUND(SUM((i.Largo_Imagen * i.Alto_Imagen * i.Profundidad_Bits) / 8192.0), 2) AS Tamaño_Imagen_KB
+FROM Producto p
+JOIN Imagenes i ON p.Id_Producto = i.Id_Producto
+GROUP BY p.Nombre_Producto;
+```
+--Mostrar el tamaño en KB de cada imagen subido por cada clase de maquillaje
+```
+SELECT cm.Nombre_Clase_Maquillaje, 
+       ROUND(SUM((i.Largo_Imagen * i.Alto_Imagen * i.Profundidad_Bits) / 8192.0), 2) AS Tamaño_Imagen_KB
+FROM Clase_Maquillaje cm
+JOIN Imagenes i ON cm.Id_Producto = i.Id_Producto AND cm.Id_Clase_Maquillaje = i.Id_Clase_Maquillaje
+GROUP BY cm.Nombre_Clase_Maquillaje;
+```
+--Mostrar el total de memoria de todas las imagenes
+```
+SELECT 
+    ROUND(SUM((i.Largo_Imagen * i.Alto_Imagen * i.Profundidad_Bits) / 8192.0), 2) AS Suma_Total_Imagenes_KB
+FROM 
+    Imagenes i
+JOIN 
+    Producto p ON i.Id_Producto = p.Id_Producto
+JOIN 
+    Clase_Maquillaje cm ON i.Id_Producto = cm.Id_Producto AND i.Id_Clase_Maquillaje = cm.Id_Clase_Maquillaje;
+```
 --Mostrar el Volumen Restante por cada Ubicación que se haya ingresado un producto
 ```
 SELECT 
@@ -1270,9 +1379,8 @@ LEFT JOIN
                     AND A.Seccion = I.Seccion
 GROUP BY 
     A.Id_Stand, A.Id_Repisas, A.Seccion, E.Largo, E.Ancho, R.Altura;
-```
+
 --Mostrar los productos que se aplican en el rostro, como busqueda con palabra clave
-```
 SELECT p.Nombre_Producto,  
        (i.Entradas - COALESCE(i.Salidas, 0)) AS Stock_Disponible,
 		m.Id_Marca
@@ -1312,9 +1420,8 @@ WHERE
     cp.Nombre_Categoria = 'Labiales'
 GROUP BY 
     p.Nombre_Producto, m.Id_Marca;
-```
+
 --Mostrar dónde se ubican los Rimels y su stock
-```
 SELECT CONCAT(a.Seccion, '-', a.Id_Stand, '-', a.Id_Repisas) AS Ubicacion,
 		p.Nombre_Producto,
        (i.Entradas - COALESCE(i.Salidas, 0)) AS Stock_Disponible
@@ -1348,16 +1455,6 @@ LEFT JOIN Producto p ON i.Id_Producto = p.Id_Producto
 GROUP BY s.Seccion, s.Peso_Soporta
 ORDER BY s.Seccion;
 ```
---Mostrar la ubicación donde el volumen sea menor o igual a un volumen dado en cm3
---Cuando llega nueva mercancia
-```
-SELECT CONCAT(a.Seccion,'-',a.Id_Stand,'-',a.Id_Repisas) AS Ubicacion,
-	(e.Largo*e.Ancho*r.Altura) AS Volumen
-FROM Acopla a
-JOIN Estands e ON a.Id_Stand=e.Id_Stand
-JOIN Repisas r ON a.Seccion=r.Seccion AND a.Id_Repisas=r.Id_Repisas
-WHERE (e.Largo * e.Ancho * r.Altura)<=200000.0;
-```
 --Mostrar las zonas en donde aplica cada categoría (en especial de maquillaje)
 ```
 SELECT c.Nombre_Categoria, string_agg(cz.Zona,', ') AS Zonas
@@ -1371,33 +1468,6 @@ SELECT c.Nombre_Categoria, string_agg(cs.Sub_Tipo_Existe,', ') AS Sub_Tipo_Exist
 FROM Categoria_Producto c
 JOIN Categoria_Producto_Sub_Tipo_Existe cs ON c.Nombre_Categoria=cs.Nombre_Categoria
 GROUP BY c.Nombre_Categoria;
-```
---Mostrar el tamaño en KB de cada imagen subido por cada producto
-```
-SELECT p.Nombre_Producto, 
-       ROUND(SUM((i.Largo_Imagen * i.Alto_Imagen * i.Profundidad_Bits) / 8192.0), 2) AS Tamaño_Imagen_KB
-FROM Producto p
-JOIN Imagenes i ON p.Id_Producto = i.Id_Producto
-GROUP BY p.Nombre_Producto;
-```
---Mostrar el tamaño en KB de cada imagen subido por cada clase de maquillaje
-```
-SELECT cm.Nombre_Clase_Maquillaje, 
-       ROUND(SUM((i.Largo_Imagen * i.Alto_Imagen * i.Profundidad_Bits) / 8192.0), 2) AS Tamaño_Imagen_KB
-FROM Clase_Maquillaje cm
-JOIN Imagenes i ON cm.Id_Producto = i.Id_Producto AND cm.Id_Clase_Maquillaje = i.Id_Clase_Maquillaje
-GROUP BY cm.Nombre_Clase_Maquillaje;
-```
---Mostrar el total de memoria de todas las imagenes
-```
-SELECT 
-    ROUND(SUM((i.Largo_Imagen * i.Alto_Imagen * i.Profundidad_Bits) / 8192.0), 2) AS Suma_Total_Imagenes_KB
-FROM 
-    Imagenes i
-JOIN 
-    Producto p ON i.Id_Producto = p.Id_Producto
-JOIN 
-    Clase_Maquillaje cm ON i.Id_Producto = cm.Id_Producto AND i.Id_Clase_Maquillaje = cm.Id_Clase_Maquillaje;
 ```
 ##3.6. Módulo de finanzas
 
