@@ -1869,11 +1869,13 @@ La carga de datos se ha hecho mediante archivos .csv
 
 [Tabla Presentacion](ArchivosCSV/Presentacion.csv)
 
+[Tabla Colores](ArchivosCSV/Colores.csv)
+
+[Tabla Proveedor](ArchivosCSV/Proveedor.csv)
+
 [Tabla Producto](ArchivosCSV/Producto.csv)
 
 [Tabla Presenta](ArchivosCSV/Presenta.csv)
-
-[Tabla Colores](ArchivosCSV/Colores.csv)
 
 [Tabla Disponible](ArchivosCSV/Disponible.csv)
 
