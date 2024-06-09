@@ -1838,6 +1838,8 @@ La carga de datos se ha hecho mediante archivos .csv
 
 [Tabla distrito](ArchivosCSV/distrito.csv)
 
+[Tabla tipo de estado de pedido](ArchivosCSV/tipo_est_pedido.csv)
+
 
 # 5. Funcionalidad Primaria Elegida (por módulo)
 
