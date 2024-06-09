@@ -1867,6 +1867,8 @@ La carga de datos se ha hecho mediante archivos .csv
 
 [Tabla Categoria_Producto_Sub_Tipo_Existe](ArchivosCSV/Categoria_Producto_Sub_Tipo_Existe.csv)
 
+[Tabla Marca](ArchivosCSV/Marca.csv)
+
 [Tabla Presentacion](ArchivosCSV/Presentacion.csv)
 
 [Tabla Colores](ArchivosCSV/Colores.csv)
@@ -1876,10 +1878,6 @@ La carga de datos se ha hecho mediante archivos .csv
 [Tabla Producto](ArchivosCSV/Producto.csv)
 
 [Tabla Presenta](ArchivosCSV/Presenta.csv)
-
-[Tabla Disponible](ArchivosCSV/Disponible.csv)
-
-[Tabla Marca](ArchivosCSV/Marca.csv)
 
 [Tabla Produce](ArchivosCSV/Produce.csv)
 
