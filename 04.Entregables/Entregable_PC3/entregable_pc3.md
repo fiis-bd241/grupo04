@@ -1861,7 +1861,7 @@ La carga de datos se ha hecho mediante archivos .csv
 
 [Tabla Funciones_Categoria](ArchivosCSV/Funciones_Categoria.csv)
 
-[Tabla Caracteriza](ArchivosCSV/Caracteriza.csv)
+[Tabla CategoriaxFunciones](ArchivosCSV/CategoriaxFunciones.csv)
 
 [Tabla Categoria_Producto_Zona](ArchivosCSV/Categoria_Producto_Zona.csv)
 
