@@ -17,8 +17,8 @@ El módulo tuvo que alterarse,los pedidos se reasignan por zonas y cada repartid
 ## Módulo de Almacén
 Se configuraron y se agregaron tablas para poder identificar mejor las categorías, los colores, las clases de cada producto (como sub productos), la marca; para poder filtrar con palabras claves y agilizar la búsqueda y hacerla más general, se agregaron sub tipos de productos para poder compararlo con los sub tipos existentes en el mercado y así se pueda alcanzar a más necesidades de clientes con productos nuevos. Se agregaron tablas para saber la ubicación de cada producto y calcular el espacio disponible para nuevas compras. Modificar la tabla inventario para tener en tiempo real (con una variable Timestamp) el stock disponible y el área de ventas puede ofrecer el stock real. Y se agregó una tabla imágenes para poder saber la cantidad aproximada de memoria, en la carga de imágenes, que se utilizará en el aplicativo.
 
-![image](AlmacenER.png)
-![image](AlmacenRS.png) 
+![image](ERAlmacen.png)
+![image](RSAlmacen.png) 
 
 ## Módulo de Finanzas
 Se modificó tanto el modelo conceptual con el modelo E-R ya que para la Entidad Item de Estados de Resultados se tiene un atributo que es compuesto que se refiere al tipo de Estado de Resultado en el que se considera ademas del nombre del tipo se considera que tipo de operación será en el Estado de Resultados ya que las Utilidades harán operaciones compuestas mientras que ventas, costo de ventas serán operaciones simples además se tiene un atributo que es tipo_valor que hace referencia a que puede sumar o restar que se representa con positivo o negativo respectivamente.
