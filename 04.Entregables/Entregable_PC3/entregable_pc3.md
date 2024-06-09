@@ -1998,7 +1998,20 @@ Esta funcionalidad permitirá cumplir con los requerimientos de las pantallas re
 | 3 | Se procede a elegir un método de pago y luego rellenar los datos correpsondientes a dicho pago.entonces ya podria procesarse y registrarse la compra en los historiales de venta de la empresa.<br> ![image](Pantallas/ModVentas/tipo_pago.png) ! |
 | 4 | Despues de la venta, se puede visualizar tanto los historiales de venta del cliente y de la empresa en general.Lo que permite visualizar los registros de venta de algún periodo en la empresa y asi poder darles seguimiento.<br> ![image](Pantallas/ModVentas/historial_ventas_gestor.png) ![image](Pantallas/ModVentas/historial_cliente.png) |
 
+## MÓDULO: FINANZAS
+**Funcionalidad primaria elegida:** Gestionar las facturas para ver la rentabilidad  de la Empresa.<br>
+**Sustentación:** El módulo archiva las facturas de compras, ventas donde en base a los ingresos y egresos se tiene una utilidad por eso es importante considerar el flujo del dinero.<br>
 
+Esta funcionalidad permitirá cumplir con los requerimientos de las pantallas relacionadas a Añadir Factura (R037), Ver historial de Facturas (R038), Ver Estado de Facturas (R039), Ver asientos contables (040) y  Ver el Estado de Resultados (041).Dichas funcionalidades  se encuentran relacionados con las interfaces I-037, I-038, I-039, I-040, I-041, I-042, 043.
+
+| Actividad     | Descripción        | 
+|:-------------:|:---------------:|
+| 1       | Al ingresar a la web el contador tiene su pagina home .<br>![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/Pantallas/Home_Contador.PNG)| 
+| 2    | Luego podra ver el estado de las facturas.<br> ![image]( https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/Pantallas/Factura%20Estados.PNG) | 
+| 3 | Se procede a elegir un si desea ingresar una factura.<br> ![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/Pantallas/A%C3%B1adirFactura.PNG) ! |
+| 4 | También puede ver el historial de facturas. <br> ![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/Pantallas/HistorialFactura.PNG) |
+| 5 | También puede ver el historial de asientos. <br> ![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/Pantallas/HistorialdeAsientos.PNG) |
+| 6 | También puede ver el estado de resultados. <br> ![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/Pantallas/EstadodeResultados.PNG) |
 
 
 # 6. Stack Tecnológico elegido para su aplicación
