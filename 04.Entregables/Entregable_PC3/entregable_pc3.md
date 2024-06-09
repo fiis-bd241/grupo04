@@ -11,7 +11,7 @@ Se configuro una lookup table para identificar a los diferentes tipos de pago qu
 ![image](MODLOG2.png)
 
 ## Módulo de Distribucion
-El módulo tuvo que alterarse,los pedidos se reasignan por zonas y cada repartidor entrega en una zona especifica,se ubica la ruta por el distrito del cliente.El gerente de distribucion aun sigue asignando los repartidores pero se reducen la cantidad disponible al trabajar solo por zonas.
+El módulo tuvo que alterarse,los pedidos se reasignan por zonas y cada repartidor entrega en una zona especifica,por lo que solo repartirá en la zona que se le ha asignado,se ubica la ruta por el distrito del cliente y es elegida por el gerente de distribucion,la ruta es solo una recomendacion pero igualmente aparecera en la tabla de pedido .El gerente de distribucion aun sigue asignando los repartidores pero ahora se verá reducido la cantidad disponible al trabajar solo por zonas.
 
 
 ## Módulo de Almacén
@@ -1110,8 +1110,8 @@ where id_persona = <1>
 ### Eventos: 
 * **BOTON ACEPTAR : Se registrará la fecha de entrega de la compra con id = <4> y se creara un nuevo registro de pedido con estado P, sabiendo que el id_pedido es incrementable**
 ```
-INSERT INTO pedido (fecha_entrega,id_venta,id_est_pedido)
-VALUES (1216,TO_DATE(CONCAT('<3>-', '<2>-', '<1>'), 'YYYY-MM-DD'),<4>,'P');
+INSERT INTO Pedido (fecha_entrega, id_venta,id_est_pedido)
+VALUES (TO_DATE(CONCAT(<3>, '-', <2>, '-', <1>), 'YYYY-MM-DD'),<4>,'P');
 ```
 ### Código Requerimiento : R - 022
 ### Codigo interfaz : I - 022
