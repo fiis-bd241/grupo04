@@ -1,0 +1,8 @@
+id_tipo_item,Nombre
+301,ventas
+302,costos
+303,gastos
+304,utilidad bruta
+305,utilidad antes de impuesto
+306,impuesto
+307,utilidad neta
