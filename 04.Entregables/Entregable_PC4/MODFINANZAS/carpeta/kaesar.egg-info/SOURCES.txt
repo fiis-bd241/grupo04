@@ -1,0 +1,11 @@
+setup.py
+client/__init__.py
+client/gui_app.py
+kaesar.egg-info/PKG-INFO
+kaesar.egg-info/SOURCES.txt
+kaesar.egg-info/dependency_links.txt
+kaesar.egg-info/top_level.txt
+model/__init__.py
+model/conexion_db.py
+model/factura_dao.py
+model/setup.py
