@@ -156,7 +156,7 @@ Base de datos: PostgreSQL
 [CÓDIGO](https://github.com/fiis-bd241/grupo04/tree/main/04.Entregables/Entregable_PC4/MODFINANZAS)
 
 ## Módulo de Almacen
-[CÓDIGO](Entregable_PC4/Almacen.py)
+[CÓDIGO]([Entregable_PC4](https://github.com/fiis-bd241/grupo04/tree/main/04.Entregables/Entregable_PC4/Almacen.py)
 # 5. Próximos Pasos
 
 ## Módulo de Compras
