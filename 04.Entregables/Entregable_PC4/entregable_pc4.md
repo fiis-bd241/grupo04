@@ -65,6 +65,12 @@ Proceso Con Índice:
 
 Ambos casos planteados previamente en el módulo de compra podrían ser realizados si se rediseña el aplicativo, optando talvez por el uso de otra tecnología aparte de un aplicativo de escritorio, por ejemplo, librerías personalizadas que nos permiten facilitar ciertas selecciones tanto en las cotizaciones como en los productos ofrecidos por los proveedores.
 
+## Módulo de Marketing
+#### Creación de campañas
+- En los requerimientos y pantallas mencionados en el anterior entregable se encontraban las vistas para el equipo de marketing, el trabajo actual solo posee las funcionalidades del gestor de marketing, es por ello que se implementará la otra parte del proyecto para la próxima entrega; estas funcionalidades se centraban mas en lo que es creación de campañas y control de observaciones realizadas por el gestor de marketing.
+#### Fidelidad con los requerimientos
+- Se han ajustado algunos requerimientos en el trabajo actual, se busca que para la entrega de la monografía todas las especificaciones estén implementadas acorde a como se había estipulado anteriormente, esto referente a la muestra de productos y canales en una campaña y tambien al ingreso por pantalla principal por cada equipo de marketing.
+
 
 
 # 6. Videos individuales
