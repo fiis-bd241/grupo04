@@ -99,7 +99,7 @@ Base de datos: PostgreSQL
 [marketing](MOD_MARKETING)
 
 ## Módulo de Ventas
-[CÓDIGO](MOD_VENTAS/Ventas.md)
+[CÓDIGO](MOD_VENTAS/Ventas.py)
 # 5. Próximos Pasos
 
 ## Módulo de Compras
