@@ -17,6 +17,21 @@ Proceso Sin Índice:
 Proceso Con Índice:
 ![image](INDICE_RUC.png)
 
+### Índice fecha_fin
+```sql
+DROP INDEX IX_fecha_fin;
+CREATE INDEX IX_fecha_fin ON campaña(fecha_fin);
+
+EXPLAIN ANALYZE
+SELECT * FROM campaña
+WHERE CURRENT_DATE BETWEEN fecha_ini AND fecha_fin;
+```
+Proceso Sin Índice:
+![image](marketing_sin_index.png)
+
+Proceso Con Índice:
+![image](marketing_con_index.png)
+
 
 # 2. PL/pgSQL – Proceso Batch
 
