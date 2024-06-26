@@ -151,3 +151,5 @@ Conciliación Bancaria: Añadir una funcionalidad para realizar la conciliación
 [Montes_Lozano_Diego](../../06.Videos_Individuales/VideosPC4/Diego_Montes.md)
 
 [Peralta Gil Alexandra](https://github.com/fiis-bd241/grupo04/blob/main/06.Videos_Individuales/VideosPC4/Peralta%20Gil%20Alexandra.md)
+
+[Salazar_Uribe_Christian](../../06.Videos_Individuales/VideosPC4/SalazarUribeChristianVideo.md)
