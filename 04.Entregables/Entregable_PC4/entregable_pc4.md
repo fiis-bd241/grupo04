@@ -127,3 +127,5 @@ Ambos casos planteados previamente en el módulo de compra podrían ser realizad
 [Damian_Cutisaca_Jhon](../../06.Videos_Individuales/VideosPC4/Damian_Cutisaca.md)
 
 [Montes_Lozano_Diego](../../06.Videos_Individuales/VideosPC4/Diego_Montes.md)
+
+[Peralta Gil Alexandra](https://github.com/fiis-bd241/grupo04/blob/main/06.Videos_Individuales/VideosPC4/Peralta%20Gil%20Alexandra.md)
