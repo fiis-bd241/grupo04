@@ -99,10 +99,15 @@ JOIN Ubicacion U ON I.seccion = U.seccion
 WHERE (I.entradas - I.salidas) > 10;
 ```
 Proceso Sin Índice:
-![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC4/Producto%20Marca%20sin%20Index.jpeg)
+![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC4/InventarioProductosinindex.jpeg)
+
+![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC4/InventarioProductosinindex2.jpeg)
 
 Proceso Con Índice:
-![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC4/Producto%20Marca%20con%20Index.jpeg)
+![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC4/InventarioProductoconindex.jpeg)
+
+![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC4/InventarioProductoconindex2.jpeg)
+
 # 2. PL/pgSQL – Proceso Batch
 
 # 3. Actualizaciones a la Arquitectura de la Aplicación
