@@ -79,6 +79,30 @@ Proceso Sin Índice:
 
 Proceso Con Índice:
 ![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC4/Producto%20Marca%20con%20Index.jpeg)
+
+### Indice Inventario Producto
+
+```sql
+CREATE INDEX idx_inv_prod ON Inventario(id_producto);
+```
+Análisis
+```sql
+EXPLAIN ANALYZE
+SELECT I.id_producto, P.nombre_producto, I.entradas, I.salidas,
+       (I.entradas - I.salidas) AS stock,
+       U.seccion, U.id_stand, U.id_repisas
+FROM Inventario I
+JOIN Producto P ON I.id_producto = P.id_producto
+JOIN Ubicacion U ON I.seccion = U.seccion
+                AND I.id_stand = U.id_stand
+                AND I.id_repisas = U.id_repisas
+WHERE (I.entradas - I.salidas) > 10;
+```
+Proceso Sin Índice:
+![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC4/Producto%20Marca%20sin%20Index.jpeg)
+
+Proceso Con Índice:
+![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC4/Producto%20Marca%20con%20Index.jpeg)
 # 2. PL/pgSQL – Proceso Batch
 
 # 3. Actualizaciones a la Arquitectura de la Aplicación
