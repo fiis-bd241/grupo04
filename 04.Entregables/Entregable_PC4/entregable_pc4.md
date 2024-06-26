@@ -97,6 +97,9 @@ Base de datos: PostgreSQL
 
 ## Módulo de Marketing
 [marketing](MOD_MARKETING)
+
+## Módulo de Ventas
+[CÓDIGO](MOD_Ventas/Ventas)
 # 5. Próximos Pasos
 
 ## Módulo de Compras
