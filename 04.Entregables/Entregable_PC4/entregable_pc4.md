@@ -149,11 +149,14 @@ Base de datos: PostgreSQL
 ## Módulo de Ventas
 [CÓDIGO](MOD_VENTAS/Ventas.py)
 
-## Módulo de distribucion
+## Módulo de Distribucion
 [CÓDIGO](MOD_DISTRIBUCION/proyectodistribucion)
 
 ## Modulo Finanzas
 [CÓDIGO](https://github.com/fiis-bd241/grupo04/tree/main/04.Entregables/Entregable_PC4/MODFINANZAS)
+
+## Módulo de Almacen
+[CÓDIGO](Entregable_PC4/Almacen.py)
 # 5. Próximos Pasos
 
 ## Módulo de Compras
