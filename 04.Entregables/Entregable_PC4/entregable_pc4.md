@@ -64,6 +64,7 @@ Base de datos: PostgreSQL
 
 # 4. Versión Final de la Aplicación
 ## Módulo de Compras
+[Pantallas](MOD_COMPRAS/Pantallas.md)
 
 [CÓDIGO](MOD_COMPRAS/Proveedores)
 
