@@ -4,7 +4,7 @@
 
 # 3. Actualizaciones a la Arquitectura de la Aplicación
 
-## 6.1 Stack Tecnológico
+## 3.1 Stack Tecnológico
 | Stack                         | Detalle                                               |
 |-------------------------------|-------------------------------------------------------|
 | Lenguaje de programación      | Python <br>![Python](https://img.shields.io/badge/Python-3.9-yellow.svg?style=for-the-badge&logo=python&logoColor=white)|
@@ -13,7 +13,7 @@
 | Base de datos                 | PostgreSQL <br> ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14.0-skyblue.svg?style=for-the-badge&logo=postgresql&logoColor=white)|
 | Controlador de base de datos  | pgAdmin <br> ![pgadmin](https://img.shields.io/badge/pgAdmin-4-blue.svg?style=for-the-badge&logo=pgadmin)|
 
-## 6.2 Diagrama de componentes
+## 3.2 Diagrama de componentes
 
 ![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/DIAGCOMP.png)
 
