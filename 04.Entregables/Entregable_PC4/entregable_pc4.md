@@ -101,6 +101,9 @@ Base de datos: PostgreSQL
 ## Módulo de Ventas
 [CÓDIGO](MOD_VENTAS/Ventas.py)
 
+## Módulo de distribucion
+[CÓDIGO](MOD_DISTRIBUCION/proyectodistribucion)
+
 ## Modulo Finanzas
 [CÓDIGO](https://github.com/fiis-bd241/grupo04/tree/main/04.Entregables/Entregable_PC4/MODFINANZAS)
 # 5. Próximos Pasos
@@ -133,6 +136,9 @@ Gestión de Pagos y Cobros: Implementar funcionalidades que permitan registrar y
 Presupuestos: Incluir una sección para la creación y seguimiento de presupuestos, permitiendo comparar los gastos reales con los presupuestados.
 Reportes Financieros: Incorporar la capacidad de generar reportes financieros detallados como balance general, estado de resultados y flujo de caja.
 Conciliación Bancaria: Añadir una funcionalidad para realizar la conciliación bancaria de manera automática o manual.
+## Módulo de Distribucion
+#### Conectar con las pantallas de cliente y repartidor
+-Si bien se pudo conectar y hacer las funcionalidades de gestor de distribucion, que asignaba repartidores y rutas. No se ha podido conectar con las pantallas de cliente y repartidor por problemas con el login.
 
 # 6. Videos individuales
 
