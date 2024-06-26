@@ -120,3 +120,5 @@ Ambos casos planteados previamente en el módulo de compra podrían ser realizad
 [Quispe Mitma Cesar](../../06.Videos_Individuales/VideosPC4/Quispe_Mitma_Cesar_Fernando-VideoIndividual.md)
 
 [Taipe Sicha Andy](../../06.Videos_Individuales/VideosPC4/Taipe_Sicha_Ronny_Andy_videoIndividual.md)
+
+[Damian_Cutisaca_Jhon](../../06.Videos_Individuales/VideosPC4/Damian_Cutisaca.md)
