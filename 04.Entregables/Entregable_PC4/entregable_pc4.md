@@ -42,3 +42,5 @@ Proceso Con Índice:
 # 5. Próximos Pasos
 
 # 6. Videos individuales
+
+[Quispe Mitma Cesar](../../06.Videos_Individuales/VideosPC4/Quispe_Mitma_Cesar_Fernando-VideoIndividual.md)
