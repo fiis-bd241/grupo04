@@ -54,6 +54,7 @@ Proceso Con Índice:
 ## Módulo de Compras
 
 [CÓDIGO](MOD_COMPRAS/Proveedores)
+[marketing](04.Entregables/Entregable_PC4/MOD_MARKETING)
 # 5. Próximos Pasos
 
 ## Módulo de Compras
