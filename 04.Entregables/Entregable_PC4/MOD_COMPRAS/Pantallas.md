@@ -1,8 +1,9 @@
 #  Pantallas
 ## Pantalla principal
-![image]()
+![image](pantalla_principal.png)
 
 ## Pantalla de proveedores
-![image]()
+![image](Proveedores.png)
 
 ## Pantalla de cotizacion
+![image](Cotizaciones.png)
