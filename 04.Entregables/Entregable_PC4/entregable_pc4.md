@@ -55,7 +55,11 @@ Análisis
 	SELECT * FROM FACTURA
 	WHERE nro_factura = '2022001';
 ```
+Proceso Sin Índice:
+![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC4/Factura%20sinindice.PNG)
 
+Proceso Con Índice:
+![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC4/Facturaconindice.PNG)
 # 2. PL/pgSQL – Proceso Batch
 
 # 3. Actualizaciones a la Arquitectura de la Aplicación
