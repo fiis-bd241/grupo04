@@ -6,7 +6,7 @@
 
 # 4. Versión Final de la Aplicación
 Compras
-[CODIGO](../MOD_COMPRAS/Proveedores)
+[CODIGO](MOD_COMPRAS/Proveedores)
 # 5. Próximos Pasos
 
 # 6. Videos individuales
