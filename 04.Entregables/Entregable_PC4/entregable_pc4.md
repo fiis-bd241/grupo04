@@ -32,22 +32,29 @@ Proceso Sin Índice:
 Proceso Con Índice:
 ![image](marketing_con_index.png)
 
-##Indice Nro_Factura
-*Vista de Factura
+### Indice Nro_Factura
+
+Vista de Factura
+```sql
 CREATE VIEW FACTURA AS
 	select f.nro_factura, f.fecha_emision,
 	f.monto,f.id_persona, f.ruc_proveedor,  tif.tipo_fac, e.nom_estado
 	from factura f
 	inner join Tipo_Factura tif on f.id_tip_fac = tif.id_tip_fac
 	inner join Estado e on f.id_estado = e.id_estado
-	order by f.nro_factura; 
-*Creando Indices:
+	order by f.nro_factura;
+```
+Creando Indices:
+```sql
   DROP INDEX IXFactura;
   CREATE INDEX IXFactura ON Factura(nro_factura);
-*Análisis
-EXPLAIN ANALYZE
-SELECT * FROM FACTURA
-WHERE nro_factura = '2022001';
+```
+Análisis
+```sql
+	EXPLAIN ANALYZE
+	SELECT * FROM FACTURA
+	WHERE nro_factura = '2022001';
+```
 
 # 2. PL/pgSQL – Proceso Batch
 
