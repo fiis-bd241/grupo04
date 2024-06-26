@@ -97,6 +97,15 @@ Base de datos: PostgreSQL
 
 ## Módulo de Marketing
 [marketing](MOD_MARKETING)
+
+## Módulo de Ventas
+[CÓDIGO](MOD_VENTAS/Ventas.py)
+
+## Módulo de distribucion
+[CÓDIGO](MOD_DISTRIBUCION/proyectodistribucion)
+
+## Modulo Finanzas
+[CÓDIGO](https://github.com/fiis-bd241/grupo04/tree/main/04.Entregables/Entregable_PC4/MODFINANZAS)
 # 5. Próximos Pasos
 
 ## Módulo de Compras
@@ -113,10 +122,32 @@ Ambos casos planteados previamente en el módulo de compra podrían ser realizad
 #### Fidelidad con los requerimientos
 - Se han ajustado algunos requerimientos en el trabajo actual, se busca que para la entrega de la monografía todas las especificaciones estén implementadas acorde a como se había estipulado anteriormente, esto referente a la muestra de productos y canales en una campaña y tambien al ingreso por pantalla principal por cada equipo de marketing.
 
+## Módulo de Finanzas
+Módulo de Finanzas
+Funcionalidad Actual: El módulo de finanzas actualmente solo permite registrar facturas, limitando la gestión financiera a una simple función de registro.
+Requerimientos Iniciales
+.Gestión Integral: El objetivo es que el módulo de finanzas no solo registre facturas, sino que también permita gestionar otros aspectos financieros como pagos, cobros, presupuestos y reportes financieros.
+.Automatización y Análisis: Se requiere que el sistema pueda automatizar procesos financieros y proporcionar herramientas de análisis y generación de reportes para facilitar la toma de decisiones.
+Propuestas de Mejora:
 
+.Ampliar Funcionalidades
+
+Gestión de Pagos y Cobros: Implementar funcionalidades que permitan registrar y gestionar pagos a proveedores y cobros a clientes.
+Presupuestos: Incluir una sección para la creación y seguimiento de presupuestos, permitiendo comparar los gastos reales con los presupuestados.
+Reportes Financieros: Incorporar la capacidad de generar reportes financieros detallados como balance general, estado de resultados y flujo de caja.
+Conciliación Bancaria: Añadir una funcionalidad para realizar la conciliación bancaria de manera automática o manual.
+## Módulo de Distribucion
+#### Conectar con las pantallas de cliente y repartidor
+-Si bien se pudo conectar y hacer las funcionalidades de gestor de distribucion, que asignaba repartidores y rutas. No se ha podido conectar con las pantallas de cliente y repartidor por problemas con el login.
 
 # 6. Videos individuales
 
 [Quispe Mitma Cesar](../../06.Videos_Individuales/VideosPC4/Quispe_Mitma_Cesar_Fernando-VideoIndividual.md)
 
 [Taipe Sicha Andy](../../06.Videos_Individuales/VideosPC4/Taipe_Sicha_Ronny_Andy_videoIndividual.md)
+
+[Damian_Cutisaca_Jhon](../../06.Videos_Individuales/VideosPC4/Damian_Cutisaca.md)
+
+[Montes_Lozano_Diego](../../06.Videos_Individuales/VideosPC4/Diego_Montes.md)
+
+[Peralta Gil Alexandra](https://github.com/fiis-bd241/grupo04/blob/main/06.Videos_Individuales/VideosPC4/Peralta%20Gil%20Alexandra.md)
