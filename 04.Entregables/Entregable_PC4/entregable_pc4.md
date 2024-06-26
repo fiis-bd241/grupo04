@@ -1,5 +1,23 @@
 # 1. Índices y otros objetos de BD
 
+## 1.1 Índices
+
+### Índice RUC
+```sql
+DROP INDEX IX_RUC;
+CREATE INDEX IX_RUC ON cotizacion(ruc_proveedor);
+
+EXPLAIN ANALYZE
+SELECT * FROM cotizacion
+WHERE ruc_proveedor = '20780385968';
+```
+Proceso Sin Índice:
+![image](SININDICE_RUC.png)
+
+Proceso Con Índice:
+![image](INDICE_RUC.png)
+
+
 # 2. PL/pgSQL – Proceso Batch
 
 # 3. Actualizaciones a la Arquitectura de la Aplicación
