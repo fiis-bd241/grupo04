@@ -60,6 +60,25 @@ Proceso Sin Índice:
 
 Proceso Con Índice:
 ![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC4/Facturaconindice.PNG)
+
+### Indice Producto Marca
+
+```sql
+CREATE INDEX idx_marca ON Producto(id_marca);
+```
+Análisis
+```sql
+EXPLAIN ANALYZE
+SELECT P.id_producto, P.nombre_producto, P.especificaciones
+FROM Producto P
+JOIN Marca M ON P.id_marca = M.id_marca
+WHERE M.id_marca = 'Beauty Creations';
+```
+Proceso Sin Índice:
+![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC4/Producto%20Marca%20sin%20Index.jpeg)
+
+Proceso Con Índice:
+![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC4/Producto%20Marca%20con%20Index.jpeg)
 # 2. PL/pgSQL – Proceso Batch
 
 # 3. Actualizaciones a la Arquitectura de la Aplicación
