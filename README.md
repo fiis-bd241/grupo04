@@ -4,7 +4,7 @@ Bienvenidos al repositorio del Proyecto de Diseño de Base de Datos del Grupo 4.
 ### 1. [Integrantes del grupo](01.Integrantes/integrantes.md)
 ### 2. [Empresa](02.Empresa/SeleccionEmpresa.md)
 ### 3. [Entrevista](03.Entrevista/entrevista.md)
-### 4. [MONOGRAFIA](7. MONOGRAFIA/monografia.md)
+### 4. [MONOGRAFIA](7.%20MONOGRAFIA/monografia.md)
 ### 5. [Entregables/PCs](04.Entregables/entregables.md)
 
 ### ENTREGABLE PC4
