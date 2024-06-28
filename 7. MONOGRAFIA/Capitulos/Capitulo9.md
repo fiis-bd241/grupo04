@@ -45,12 +45,12 @@
 
 | Código Interfaz | I002  |
 |----------|----------|
-|Imagen interfaz|![image](Pantallas/ModMarketing/I009.png)|
+|Imagen interfaz|![image](imagenes_cap_9/modulo_mark/I009.png)|
 
 | Código Interfaz | I003  |
 |----------|----------|
-|Imagen interfaz|![image](Pantallas/ModMarketing/I010.png)|
+|Imagen interfaz|![image](imagenes_cap_9/modulo_mark/I010.png)|
 
 | Código Interfaz | I004  |
 |----------|----------|
-|Imagen interfaz|![image](Pantallas/ModMarketing/I011.png)|
+|Imagen interfaz|![image](imagenes_cap_9/modulo_mark/I011.png)|
