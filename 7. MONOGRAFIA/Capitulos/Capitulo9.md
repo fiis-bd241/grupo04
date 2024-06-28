@@ -39,6 +39,7 @@
 |Precondiciones | Debe existir al menos una campaña vigente. |
 
 ## Interfaces de requerimientos
+### Módulo de Marketing
 | Código Interfaz | I001  |
 |----------|----------|
 |Imagen interfaz|![image](imagenes_cap_9/modulo_mark/I007.png)|
