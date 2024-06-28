@@ -112,6 +112,8 @@
 |----------|----------|
 |Imagen interfaz|![image](imagenes_cap_9/modulo_mark/I011.png)|
 
+### Módulo de Compras
+
 | Código Interfaz | I005 |
 |----------|----------|
 |Imagen interfaz|![image](../../04.Entregables/Entregable_PC3/Pantallas/ModCompras/MP6-.png)|
