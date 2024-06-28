@@ -69,6 +69,60 @@
 | 6 | El equipo de marketing envia los datos de campaña corregidos con respecto a la observacion realizada por el gestor de marketing. |
 | 7 | El caso termina |
 
+### Casos de uso para Compras
+**Caso de uso : Añadir proveedor**
+
+| Objetivo | <p align="left">Permitir que el Gestor de compras pueda añadir proveedores a la página de Migni Store.</p> | 
+|:--------------:|--------------|
+| Descripción | Proceso de registro de proveedores en la aplicación, con datos de empresa ya sea nombre, dirección, numero, rubro, correo y sitio web.  | 
+| Actor primario   | Gestor de compras | 
+|Actor secundario| - |
+|Precondiciones | El proveedor ya debe haber contactado con la empresa previamente |
+| Paso | <p align="center"> Acción </p> |
+| 1 | El gestor de compras accede a la pagina web |
+| 2 | El gestor de compras ingresa sus datos de inicio de sesión |
+| 3 | El gestor de compras se dirige al apartado de proveedores |
+| 4 | El gestor de compras se dirige a “añadir proveedores”|
+| 5 | El gestor de compras registra el nombre, teléfono, dirección, correo electrónico, rubro, sitio web y foto del proveedor |
+| 6 | El sistema guarda los datos del proveedor |
+| 7 | El sistema confirma de la creación de un nuevo proveedor |
+| 8 | El caso termina |
+
+**Caso de uso : Aceptar/Rechazar oferta del proveedor**
+
+| Objetivo | <p align="left"> Permitir que el gestor de compras pueda aceptar o rechazar la oferta realizada por el proveedor d</p> | 
+|:--------------:|--------------|
+| Descripción | Proceso en el cual se puede visualizar la oferta, con estado pendiente y aceptar o rechazar dicha oferta| 
+| Actor primario   | Gestor de compras | 
+|Actor secundario| - |
+|Precondiciones | El proveedor debe haber sido registrado por el gestor de compras |
+| Paso | <p align="center"> Acción </p> |
+| 1  | El gestor de compras ingresa a la plataforma web con su correo y contraseña|
+| 2  | El gestor de compras se dirige a la sección de proveedores |
+| 3  | El gestor de compras selecciona el proveedor que desee verificar su historial |
+| 4  | El gestor de compras accede a la parte de registros del proveedor elegido |
+| 5  | El gestor de compras revisa las solicitudes pendientes |
+| 6  | El gestor de compras ingresa a la solicitud pendiente|
+| 7  | El gestor de compras acepta o rechaza la oferta del proveedor |
+| 8  | Se actualiza el estado de la oferta  |
+| 9 | El caso se termina |
+
+**Caso de uso : Visualizar proveedores/historial**
+
+| Objetivo | <p align="left">  Permitir a los gestores poder acceder  y visualizar los proveedores y registros, con sus datos. </p> | 
+|:--------------:|--------------|
+| Descripción | Proceso mediante el cual los gestores pueden acceder a la visualización de proveedores y sus registros de compras.  | 
+| Actor primario | Gestor de compras | 
+|Actor secundario| - |
+|Precondiciones | El proveedor debe haber sido registrado por el gestor de compras |
+| Paso | <p align="center"> Acción </p> |
+| 1 | El gestor de compras ingresa a la plataforma web con su correo y contraseña. |
+| 2 | El gestor de compras ingresa a la sección de Proveedores |
+| 3 | El sistema muestra la sección de Proveedores que fueron registrados|
+| 4 | El gestor de compras elige de que proveedor va a revisar la información |
+| 5 | El gestor de compras selecciona la opción de registros |
+| 6 | El sistema muestra el historial de ofertas que fueron subidas a la pagina web y su estado|
+| 7 | El caso termina |
 
 
 ### Requerimientos de atributos de Calidad
