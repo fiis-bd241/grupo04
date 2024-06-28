@@ -6,3 +6,8 @@ Para ver el esquema completo, puede ingresar al figma del equipo: (https://www.f
 ![editar y revisar campañas](imagenes_cap_4/fig2.png)
 ![home equipo marketing y observaciones](imagenes_cap_4/fig3.png)
 ![atender observaciones y crear propuestas](imagenes_cap_4/fig4.png)
+
+## Módulo Compras:
+![imagen](imagenes_cap_4/C1.png)
+![imagen](imagenes_cap_4/C2.png)
+![imagen](imagenes_cap_4/C3.png)
