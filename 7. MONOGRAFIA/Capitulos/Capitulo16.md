@@ -6,7 +6,7 @@
 ### Explicación de las funcionalidades
 #### Gestor de marketing
 
-[campañas Vigentes](imagenes_cap16/modmark/gest1.png)
+![campañas Vigentes](imagenes_cap16/modmark/gest1.png)
 La primera funcionalidad es la de mostrar campañas vigentes, con un select para aquellas campañas que tengan a la fecha de hoy entre la fecha de inicio y la fecha de fin.
 
 [campañas Vigentes](imagenes_cap16/modmark/gest2.png)
