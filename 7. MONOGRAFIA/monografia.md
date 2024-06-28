@@ -8,7 +8,7 @@ Caballero Ortiz, José Alberto
 ## INTEGRANTES
 - Quispe Mitma Cesar Fernando
 - Damián Cutisaca Jhon Kenedy
-- Taipe Sich, Ronny Andy
+- Taipe Sicha, Ronny Andy
 - Loza Sanchez Gianmarco Alejandro
 - Salazar Uribe Christian Johmar
 - Peralta Gil Alexandra Valentina
