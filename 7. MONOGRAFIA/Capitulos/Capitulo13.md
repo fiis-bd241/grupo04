@@ -12,7 +12,7 @@ SELECT * FROM campaña
 WHERE CURRENT_DATE BETWEEN fecha_ini AND fecha_fin;
 ```
 Proceso Sin Índice:
-![image](imagen_cap12/marketing_sin_index.png)
+![image](imagen_cap_12/marketing_sin_index.png)
 
 Proceso Con Índice:
 ![image](imagen_cap_12/marketing_con_index.png)
