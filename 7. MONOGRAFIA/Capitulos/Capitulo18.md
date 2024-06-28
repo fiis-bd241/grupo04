@@ -12,6 +12,26 @@
 
 ## Configuración
 ### Instalación de InfluxDB
+1. En el buscador de google, buscamos influxdb y en la pagina principal, seleccionamos InfluxData Downloads
+![image](ImagenCap18/1-1.png)
+2. Ya dentro de la página: https://www.influxdata.com/downloads/ | copiamos el comando marcado abajo
+![image](ImagenCap18/6.png)
+3. Ahora ejecutamos Windows PowerSheell como administrador
+![image](ImagenCap18/7.png)
+4. Ejecutamos el comando que antes copiamos
+![image](ImagenCap18/8.png)
+5. Ejecutamos WindowsPowerShell en la carpeta donde se instalo y usamos el comando ".\influxdb.exe"
+![image](ImagenCap18/9.png)
+6. Nos sale este texto, que indica el puerto que tenemos habilitado para ejecutar influxdb
+![image](ImagenCap18/10.png)
+7. En nuestro navegador ponemos "http://127.0.0.1:8086/signin" y le damos a Get Started
+![image](ImagenCap18/11.png)
+8. Nos registramos y le damos a Continue
+![image](ImagenCap18/12.png)
+9. En este pantalla podemos configurar más a detalle, por el momento le daremos a Configure Later
+![image](ImagenCap18/13.png)
+10. Y listo tendriamos influxdb operativo para trabajar
+![image](ImagenCap18/14.png)
 
 ## Implementación
 ### Trabajar con InfluxDB
