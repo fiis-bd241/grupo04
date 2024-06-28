@@ -33,3 +33,33 @@
 
   **- Proponer campaña**
     - Responsabilidades: Permite al equipo de marketing generar campañas para la posterior revision del gestor de marketing.
+
+ ### Módulo Compra-Proveedores
+- Descripción: Este módulo de compra-proveedores permite al gestor de compras añadir nuevos proveedores a la base de datos de la empresa, así como también facilita la gestión de las ofertas recibidas de dichos proveedores. Desde aceptar hasta rechazar ofertas, además permite la visualización completa de los datos del proveedor, desde sus datos hasta el historial de ofertas que han realizado a la empresa, este modulo tiene el fin de poder optimizar el proceso de gestión de compras realizadas a los proveedores.
+
+- Responsabilidades: Gestionar el proceso de compra, elección de proveedores, añadir nuevos proveedores, subir los archivos de la cotizacion que el proveedor le ofrece y confirmar o rechazar las ofertas del proveedor.
+
+- Interacción: Con el módulo de almacen y finanzas.
+
+- Funcionalidad:
+
+  **- Home Gestor Compra**
+    - Responsabilidades: Permite al gestor de compras tener su propia vista de las partes que constituyen su módulo, como son la visualizacion de proveedores, acceso al stock y acceso a finanzas.
+
+  **- Proveedores Actuales**
+    - Responsabilidades: Permite al gestor visualizar y acceder al historial de todos los proveedores con las que la empresa esta trabajando.
+
+  **- Añadir proveedores**
+    - Responsabilidades: Permite al gestor de compras añadir nuevos proveedores con los que va a trabajar.
+
+  **- Perfil del proveedor**
+    - Responsabilidades: Permite al gestor de compras visualizar, gestionar y actualizar la información de los proveedores con los que está trabajando.
+
+  **- Historial del proveedor**
+    - Responsabilidades: Muestra al gestor de compras un registro detallado de las ofertas no aceptadas, aceptadas y pendientes por aceptar/rechazar, dentro de la plataforma a lo largo del tiempo. Además permite que el gestor pueda realizar un seguimiento de sus ofertas pasadas.
+
+  **- Datos de cotización**
+    - Responsabilidades: Permite visualizar el detalle de la cotización de productos que ha realizado el proveedor a la empresa.
+
+  **- Confirmar Oferta**
+    - Responsabilidades: Permite al gestor de compras aceptar o rechazar la oferta final que ha realizado el proveedor hacia la empresa.
