@@ -41,7 +41,7 @@
 ## Interfaces de requerimientos
 | Código Interfaz | I001  |
 |----------|----------|
-|Imagen interfaz|![image](Pantallas/ModMarketing/I007.png)|
+|Imagen interfaz|![image](04.Entregables/Entregable_PC3/Pantallas/ModMarketing/I007.png)|
 
 | Código Interfaz | I002  |
 |----------|----------|
