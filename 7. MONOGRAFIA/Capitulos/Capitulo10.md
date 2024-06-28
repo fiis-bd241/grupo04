@@ -1,4 +1,4 @@
-# Capítulo 10: Asignación de códigos, requerimientos e interfaces
+# Capítulo 10: Sentencias SQL por prototipo
 
 
 ## Módulo marketing
