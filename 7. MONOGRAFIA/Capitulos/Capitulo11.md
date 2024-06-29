@@ -28,7 +28,9 @@ pago (detalle_pago),tipos_pago,venta, ventaxprod, personas, producto
 
 ## Módulo Almacen
 
-[Carpeta contenedora de los archivos](archivos_cap16/modulo_almacen/Migni_Store_Inserts.sql)
+[Carpeta contenedora de inserts](archivos_cap16/modulo_almacen/Migni_Store_Inserts.sql)
+
+[Carpeta contenedora de los csv](archivos_cap_11/Mod_Alamacen)
 
 ## Módulo Finanzas
 [Carpeta contenedora de los archivos](archivos_cap_11/ModFinanzas)
