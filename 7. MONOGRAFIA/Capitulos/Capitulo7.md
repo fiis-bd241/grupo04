@@ -80,6 +80,16 @@ Columnas: id_estado_pedido,nombre_tipo_entrega
 |D|Despachado|
 |R|Retornado|
 
+### Tipos de pago
+Columnas: id_tipo_pago, nombre_tipo 
+
+| id_tipo_pago | nombre_tipo |
+|------------------|----------------------|
+| 11                | Tarjeta de crédito               |
+| 12               | Tarjeta de débito      |
+| 13               | Efectivo         |
+| 14                | Contraentrega            |
+| 15                | Yape/Plin          |
 
 
 
