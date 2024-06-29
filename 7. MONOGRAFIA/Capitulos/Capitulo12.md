@@ -44,3 +44,18 @@ Esta funcionalidad permitirá cumplir con los requerimientos Establecer fecha de
 |:-------------:|:---------------:|
 | 1       | Al ingresar a la sección inventario se podrá visualizar la lista de todos los productos y poder filtrar según la necesidad que se busca<br> ![image](imagenes_cap16/mod_Almacen/Pantalla_Inventario.png)| 
 | 2    | Para saber lso movimientos efectuados y los detalles de los productos con su cantidad, se podrá visualizar en la sección Kardex<br> ![image](imagenes_cap16/mod_Almacen/Vista_Kardex.png)|
+
+
+
+## Módulo de Ventas
+**Funcionalidad primaria elegida:** Gestionar el flujo de compra de prodcutos por parte de cliente<br>
+**Sustentación:** Como se trata de una página web que permite ventas online, es muy importante manejar y controlar el flujo de ventas que al dia recibe la empresa por parte de numerosos clientes.<br>
+Esta funcionalidad permitirá cumplir con los requerimientos de las pantallas relacionadas a Ver Cátalogo de productos, Realizar una compra , Elegir método de pago.
+
+| Actividad     | Descripción        | 
+|:-------------:|:---------------:|
+| 1       | Al ingresar a la web el cliente podra ver todo el arsenal de productos con los que cuenta la empresa para que pueda encontrar el que desee comprar.<br>![image](imagenes_cap_4/VistasVentas/catalogo.png)| 
+| 2    | Luego de escojer sus productos, el cliente pasa a la seccion del carrito de compras donde puede configurar ciertos aspectos de los porductos que esta comprando. Se le detalla los precios que va a tener que pagar y  tambien se le informa que prosiga con el proceso de pago con un método de pago permitido.<br> ![image]( imagenes_cap_4/VistasVentas/carrito.png) | 
+| 3 | Se procede a elegir un método de pago y luego rellenar los datos correpsondientes a dicho pago.entonces ya podria procesarse y registrarse la compra en los historiales de venta de la empresa.<br> ![image](imagenes_cap_4/VistasVentas/tipo_pago.png) ! |
+
+
