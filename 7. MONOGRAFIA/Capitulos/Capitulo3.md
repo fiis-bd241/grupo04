@@ -186,3 +186,63 @@
     - Responsabilidades: Ofrecer herramientas de análisis financiero.
     - Funciones: Evaluar la rentabilidad, liquidez y solvencia de la empresa. Realizar proyecciones financieras y escenarios hipotéticos para la toma de decisiones 
       estratégicas.
+
+
+## Módulo CRM
+
+- Descripción: Este módulo está diseñado para gestionar la interacción con los clientes a través de diversos canales, clasificar y analizar comentarios, y facilitar la comunicación masiva vía WhatsApp y correo electrónico. Además, incluye herramientas de análisis de datos para identificar tendencias de compra y productos menos comprados, así como la visualización de tablas en PostgreSQL y la clasificación de usuarios mediante un pipeline.
+
+- Responsabilidades: Gestionar y clasificar comentarios de usuarios,puntuar comentarios basados en la posibilidad de compra,enviar y atender mensajes de WhatsApp y correos electrónicos,realizar análisis de datos para detectar tendencias de compra y productos menos comprados,visualizar y gestionar tablas en PostgreSQL yclasificar usuarios mediante un pipeline.
+
+- Interacción: Con el módulo de ventas y soporte técnico.
+
+- Detalles de estado:
+  
+  - Comentarios de Usuarios
+  - NUEVO: Comentarios recién recibidos que aún no han sido clasificados.
+  - CLASIFICADO: Comentarios que han sido analizados y categorizados.
+  - PUNTUADO: Comentarios que han sido puntuados según la posibilidad de compra.
+
+
+  - Mensajes de WhatsApp y Correo Electrónico
+  - ENVIADO: Mensajes que han sido enviados a múltiples destinatarios.
+  - ATENDIDO: Mensajes que han recibido una respuesta y han sido gestionados.
+  
+  
+  - Análisis de Datos
+  - PROCESADO: Datos que han sido analizados para detectar tendencias de compra y productos menos comprados.
+
+  - Tablas de PostgreSQL
+  VISUALIZADO: Tablas que han sido consultadas por el gestor de CRM.
+
+  - Clasificación de Usuarios
+  - NUEVO: Usuarios que han sido recién ingresados al pipeline.
+  - CALIFICADO: Usuarios que han sido evaluados y clasificados según criterios definidos.
+
+
+
+- Funcionalidad:
+
+  **- Home Gestor de CRM**
+    - Responsabilidades: Permite al gestor de CRM acceder a las funciones principales del módulo, como la gestión de comentarios, el envío de mensajes, el análisis de datos, la visualización de tablas y la clasificación de usuarios.
+
+  **- Gestión de Comentarios**
+    - Responsabilidades: Permite al gestor clasificar y puntuar los comentarios de los usuarios en base a productos específicos y la posibilidad de compra.
+
+  **- Enviar y Atender Mensajes de WhatsApp**
+    - Responsabilidades: Facilita el envío masivo de mensajes de WhatsApp y la atención de respuestas recibidas.
+    - 
+  **- Enviar y Atender Mensajes de Email**
+    - Responsabilidades: Facilita el envío masivo de correos electrónicos y la gestión de las respuestas recibidas.
+      
+  **- Análisis de Datos**
+    - Responsabilidades: Permite al gestor analizar datos para identificar productos menos comprados y tendencias de compra de los clientes.
+
+
+  **- Visualización de Tablas de PostgreSQL**
+    - Responsabilidades: Permite al gestor de CRM visualizar y gestionar las tablas de la base de datos PostgreSQL para obtener una visión completa de la información.
+
+  **- Clasificación de Usuarios mediante Pipeline**
+    - Responsabilidades: Permite al gestor clasificar usuarios en diferentes etapas del pipeline según su interacción y calificación.
+
+ 
