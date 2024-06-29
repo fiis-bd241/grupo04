@@ -1,4 +1,5 @@
 # Capítulo 16: Versión Final de la Aplicación
+
 ## Módulo marketing
 
 [archivos aplicativo marketing](archivos_cap16/modulo_marketing)
@@ -55,9 +56,13 @@ Se verifica que se actualizó la observación.
 Se verifica que se realizo la correccion con respecto a la descripcion de la observacion (se disminuyo el descuento).
 
 ## Módulo Compras
-### CODIGO
+### Código
 [APLICATIVO COMPRAS](archivos_cap16/mod_compra/COMPRAS)
 
 ### Explicación de las funcionalidades
 
 [EXPLICACION COMPRAS](archivos_cap16/mod_compra/MODCOMPRA.md)
+
+## Módulo Almacén
+### Código
+[APLICATIVO ALMACEN](archivos_cap16/mod_compra/COMPRAS)
