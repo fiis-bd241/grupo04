@@ -3,7 +3,7 @@ import psycopg2
 class ConexionDB():
     def __init__(self):
         self.conexion = psycopg2.connect(
-            dbname = 'modfinfinal',
+            dbname = 'finanzas',
             user = "postgres",
             password = "1234",
             host = "localhost",
