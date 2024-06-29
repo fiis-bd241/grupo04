@@ -2,7 +2,8 @@
 ## NOTA: SE TRABAJÓ EL FLUJO DE ALMACÉN CON EL SIGUIENTE MODELO CONCEPTUAL Y LÓGICO (que por tema se tiempo no se pudo consolidar con los de mi grupo)
 
 ![Modelo conceptual2](imagenes_cap5/Flujo_2_Almacen_ER.png)
-![Modelo lógico2](imagenes_cap5/Flujo_2_Almacen_RS.png)
+
+![Modelamiento lógico2](imagenes_cap5/Flujo_2_Almacen_RS.png)
 
 ## EXPLICACION DE LAS PANTALLAS
 ### GESTOR DE ALMACEN
