@@ -1207,10 +1207,10 @@ WHERE id_repartidor = <1> AND id_pedido = <2>>;
 ### Eventos: 
 * **Visualizar el historial de pedido: El repartidor de id = <1> podra visualizar todas las entregas que realizó**
 ```
-SELECT id_venta,fecha_entrega,e.estado_pedido
-FROM pedido
-INNER JOIN tipo_est_pedido e on pedido.id_est_pedido = tipo_est_pedido.id_est_pedido
-WHERE id_repartidor = <1>;
+SELECT p.id_venta,p.fecha_entrega,e.estado_pedido
+FROM pedido p
+INNER JOIN tipo_est_pedido e on p.id_est_pedido = e.id_est_pedido
+WHERE p.id_repartidor = <1>;
 ```
 ### Código Requerimiento : R - 028
 ### Codigo interfaz : I - 028
