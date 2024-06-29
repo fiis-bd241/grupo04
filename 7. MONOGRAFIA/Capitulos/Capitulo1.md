@@ -280,7 +280,7 @@
 
 ### 6. Proceso de CRM
 
-![Proceso de CRM](../../04.Entregables/Entregable2/ProcesosTOBE/ProcesosMigniStore - ProcesoCRM-tobe.png)
+![Proceso de CRM](../../04.Entregables/Entregable2/ProcesosTOBE/ProcesoCRM-tobe.png)
 
 | Secuencia | Actividad                                | Descripción                            | Responsable      |
 |-----------|------------------------------------------|-----------------------------------------------------------------------|------------------|
