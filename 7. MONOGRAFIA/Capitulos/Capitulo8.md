@@ -609,5 +609,6 @@ CREATE TABLE EstadoxItem
   FOREIGN KEY (Id_item_est__resultados) REFERENCES Item_estado_resultados(Id_item_est__resultados),
   FOREIGN KEY (id_estad_result) REFERENCES Estado_de_Resultados(id_estad_result)
 );
-
 ```
+
+# Creación de tablas Almacén
