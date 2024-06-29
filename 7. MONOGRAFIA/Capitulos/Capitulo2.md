@@ -196,13 +196,24 @@
 
 | Objetivo | <p align="left"> Permite al Gestor de Almacén ver los detalles de los pedidos despachados con tu tipo de movimiento </p> | 
 |:--------------:|--------------|
-| Descripción | Se podrá los detalles del movimiento de los productos de mi almacén| 
+| Descripción | Se podrá ver los detalles del movimiento de los productos de mi almacén| 
 | Actor primario | Gestor de almacén | 
 |Actor secundario|-|
 |Precondiciones |El pedido ha sido recogido de almacén y está en estado 'P'|
 | Paso | <p align="center"> Acción </p> |
-| 1 |En el marco izquierdo ingresar a la sección 'Kardex' que mostrarála tabla Kardex con los campos: ID Kardex, Fecha, Movimiento, Pedido, Tipo entreg|
+| 1 |En el marco izquierdo ingresar a la sección 'Kardex' que mostrará tabla Kardex con los campos: ID Kardex, Fecha, Movimiento, Pedido, Tipo entreg|
 | 2 | Al dar clic en una fila de la tabla kardex, en el marco derecho se mostrará una tabla con los campos: Producto, Cantidad que indicarán a qué productos se ha efectuado ese movimiento en almacén|
+
+**Caso de uso : Nuevo Producto**
+
+| Objetivo | <p align="left"> Permite al Gestor de Almacén ingresar un nuevo producto a mis almacenes</p> | 
+|:--------------:|--------------|
+| Descripción | Registrar las caraacterísticas del nuevo producto| 
+| Actor primario | Gestor de almacén | 
+|Actor secundario|-|
+|Precondiciones |Se efectúo una nueva compra de un producto nuevo|
+| Paso | <p align="center"> Acción </p> |
+| 1 |En el marco izquierdo ingresar a la sección 'Nuevo Producto' que mostrarála los labels y combo box para registrar los detalles y crear el nuevo producto en el sistema|
 
 ## -  Casos de uso para Distribucion
 
