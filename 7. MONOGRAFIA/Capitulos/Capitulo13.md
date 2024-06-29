@@ -161,3 +161,32 @@ Proceso Sin Índice:
 Proceso Con Índice:
 ![image](imagen_cap_12/v_con.png)
 
+## Módulo Finanzas
+### Indice Nro_Factura
+
+Vista de Factura
+```sql
+CREATE VIEW FACTURA AS
+	select f.nro_factura, f.fecha_emision,
+	f.monto,f.id_persona, f.ruc_proveedor,  tif.tipo_fac, e.nom_estado
+	from factura f
+	inner join Tipo_Factura tif on f.id_tip_fac = tif.id_tip_fac
+	inner join Estado e on f.id_estado = e.id_estado
+	order by f.nro_factura;
+```
+Creando Indices:
+```sql
+  DROP INDEX IXFactura;
+  CREATE INDEX IXFactura ON Factura(nro_factura);
+```
+Análisis
+```sql
+	EXPLAIN ANALYZE
+	SELECT * FROM FACTURA
+	WHERE nro_factura = '2022001';
+```
+Proceso Sin Índice:
+![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC4/Factura%20sinindice.PNG)
+
+Proceso Con Índice:
+![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC4/Facturaconindice.PNG)
