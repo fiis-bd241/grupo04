@@ -466,5 +466,142 @@ INNER JOIN Repartidor r ON p.Id_repartidor = r.Id_repartidor
 WHERE p.Id_pedido = <1>;
 ```
 
+## 3.3 Modulo de Ventas
+### Código Requerimiento : R - 012
+### Codigo interfaz : I - 012
+### Imagen interfaz : 
+![image](Pantallas/ModVentas/catalogo.png)
+### Sentecias SQL:
+### Eventos: 
+* **Pantalla Visualizar Catálogo productos: Se mostrará todos los productos al cliente**
+```
+SELECT id_producto,nombre_producto,precio_unit FROM PRODUCTO;
+```
 
+### Código Requerimiento : R - 013
+### Codigo interfaz : I - 013
+### Imagen interfaz : 
+![image](Pantallas/ModVentas/info_prod_catalogo.png)
+### Sentecias SQL:
+### Eventos: 
+* **Pantalla Visualizar información detallada del producto**
+```
+SELECT P.id_producto,nombre_producto,descripcion_prod,precio_unit,cant_max as cantidad_en_stock,t.nombre as Tipo_Producto,c.nombre as categoria_prod FROM PRODUCTO P
+JOIN CATEGORIA_PROD C ON C.ID_CATEGORIA_PROD = P.ID_CATEGORIA_PROD
+JOIN TIPO_PROD T ON C.ID_tipo_prod = T.id_tipo_prod;
+```
+### Código Requerimiento : R - 014
+### Codigo interfaz : I - 014
+### Imagen interfaz : 
+![image](Pantallas/ModVentas/carrito.png)
+### Sentecias SQL:
+### Eventos: Decidir comprar algo en el carro de compras
+* **Pantalla carrito de compras**
+```
+select nombre_producto,descripcion_prod,cant_prod,cant_prod*precio_unit as precio ,c.esta_activo,direccion,
+(select sum(cant_prod*precio_unit) AS PRECIO_FINAL from producto p
+ join ventaxprod V ON  p.id_producto = v.id_producto
+JOIN venta ve on ve.id_venta=v.id_venta
+join persona pe on ve.id_persona = pe.id_persona
+join cupón c on c.id_cupón=v.id_cupón
+ where ve.id_venta = <900001>
+ group by ve.id_venta
+ )
+
+from producto p
+join ventaxprod V ON  p.id_producto = v.id_producto
+JOIN venta ve on ve.id_venta=v.id_venta
+join persona pe on ve.id_persona = pe.id_persona
+join cupón c on c.id_cupón=v.id_cupón
+where ve.id_venta = 900001
+```
+### Código Requerimiento : R - 015
+### Codigo interfaz : I - 015
+### Imagen interfaz : 
+![image](Pantallas/ModVentas/tipo_pago.png)
+### Sentecias SQL:
+### Eventos: Elegir método de pago
+* **Pantalla Visualizar posibles tipos de pago a elección del cliente**
+```
+select t.nombre_tipo as tipo_pago,nro_tarjeta from Tipos_pago T
+join detalle_pago D on T.ID_TIPO_PAGO = D.ID_TIPO_PAGO
+JOIN venta v on v.id_detalle_pago = d.id_detalle_pago
+where v.id_venta = <900001>
+```
+### Código Requerimiento : R - 016
+### Codigo interfaz : I - 016
+### Imagen interfaz : 
+![image](Pantallas/ModVentas/info_despues_comprar.png)
+### Sentecias SQL:
+### Eventos: Decidir ver información mas detallada mientras esta en el carrito de compras
+* **Pantalla Visualizar los detalles del producto que esta comprando en específico**
+```
+select nombre_producto,descripcion_prod,pe.direccion,cant_prod,(cant_max-cant_prod) as stock_restante,cant_prod*precio_unit as precio,
+d.fecha_pago as fecha_en_el_carrito,t.nombre_tipo
+from producto p
+join ventaxprod V ON  p.id_producto = v.id_producto
+JOIN venta ve on ve.id_venta=v.id_venta
+join persona pe on ve.id_persona = pe.id_persona
+join detalle_pago  d on ve.id_detalle_pago = d.id_detalle_pago
+join tipos_pago t on t.id_tipo_pago = d.id_tipo_pago
+where ve.id_venta = 900001 and p.id_producto=2
+```
+### Código Requerimiento : R - 017
+### Codigo interfaz : I - 017
+### Imagen interfaz : 
+![image](Pantallas/ModVentas/cambio_direccion.png)
+### Sentecias SQL:
+### Eventos: Elegir (si lo desea) cambiar la direccion de envió antes de registrar su compra
+* **Pantalla Visualizar cambio de dirección del cliente**
+```
+Primero actualizamos
+
+UPDATE persona
+SET direccion = 'Av. Siempre Viva 123'
+WHERE id_persona = 1008
+
+Luego verificamos dicha actualización
+
+select direccion ,d.nombre as nombre_distrito from persona P
+JOIN DISTRITO D ON P.ID_DISTRITO=D.ID_DISTRITO
+WHERE id_persona = 1008
+```
+### Código Requerimiento : R - 018
+### Codigo interfaz : I - 018
+### Imagen interfaz : 
+![image](Pantallas/ModVentas/historial_ventas_gestor.png)
+### Sentecias SQL:
+### Eventos: Decidir ver el historial de ventas de la empresa para dar seguimiento
+* **Pantalla Visualizar historial de ventas**
+```
+select vp.id_venta,p.nombre,sum(vp.monto_total) as monto_final,t.nombre_tipo,d.fecha_pago,d.hora_pago from VentaXProd  vp
+JOIN venta v on vp.id_venta=v.id_venta
+join persona p on p.id_persona=v.id_persona
+join detalle_pago  d on v.id_detalle_pago = d.id_detalle_pago
+join tipos_pago t on t.id_tipo_pago = d.id_tipo_pago
+group by vp.id_venta,p.nombre,t.nombre_tipo,d.fecha_pago,d.hora_pago
+order by d.fecha_pago desc
+```
+
+### Código Requerimiento : R - 019
+### Codigo interfaz : I - 019
+### Imagen interfaz : 
+![image](Pantallas/ModVentas/historial_cliente.png)
+### Sentecias SQL:
+### Eventos: Decidir ver el historial de ventas de algun cliente en especifico
+* **Pantalla Visualizar historial de ventas de clientes**
+```
+
+select vp.id_venta,pr.id_producto,pr.nombre_producto,vp.cant_prod as cantidad,pr.precio_unit as precio_unitario,
+vp.cant_prod*pr.precio_unit as sub_total,c.esta_activo,vp.cant_prod*pr.precio_unit as monto,
+t.nombre_tipo as tipo_pago from VentaXProd  vp
+JOIN venta v on vp.id_venta=v.id_venta
+join producto pr on pr.id_producto=vp.id_producto
+join persona p on p.id_persona=v.id_persona
+join cupón c on c.id_cupón=vp.id_cupón
+join detalle_pago  d on v.id_detalle_pago = d.id_detalle_pago
+join tipos_pago t on t.id_tipo_pago = d.id_tipo_pago
+where p.nombre = 'Brittney'
+
+```
 
