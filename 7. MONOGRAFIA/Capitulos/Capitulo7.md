@@ -31,3 +31,56 @@ Columnas: id_est_pedido, estado_pedido
 |E|ENTREGADO|
 |P|PENDIENTE|
 |C|CANCELADO|
+
+### Estado_Cliente
+Columnas: id_estado_cliente, id_estado_cliente
+
+|id_estado_cliente|id_estado_cliente|
+|----------------------|------------|
+|A|Activo|
+|C|No concurrente|
+|F|Falta pago|
+|I|Incomunicado|
+
+### Tipo_Almacén
+Columnas: id_almacen, tipo_almacen
+
+|id_almacen|tipo_almacen|
+|----------------------|------------|
+|A1|Maquillaje|
+|A2|Papelería|
+
+### Tipo_Movimiento
+Columnas: id_movimiento,nombre_movimiento
+
+|id_movimiento|nombre_movimiento|
+|----------------------|------------|
+|1|Salida Entrega|
+|2|Salida Despacho|
+|3|Salida Envío|
+|4|Entrada Recepción|
+|5|Entrada Devolución|
+
+### Tipo_Entrega
+Columnas: id_tipo_entrega,nombre_tipo_entrega
+
+|id_tipo_entrega|nombre_tipo_entrega|
+|----------------------|------------|
+|A|Domicilio|
+|B|Recojo|
+|C|Envío|
+
+### Estado_Pedido
+Columnas: id_estado_pedido,nombre_tipo_entrega
+
+|id_estado_pedido|nombre_estado_pedido|
+|----------------------|------------|
+|L|Leído|
+|P|En Preparación|
+|D|Despachado|
+|R|Retornado|
+
+
+
+
+
