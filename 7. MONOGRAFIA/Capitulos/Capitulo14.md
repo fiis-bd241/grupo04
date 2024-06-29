@@ -29,7 +29,7 @@ SELECT actualizar_stock_inventario();
 ```
 
 - Proceso Batch del módulo de almacén ingresar nuevos productos a mi tabla Producto, que puede ser en un periodo semestral al traer nueva mercancía para comercializar
-- 
+
 ```sql
 DO $$
 DECLARE
