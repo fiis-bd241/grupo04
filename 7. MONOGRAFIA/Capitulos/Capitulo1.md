@@ -33,7 +33,7 @@
 
 ## PROCESO AS IS
 
-### Proceso de Compra
+### 1. Proceso de Compra
 ![Proceso de Compra](../../04.Entregables/Entregable2/ProcesosASIS/BPMN_CompraASIS.png)
 
 |Secuencia | Actividad | Descripción | Responsable |
@@ -53,7 +53,7 @@
 | 13 | Envió al almacén | Se envía al almacén todos los productos recepcionados para su posterior revisión | Gestor de compra |
 | 14 | Recepción en almacén | En el almacén recepciona todos los productos y serán revisados para asegurarse que llegaron en correcto estado | Gestor de almacén |
 
-### Proceso de Venta
+### 2. Proceso de Venta
 
 ![Proceso de Venta](../../04.Entregables/Entregable2/ProcesosASIS/ProcesoVentaBPMN.png)
 
@@ -70,7 +70,7 @@
 | 9        | Envío de código de compra               | Se genera manualmente un código de compra único y se envía al cliente por correo electrónico.                    | Gestor de Ventas |
 | 10      | Emitir comprobante de pago electrónico | Se genera manualmente un comprobante de pago y se envía al cliente por correo electrónico. | Gestor de Ventas |
 
-### Proceso de Almacén
+### 3. Proceso de Almacén
 
 ![Proceso de Almacén](../../04.Entregables/Entregable2/ProcesosASIS/AsIs%20Almacen.png)
 | Secuencia | Actividad                                | Descripción                                                                                                      | Responsable      |
@@ -81,7 +81,7 @@
 |4| Realizar Cotización de Nuevos Productos|Si el Stock es 0, se cotiza con la lista de proveedores para recibir nueva mercadería| Gestor de Almacén|
 |5| Actualizar|Al comprar nueva mercancía, se deja el stock en almacén y se registra la cantidad que se compró| Gestor de Almacén|
 
-### Proceso de Distribución
+### 4. Proceso de Distribución
   
 ![Proceso de Distribución](../../04.Entregables/Entregable2/ProcesosASIS/DistribucionAsis.jpeg)
 
@@ -101,7 +101,7 @@
 |12|Recepcion del producto por el cliente|Si el código es correcto,el cliente recibe el producto |Repartidor|
 |13|Actualizar el estado de productos de almacen|Si la entrega se realiza con éxito,se actualiza el estado del pedido a ENTREGADO|Repartidor|
 
-### Proceso de Marketing
+### 5. Proceso de Marketing
 
 ![Proceso de Marketing](../../04.Entregables/Entregable2/ProcesosASIS/BPMN_marketing.jpeg)
 
@@ -121,7 +121,7 @@
 | 12        | Realización de correcciones | La campaña que no ha sido aprobada se corregirá en los puntos que el Director de marketing haya considerado no aprovechables o que reduzcan la eficacia de la publicidad. | Equipo de marketing |
 | 13        | Se publica la campaña | La campaña será publicada dependiendo de lo acordado y aprobado anteriormente. | Gestor de marketing |
 
-### Proceso de CRM
+### 6. Proceso de CRM
 
 ![Proceso de CRM](../../04.Entregables/Entregable2/ProcesosASIS/Proceso-CRM.png)
 
@@ -139,7 +139,7 @@
 | 10        |Información y puesta en marcha | Se envian las campañas y avisos a los clientes , asi que si se dio el caso de ofertas|gestor CRM 
 | 11     | revision de la calidad hacia el cliente | se revisan los libros de reclamaciones para ver posibles quejas y puntos a mejorar  | gestor CRM |
 
-### Proceso de Finanzas
+### 7. Proceso de Finanzas
 
 ![Proceso de Finanzas](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable2/ProcesosASIS/Proceso%20ASIS%20finanzas.png)
 
@@ -167,7 +167,7 @@
 
 ## PROCESO TO BE
 
-### Proceso de Compra
+### 1.Proceso de Compra
 ![Proceso de Compra](../../04.Entregables/Entregable2/ProcesosTOBE/BPMN_CompraTOBE.png)
 
 |Secuencia | Actividad | Descripción | Responsable |
@@ -188,7 +188,7 @@
 | 14 | Enviar al almacén | Se envía al almacén todos los productos recepcionados para su posterior revisión | Gestor de compra |
 | 15 | Recepción en almacén | En el almacén recepciona todos los productos y serán revisados para asegurarse que llegaron en correcto estado | Gestor de almacén |
 
-### Proceso de Venta
+### 2. Proceso de Venta
 
 ![Proceso de Venta](../../04.Entregables/Entregable2/ProcesosTOBE/VentaTOBE2.png)
 
@@ -214,7 +214,7 @@
    productos al carro de compras.
 6) La **emision de comprobante de pago** ya no será manual. La misma página los puede enviar.
 7) Con respecto al tema del gestor de ventas, se han establecido permisos para que, al ingresar a la página web en su respectivo rol, pueda acceder a múltiples opciones que un usuario común no puede visualizar, como el historial de ventas. Allí podrá gestionar y revisar la trayectoria de las ventas en cualquier unidad de tiempo, por ejemplo, las ventas del día, de la semana, del mes, etc. Esto con la finalidad de realizar seguimiento a las ventas y los productos más vendidos, tener un mejor conocimiento del inventario que se debe conseguir, y ayuda en las planificaciones financieras en la elaboración de presupuestos.
-### Proceso de Almacén
+### 3. Proceso de Almacén
 
 ![Proceso de Almacén](../../04.Entregables/Entregable2/ProcesosTOBE/ToBeAlmacen.jpg)
 |Secuencia | Actividad | Descripción | Responsable |
@@ -232,7 +232,7 @@
 | 11 | Almacenar mercanción | El personal distribuirá los articulos según su ubicación correspondiente en los andamios del almacén. | Personal de almacén |
 | 12 | Registrar artículo defectuoso | Si se encuentra un producto defectuoso, se registrará en el sistema con las características defectuosa, el proveedor y código del producto. | Gestor de almacén |
 
-### Proceso de Distribución
+### 4. Proceso de Distribución
   
 ![Proceso de Distribución](../../04.Entregables/Entregable2/ProcesosTOBE/DistribucionTobe.jpeg)
 
@@ -254,7 +254,7 @@
 |14|Actualizar el estado del pedido a "ENTREGADO"|El repartidor entra a la lista de sus pedidos y confirma que se ha entregado el pedido ,lo que actualiza el estado del pedido a ENTREGADO automaticamente en la lista del gestor de ventas|Repartidor|
 |15|Reprogramar pedido|El pedido por alguna razon,como que el cliente no llegó al punto de encuentro,el codigo de compra era incorrecto, no se pudo entregar,el repartidor oprime la opcion de reprogramar pedido y el cliente debe establecer nueva fecha|Repartidor|
 
-### Proceso de Marketing
+### 5. Proceso de Marketing
 
 ![Proceso de Marketing](../../04.Entregables/Entregable2/ProcesosTOBE/BPMN_MARKETINGTOBE.jpeg)
 
@@ -276,7 +276,10 @@
 | 14        | Realización de correcciones | La campaña que no ha sido aprobada se corregirá en los puntos que el Director de marketing haya considerado no aprovechables o que reduzcan la eficacia de la publicidad. | Equipo de marketing |
 | 15        | Se publica la campaña | La campaña será publicada dependiendo de lo acordado y aprobado anteriormente. | Gestor de marketing |
 
-### Proceso de Finanzas
+### 6. Proceso de CRM
+
+![Proceso de CRM](../../04.Entregables/Entregable2/ProcesosTOBE/TOBEProcesoCRM.png)
+### 7. Proceso de Finanzas
 
 ![Proceso de Finanzas](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable2/ProcesosTOBE/Proceso%20TOBE%20Finanzas.png)
 
@@ -295,11 +298,6 @@
 
 ### Cambios implementados: 
 - Anteriormente los registro se hacen mediante un excel y cuando se recepciona hacia el gesto de costos es median un correo o whattsap pero con el nuevo sistema podra registrar todo en el sitio web de manera que al registrar las ventas, los gastos, costos y pagos automáticamente se tendrá la suma total de todos que se alamnecará en una base datos de manera que eso servirá para realizar automáticamente los asientos contables y el estado de resultados además que dentro del sistema web podra registrar todas las facturas y transacciones donde podra ver el resumen de ello y darse cuenta más fácil que facturas faltan pagar o cobrar.
-
-  
-### Proceso de CRM
-
-![Proceso de CRM](../../04.Entregables/Entregable2/ProcesosTOBE/TOBEProcesoCRM.png)
 
 ### 1.3 Motivación
 -  La principal motivación para elegir a "Migni Store" y desarrollar una página web es el potencial de crecimiento que ofrece. Al ser una empresa pequeña en el mercado de la venta de papelería y maquillaje para dama, el 
