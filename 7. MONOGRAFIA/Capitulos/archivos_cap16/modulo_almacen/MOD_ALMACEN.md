@@ -157,10 +157,8 @@ query = '''
             JOIN Colores c ON p.id_color = c.id_color
             JOIN Categoria_Producto cp ON p.nombre_categoria = cp.nombre_categoria
             JOIN Tipo_Producto tp ON cp.id_tipo_producto = tp.id_tipo_producto
-            WHERE tp.nombre_tipo_producto = 'Papelería';
+            WHERE tp.id_tipo_producto = 2;
         '''
-        cursor.execute(query)
-        self.tabla_frame(cursor.fetchall())
 ```
 
 ![Imagen](../../imagenes_cap16/mod_Almacen/Filtro_Sin_Stock.png)
@@ -305,9 +303,7 @@ query = '''
             LEFT JOIN
                 Inventario inv ON p.id_producto = inv.id_producto
             WHERE 
-                pd.id_pedido = %s
-                AND pd.id_estado_pedido = 'L'
-                AND v.id_estado_venta = 'C'   
+                pd.id_pedido = %s  
         '''
         cursor.execute(query,(id_pedido,))
 ```
@@ -333,6 +329,26 @@ query = '''
                     WHERE
                         te.nombre_tipo_entrega = %s           
                 '''
+query = '''
+                    SELECT
+                        p.id_pedido,
+                        te.nombre_tipo_entrega,
+                        p.fecha_entrega,
+                        (p.fecha_entrega - CURRENT_DATE) AS dias_faltantes,
+                        p.cod_venta,
+                        CONCAT(pe.nombre, ' ', pe.primer_apellido) AS nombre_repartidor
+                    FROM
+                        Pedido p
+                    INNER JOIN
+                        Tipo_Entrega te ON p.id_tipo_entrega = te.id_tipo_entrega
+                    LEFT JOIN
+                        Persona pe ON p.id_repartidor = pe.id_persona
+                    INNER JOIN
+                        Estado_Pedido ep ON p.id_estado_pedido = ep.id_estado_pedido
+                    WHERE
+                        ep.nombre_estado_pedido = %s
+                '''
+                cursor.execute(query,(valor_estado,))
 ```
 
 ![Imagen](../../imagenes_cap16/mod_Almacen/Boton_Registrar.png)
