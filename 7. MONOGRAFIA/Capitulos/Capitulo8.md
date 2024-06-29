@@ -298,18 +298,17 @@ CREATE TABLE VentaXProd
 );
 
 CREATE TABLE Tipo_est_pedido (
-    est_pedido VARCHAR(1) PRIMARY KEY,
-    descripcion VARCHAR(50) NOT NULL
+    id_est_pedido VARCHAR(1) PRIMARY KEY,
+    estado_pedido VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE Pedido
 (
   Id_pedido SERIAL NOT NULL,
   fecha_entrega DATE NOT NULL,
-  est_pedido VARCHAR(100) NOT NULL,
-  hora_entrega TIME,
-  Id_ruta INT NOT NULL,
-  Id_repartidor INT NOT NULL,
+  id_est_pedido VARCHAR(100) NOT NULL,
+  Id_ruta INT NOT ,
+  Id_repartidor INT ,
   Id_venta INT NOT NULL,
   PRIMARY KEY (Id_pedido),
   FOREIGN KEY (Id_ruta) REFERENCES Ruta(Id_ruta),
