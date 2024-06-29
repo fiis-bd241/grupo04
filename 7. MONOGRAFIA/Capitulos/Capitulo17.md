@@ -12,3 +12,9 @@ Diseño
 * Se espera mejorar el diseño del aplicativo, para asemejarse mucho mas al prototipo inicial que se tenia, ademas de la unificacion total de todos los aplicativos que se tienen en el documento
 
 Para llevar a cabo estas funcionalidades mencionadas previamente en el módulo de compras, podría ser necesario rediseñar la aplicación. Una opción sería considerar el uso de tecnologías adicionales, más allá de una aplicación de escritorio. Por ejemplo, podrían utilizarse librerías personalizadas que permitan automatizar y optimizar la selección de los productos ofrecidos por los proveedores. Esto no solo mejoraría la eficiencia del proceso, sino que también proporcionaría una herramienta más robusta y flexible para la gestión de proveedores y sus precios.
+
+## Módulo de Almacén
+
+* Se dasarrollará en la automatización de los procesos de picking, packing y en la asignación de ubicación de los productos y para las entregas con la extensión de nuevos almacenes.
+* Se generarán reportes automático semanales de los productos con más salidas o con mas observaciones para una toma de decisiones más fáciles y rápidas, que se logrará con el mejoramiento del aplicativo y que aprenda del comportamiento (detalles, características) de los productos para poder promocionarlo al área de marketing.
+* Corregir algunas incovenientes en los frames para que la interfaz sea más atractiva y práctica
