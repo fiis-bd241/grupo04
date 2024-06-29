@@ -398,6 +398,114 @@
 | 5 | El caso termina. |
 | **Flujo Alternativo** | - Si el usuario no tiene permisos, el sistema muestra un mensaje de error. |
 
+
+
+
+## - Casos de uso para CRM
+**Caso de uso: Editar campaña vigente**
+
+| Objetivo | <p align="left"> Permitir que el Gestor de CRM clasifique los comentarios enviados por los usuarios.</p> | 
+|:--------------:|--------------|
+| Descripción | Proceso mediante el cual el Gestor de CRM puede clasificar los comentarios recibidos de los usuarios, asignando una puntuación basada en la posibilidad de compra mencionada en el comentario. | 
+| Actor primario   | Gestor de CRM | 
+|Actor secundario| - |
+|Precondiciones |Debe existir al menos un comentario recibido.|
+| Paso | <p align="center"> Acción </p> |
+| 1 | El gestor de CRM inicia sesión en su cuenta de la página web de Migni Store. |
+| 2 | El gestor de CRM accede a la sección "Clasificar comentarios". |
+| 3 | La página muestra la lista de comentarios recibidos.|
+| 4 | El gestor de CRM selecciona un comentario de la lista.|
+| 5 | El gestor de CRM asigna una puntuación al comentario basado en la posibilidad de compra mencionada.|
+| 6 | El gestor de CRM guarda la clasificación. |
+| 7 | El caso termina.|
+
+
+**Caso de uso: Enviar mensajes de WhatsApp**
+
+| Objetivo | <p align="left"> Permitir que el Gestor de CRM envíe mensajes de WhatsApp a múltiples usuarios.</p>| 
+|:--------------:|--------------|
+| Descripción | Proceso mediante el cual el Gestor de CRM puede enviar mensajes de WhatsApp a varios usuarios a la vez, facilitando la labor de envío de mensajes. | 
+| Actor primario   | Gestor de CRM | 
+|Actor secundario| - |
+|Precondiciones |Deben existir usuarios con números de WhatsApp registrados.|
+| Paso |<p align="center"> Acción </p>|
+| 1 | 	El gestor de CRM inicia sesión en su cuenta de la página web de Migni Store.|
+| 2 | El gestor de CRM accede a la sección "Enviar mensajes de WhatsApp".|
+| 3 | La página muestra la lista de usuarios con números de WhatsApp.|
+| 4 | El gestor de CRM selecciona los usuarios a los que desea enviar el mensaje.|
+| 5 | El gestor de CRM redacta el mensaje.|
+| 6 | El gestor de CRM envía el mensaje a los usuarios seleccionados.|
+| 7 | El caso termina |
+
+**Caso de uso: Enviar mensajes de email**
+
+| Objetivo | <p align="left"> Permitir que el Gestor de CRM envíe mensajes de email a múltiples usuarios.</p>| 
+|:--------------:|--------------|
+| Descripción | Proceso mediante el cual el Gestor de CRM puede enviar mensajes de email a varios usuarios a la vez, facilitando la labor de envío de mensajes.| 
+| Actor primario   | 	Gestor de CRM| 
+|Actor secundario| - |
+|Precondiciones |Deben existir usuarios con direcciones de email registradas. |
+| Paso | <p align="center"> Acción </p>|
+| 1 | El gestor de CRM inicia sesión en su cuenta de la página web de Migni Store.|
+| 2 |El gestor de CRM accede a la sección "Enviar mensajes de email".|
+| 3 | La página muestra la lista de usuarios con direcciones de email. |
+| 4 | El gestor de CRM selecciona los usuarios a los que desea enviar el mensaje. |
+| 6 | El gestor de CRM envía el mensaje a los usuarios seleccionados. |
+| 7 | El caso termina |
+
+**Caso de uso: Análisis de datos**
+
+| Objetivo |<p align="left"> Permitir que el Gestor de CRM realice análisis de datos sobre las ventas y tendencias de compra.</p>| 
+|:--------------:|--------------|
+| Descripción | Proceso mediante el cual el Gestor de CRM puede analizar los datos de ventas para identificar productos menos comprados y tendencias de compra de los clientes. | 
+| Actor primario   | Gestor de CRM | 
+|Actor secundario| - |
+|Precondiciones | Debe existir un historiales registrados. |
+| Paso | <p align="center"> Acción </p> |
+| 1 | 	El gestor de CRM inicia sesión en su cuenta de la página web de Migni Store. |
+| 2 | El gestor de CRM accede a la sección "Análisis de datos". |
+| 3 | La página muestra las opciones de análisis disponibles. |
+| 4 | El gestor de CRM selecciona el tipo de análisis que desea realizar (productos menos comprados, tendencias de compra, etc.).|
+| 5 | La página muestra los resultados del análisis seleccionado. |
+| 6 | El gestor de CRM utiliza la información para tomar decisiones estratégicas. |
+| 7 | El caso termina |
+
+**Caso de uso: Visualizar tablas de PostgreSQL**
+
+| Objetivo |	<p align="left"> Permitir que el Gestor de CRM visualice las tablas de la base de datos PostgreSQL.</p>| 
+|:--------------:|--------------|
+| Descripción | Proceso mediante el cual el Gestor de CRM puede acceder y visualizar las tablas de la base de datos PostgreSQL para tener una visión completa de la información.| 
+| Actor primario   | Gestor de CRM | 
+|Actor secundario| - |
+|Precondiciones | Debe existir una base de datos PostgreSQL configurada. |
+| Paso | <p align="center"> Acción </p> |
+| 1 | El gestor de CRM inicia sesión en su cuenta de la página web de Migni Store. |
+| 2 | El gestor de CRM accede a la sección "Visualizar tablas de PostgreSQL". |
+| 3 | La página muestra la lista de tablas disponibles en la base de datos. |
+| 4 | El gestor de CRM selecciona una tabla para visualizar su contenido.|
+| 5 | La página muestra los datos de la tabla seleccionada. |
+| 6 | El gestor de CRM analiza los datos según sea necesario. |
+| 7 | El caso termina |
+
+**Caso de uso: Clasificar usuarios mediante pipeline**
+
+| Objetivo |	<p align="left"> Permitir que el Gestor de CRM clasifique a los usuarios mediante un pipeline.</p>| 
+|:--------------:|--------------|
+| Descripción | Proceso mediante el cual el Gestor de CRM puede clasificar a los usuarios en diferentes etapas del pipeline, ayudando a gestionar el proceso de ventas y seguimiento.| 
+| Actor primario   | Gestor de CRM | 
+|Actor secundario| - |
+|Precondiciones | Deben existir usuarios registrados en el sistema.|
+| Paso | <p align="center"> Acción </p> |
+| 1 | El gestor de CRM inicia sesión en su cuenta de la página web de Migni Store. |
+| 2 | El gestor de CRM accede a la sección "Clasificar usuarios mediante pipeline". |
+| 3 | La página muestra la lista de usuarios y las etapas del pipeline. |
+| 4 | 	El gestor de CRM selecciona un usuario para clasificarlo en una etapa del pipeline.|
+| 5 | El gestor de CRM asigna al usuario a la etapa correspondiente (nuevo, calificado, propuesta, negociación, ganado). |
+| 6 | El gestor de CRM guarda la clasificación. |
+| 7 | El caso termina.|
+
+
+
 ## Requerimientos de atributos de Calidad
 
 
