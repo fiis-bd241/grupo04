@@ -56,7 +56,7 @@ Se verifica que se realizo la correccion con respecto a la descripcion de la obs
 
 ## Módulo Compras
 ### CODIGO
-[APLICATIVO COMPRAS](archivos_cap16/mod_compra)
+[APLICATIVO COMPRAS](archivos_cap16/mod_compra/COMPRAS)
 
 ### Explicación de las funcionalidades
 
