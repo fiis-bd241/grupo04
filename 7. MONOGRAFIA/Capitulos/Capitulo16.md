@@ -54,3 +54,10 @@ Se verifica que se actualizó la observación.
 ![Verificación de actualizacion de campaña](imagenes_cap16/modmark/equip8.png)
 Se verifica que se realizo la correccion con respecto a la descripcion de la observacion (se disminuyo el descuento).
 
+## Módulo Compras
+### CODIGO
+[archivos aplicativo compras](archivos_cap16/mod_compra)
+
+### Explicación de las funcionalidades
+
+[archivos aplicativo compras](archivos_cap16/mod_compra/MODCOMPRA.md)
