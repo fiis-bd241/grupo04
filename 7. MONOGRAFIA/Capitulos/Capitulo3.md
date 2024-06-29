@@ -63,3 +63,57 @@
 
   **- Confirmar Oferta**
     - Responsabilidades: Permite al gestor de compras aceptar o rechazar la oferta final que ha realizado el proveedor hacia la empresa.
+
+### Módulo Distribución
+
+- Descripcion: Este modulo de distribucion permite al cliente ver el estado de sus pedidos,al gestor de ventas acceder a la base de datos de los pedidos para ver los detalles de las entregas y asignarles un repartidor,y este ultimo podra visualizar la lista de pedidos pendientes que se les asigno accediendo a la base datos y actualizar los estados de los pedidos.
+
+- Responsabilidades: Gestionar las entregas de los pedidos,asignarles una fecha,elegir el repartidor,ver detalles de la entrega,actualizar los estados de entrega,y notificarle al cliente la llegada de su pedido.
+
+- Interacción: Con el módulo de ventas y almacen.
+
+- Detalles de estado:
+
+  - CANCELADO: El pedido ha sido reprogramado,el cliente cambió la fecha,por lo que se cancela la entrega del pedido en la fecha pre-establecida.
+  - PENDIENTE: El pedido aun no ha sido entregado.
+  - ENTREGADO: El pedido fue entregado al cliente con exito.
+
+- Funcionalidad:
+
+  **- Home Gestor de distribucion**
+    - Responsabilidades: Permite al gestor de ventas tener su propia vista de las partes que constituyen su módulo, como son el acceso al historial de ventas, pedidos y gestion de los pedidos .
+
+  **- Gestionar pedidos**
+    - Responsabilidades: Permite al gestor de distribucion vizualizar los pedidos,su estado y si hay asignado o no un repartidor para cada entrega.
+
+  **- Asignar repartidor**
+    - Responsabilidades: Permite al gestor de distribucion asignar un repartidor a cada pedido para su respectiva entrega.
+
+  **- Historial de pedidos-gestor de distribucion**
+    - Responsabilidades: Permite al gestor de distribucion visualizar todos los pedidos,entregados o cancelados, que se realizaron en el mes.
+
+  **- Home Repartidor**
+    - Responsabilidades: Permite al repartidor tener su propia vista de las partes que constituyen su módulo, como son el acceso al la lista de sus pedidos pendientes y el historial de sus entregas .
+
+  **- Pedidos pendientes**
+    - Responsabilidades: Permite al repartidor visualizar los pedidos que se le asignaron,sus detalles y estado.
+
+  **- Aceptar-repartidor**
+    - Responsabilidades: Permite al repartidor,que esta listo con el pedido para la entrega,aceptar el pedido para dirigirse a la direccion dada,lo cual actualiza y notifica al cliente con "SU PEDIDO ESTA EN CAMINO".
+
+  **- Entregado-repartidor**
+    - Responsabilidades: Permite al repartidor,que ya hizo la entrega, actualizar el estado del pedido de "PENDIENTE" a "ENTREGADO",tanto para la lista del gestor de distribucion y para el historial del repartidor.
+
+  **- Ver mis pedidos**
+    - Responsabilidades: Permite al cliente visualizar el estado de sus pedidos y sus detalles.
+
+  **- Ver detalles de su compra**
+    - Responsabilidades: Permite al cliente ver los detalles de la compra que realizó,como la fecha,hora,los productos que compró,su precio y el monto total .
+
+  **- Establecer la fecha de entrega**
+    - Responsabilidades: Permite al cliente establecer la fecha en la que se va a realizar la entrega.
+
+  **- Ver detalles de la entrega**
+    - Responsabilidades: Permite al cliente ver los detalles de la entrega,como la fecha,el perfil del repartidor que fue asignado.
+
+
