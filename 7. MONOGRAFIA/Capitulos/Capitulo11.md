@@ -19,3 +19,9 @@ Proveedor, Cotizacion, CotizacionxProducto, tipo_est_proveedor, tipo_est_cotizac
 
 Aquí estan presentes los archivos csv de el módulo de distribucion
 distrito, pedido, repartidor, ruta , tipo_est_pedido,zona
+
+## Módulo Ventas
+
+[Carpeta contenedora de los archivos](archivos_cap_11/modulo_venta)
+
+pago (detalle_pago),tipos_pago,venta, ventaxprod, personas, producto
