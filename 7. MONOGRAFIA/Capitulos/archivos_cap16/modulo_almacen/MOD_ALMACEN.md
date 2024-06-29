@@ -276,6 +276,7 @@ query = '''
         cursor.execute(query)
         self.tabla_frame(cursor.fetchall())
 ```
+
 ![Imagen](../../imagenes_cap16/mod_Almacen/Pedido_Detalles.png)
 * Al dar clic en la fila de la tabla pedido, se mostrará al lado derecho los detalles de la venta que se ha efectuado
 
@@ -305,6 +306,7 @@ query = '''
         '''
         cursor.execute(query,(id_pedido,))
 ```
+
 ![Imagen](../../imagenes_cap16/mod_Almacen/Filtro_Entrega.png)
 *Se puede filtrar para ver pedidos actuales o pasados por tipo de entrega o estado de pedido
 
@@ -326,6 +328,131 @@ query = '''
                     WHERE
                         te.nombre_tipo_entrega = %s           
                 '''
+```
+
+![Imagen](../../imagenes_cap16/mod_Almacen/Boton_Registrar.png)
+*Al darle en registrar, se insertaré los detalles de pedido en mis tablas Kardex y KardexxProducto
+*Y SE ACTUALIZARÁ EL ESTADO DEL PEDIDO A P (EN PROCESO) Y EL ESTADO DE LA VENTA PARA QUE VISUALICE EL CLIENTE QUE SU PEDIDO ESTÁ EN PREPARACIÓN
+
+```py
+query2 = '''
+            SELECT id_tipo_entrega
+            FROM Pedido
+            WHERE id_pedido = %s        
+        '''
+        cursor.execute(query2,(pedidokx,))
+        one = cursor.fetchone()
+
+        if one:
+            id_tipo_entrega = one[0]
+        else:
+            id_tipo_entrega = None
+
+        if id_tipo_entrega == 'A':
+            mov = 1
+        elif id_tipo_entrega == 'B':
+            mov = 2
+        elif id_tipo_entrega == 'C':
+            mov = 3
+        else:
+            mov = None          
+
+        query = '''
+            WITH NumerosKardex AS (
+                SELECT COUNT(*) + 1 AS siguiente_numero
+                FROM Kardex
+            )
+
+            INSERT INTO Kardex (id_kardex,fecha_kx,id_tipo_mov,id_pedido,id_tipo_entrega)
+            VALUES (
+                (SELECT 'KX0' || siguiente_numero FROM NumerosKardex),
+                CURRENT_TIMESTAMP,%s,%s,%s
+            )  
+        '''
+        cursor.execute(query,(mov,pedidokx,id_tipo_entrega))
+
+        query6 = '''
+            WITH NumerosKardex AS (
+                SELECT COUNT(*) AS siguiente_numero
+                FROM Kardex
+            )
+            SELECT 'KX0' || siguiente_numero AS id_kardex
+            FROM NumerosKardex
+        '''
+        cursor.execute(query6)
+        id_kx = cursor.fetchone()
+        id_kx2 = id_kx[0]
+
+        query7 = '''
+            SELECT id_persona
+            FROM Pedido
+            WHERE id_pedido = %s
+        '''
+        cursor.execute(query7,(pedidokx,))
+        person = cursor.fetchone()
+        person2 = person[0]
+        
+        query5 = '''
+            INSERT INTO KardexxProducto (id_kardex,id_producto,cantidad_kx)
+            SELECT %s,id_producto,cantidad
+            FROM ClientexProducto
+            WHERE id_persona = %s AND id_estado_compra = 'C';       
+        '''
+        cursor.execute(query5,(id_kx2,person2,))
+
+        query3 = '''
+            UPDATE Pedido
+            SET id_estado_pedido = 'P'
+            WHERE id_pedido = %s
+        '''
+        cursor.execute(query3,(pedidokx,))
+
+        query4 = '''
+            UPDATE Venta
+            SET id_estado_venta = 'D'
+            WHERE cod_venta = (
+                SELECT cod_venta
+                FROM Pedido
+                WHERE id_pedido = %s
+            )
+        '''
+        cursor.execute(query4,(pedidokx,))
+        util_mensaje.ConfirmarRegistro()
+
                 cursor.execute(query,(valor_entrega,))
                 rows = cursor.fetchall()
+```
+
+![Imagen](../../imagenes_cap16/mod_Almacen/Vista_Kardex.png)
+*Se visualiza los movimientos de los productos con sus detalles de cantidad y productos por cada id_kardex
+
+```py
+query = '''
+            SELECT
+                k.id_kardex,
+                TO_CHAR(k.fecha_kx,'YYYY-MM-DD HH24:MI:SS') AS fecha_kx,
+                tm.nombre_movimiento,
+                k.id_pedido,
+                te.nombre_tipo_entrega
+            FROM
+                Kardex k
+            INNER JOIN
+                Tipo_Movimiento tm ON k.id_tipo_mov = tm.id_tipo_mov
+            INNER JOIN
+                Pedido p ON k.id_pedido = p.id_pedido
+            INNER JOIN
+                Tipo_Entrega te ON p.id_tipo_entrega = te.id_tipo_entrega        
+        '''
+        cursor.execute(query)
+        self.tabla_frame(cursor.fetchall())
+```
+
+```py
+query = '''
+            SELECT p.nombre_producto,kp.cantidad_kx
+            FROM KardexxProducto kp
+            JOIN Producto p ON kp.id_producto = p.id_producto
+            WHERE kp.id_kardex = %s
+        '''
+        cursor.execute(query,(id_detalle,))
 ```
