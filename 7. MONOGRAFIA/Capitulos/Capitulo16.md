@@ -69,4 +69,4 @@ Se verifica que se realizo la correccion con respecto a la descripcion de la obs
 
 ### Explicación de las funcionalidades
 
-[EXPLICACION ALMACEN](archivos_cap16/mod_compra/MODCOMPRA.md)
+[EXPLICACION ALMACEN](archivos_cap16/modulo_almacen/MOD_ALMACEN.md)
