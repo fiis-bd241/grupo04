@@ -467,8 +467,8 @@ WHERE p.Id_pedido = <1>;
 ```
 
 ## 3.3 Modulo de Ventas
-### Código Requerimiento : R - 012
-### Codigo interfaz : I - 012
+### Código Requerimiento : R - 020
+### Codigo interfaz : I - 020
 ### Imagen interfaz : 
 ![image](Pantallas/ModVentas/catalogo.png)
 ### Sentecias SQL:
@@ -478,8 +478,8 @@ WHERE p.Id_pedido = <1>;
 SELECT id_producto,nombre_producto,precio_unit FROM PRODUCTO;
 ```
 
-### Código Requerimiento : R - 013
-### Codigo interfaz : I - 013
+### Código Requerimiento : R - 021
+### Codigo interfaz : I - 021
 ### Imagen interfaz : 
 ![image](Pantallas/ModVentas/info_prod_catalogo.png)
 ### Sentecias SQL:
@@ -490,8 +490,8 @@ SELECT P.id_producto,nombre_producto,descripcion_prod,precio_unit,cant_max as ca
 JOIN CATEGORIA_PROD C ON C.ID_CATEGORIA_PROD = P.ID_CATEGORIA_PROD
 JOIN TIPO_PROD T ON C.ID_tipo_prod = T.id_tipo_prod;
 ```
-### Código Requerimiento : R - 014
-### Codigo interfaz : I - 014
+### Código Requerimiento : R - 022
+### Codigo interfaz : I - 22
 ### Imagen interfaz : 
 ![image](Pantallas/ModVentas/carrito.png)
 ### Sentecias SQL:
@@ -515,8 +515,8 @@ join persona pe on ve.id_persona = pe.id_persona
 join cupón c on c.id_cupón=v.id_cupón
 where ve.id_venta = 900001
 ```
-### Código Requerimiento : R - 015
-### Codigo interfaz : I - 015
+### Código Requerimiento : R - 023
+### Codigo interfaz : I - 023
 ### Imagen interfaz : 
 ![image](Pantallas/ModVentas/tipo_pago.png)
 ### Sentecias SQL:
@@ -528,8 +528,8 @@ join detalle_pago D on T.ID_TIPO_PAGO = D.ID_TIPO_PAGO
 JOIN venta v on v.id_detalle_pago = d.id_detalle_pago
 where v.id_venta = <900001>
 ```
-### Código Requerimiento : R - 016
-### Codigo interfaz : I - 016
+### Código Requerimiento : R - 024
+### Codigo interfaz : I - 024
 ### Imagen interfaz : 
 ![image](Pantallas/ModVentas/info_despues_comprar.png)
 ### Sentecias SQL:
@@ -546,8 +546,8 @@ join detalle_pago  d on ve.id_detalle_pago = d.id_detalle_pago
 join tipos_pago t on t.id_tipo_pago = d.id_tipo_pago
 where ve.id_venta = 900001 and p.id_producto=2
 ```
-### Código Requerimiento : R - 017
-### Codigo interfaz : I - 017
+### Código Requerimiento : R - 027
+### Codigo interfaz : I - 027
 ### Imagen interfaz : 
 ![image](Pantallas/ModVentas/cambio_direccion.png)
 ### Sentecias SQL:
@@ -566,8 +566,8 @@ select direccion ,d.nombre as nombre_distrito from persona P
 JOIN DISTRITO D ON P.ID_DISTRITO=D.ID_DISTRITO
 WHERE id_persona = 1008
 ```
-### Código Requerimiento : R - 018
-### Codigo interfaz : I - 018
+### Código Requerimiento : R - 025
+### Codigo interfaz : I - 025
 ### Imagen interfaz : 
 ![image](Pantallas/ModVentas/historial_ventas_gestor.png)
 ### Sentecias SQL:
@@ -583,8 +583,8 @@ group by vp.id_venta,p.nombre,t.nombre_tipo,d.fecha_pago,d.hora_pago
 order by d.fecha_pago desc
 ```
 
-### Código Requerimiento : R - 019
-### Codigo interfaz : I - 019
+### Código Requerimiento : R - 026
+### Codigo interfaz : I - 026
 ### Imagen interfaz : 
 ![image](Pantallas/ModVentas/historial_cliente.png)
 ### Sentecias SQL:
