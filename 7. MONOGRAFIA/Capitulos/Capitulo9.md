@@ -337,3 +337,40 @@
 | Código Interfaz | I019 |
 |----------|----------|
 |Imagen interfaz|![image](../../04.Entregables/Entregable_PC3/Pantallas/ModDistribucion/I0027.png)|
+
+
+### Modulo de Ventas
+
+| Código Interfaz | I020 |
+|----------|----------|
+|Imagen interfaz|![image](../../04.Entregables/Entregable_PC3/Pantallas/ModVentas/catalogo.png)|
+
+| Código Interfaz | I021 |
+|----------|----------|
+|Imagen interfaz|![image](../../04.Entregables/Entregable_PC3/Pantallas/ModVentas/info_prod_catalogo.png)|
+
+| Código Interfaz | I022 |
+|----------|----------|
+|Imagen interfaz|![image](../../04.Entregables/Entregable_PC3/Pantallas/ModVentas/carrito.png)|
+
+| Código Interfaz | I023 |
+|----------|----------|
+|Imagen interfaz|![image](../../04.Entregables/Entregable_PC3/Pantallas/ModVentas/tipo_pago.png)|
+
+| Código Interfaz | I024 |
+|----------|----------|
+|Imagen interfaz|![image](../../04.Entregables/Entregable_PC3/Pantallas/ModVentas/info_despues_comprar.png)|
+
+| Código Interfaz | I025 |
+|----------|----------|
+|Imagen interfaz|![image](../../04.Entregables/Entregable_PC3/Pantallas/ModVentas/historial_ventas_gestor.png)|
+
+| Código Interfaz | I026 |
+|----------|----------|
+|Imagen interfaz|![image](../../04.Entregables/Entregable_PC3/Pantallas/ModVentas/historial_cliente.png)|
+
+| Código Interfaz | I027 |
+|----------|----------|
+|Imagen interfaz|![image](../../04.Entregables/Entregable_PC3/Pantallas/ModVentas/cambio_direccion.png)|
+
+
