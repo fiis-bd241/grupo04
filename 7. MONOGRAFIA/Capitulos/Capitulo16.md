@@ -33,4 +33,14 @@
 
 [EXPLICACION VENTAS](archivos_cap16/mod_venta/explicacion.md)
 
+## Módulo Finanzas
+### Código
+[APLICATIVO FINANZAS](https://github.com/fiis-bd241/grupo04/tree/main/04.Entregables/Entregable_PC4/MODFINANZAS)
+
+
+### Explicación de las funcionalidades
+
+[EXPLICACION FINANZAS](https://github.com/fiis-bd241/grupo04/blob/main/7.%20MONOGRAFIA/Capitulos/archivos_cap16/MODFinanzas/ExplicacionFin.md)
+
+
 
