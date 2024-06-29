@@ -26,15 +26,15 @@ Para llevar a cabo estas funcionalidades mencionadas previamente en el módulo d
 * Aún no esta acabada todas las funcionalidades, por ejemplo los historiales de venta y de cliente deberian poder funcioanr,sin embargo, no estan en uso. Deberia poder implementarse para un mejor seguimeinto tanto de la empresa como de los clientes.
 
 ## Módulo de Finanzas
-Módulo de Finanzas
-Funcionalidad Actual: El módulo de finanzas actualmente solo permite registrar facturas para generar asientos contables y estado de resultados y también la asignación de presupuestos, limitando la gestión financiera a una simple función de registro.
-Requerimientos Iniciales
-.Gestión Integral: El objetivo es que el módulo de finanzas no solo registre facturas, sino que también permita gestionar otros aspectos financieros como pagos, cobros, presupuestos y reportes financieros.
-.Automatización y Análisis: Se requiere que el sistema pueda automatizar procesos financieros y proporcionar herramientas de análisis y generación de reportes para facilitar la toma de decisiones.
-Propuestas de Mejora:
-.Ampliar Funcionalidades
-
-Gestión de Pagos y Cobros: Implementar funcionalidades que permitan registrar y gestionar pagos a proveedores y cobros a clientes.
-Presupuestos: Incluir una sección para la creación y seguimiento de presupuestos, permitiendo comparar los gastos reales con los presupuestados.
-Reportes Financieros: Incorporar la capacidad de generar reportes financieros detallados como balance general, estado de resultados y flujo de caja.
-Conciliación Bancaria: Añadir una funcionalidad para realizar la conciliación bancaria de manera automática o manual.
+* Funcionalidad Actual: El módulo de finanzas actualmente solo permite registrar facturas para generar asientos contables y estado de resultados y también la asignación de presupuestos, limitando la gestión financiera a una simple función de registro.
+### Requerimientos Iniciales
+* Gestión Integral: El objetivo es que el módulo de finanzas no solo registre facturas, sino que también permita gestionar otros aspectos financieros como pagos, 
+  cobros,presupuestos y reportes financieros.
+* Automatización y Análisis: Se requiere que el sistema pueda automatizar procesos financieros y proporcionar herramientas de análisis y generación de reportes para 
+  facilitar la toma de decisiones.
+* Propuestas de Mejora:
+### Ampliar Funcionalidades
+#### - Gestión de Pagos y Cobros: Implementar funcionalidades que permitan registrar y gestionar pagos a proveedores y cobros a clientes.
+#### - Presupuestos: Incluir una sección para la creación y seguimiento de presupuestos, permitiendo comparar los gastos reales con los presupuestados.
+#### - Reportes Financieros: Incorporar la capacidad de generar reportes financieros detallados como balance general, estado de resultados y flujo de caja.
+#### - Conciliación Bancaria: Añadir una funcionalidad para realizar la conciliación bancaria de manera automática o manual.
