@@ -11,3 +11,12 @@ Para ver el esquema completo, puede ingresar al figma del equipo: (https://www.f
 ![imagen](imagenes_cap_4/C1.png)
 ![imagen](imagenes_cap_4/C2.png)
 ![imagen](imagenes_cap_4/C3.png)
+
+## Módulo Distribucion:
+![imagen](imagenes_cap_4/vista1dis.png)
+![imagen](imagenes_cap_4/vista2dis.png)
+![imagen](imagenes_cap_4/vista3dis.png)
+![imagen](imagenes_cap_4/vista4dis.png)
+![imagen](imagenes_cap_4/vista5dis.png)
+![imagen](imagenes_cap_4/vista6dis.png)
+![imagen](imagenes_cap_4/vista7.png)
