@@ -557,6 +557,7 @@ def actualizar_categorias(self,event):
 ```
 ![Imagen](../../imagenes_cap16/mod_Almacen/Producto_Correcto.png)
 *Al dar clic en el botón registrar, se ingresarán los datos mi tabla Producto, para posteriormente elegir su ubicación disponible en el almacén ingresado
+*Y luego, se visualizará que se ingrese la cantidad y al dar clic en el botón Ver Ubicación se insertará mi producto en mi tabla Inventario son la cantidad de entradas y ver la ubicación que le corresponde
 
 ```py
 def registro(self):
@@ -606,6 +607,46 @@ def registro(self):
         self.entry_InCategoria.get()))
 
         util_mensaje.ProdIn()
+
+        cursor.close()
+        conn.commit()
+        conn.close()
+```
+```py
+def ubicar(self):
+        volumen = self.entry_InCant.get("1.0", END).strip()*self.entry_InAncho.get("1.0", END).strip()*self.entry_InLargo.get("1.0", END).strip()*self.entry_InAlto.get("1.0", END).strip()
+        conn,cursor = bd.conectar()
+        query_ubi = '''
+            SELECT U.seccion,U.id_stand,U.id_repisas
+                (I.entradas - I.salidas) AS stock,
+                P.largo_present,
+                P.ancho_present,
+                P.alto_present,
+                ((I.entradas - I.salidas) * P.largo_present * P.ancho_present * P.alto_present) AS volumen_disponible
+            FROM Inventario I
+            JOIN Ubicacion U ON I.seccion = U.seccion AND I.id_stand = U.id_stand AND I.id_repisas = U.id_repisas
+            JOIN Producto P ON I.id_producto = P.id_producto
+            WHERE ((I.entradas - I.salidas) * P.largo_present * P.ancho_present * P.alto_present) >= @volumen_dado
+            ORDER BY volumen_disponible DESC
+            LIMIT 1
+        '''
+        cursor.execute(query_ubi,(volumen,))
+        row = cursor.fetchone()
+
+        query_count = '''
+                SELECT COUNT(*)
+                FROM Inventario
+                WHERE entradas > 0
+        '''
+        cursor.execute(query_count)
+        id_count = cursor.fetchone()
+
+        query_insert = '''
+                INSERT INTO Inventario
+                VALUES (%s,%s,%s,0,%s,%s,%s,CURRENT_DATE)
+        '''
+        cursor.execute(query_insert,(id_count,id_producto_final,self.entry_InCant.get(),
+        row[0],row[1],row[2]))
 
         cursor.close()
         conn.commit()
