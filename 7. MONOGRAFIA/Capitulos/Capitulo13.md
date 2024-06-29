@@ -34,6 +34,8 @@ Proceso Sin Índice:
 Proceso Con Índice:
 ![image](../../04.Entregables/Entregable_PC4/INDICE_RUC.png)
 
+## Módulo Almacen
+
 ### Indice Producto Marca
 
 ```sql
@@ -52,8 +54,6 @@ Proceso Sin Índice:
 
 Proceso Con Índice:
 ![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC4/Producto%20Marca%20con%20Index.jpeg)
-
-## Módulo Almacen
 
 ### Indice Inventario Producto
 
