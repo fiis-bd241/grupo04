@@ -139,3 +139,4 @@ BEFORE UPDATE ON ClientexProducto
 FOR EACH ROW
 EXECUTE FUNCTION actualizar_check_compra();
 ```
+## Módulo Ventas
