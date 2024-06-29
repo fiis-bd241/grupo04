@@ -29,6 +29,25 @@ Al dar clic en cada fila de la tabla que se muestra, en el lado derecho se mostr
 ![Imagen](../../imagenes_cap16/mod_Almacen/Seleccionar_Fila.png)
 *Acción de seleccionar una fila
 
+query3 = '''
+    SELECT 
+        p.id_producto,
+        i.path_imagen,
+        (p.precio_unitario*(inv.entradas - inv.salidas)) AS importe,
+        CONCAT(p.ancho_present*p.largo_present*p.alto_present,' cm³') AS volumen
+            FROM 
+                Producto p
+            JOIN 
+                Imagenes i ON p.id_producto = i.id_producto
+            JOIN 
+                Inventario inv ON p.id_producto = inv.id_producto
+        '''
+        cursor.execute(query3)
+        img = cursor.fetchall()
+        self.id_img_prod = {str(imagen[0]):
+            {'path_imagen': imagen[1],'Importe': imagen[2],'Volumen': imagen[3]} for imagen in img}
+  '''
+
 ![Imagen](../../imagenes_cap16/mod_Almacen/Filtro_Código.png)
 * Filtrar por las iniciales PAL
 
@@ -57,4 +76,4 @@ Al dar clic en cada fila de la tabla que se muestra, en el lado derecho se mostr
 
 
 ## CODIGO DEL APLICATIVO
-[APLICATIVO COMPRAS](COMPRAS)
+[APLICATIVO COMPRAS](archivos_cap16/modulo_almacen)
