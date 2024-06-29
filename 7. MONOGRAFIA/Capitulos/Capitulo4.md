@@ -20,3 +20,15 @@ Para ver el esquema completo, puede ingresar al figma del equipo: (https://www.f
 ![imagen](imagenes_cap_4/vista5dis.png)
 ![imagen](imagenes_cap_4/vista6dis.png)
 ![imagen](imagenes_cap_4/vista7.png)
+
+## Módulo Ventas:
+
+![imagen](imagenes_cap_4/VistasVentas/carrito.png)
+![imagen](imagenes_cap_4/VistasVentas/cambio_direccion.png)
+![imagen](imagenes_cap_4/VistasVentas/catalogo.png)
+![imagen](imagenes_cap_4/VistasVentas/historial_cliente.png)
+![imagen](imagenes_cap_4/VistasVentas/historial_ventas_gestor.png)
+![imagen](imagenes_cap_4/VistasVentas/info_despues_comprar.png)
+![imagen](imagenes_cap_4/VistasVentas/info_prod_catalogo.png)
+![imagen](imagenes_cap_4/VistasVentas/tipo_pago.png)
+
