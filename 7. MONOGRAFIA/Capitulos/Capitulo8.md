@@ -145,6 +145,7 @@ CREATE TABLE Cotizacion
   id_cotizacion INT NOT NULL,
   Monto_total NUMERIC(7,2) NOT NULL,
   RUC_proveedor CHAR(11) NOT NULL,
+  hora DATE NOT NULL,
   Id_est_cotizacion CHAR(1) NOT NULL,
   PRIMARY KEY (id_cotizacion),
   FOREIGN KEY (RUC_proveedor) REFERENCES Proveedor(RUC_proveedor),
