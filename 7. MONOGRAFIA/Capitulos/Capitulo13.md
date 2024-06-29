@@ -83,3 +83,59 @@ Proceso Con Índice:
 
 ![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC4/InventarioProductoconindex2.jpeg)
 
+### Índices Únicos Almacén
+``` sql
+CREATE UNIQUE INDEX idx_tipo_presentacion ON Presentacion(tipo_presentacion);
+CREATE UNIQUE INDEX idx_cod_hexa ON Colores(cod_hexa);
+CREATE UNIQUE INDEX idx_nombre_color ON Colores(nombre_color);
+```
+
+### Funciones y Triggers Almacén
+
+*Tabla Producto
+```sql
+CREATE OR REPLACE FUNCTION actualizar_fecha_actualizacion()
+RETURNS TRIGGER AS $$
+BEGIN
+    NEW.fecha_actualizacion = CURRENT_TIMESTAMP;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER actualizar_fecha_actualizacion_trigger
+BEFORE UPDATE ON Producto
+FOR EACH ROW
+EXECUTE FUNCTION actualizar_fecha_actualizacion();
+```
+
+*Tabla Inventario
+```sql
+CREATE OR REPLACE FUNCTION actualizar_ultima_actualizacion()
+RETURNS TRIGGER AS $$
+BEGIN
+    NEW.ultima_actualizacion = CURRENT_TIMESTAMP;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+```
+
+*Tabla ClientexProducto
+```sql
+CREATE TRIGGER actualizar_ultima_actualizacion_trigger
+BEFORE UPDATE ON Inventario
+FOR EACH ROW
+EXECUTE FUNCTION actualizar_ultima_actualizacion();
+
+CREATE OR REPLACE FUNCTION actualizar_check_compra()
+RETURNS TRIGGER AS $$
+BEGIN
+    NEW.check_compra = CURRENT_TIMESTAMP;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER actualizar_check_compra_trigger
+BEFORE UPDATE ON ClientexProducto
+FOR EACH ROW
+EXECUTE FUNCTION actualizar_check_compra();
+```
