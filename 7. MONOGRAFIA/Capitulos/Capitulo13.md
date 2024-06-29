@@ -140,3 +140,24 @@ FOR EACH ROW
 EXECUTE FUNCTION actualizar_check_compra();
 ```
 ## Módulo Ventas
+
+### Índice VentaxProd
+```sql
+
+DROP INDEX IF EXISTS IX_ID_PROD_VENTA;
+
+
+CREATE INDEX IX_ID_PROD_VENTA ON ventaxprod(id_prod_venta);
+
+EXPLAIN ANALYZE
+SELECT *
+FROM ventaxprod
+WHERE id_prod_venta = 9000011 ;
+
+```
+Proceso Sin Índice:
+![image](imagen_cap_12/v_sin.png)
+
+Proceso Con Índice:
+![image](imagen_cap_12/v_con.png)
+
