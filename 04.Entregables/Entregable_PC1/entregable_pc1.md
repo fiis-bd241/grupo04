@@ -302,6 +302,21 @@
 
 ![Proceso de CRM](../Entregable2/ProcesosTOBE/TOBEProcesoCRM.png)
 
+
+| Secuencia | Actividad                                | Descripción                            | Responsable      |
+|-----------|------------------------------------------|-----------------------------------------------------------------------|------------------|
+| 1         | recepción de información |El proceso comienza con la recepción de información semanal , ya que en base a esto se preparan para analizar la fidelización de los clientes| gestor CRM |
+| 2         | analisis de las ventas por semana | Se hace una revisión de las ventas de la semana y ver que productos son rentables comprar ya que hay productos que se quedan por mucho tiempo en almacén | gestor CRM  |
+| 3         |revisión del segmento del cliente |Ver que tanto aumento o disminuyo , por ende en base a esto se tomará las medidas correspondientes para mejorar las ventas del segmento que son de interes  | gestor CRM |
+| 4         |sugerencia de compra del producto |En base al analisis se hace sugerencia de compra  correspondiente , veamos lo de manera de rotación de activos por margen de venta , en caso se queda mucho producto y no rota , se hace promoción y se genera catalogos y envios de email personalizados| gestor CRM  |
+| 5         | busqueda de tendencias | Se hace una busqueda de los productos que estan siendo mas comprados por el segmento que es de nuestro interes | gestor CRM|
+| 8        | preparar las campañas por redes sociales | El nuevo producto se debe avisar por varios medios para que tenga mayor alcance| gestor CRM |
+| 9        | verificación de ofertas| En esta parte se verifica si es posible incluir ofertas en los productos nuevos , por la compra de muchos de estos y enviar catalogos | gestor CRM |
+| 10        |Información y puesta en marcha | Se envian las campañas y avisos a los clientes , asi que si se dio el caso de ofertas|gestor CRM 
+| 11     | verificación de correos y solución de problemas | se revisan los libros de reclamaciones para ver posibles quejas y puntos a mejorar  | gestor CRM |
+| 11     | verificación de correos y solución de problemas | se revisan los correos , se clasifican y se personalizan productos pudiendo ser individuales o para un grupo de personas, también para ver posibles quejas y puntos a mejorar  | gestor CRM |
+| 12     | verificación de watsapp y solución de problemas | se revisan los mensajes de wattsapp , se clasifican y se personalizan productos pudiendo ser individuales o para un grupo de personas, también para ver posibles quejas y puntos a mejorar  | gestor CRM |
+
 ### 1.3 Motivación
 -  La principal motivación para elegir a "Migni Store" y desarrollar una página web es el potencial de crecimiento que ofrece. Al ser una empresa pequeña en el mercado de la venta de papelería y maquillaje para dama, el 
    lanzamiento de una plataforma en línea puede abrir nuevas oportunidades para expandir su alcance, atraer a más clientes y aumentar sus ventas. Una presencia en línea sólida puede llevar a "Migni Store" a competir de 
