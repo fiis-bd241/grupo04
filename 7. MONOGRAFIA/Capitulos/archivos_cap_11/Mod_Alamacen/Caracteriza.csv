@@ -1,0 +1,68 @@
+"nombre_categoria","id_funcion","caracteristicas"
+"Paletas",1,"Ofrece una amplia gama de colores y acabados en un solo producto"
+"Paletas",2,"Son compactas y fáciles de transportar, lo que las hace ideales para llevar en el bolso o en el kit de maquillaje"
+"Primers",3,"Crea una base lisa sobre la piel"
+"Primers",4,"Ayuda a que la base del maquillaje y otros productos se adhieran mejor y duren más tiempo sin desvanecerse, agrietarse o desplazarse"
+"Primers",5,NULL
+"Primers",6,"Ayudan a controlar el exceso de sebo y mantener un acabado mate durante el día"
+"Primers",7,"Aportan humedad a la piel"
+"Primers",8,"Crea una superficie más suave para la aplicación del maquillaje"
+"Primers",9,"Rellenar los poros y líneas finas"
+"Primers",10,"Ayudan a corregir la tonalidad de la piel"
+"Primers",11,"Contiene antioxidantes o SPF que proporcionan una capa adicional de protección contra los daños ambientales y la radiación UV"
+"Glitter",12,"Proporciona un acabado brillante y llamativo"
+"Glitter",13,NULL
+"Glitter",14,NULL
+"Glitter",15,NULL
+"Glitter",16,"Puede mezclarse con otros productos de maquillaje"
+"Glitter",17,NULL
+"Labiales",18,NULL
+"Labiales",19,"Ayudan a definir la forma de los labios, haciéndolos más prominentes y atractivos"
+"Labiales",20,NULL
+"Labiales",21,"Contienen ingredientes hidratantes como aceites, mantecas y vitaminas que ayudan a mantener los labios suaves e hidratados"
+"Labiales",22,"Incluyen protección solar para prevenir el daño causado por los rayos UV"
+"Labiales",23,"Permiten una amplia versatilidad en los estilos de maquillaje, adaptándose a las necesidades y preferencias individuales"
+"Labiales",24,"Pueden reflejar el estado de ánimo, la personalidad y el estilo individual de quien los usa"
+"Glosses",12,"Proporcionar un acabado brillante a los labios, haciéndolos lucir más voluminosos y atractivos"
+"Glosses",21,"Contienen ingredientes hidratantes como aceites y mantecas, que ayudan a mantener los labios suaves y humectados"
+"Glosses",25,"Crea la ilusión de labios más llenos y voluminosos"
+"Rubores",18,"Añadir un toque de color a las mejillas, lo que da la apariencia de un rostro saludable y radiante"
+"Rubores",27,"Ayudar a realzar la estructura ósea del rostro. Puede acentuar pómulos, definir mejillas y equilibrar las proporciones faciales"
+"Rubores",20,NULL
+"Polvos",28,"Fijar la base y otros productos en crema o líquidos"
+"Polvos",4,NULL
+"Polvos",5,"Ayudan a controlar el exceso de brillo y grasa en la piel, especialmente en áreas propensas a ser más oleosas como la zona T (frente, nariz y barbilla)"
+"Polvos",29,"Ayudar a suavizar y unificar el tono de la piel, proporcionando un acabado más uniforme y refinado"
+"Polvos",30,"Proporcionan un acabado mate, eliminando cualquier brillo no deseado y dejando la piel con un aspecto suave y sin reflejos"
+"Polvos",31,"Ayudar a minimizar la apariencia de los poros y las líneas finas, creando una superficie más lisa y uniforme"
+"Correctores",32,"Ocultar imperfecciones específicas de la piel, como manchas oscuras, granos, cicatrices y decoloraciones"
+"Correctores",33,"Los correctores verdes neutralizan el enrojecimiento, los correctores naranjas neutralizan las ojeras, y los correctores amarillos ayudan a iluminar áreas oscuras"
+"Correctores",34,"Iluminar áreas específicas del rostro, como debajo de los ojos, el puente de la nariz y el centro de la frente"
+"Correctores",35,NULL
+"Correctores",36,"Ayuda a crear una superficie más uniforme y suave, mejorando la apariencia general del maquillaje"
+"Delineadores",37,"Definir la forma de los ojos y realzar su apariencia. Utilizarse en la línea de las pestañas superiores e inferiores para crear una mirada más intensa y expresiva"
+"Delineadores",38,"Agregar profundidad y dimensión a los ojos. Pueden ayudar a agrandar los ojos, hacer que las pestañas parezcan más densas"
+"Delineadores",23,NULL
+"Delineadores",39,"Utilizarse para corregir y mejorar la forma y las proporciones de los ojos"
+"Delineadores",40,"Se utilizan para definir el contorno y prevenir que el labial se salga"
+"Delineadores",41,"Se utilizan para rellenar y definir la forma de las cejas"
+"Rimels",42,NULL
+"Rimels",43,NULL
+"Rimels",44,NULL
+"Rimels",45,NULL
+"Rimels",21,NULL
+"Rimels",22,NULL
+"Cuadernos",46,NULL
+"Cuadernos",47,NULL
+"Cuadernos",48,NULL
+"Cuadernos",49,NULL
+"Cuadernos",50,NULL
+"Cuadernos",2,NULL
+"Cuadernos",51,NULL
+"Lapiceros",51,NULL
+"Lapiceros",52,NULL
+"Lapiceros",53,NULL
+"Lapiceros",47,NULL
+"Lapiceros",48,NULL
+"Lapiceros",2,NULL
+"Lapiceros",46,NULL
