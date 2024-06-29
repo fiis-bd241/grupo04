@@ -58,4 +58,23 @@ Esta funcionalidad permitirá cumplir con los requerimientos de las pantallas re
 | 2    | Luego de escojer sus productos, el cliente pasa a la seccion del carrito de compras donde puede configurar ciertos aspectos de los porductos que esta comprando. Se le detalla los precios que va a tener que pagar y  tambien se le informa que prosiga con el proceso de pago con un método de pago permitido.<br> ![image]( imagenes_cap_4/VistasVentas/carrito.png) | 
 | 3 | Se procede a elegir un método de pago y luego rellenar los datos correpsondientes a dicho pago.entonces ya podria procesarse y registrarse la compra en los historiales de venta de la empresa.<br> ![image](imagenes_cap_4/VistasVentas/tipo_pago.png) ! |
 
+## MÓDULO: FINANZAS
+**Funcionalidad primaria elegida:** Gestionar las facturas para ver la rentabilidad  de la Empresa.<br>
+**Sustentación:** El módulo archiva las facturas de compras, ventas donde en base a los ingresos y egresos se tiene una utilidad por eso es importante considerar el flujo del dinero.<br>
 
+Esta funcionalidad permitirá cumplir con los requerimientos de las pantallas relacionadas a Añadir Factura (R037), Ver historial de Facturas (R038), Ver Estado de Facturas (R039), Ver asientos contables (040) y  Ver el Estado de Resultados (041).Dichas funcionalidades  se encuentran relacionados con las interfaces I-037, I-038, I-039, I-040, I-041, I-042, 043.
+
+| Actividad     | Descripción        | 
+|:-------------:|:---------------:|
+| 1       | Al ingresar a la web el contador tiene su pagina home .<br>![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/Pantallas/Home_Contador.PNG)| 
+| 2    | Luego podra ver el estado de las facturas.<br> ![image]( https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/Pantallas/Factura%20Estados.PNG) | 
+| 3 | Se procede a elegir un si desea ingresar una factura de venta.<br> ![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/Pantallas/A%C3%B1adirFactura.PNG) ! |
+| 4 | Se procede a elegir un si desea ingresar una factura de compra.<br> ![imagen](imagenes_cap_4/VistasFinanzas/FacturaCompras.PNG) ! |
+| 5 | Se procede a elegir un si desea ingresar una factura de gastos.<br> ![imagen](imagenes_cap_4/VistasFinanzas/FacturaGasto.PNG) ! |
+| 6 | Se procede a elegir un si desea ingresar una factura de pagos.<br> ![imagen](imagenes_cap_4/VistasFinanzas/FacturaPAgo.PNG)! |
+| 7 | Tambien puede subir facturas al sistema.<br> ![imagen](imagenes_cap_4/VistasFinanzas/SubirFactura.PNG)! |
+| 8 | Se procede a elegir un si desea ingresar una factura de venta.<br> ![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/Pantallas/A%C3%B1adirFactura.PNG) ! |
+| 9 | También puede ver el historial de facturas.<br> ![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/Pantallas/HistorialFactura.PNG) |
+| 10 | También puede ver el historial de asientos. <br> ![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/Pantallas/HistorialdeAsientos.PNG) |
+| 11 | También puede ver el estado de resultados. <br> ![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/Pantallas/EstadodeResultados.PNG) |
+| 12 | También puede ver el reporte contable y escoge el periodo. <br>![imagen](imagenes_cap_4/VistasFinanzas/ReporteContable.PNG) |
