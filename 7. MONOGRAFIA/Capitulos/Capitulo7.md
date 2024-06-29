@@ -91,6 +91,52 @@ Columnas: id_tipo_pago, nombre_tipo
 | 14                | Contraentrega            |
 | 15                | Yape/Plin          |
 
+### Tipos de factura
+Columnas: id_tip_fac, tipo_fac
+|id_tip_fac	| tipo_fac|
+|------------------|----------------------|
+| 1	 | Compra |
+| 2	 | Venta  |
+| 3	 | Gastos |
+| 4	 | Pagos |
 
+### Tipos de presupuestos
+Columnas: id_tipo_presupuesto, nombre_tipo
+| id_tipo_presupuesto	| nombre_tipo |
+|------------------|----------------------|
+| 1	 | Compra |
+| 2	 | Venta  |
+| 3	 | Marketing |
+| 4	 | CRM |
+| 5	 | Distribución |
+| 6	 | Almacén |
 
+### Tipos de valor
+Columnas: id_tip_valor, nombre_val
+| id_tip_valor| nombre_val |
+|------------------|----------------------|
+| 1	 | Positivo |
+| 2	 | Negativo  |
+
+### Tipos de operación
+Columnas: id_tip_op, nom_operacion
+| id_tip_op | nom_operacion |
+|------------------|----------------------|
+| 1	 | Operación simple |
+| 2	 | Operación compuesta |
+
+### Tipo_asiento_contable
+Columnas: id_tipo_asiento_contable, nombre_tipo_as
+| id_tipo_asiento_contable, nombre_tipo_as |
+|------------------|----------------------|
+| 1	 | Apertura |
+| 2	 | Cierre |
+| 3	 | Ajuste |
+| 4	 | Ingreso |
+| 5	 | Gasto |
+| 6	 | Pago |
+| 7	 | Cobro |
+| 8	 | Compras |
+| 9	 | Ventas |
+| 10	 | Provisión |
 
