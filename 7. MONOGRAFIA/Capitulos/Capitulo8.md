@@ -847,4 +847,4 @@ CREATE TABLE Pedido(
 	FOREIGN KEY (id_repartidor) REFERENCES Repartidor(id_persona)
 );
 ```
-[Ver completo](.../.../Capitulos/archivos_cap16/modulo_almacen/Migni_Store_Tables.sql)
+[Ver completo](archivos_cap16/modulo_almacen/Migni_Store_Tables.sql)
