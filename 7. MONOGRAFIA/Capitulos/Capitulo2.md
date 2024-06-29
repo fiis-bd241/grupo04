@@ -289,16 +289,20 @@
    **Simplicidad y Facilidad de Uso:**
    - La página web debe ser intuitiva y fácil de usar, especialmente para usuarios nuevos. Se deben evitar interfaces complicadas que puedan confundir a los 
      usuarios.
+
    **Rendimiento:**
    - La página web debe cargar rápidamente y proporcionar una experiencia de usuario fluida en todos los dispositivos y conexiones a internet. Se debe minimizar 
      el tiempo de carga de las páginas y optimizar el rendimiento del sitio.
-   **Seguridad**
+     
+  **Seguridad:**
    - La página controlará el acceso solo de las personas que cuenten con una cuenta en el sistema, ya que dependiendo del rol podrá editar, ver así como registrar en el 
      aplicativo.
-   **Usabilidad**
+     
+   **Usabilidad:**
    - La usabilidad es esencial para que tanto los administradores, trabajadores como los clientes interactúen facilmente con el sistema, y permita optimizar el proceso de 
      obtención de información necesaria especialmente para los clientes al momento de buscar sus productos.
-   **Escalabilidad **
+     
+   **Escalabilidad:**
    -  La página será capaz de soportar una gran cantidad de usuarios y operaciones.
 
 ## Restricciones:
