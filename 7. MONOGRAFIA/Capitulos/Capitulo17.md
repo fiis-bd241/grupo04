@@ -18,3 +18,9 @@ Para llevar a cabo estas funcionalidades mencionadas previamente en el módulo d
 * Se dasarrollará en la automatización de los procesos de picking, packing y en la asignación de ubicación de los productos y para las entregas con la extensión de nuevos almacenes.
 * Se generarán reportes automático semanales de los productos con más salidas o con mas observaciones para una toma de decisiones más fáciles y rápidas, que se logrará con el mejoramiento del aplicativo y que aprenda del comportamiento (detalles, características) de los productos para poder promocionarlo al área de marketing.
 * Corregir algunas incovenientes en los frames para que la interfaz sea más atractiva y práctica
+
+## Módulo de Ventas
+
+* Se espera mejorar las funcionalidades del programa para que permita una mejor agilidad en el flujo de venta de productos. Por ejemplo: es mejor añadir la posibilidad que los lcientes puedan escojer una cantidad específica de producto que quiere comprar.
+* Mejorar la estética de las pantallas para poder dejar una mejor presentación en  la calidad del aplicativo. De manera que se vea mas amigable al consumidor.
+* Aún no esta acabada todas las funcionalidades, por ejemplo los historiales de venta y de cliente deberian poder funcioanr,sin embargo, no estan en uso. Deberia poder implementarse para un mejor seguimeinto tanto de la empresa como de los clientes.
