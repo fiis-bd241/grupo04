@@ -34,3 +34,7 @@ Aparecerá un aviso que nos notifica que el pedido fue actualizado y asignado su
 ![GESTOR](../../imagenes_cap16/MODdist/p9.png)
 
 Vemos como se actualiza el pedido en el listado,y cuando antes era "NONE" ,ahora si aparece un id_repartidor en el pedido
+
+## DATOS
+Anteriormente se le asigno una fecha al pedido por parte del cliente, luego el repartidor asignado puede aceptar el pedido y actualizar el estado,esto no se logró en las pantallas del aplicativo
+
