@@ -555,5 +555,60 @@ def actualizar_categorias(self,event):
         conn.commit()
         conn.close()
 ```
+![Imagen](../../imagenes_cap16/mod_Almacen/Producto_Correcto.png)
+*Al dar clic en el botón registrar, se ingresarán los datos mi tabla Producto, para posteriormente elegir su ubicación disponible en el almacén ingresado
 
+```py
+def registro(self):
+        primeras_tres_letras = self.entry_InCategoria.get()[:3].upper() + '0'
+        conn,cursor = bd.conectar()
+
+        query_count = '''
+                SELECT COUNT(*)
+                FROM Producto
+                WHERE nombre_categoria = %s
+        '''
+        cursor.execute(query_count,(self.entry_InCategoria.get(),))
+        numero_x = cursor.fetchone()[0]
+        numero_x2 = numero_x+1
+
+        id_producto_final = primeras_tres_letras + str(numero_x2)
+
+        query_present = '''
+                SELECT id_presentacion
+                FROM Presentacion
+                WHERE tipo_presentacion = %s
+            '''
+        cursor.execute(query_present,(self.entry_InPresentacion.get(),))
+        id_presentacion = cursor.fetchone()[0]
+
+        query_color = '''
+                SELECT id_color
+                FROM Colores
+                WHERE nombre_color = %s
+            '''
+        cursor.execute(query_color,(self.entry_InColor.get(),))
+        id_color = cursor.fetchone()[0]
+
+        query_insert = '''
+                INSERT INTO Producto
+                VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,CURRENT_DATE,CURRENT_DATE,6,4,%s)
+            '''
+        cursor.execute(query_insert, (id_producto_final, id_presentacion, id_color,
+        self.entry_InNombre.get("1.0", END).strip(),
+        self.entry_InMarca.get(), self.entry_InEspecif.get("1.0", END).strip(),
+        self.entry_InObserv.get("1.0", END).strip(),
+        self.entry_InPrecio.get("1.0", END).strip(),
+        self.entry_InPeso.get("1.0", END).strip(),
+        self.entry_InAncho.get("1.0", END).strip(),
+        self.entry_InLargo.get("1.0", END).strip(),
+        self.entry_InAlto.get("1.0", END).strip(),
+        self.entry_InCategoria.get()))
+
+        util_mensaje.ProdIn()
+
+        cursor.close()
+        conn.commit()
+        conn.close()
+```
   
