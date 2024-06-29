@@ -1142,7 +1142,7 @@ AND p.id_est_pedido = 'P'
 ### Eventos: 
 * **Pantalla Asignar: El gestor de distribucion podra visualizar los repartidores disponibles y asignar una fecha y ruta al pedido de codigo <1>**
 ```
-SELECT r.i_repartidor, r.nombre, r.apellido
+SELECT r.id_repartidor, r.nombre, r.apellido
 FROM Repartidor r
 INNER JOIN zona z ON r.id_zona = z.id_zona
 INNER JOIN distrito d ON z.id_zona = d.id_zona
