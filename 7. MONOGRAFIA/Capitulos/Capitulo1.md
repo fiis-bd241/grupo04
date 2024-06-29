@@ -143,13 +143,12 @@
 | 11     | revision de la calidad hacia el cliente | se revisan los libros de reclamaciones para ver posibles quejas y puntos a mejorar  | gestor CRM |
 
 ### 7. Proceso de Finanzas
+![Proceso de Finanzas](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable2/ProcesosASIS/Procesos%20ASIS%20Finanzas.png)
 
-![Proceso de Finanzas](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable2/ProcesosASIS/Proceso%20ASIS%20finanzas.png)
-
-| Secuencia | Proceso                       | Descripción                                                                                                                       | Autor    |
+| Secuencia | Proceso                       | Descripción                                                                                                                   | Autor    |
 |-----------|-------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|----------|
-| 1         | Generar un presupuesto de compra    | Generar un monto  de cuánto se dispone a tener de presupuesto para realizar las compras | Gestor de costos |
-| 2         | Enviar el presupuesto al área de compras | Envíar el presupuesto al área de compras para que en base a eso procedan a comprar los productos.| Gestor de costos |
+| 1         | Generar presupuestos  | Generar un monto  de cuánto se dispone a tener de presupuesto para realizar las compras | Gestor de costos |
+| 2         | Enviar el presupuesto a las áreas de la empresa | Envíar el presupuesto a las áreas de compras, marketing, almacén, administrativos para que en base a eso procedan a hacer sus operaciones diarias.| Gestor de costos |
 | 3         | Recepción de las compras | Recibir las compras realizadas. | Gestor de costos |
 | 4         | Validar las compras | Revisar las compras que registro concuerdan con lo recibido| Gestor de costos |
 | 5         | Recepción de los gastos administrativos | Recibe en un excel todos los gastos de la administración. | Gestor de costos |
@@ -284,12 +283,12 @@
 ![Proceso de CRM](../../04.Entregables/Entregable2/ProcesosTOBE/TOBEProcesoCRM.png)
 ### 7. Proceso de Finanzas
 
-![Proceso de Finanzas](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable2/ProcesosTOBE/Proceso%20TOBE%20Finanzas.png)
+![Proceso de Finanzas](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable2/ProcesosTOBE/Processo%20TO%20BE%20Finanzas.png)
 
-| Secuencia | Proceso                       | Descripción                                                                                                                       | Autor    |
+| Secuencia | Proceso                       | Descripción                                                                                                                   | Autor    |
 |-----------|-------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|----------|
-| 1         | Revisar Reportes | Se obtendrá reportes dentro del sistema que da´ran las diferente áreas mediante su alamcenamiento dentro del sistema. | Gestor de costos |.
-| 2         | Registrar el presupuesto en el sistema. | Registrar el presupuesto para que llegue al área de compras para que en base a eso procedan a comprar los productos.| Gestor de costos |
+| 1         | Revisar Reportes | Se obtendrá reportes dentro del sistema que dan las diferente áreas mediante su alamcenamiento dentro del sistema. | Gestor de costos |.
+| 2         | Registrar el presupuesto en el sistema para las áreas que necesitan. | Registrar el presupuesto para que llegue al área de compras para que en base a eso procedan a comprar los productos.| Gestor de costos |
 | 3         | Realizar la suma total de compras , ventas y  gastos dentro del sistema donde solo tendrá que revisar y verificar. | Realizar operaciones de suma total para obtener cuánto se está costando el producto. | Gestor de costos |
 | 4         | Recepción de costos | Recibir los costos realizados de las compras y los gastos administrativos dentro del sistema | Contador |
 | 5         | Asegurar la obtención de los comprobantes de pago de las compras y si no está podrá notificar mediante el sistema. | Verificar que todos los comprobante de pago en las compras están registrados. | Contador |
@@ -300,7 +299,7 @@
 | 10        | Realizar Reportes | Realizar reportes de las ganancias, cuento se vende, que producto es más vendido, las pérdidas, etc. | Contador |
 
 ### Cambios implementados: 
-- Anteriormente los registro se hacen mediante un excel y cuando se recepciona hacia el gesto de costos es median un correo o whattsap pero con el nuevo sistema podra registrar todo en el sitio web de manera que al registrar las ventas, los gastos, costos y pagos automáticamente se tendrá la suma total de todos que se alamnecará en una base datos de manera que eso servirá para realizar automáticamente los asientos contables y el estado de resultados además que dentro del sistema web podra registrar todas las facturas y transacciones donde podra ver el resumen de ello y darse cuenta más fácil que facturas faltan pagar o cobrar.
+- Anteriormente los registro se hacen mediante un excel y cuando se recepciona hacia el gestor de costos es mediante un correo o whattsap pero con el nuevo sistema podrá registrar todo en el sitio web de manera que al registrar las ventas, los gastos, costos y pagos automáticamente se tendrá la suma total de todos que se almanecerá en una base datos de manera que eso servirá para realizar automáticamente los asientos contables y el estado de resultados además que dentro del sistema web podra registrar todas las facturas y transacciones donde podra ver el resumen de ello y darse cuenta más fácil que facturas faltan pagar o cobrar.
 
 ### 1.3 Motivación
 -  La principal motivación para elegir a "Migni Store" y desarrollar una página web es el potencial de crecimiento que ofrece. Al ser una empresa pequeña en el mercado de la venta de papelería y maquillaje para dama, el 
