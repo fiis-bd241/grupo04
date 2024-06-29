@@ -31,6 +31,6 @@
 
 ### Explicación de las funcionalidades
 
-[EXPLICACION COMPRAS](archivos_cap16/mod_venta/explicacion.md)
+[EXPLICACION VENTAS](archivos_cap16/mod_venta/explicacion.md)
 
 
