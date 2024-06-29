@@ -1179,10 +1179,12 @@ INNER JOIN Tipo_est_pedido te ON p.id_est_pedido = te.id_est_pedido;
 ### Eventos: 
 * **Visualizar las entregas pendientes: El repartidor de id = <1> podra visualizar todos los pedidos que se encuentran pendientes**
 ```
-SELECT p.id_venta,p.fecha_entrega,e.estado_pedido
-FROM pedido p
-INNER JOIN tipo_est_pedido e on pedido.id_est_pedido = tipo_est_pedido.id_est_pedido
-WHERE id_repartidor = <1> AND  id_est_pedido = 'P';
+SELECT p.Id_venta,p.fecha_entrega,te.estado_pedido
+FROM Pedido p
+INNER JOIN Repartidor r ON p.Id_repartidor = r.Id_repartidor
+INNER JOIN Tipo_est_pedido te ON p.id_est_pedido = te.id_est_pedido
+WHERE r.Id_repartidor = <1>
+AND p.id_est_pedido = 'P';
 ```
 ### Código Requerimiento : R - 026
 ### Codigo interfaz : I - 026
