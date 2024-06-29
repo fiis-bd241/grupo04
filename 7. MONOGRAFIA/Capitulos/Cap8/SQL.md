@@ -1,4 +1,5 @@
 ## SQL para pruebas:
+```sql
 CREATE TABLE tipo_prod
 (
   Id_tipo_prod INT NOT NULL,
@@ -1230,3 +1231,5 @@ SELECT * FROM VENTA;
 SELECT * from detalle_pago;
 select * from tipos_pago;
 select * from factura;
+
+```
