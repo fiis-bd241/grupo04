@@ -283,7 +283,7 @@
 | 5 | El caso termina. |
 | **Flujo Alternativo** | - Si el usuario no tiene permisos, el sistema muestra un mensaje de error. |
 
-### Requerimientos de atributos de Calidad
+## Requerimientos de atributos de Calidad
 
 
    **Simplicidad y Facilidad de Uso:**
@@ -293,7 +293,7 @@
    - La página web debe cargar rápidamente y proporcionar una experiencia de usuario fluida en todos los dispositivos y conexiones a internet. Se debe minimizar 
      el tiempo de carga de las páginas y optimizar el rendimiento del sitio.
 
-### Restricciones:
+## Restricciones:
 
    **Compatibilidad con Navegadores:**
    - La página web debe ser compatible con una variedad de navegadores web modernos, incluidos Chrome, Firefox, Safari y Edge, para garantizar una experiencia de 
