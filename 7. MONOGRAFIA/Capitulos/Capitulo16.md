@@ -29,3 +29,8 @@
 [APLICATIVO VENTAS](archivos_cap16/mod_venta/ventas.py)
 
 
+### Explicación de las funcionalidades
+
+[EXPLICACION COMPRAS](archivos_cap16/mod_venta/explicacion.md)
+
+
