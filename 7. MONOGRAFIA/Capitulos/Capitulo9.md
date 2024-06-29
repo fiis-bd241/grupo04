@@ -177,6 +177,85 @@
 | Actor secundario    | -  |
 | Precondiciones    | Debe existir el pedido, con la fecha establecidad previamente |
 
+### Módulo de Ventas
+
+| Código | R020 |
+|----------|----------|
+|Nombre  | Ver Catálogo de Productos|
+| Objetivo | <p align="left"> Permitir que el cliente visualice el catálogo completo de productos disponibles en la plataforma de ventas.</p> | 
+| Descripción |  Facilitar al cliente la exploración de todos los productos disponibles para su compra, mostrando información básica de cada producto. | 
+| Actor primario   | Cliente | 
+|Actor secundario| Plataforma de Ventas|
+|Precondiciones |El cliente ha accedido a la plataforma de ventas|
+
+| Código | R021 |
+|----------|----------|
+|Nombre  | Ver Detalle de Producto desde el Catálogo|
+| Objetivo | <p align="left"> Permitir que el cliente acceda a una vista detallada de un producto mientras navega por el catálogo en la plataforma de ventas.</p>| 
+| Descripción | Facilitar al cliente la visualización de información detallada sobre un producto específico mientras navega por el catálogo de la plataforma de ventas, brindando detalles como descripción, código, marca, tipo de producto, precio y disponibilidad en stock.| 
+| Actor primario   | Cliente | 
+|Actor secundario| Plataforma de Ventas|
+|Precondiciones |El cliente ha iniciado sesión en la plataforma de ventas |
+
+| Código | R022 |
+|----------|----------|
+|Nombre  | Realizar una compra (carrito de compras)|
+| Objetivo | <p align="left"> Permitir que el cliente realice una compra en la plataforma de ventas y pueda cambiar su dirección de envío antes de finalizar la transacción si lo desea.</p> | 
+| Descripción | Facilitar el proceso de compra para el cliente, desde la selección de productos hasta la finalización de la transacción. | 
+| Actor primario   | Cliente | 
+|Actor secundario| Plataforma de Ventas|
+|Precondiciones |El cliente ha accedido a la plataforma de ventas y ha agregado productos al carrito de compras. |
+
+| Código | R023 |
+|----------|----------|
+|Nombre  | Elegir Método de Pago|
+| Objetivo | <p align="left"> Permitir que el cliente elija el método de pago al realizar una compra en la plataforma de ventas.</p> | 
+| Descripción | Facilitar al cliente la selección de su método de pago preferido durante el proceso de compra, limitando las opciones a tarjeta de débito o crédito. | 
+| Actor primario   | Cliente | 
+|Actor secundario| Plataforma de Ventas|
+|Precondiciones |El cliente ha accedido a la plataforma de ventas y ha agregado productos al carrito de compras|
+
+| Código | R024 |
+|----------|----------|
+|Nombre  | Ver Detalles del Producto|
+| Objetivo | <p align="left"> Permitir que el cliente acceda a una vista detallada del producto en la plataforma de ventas después de elegir su método de pago correspondiente.</p> | 
+| Descripción | Facilitar al cliente la visualización de información detallada sobre un producto seleccionado. | 
+| Actor primario   | Cliente | 
+|Actor secundario| Plataforma de Ventas|
+|Precondiciones |El cliente ha iniciado el proceso de pago y ha ingresado los datos de su tarjeta|
+
+| Código | R025 |
+|----------|----------|
+|Nombre  | Añadir Nueva Dirección de Envío|
+| Objetivo | <p align="left"> Permitir que el cliente agregue una nueva dirección de envío para recibir sus productos comprados en la plataforma de ventas.</p> | 
+| Descripción | Facilitar al cliente la posibilidad de registrar una dirección adicional donde desee recibir sus pedidos, aumentando la flexibilidad en la entrega de productos. | 
+| Actor primario   | Cliente | 
+|Actor secundario| Plataforma de Ventas|
+|Precondiciones |El cliente ha iniciado sesión en su cuenta en la plataforma de ventas|
+
+
+| Código | R026 |
+|----------|----------|
+|Nombre  | Consultar Historial de Ventas de la Empresa|
+| Objetivo | <p align="left"> Permitir que el gestor acceda al historial de ventas de la empresa en la plataforma de ventas.</p> | 
+| Descripción | Facilitar al gestor el acceso a información detallada sobre las ventas realizadas por la empresa, incluyendo datos como fechas, productos vendidos, montos y clientes. | 
+| Actor primario   | Gestor de Ventas | 
+|Actor secundario| Plataforma de Ventas|
+|Precondiciones |El gestor ha accedido a la plataforma de ventas|
+
+
+| Código | R027 |
+|----------|----------|
+|Nombre  | Consultar Historial de ventas de algun cliente|
+| Objetivo | <p align="left"> Permitir que el gestor acceda al historial de ventas del cliente para realizar seguimientos.</p> | 
+| Descripción | Facilitar al gestor el acceso a información detallada sobre las ventas realizadas por el cliente. | 
+| Actor primario   | Gestor de Ventas | 
+|Actor secundario| Plataforma de Ventas|
+|Precondiciones |El gestor ha accedido a la plataforma de ventas|
+
+
+
+
 ## Interfaces de requerimientos
 ### Módulo de Marketing
 | Código Interfaz | I001  |
