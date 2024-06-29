@@ -1,6 +1,6 @@
 # Módulo marketing
 
-[archivos aplicativo marketing](archivos_cap16/modulo_marketing)
+[archivos aplicativo marketing](../modulo_marketing)
 
 ## Explicación de las funcionalidades
 
@@ -52,6 +52,3 @@ Se verifica que se actualizó la observación.
 
 ![Verificación de actualizacion de campaña](../../imagenes_cap16/modmark/equip8.png)
 Se verifica que se realizo la correccion con respecto a la descripcion de la observacion (se disminuyo el descuento).
-
-## CODIGO DEL APLICATIVO
-[APLICATIVO MARKETING](../modulo_marketing)
