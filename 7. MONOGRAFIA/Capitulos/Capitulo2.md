@@ -168,6 +168,42 @@
 | 2 | En la tabla pedidos se mostrará los campos: ID Pedido, Tipo Entrega, Fecha Entrega, Dias Faltantes, Cod Venta, Repartidor (asignado automático por la zona de la dirección del cliente, si el repartidor está disponible y si el tipo de entrega es en domicilio) |
 | 3 | Al dar clic en una fila de la tabla pedidos, en el marco derecho se mostrará una tabla con los campos: ID Producto, Nombre, Cantidad, Ubicación; que vendría a ser el detalle del pedido para poder preparar los respectivos productos|
 
+**Caso de uso : Filtrar Pedido**
+
+| Objetivo | <p align="left"> Permite al Gestor de Almacén o algún trabajador filtrar los campos de mi tabla pedidos para mostrar lo que se requiere buscar </p> | 
+|:--------------:|--------------|
+| Descripción | Proceso de búsqueda o filtración con parámetros (botones o labels) para mis pedidos| 
+| Actor primario | Gestor de almacén | 
+|Actor secundario| Trabajador de almacén|
+|Precondiciones |Ingresar un dato o dar clic en algún filtro|
+| Paso | <p align="center"> Acción </p> |
+| 1 | El label 'Tipo Entrega' mostrará un combo box con los diferentes tipos de entrega que el cliente haya seleccionado en su venta que puede ser a Domicilio, Recojo o Envío|
+| 2 | El label 'Estado Pedido' mostrará un combo box con los diferentes estados que se le asigna a un pedido que puede ser, Leído, En Preparación, Despachado y Retornado|
+| 3 | El botón 'Actualizar' mostrará en la tabla pedidos solo aquellos ID Pedido que faltan por procesar como en la pantalla de inicio|
+
+**Caso de uso : Registrar**
+
+| Objetivo | <p align="left"> Permite ingresar los detalles del pedido a mi tabla Kardex </p> | 
+|:--------------:|--------------|
+| Descripción | los ID Producto con sus cantidades respectivas y el tipo de movimiento se agregan de manera automática mi sección Kardex| 
+| Actor primario | Gestor de almacén | 
+|Actor secundario|-|
+|Precondiciones |Que un pedido seleccionado esté en estado 'L'|
+| Paso | <p align="center"> Acción </p> |
+| 1 | Al dar clic en el botón registrar que aparecerá en el marco derecho, se actualizará el estado de la venta a 'P' (En Proceso) y el estado del pedido a 'P' (En Preparación), y se agregarán los ítems de los productos con su cantidad a las tablas Kardex y KardexxProducto|
+
+**Caso de uso : Visualizar Kardex**
+
+| Objetivo | <p align="left"> Permite al Gestor de Almacén ver los detalles de los pedidos despachados con tu tipo de movimiento </p> | 
+|:--------------:|--------------|
+| Descripción | Se podrá los detalles del movimiento de los productos de mi almacén| 
+| Actor primario | Gestor de almacén | 
+|Actor secundario|-|
+|Precondiciones |El pedido ha sido recogido de almacén y está en estado 'P'|
+| Paso | <p align="center"> Acción </p> |
+| 1 |En el marco izquierdo ingresar a la sección 'Kardex' que mostrarála tabla Kardex con los campos: ID Kardex, Fecha, Movimiento, Pedido, Tipo entreg|
+| 2 | Al dar clic en una fila de la tabla kardex, en el marco derecho se mostrará una tabla con los campos: Producto, Cantidad que indicarán a qué productos se ha efectuado ese movimiento en almacén|
+
 ## -  Casos de uso para Distribucion
 
 **Caso de uso : Establecer fecha de entrega del pedido**
