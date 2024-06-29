@@ -50,4 +50,4 @@
 
 ### Explicación de las funcionalidades
 
-[EXPLICACION DISTRIBUCION](archivos_cap16/MODdist/Mod_distribucion.md.md)
+[EXPLICACION DISTRIBUCION](archivos_cap16/MODdist/Mod_distribucion.md)
