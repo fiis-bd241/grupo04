@@ -1163,10 +1163,13 @@ WHERE id_pedido = <1>
 ### Eventos: 
 * **Visualizar historial de pedidos: El gestor de distribucion podra visualizar todos los pedidos que se han registrado**
 ```
-SELECT p.id_venta,p.fecha_entrega,persona.CONCAT(nombre, ' ', primer_apell),tipo_est_pedido.estado_pedido
-from pedido p
-INNER JOIN venta ON pedido.id_venta = venta.id_venta
-INNER JOIN persona  ON venta.id_persona = persona.id_persona
+SELECT p.Id_venta, p.fecha_entrega, 
+	pe.Nombre || ' ' || pe.Primer_apell || ' ' || pe.Segundo_apell AS nombre_cliente, 
+    te.estado_pedido AS estado_pedido
+FROM Pedido p
+INNER JOIN Venta v ON p.Id_venta = v.Id_venta
+INNER JOIN Persona pe ON v.Id_persona = pe.Id_persona
+INNER JOIN Tipo_est_pedido te ON p.id_est_pedido = te.id_est_pedido;
 ```
 ### Código Requerimiento : R - 025
 ### Codigo interfaz : I - 025
