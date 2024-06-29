@@ -611,4 +611,239 @@ CREATE TABLE EstadoxItem
 );
 ```
 
-# Creación de tablas Almacén
+## Creación de tablas Almacén
+```sql
+CREATE TABLE Almacen(
+	id_almacen CHAR(2) PRIMARY KEY,
+	tipo_almacen VARCHAR(50) NOT NULL,
+	descripcion_almacen VARCHAR(150) NOT NULL
+);
+
+CREATE TABLE Secciones(
+	seccion CHAR(1) PRIMARY KEY,
+	peso_soporta DECIMAL(5,1) NOT NULL,
+	id_almacen CHAR(2),	
+	CHECK (peso_soporta>0),
+	CONSTRAINT sector FOREIGN KEY (id_almacen) REFERENCES almacen(id_almacen)
+);
+
+CREATE TABLE Repisas(
+	seccion CHAR(1),
+	id_repisas CHAR(2),
+	altura DECIMAL(5,1) NOT NULL,
+	CHECK (altura BETWEEN 15.0 AND 300.0),
+	PRIMARY KEY (seccion,id_repisas),
+	FOREIGN KEY (seccion) REFERENCES secciones(seccion)
+);
+
+CREATE TABLE Estands(
+	seccion CHAR(1),
+	id_stand CHAR(2),
+	largo DECIMAL(5,1) NOT NULL,
+	ancho DECIMAL(5,1) NOT NULL,
+	CHECK(largo BETWEEN 30.0 AND 300.0),
+	CHECK(ancho BETWEEN 30.0 AND 100.0),
+	PRIMARY KEY (seccion,id_stand),
+	FOREIGN KEY (seccion) REFERENCES secciones(seccion)
+);
+	
+CREATE TABLE Ubicacion(
+	seccion CHAR(1),
+	id_stand CHAR(2),	
+	id_repisas CHAR(2),
+	PRIMARY KEY(seccion,id_stand,id_repisas),
+	FOREIGN KEY(seccion,id_repisas) REFERENCES Repisas(seccion,id_repisas),
+	FOREIGN KEY(seccion,id_stand) REFERENCES Estands(seccion,id_stand)
+);
+
+CREATE TABLE Tipo_Producto(
+	id_tipo_producto SERIAL PRIMARY KEY,
+	nombre_tipo_producto VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE Categoria_Producto(
+	nombre_categoria VARCHAR(20) PRIMARY KEY,
+	funcion_principal VARCHAR(150) NOT NULL,
+	id_tipo_producto INT,
+	CONSTRAINT sub FOREIGN KEY (id_tipo_producto) REFERENCES Tipo_Producto(id_tipo_producto)
+);
+
+CREATE TABLE Funciones_Categoria (
+	id_funcion SERIAL PRIMARY KEY,
+	nombre_funcion VARCHAR(100) NOT NULL,
+	caracteristica_general VARCHAR(200)
+);
+
+CREATE UNIQUE INDEX idx_nombre_funcion ON Funciones_Categoria(nombre_funcion);
+
+CREATE TABLE CategoriaxFunciones (
+	nombre_categoria VARCHAR(20),
+	id_funcion INT,
+	caracteristica_especifica VARCHAR(200),
+	PRIMARY KEY(nombre_categoria,id_funcion),
+	FOREIGN KEY(nombre_categoria) REFERENCES Categoria_Producto(nombre_categoria),
+	FOREIGN KEY(id_funcion) REFERENCES Funciones_Categoria(id_funcion)
+);
+
+CREATE TABLE Categoria_Producto_Zona(
+	nombre_categoria VARCHAR(20),
+	zona VARCHAR(10),
+	PRIMARY KEY(nombre_categoria,zona),
+	FOREIGN KEY (nombre_categoria) REFERENCES Categoria_Producto(nombre_categoria) ON DELETE CASCADE
+);
+
+CREATE TABLE Categoria_Producto_Sub_Tipo_Existe(
+	nombre_categoria VARCHAR(20),
+	sub_tipo_existe VARCHAR(30),
+	PRIMARY KEY(nombre_categoria,sub_tipo_existe),
+	FOREIGN KEY (nombre_categoria) REFERENCES Categoria_Producto(nombre_categoria)
+);
+
+CREATE TABLE Marca(
+	id_marca VARCHAR(30) PRIMARY KEY,
+	rubro VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Presentacion(
+	id_presentacion SERIAL PRIMARY KEY,
+	tipo_presentacion VARCHAR(30)
+);
+
+CREATE UNIQUE INDEX idx_tipo_presentacion ON Presentacion(tipo_presentacion);
+
+CREATE TABLE Colores(
+	id_color SERIAL PRIMARY KEY,
+	nombre_color VARCHAR(30) NOT NULL,
+	cod_hexa CHAR(7)
+);
+
+CREATE UNIQUE INDEX idx_cod_hexa ON Colores(cod_hexa);
+CREATE UNIQUE INDEX idx_nombre_color ON Colores(nombre_color);
+
+CREATE TABLE Producto(
+	id_producto VARCHAR(8) PRIMARY KEY,
+	id_presentacion INT,
+	id_color INT,
+	nombre_producto VARCHAR(100) NOT NULL,
+	id_marca VARCHAR(30),
+	especificaciones VARCHAR(150) NOT NULL,
+	observaciones VARCHAR(150),
+	precio_unitario DECIMAL(6,2) NOT NULL,
+	peso_unitario DECIMAL(6,3) NOT NULL,
+	ancho_present DECIMAL(4,1) NOT NULL,
+	largo_present DECIMAL(4,1) NOT NULL,
+	alto_present DECIMAL(4,1) NOT NULL,
+	fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	fecha_actualizacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	cantidad_minima INT NOT NULL,
+	valoracion INT NOT NULL,
+	nombre_categoria VARCHAR(20),
+	FOREIGN KEY (id_presentacion) REFERENCES Presentacion(id_presentacion),
+	FOREIGN KEY (id_color) REFERENCES Colores(id_color),
+	FOREIGN KEY (id_marca) REFERENCES Marca(id_marca),
+	FOREIGN KEY (nombre_categoria) REFERENCES Categoria_Producto(nombre_categoria)
+);
+
+CREATE OR REPLACE FUNCTION actualizar_fecha_actualizacion()
+RETURNS TRIGGER AS $$
+BEGIN
+    NEW.fecha_actualizacion = CURRENT_TIMESTAMP;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER actualizar_fecha_actualizacion_trigger
+BEFORE UPDATE ON Producto
+FOR EACH ROW
+EXECUTE FUNCTION actualizar_fecha_actualizacion();
+
+CREATE TABLE Imagenes(
+	id_imagen SERIAL PRIMARY KEY,
+	path_imagen VARCHAR(255) NOT NULL,
+	largo_imagen INT NOT NULL,
+	alto_imagen INT NOT NULL,
+	profundidad_bits INT NOT NULL,
+	id_producto VARCHAR(8),
+	CONSTRAINT tamañokb FOREIGN KEY (id_producto) REFERENCES Producto(id_producto)	
+);
+
+CREATE TABLE Inventario(
+	id_inventario SERIAL PRIMARY KEY,
+	id_producto VARCHAR(8),	
+	entradas INT NOT NULL,
+	salidas INT NOT NULL,	
+	seccion CHAR(1),
+	id_stand CHAR(2),
+	id_repisas CHAR(2),
+	ultima_actualizacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,	
+	FOREIGN KEY (id_producto) REFERENCES Producto(id_producto),
+	CONSTRAINT lugar FOREIGN KEY (seccion,id_stand,id_repisas) REFERENCES Ubicacion(seccion,id_stand,id_repisas)
+);
+
+CREATE OR REPLACE FUNCTION actualizar_ultima_actualizacion()
+RETURNS TRIGGER AS $$
+BEGIN
+    NEW.ultima_actualizacion = CURRENT_TIMESTAMP;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER actualizar_ultima_actualizacion_trigger
+BEFORE UPDATE ON Inventario
+FOR EACH ROW
+EXECUTE FUNCTION actualizar_ultima_actualizacion();
+
+CREATE TABLE Tipo_Movimiento(
+	id_tipo_mov SERIAL PRIMARY KEY,
+	nombre_movimiento VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE Kardex(
+	id_kardex VARCHAR(10) PRIMARY KEY,
+	fecha_kx TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	id_tipo_mov INT,
+	id_pedido VARCHAR(10),
+	id_tipo_entrega CHAR(1),
+	id_cotizacion VARCHAR(15),
+	FOREIGN KEY (id_tipo_mov) REFERENCES Tipo_Movimiento(id_tipo_mov),
+	FOREIGN KEY (id_pedido,id_tipo_entrega) REFERENCES Pedido(id_pedido,id_tipo_entrega),
+	FOREIGN KEY (id_cotizacion) REFERENCES Cotizacion(id_cotizacion)
+);
+
+CREATE TABLE KardexxProducto(
+	id_kardex VARCHAR(10),
+	id_producto VARCHAR(8),
+	cantidad_kx INT NOT NULL,
+	observacion_kx VARCHAR(255),
+	PRIMARY KEY(id_kardex,id_producto),
+	FOREIGN KEY (id_kardex) REFERENCES Kardex(id_kardex),
+	FOREIGN KEY (id_producto) REFERENCES Producto(id_producto)
+);
+
+CREATE TABLE Estado_Pedido(
+	id_estado_pedido CHAR(1) PRIMARY KEY,
+	nombre_estado_pedido VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE Tipo_Entrega(
+	id_tipo_entrega CHAR(1) PRIMARY KEY,
+	nombre_tipo_entrega VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE Pedido(
+	id_pedido VARCHAR(10),
+	id_tipo_entrega CHAR(1),
+	fecha_entrega DATE NOT NULL,
+	check_salida TIMESTAMP,
+	check_entrega TIMESTAMP,
+	id_estado_pedido CHAR(1),
+	cod_venta VARCHAR(10),
+	id_persona VARCHAR(10),
+	id_repartidor VARCHAR(10),
+	PRIMARY KEY(id_pedido,id_tipo_entrega),
+	FOREIGN KEY (id_tipo_entrega) REFERENCES Tipo_Entrega(id_tipo_entrega),
+	FOREIGN KEY (id_estado_pedido) REFERENCES Estado_Pedido(id_estado_pedido),
+	FOREIGN KEY (cod_venta,id_persona) REFERENCES Venta(cod_venta,id_persona),
+	FOREIGN KEY (id_repartidor) REFERENCES Repartidor(id_persona)
+);
+```
