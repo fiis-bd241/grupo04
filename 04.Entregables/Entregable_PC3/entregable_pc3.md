@@ -1220,12 +1220,19 @@ WHERE p.id_repartidor = <1>;
 ### Eventos: 
 * **BOTON VER MAS: El repartidor y el gestor de distribucion podran visualizar los detalles del pedido de id = <1>**
 ```
-SELECT per.nombre,ped.fecha_entrega,ped.id_venta,ven.monto_final,ped.id_ruta,rep.nombre,rep.id_repartidor,per.direccion
-FROM pedido ped
-INNER JOIN venta ven on ven.id_venta = ped.id_venta
-INNER JOIN persona per on per.id_persona = ven.id_persona
-INNER JOIN repartidor rep on rep.id_repartidor = ped.id_repartidor
-WHERE id_pedido = <1>
+SELECT 
+    pe.Nombre || ' ' || pe.Primer_apell || ' ' || pe.Segundo_apell AS nombre_cliente,
+    p.fecha_entrega,
+    p.Id_venta AS codigo_de_compra,
+    p.Id_ruta,
+    r.nombre AS nombre_repartidor,
+    r.Id_repartidor,
+    pe.Direccion
+FROM Pedido p
+INNER JOIN Venta v ON p.Id_venta = v.Id_venta
+INNER JOIN Persona pe ON v.Id_persona = pe.Id_persona
+INNER JOIN Repartidor r ON p.Id_repartidor = r.Id_repartidor
+WHERE p.Id_pedido = <1>;
 ```
 
 ## 3.5 Modulo de Alamcén
