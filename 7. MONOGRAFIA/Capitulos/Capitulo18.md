@@ -35,12 +35,36 @@
 
 ## Implementación
 ### Trabajar con InfluxDB
+- En la pagina principal vamos a la opcion de Buckets
 
 ![image](ImagenCap18/bucket.png)
+
+- Nos dirigira a la pestaña de buckets, que seria donde almacenariamos los datos
+
 ![image](ImagenCap18/add_data.png)
+
+- Entonces escogemos dentro de la opcion add data, line protocol
+
 ![image](ImagenCap18/line_protocol.png)
+
+- Dentro de "line protocol", vamos a la opcion de "enter manually"
+
 ![image](ImagenCap18/INS1.png)
+
+- Introducimos los datos de la cotizacion, id, monto, ruc y estado, no se pondra el tiempo, pues es generado automaticamente por influxdb
+
 ![image](ImagenCap18/INS2.png)
+
+- Nos saldra un mensaje de que la data ha sido guardada.
+
 ![image](ImagenCap18/INS3.png)
+
+- Luego en el data explorer podemos usar comando para ver nuestras cotizaciones, en este caso usamos "SELECT * FROM cotizacion" y podremos ver las cotizaciones que hemos introducido (ademas se ve en tiempo en que fue introducido el dato dentro de la base de datos)
+
 ![image](ImagenCap18/SELECT.png)
+
+- Ademas podemos hacer otros comandos igual que en una base de datos sql.
+
 ![image](ImagenCap18/SELECT2.png)
+
+- La funcionalidad a partir de este momento seria similar, pues podriamos crear mas tablas y hacer comandos igual que en una base de datos sql para buscar datos, actualizar, etc.
