@@ -35,3 +35,12 @@
 
 ## Implementación
 ### Trabajar con InfluxDB
+
+![image](ImagenCap18/bucket.png)
+![image](ImagenCap18/add_data.png)
+![image](ImagenCap18/line_protocol.png)
+![image](ImagenCap18/INS1.png)
+![image](ImagenCap18/INS2.png)
+![image](ImagenCap18/INS3.png)
+![image](ImagenCap18/SELECT.png)
+![image](ImagenCap18/SELECT2.png)
