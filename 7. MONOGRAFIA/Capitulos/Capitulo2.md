@@ -1,6 +1,6 @@
 # Capítulo 02: Requerimientos
 ## Requerimientos Funcionales
-### Casos de uso para Marketing
+## - Casos de uso para Marketing
 **Caso de uso: Editar campaña vigente**
 
 | Objetivo | <p align="left"> Permitir que el Gestor de marketing edite las campañas vigentes.</p> | 
@@ -69,7 +69,7 @@
 | 6 | El equipo de marketing envia los datos de campaña corregidos con respecto a la observacion realizada por el gestor de marketing. |
 | 7 | El caso termina |
 
-### Casos de uso para Compras
+## -  Casos de uso para Compras
 **Caso de uso : Añadir proveedor**
 
 | Objetivo | <p align="left">Permitir que el Gestor de compras pueda añadir proveedores a la página de Migni Store.</p> | 
@@ -124,7 +124,7 @@
 | 6 | El sistema muestra el historial de ofertas que fueron subidas a la pagina web y su estado|
 | 7 | El caso termina |
 
-### Casos de uso para Distribucion
+## -  Casos de uso para Distribucion
 
 **Caso de uso : Establecer fecha de entrega del pedido**
 
@@ -189,8 +189,102 @@
 |11|El sistema actualiza el estado del pedido a "ENTREGADO" en la seccion de gestionar pedidos del gestor de ventas|
 |12|El caso termina|
 
+## - Casos de uso para Finanzas
+**Caso de uso : Añadir factura**
+
+| **Objetivo**       | <p align="left"> Permitir al usuario añadir una factura al sistema.</p>  |
+|:--------------:|--------------|
+| **Descripción**    | Proceso de creación y registro de una facturas de los diferentes tipos existentes para considerar el monto y clasificarlos como asientos contables. |
+| **Actor Primario** | Contador General |
+| **Precondiciones** | El usuario ha iniciado sesión y tiene permisos para añadir facturas. |
+| **Paso**           | <p align="center"> Acción </p>|
+| 1 | El usuario selecciona "Añadir Factura" en el menú principal. |
+| 2 | El sistema presenta un formulario para ingresar detalles de la factura. |
+| 3 | El usuario completa el formulario con la información requerida así como el tipo. |
+| 4 | El usuario revisa y confirma la creación de la factura. |
+| 5 | El sistema valida la información ingresada y guarda la factura en la base de datos. |
+| 6 | El sistema genera automáticamente el asiento contable correspondiente. |
+| **Flujo Alternativo** | - Si hay errores en los datos, el sistema muestra mensajes de error y permite correcciones. |
+
+**Caso de Uso: Ver Asientos Contables**
+
+| **Objetivo**       | <p align="left"> Facilitar al usuario la consulta de asientos contables. </p>  |
+|:--------------:|--------------|
+| **Descripción**    | Mostrar una lista de asientos contables con opciones para ver detalles, filtrar, buscar además de editar e ingresar.|
+| **Actor Primario** | Contador General, Gerente General|
+| **Precondiciones** | El usuario ha iniciado sesión y según su rol tiene permisos para ver los asientos contables o para editar e ingresar. |
+| **Paso**           | <p align="center"> Acción </p> |
+| 1 | El usuario selecciona "Ver Asientos Contables" en el menú principal. |
+| 2 | El sistema muestra una lista de asientos contables ordenados por fecha. |
+| 3 | El usuario puede seleccionar un asiento para ver detalles adicionales. |
+| 4 | El usuario puede filtrar y buscar asientos por fecha, número o tipo además de ingresar o editar según el rol que tenga. |
+| 5 | El caso termina. |
+| **Flujo Alternativo** | - Si el usuario no tiene permisos, el sistema muestra un mensaje de error. |
+
+**Caso de Uso: Ver Estado de Resultados**
+
+| **Objetivo**       |  <p align="left">  Permitir al usuario consultar el estado de resultados.</p>  |
+|:--------------:|--------------|
+| **Descripción**    | Mostrar el estado de resultados con ingresos, costos de ventas, gastos operativos y beneficios netos así como poder editar en caso lo necesita considerando su rol. |
+| **Actor Primario** | Gerente General, Contador General |
+| **Precondiciones** | - El usuario ha iniciado sesión y tiene permisos según sea el caso para ver, editar el estado de resultados. |
+| **Paso**           | <p align="center"> Acción </p>|
+| 1 | El usuario selecciona "Ver Estado de Resultados" en el menú principal. |
+| 2 | El sistema muestra el estado de resultados con los datos correspondientes. |
+| 3 | El sistema calcula automáticamente los valores basados en las transacciones registradas. |
+| 4 | El usuario puede filtrar y buscar transacciones específicas. |
+| 5 | El caso termina. |
+| **Flujo Alternativo** | - Si el usuario no tiene permisos, el sistema muestra un mensaje de error. |
+
+**Caso de Uso: Ver Reporte Contable**
+
+| **Objetivo**       |  <p align="left">Permitir al usuario descargar el reporte contable. </p> |
+|:--------------:|--------------|
+| **Descripción**    | Generar y  ver un reporte contable.|
+| **Actor Primario** | Gerente General, Contador General |
+| **Precondiciones** | El usuario ha iniciado sesión  y tiene permisos para ver reportes contables o para editar según sea el caso. |
+| **Paso**           |  <p align="center"> Acción </p>  |
+| 1 | El usuario selecciona la opción de "Ver Reporte Contable" en el menú principal. |
+| 2 | El sistema genera el reporte según el periodo. |
+| 2 | El sistema muestra un resumen contable con el total de ingresos, gastos, activos, pasivos y patrimonio así como una análisis detallado. |
+| 3 | El sistema presenta un desglose detallado de cada categoría contable. |
+| 4 | El usuario puede filtrar y buscar transacciones específicas dentro del resumen. |
+| 5 | El usuario puede dejar algunas acotaciones específicas dentro del resumen. |
+| 4 | El caso termina. |
+| **Flujo Alternativo** | - Si el usuario no tiene permisos para acceder al resumen contable, el sistema muestra un mensaje de error. |
+
+**Caso de Uso: Asignar Presupuesto**
+
+| **Objetivo**       |  <p align="left"> Permitir al usuario asignar un presupuesto a diferentes departamentos o proyectos. </p> |
+|:--------------:|--------------|
+| **Descripción**    | Asignar y distribuir fondos según las necesidades de cada departamento o proyecto. |
+| **Actor Primario** | Contador General, Gerente General |
+| **Precondiciones** | - El usuario ha iniciado sesión y el usuario tiene permisos para asignar presupuestos. |
+| **Paso**           |  <p align="center"> Acción </p>  |
+| 1 | El usuario selecciona "Asignar Presupuesto" en el menú principal. |
+| 2 | El sistema muestra una lista de departamentos o proyectos. |
+| 3 | El usuario selecciona el departamento o proyecto y el monto a asignar. |
+| 4 | El sistema registra la asignación y actualiza el presupuesto total. |
+| 5 | El caso termina. |
+| **Flujo Alternativo** | - Si el usuario no tiene permisos, el sistema muestra un mensaje de error. |
+
+**Caso de Uso: Gestión de Presupuesto**
+
+| **Objetivo**       |  <p align="left"> Permitir al usuario gestionar presupuestos financieros. </p>  |
+|:--------------:|--------------|
+| **Descripción**    | Crear, editar y revisar presupuestos, con opciones para ajustar partidas y comparar con datos reales. |
+| **Actor Primario** | Contador General, Gerente General |
+| **Precondiciones** | - El usuario ha iniciado sesión y tiene permisos para gestionar presupuestos. |
+| **Paso**           |  <p align="center"> Acción </p>  |
+| 1 | El usuario selecciona "Gestión de Presupuestos" en el menú principal. |
+| 2 | El sistema muestra una lista de presupuestos existentes. |
+| 3 | El usuario puede crear un nuevo presupuesto o editar uno existente. |
+| 4 | El sistema permite ajustar partidas y comparar con datos reales. |
+| 5 | El caso termina. |
+| **Flujo Alternativo** | - Si el usuario no tiene permisos, el sistema muestra un mensaje de error. |
 
 ### Requerimientos de atributos de Calidad
+
 
    **Simplicidad y Facilidad de Uso:**
    - La página web debe ser intuitiva y fácil de usar, especialmente para usuarios nuevos. Se deben evitar interfaces complicadas que puedan confundir a los 
