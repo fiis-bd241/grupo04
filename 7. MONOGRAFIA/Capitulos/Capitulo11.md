@@ -13,6 +13,8 @@ Cúpon, Campaña, Campañaxprod, Campañaxcanal, Observacion, Equipo_Marketing, 
 Aquí estan presentes los archivos csv de el módulo de compras
 Proveedor, Cotizacion, CotizacionxProducto, tipo_est_proveedor, tipo_est_cotizacion
 
+## Módulo Distribucion
+
 [Carpeta contenedora de los archivos](archivos_cap_11/modulo_dist)
 
 Aquí estan presentes los archivos csv de el módulo de distribucion
