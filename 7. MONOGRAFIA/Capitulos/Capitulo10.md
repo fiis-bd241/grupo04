@@ -604,4 +604,150 @@ join tipos_pago t on t.id_tipo_pago = d.id_tipo_pago
 where p.nombre = 'Brittney'
 
 ```
+##3.6. Módulo de finanzas
 
+### Código Requerimiento : R - 037
+### Codigo interfaz : I - 037
+### Imagen interfaz : 
+![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/Pantallas/VerFactura.PNG)
+Sectencia SQL:
+Eventos: Hacer click a una factura y visualiza la factura escogida:
+```
+select f.nro_factura, f.fecha_emision,dp.hora_pago,
+concat (p.nombre, ' ', p.primer_apell,' ', p.segundo_apell) as Nombre,
+p.direccion, tp.nombre_tipo as metodo_pago, 
+tif.tipo_fac, prod.nombre_producto , vp.cant_prod, f.monto, e.nom_estado
+from factura f
+inner join Persona p on p.id_persona = f.id_persona
+inner join Tipo_Factura tif on f.id_tip_fac = tif.id_tip_fac
+inner join Estado e on f.id_estado = e.id_estado
+inner join venta v on v.id_persona = f.id_persona
+inner join detalle_pago dp on dp.id_detalle_pago = v.id_detalle_pago
+inner join tipos_pago tp on tp.id_tipo_pago = dp.id_tipo_pago
+inner join ventaxprod vp on vp.id_venta = v.id_venta
+inner join producto prod on prod.id_producto = vp.id_producto
+where f.nro_factura = 2022001;
+```
+### Código Requerimiento : R - 038
+### Codigo interfaz : I - 038
+### Imagen interfaz : 
+![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/Pantallas/HistorialFactura.PNG)
+Eventos: Visualizar todas las facturas, y poder filtrarlo por el año, etc.
+
+--Todas las fcaturas sin filtro:
+```
+select f.nro_factura, f.fecha_emision,
+f.monto,f.id_persona, f.ruc_proveedor,  tif.tipo_fac, e.nom_estado
+from factura f
+inner join Tipo_Factura tif on f.id_tip_fac = tif.id_tip_fac
+inner join Estado e on f.id_estado = e.id_estado
+order by f.nro_factura; 
+```
+-Facturas de un año en espcifico:
+```
+select f.nro_factura, f.fecha_emision,dp.hora_pago,
+concat (p.nombre, ' ', p.primer_apell,' ', p.segundo_apell) as Nombre,
+p.direccion, tp.nombre_tipo as metodo_pago, 
+tif.tipo_fac, prod.nombre_producto , vp.cant_prod, f.monto, e.nom_estado
+from factura f
+inner join Persona p on p.id_persona = f.id_persona
+inner join Tipo_Factura tif on f.id_tip_fac = tif.id_tip_fac
+inner join Estado e on f.id_estado = e.id_estado
+inner join venta v on v.id_persona = f.id_persona
+inner join detalle_pago dp on dp.id_detalle_pago = v.id_detalle_pago
+inner join tipos_pago tp on tp.id_tipo_pago = dp.id_tipo_pago
+inner join ventaxprod vp on vp.id_venta = v.id_venta
+inner join producto prod on prod.id_producto = vp.id_producto
+where extract(year from fecha_emision) = 2022;
+```
+### ![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/Pantallas/A%C3%B1adirFactura.PNG)
+--Para llenar la factura:
+```
+select f.nro_factura, f.fecha_emision,dp.hora_pago,p.nombre,
+concat (p.nombre, ' ', p.primer_apell,' ', p.segundo_apell) as Nombre,
+p.direccion, tp.nombre_tipo as metodo_pago, 
+tif.tipo_fac, prod.nombre_producto , vp.cant_prod, f.monto
+from factura f
+inner join Persona p on p.id_persona = f.id_persona
+inner join Tipo_Factura tif on f.id_tip_fac = tif.id_tip_fac
+inner join Estado e on f.id_estado = e.id_estado
+inner join venta v on v.id_persona = f.id_persona
+inner join detalle_pago dp on dp.id_detalle_pago = v.id_detalle_pago
+inner join tipos_pago tp on tp.id_tipo_pago = dp.id_tipo_pago
+inner join ventaxprod vp on vp.id_venta = v.id_venta
+inner join producto prod on prod.id_producto = vp.id_producto;
+```
+### Código Requerimiento : R - 039
+### Codigo interfaz : I - 039
+### Imagen interfaz : 
+![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/Pantallas/Factura%20Estados.PNG)
+eventos: Podemos ver las facturas que faltan pagar, etc:
+
+--Facturas que faltan pgar hasta hoy
+```
+select f.nro_factura, f.fecha_emision,
+f.monto,f.id_persona, f.ruc_proveedor,  tif.tipo_fac, e.nom_estado
+from factura f
+inner join Tipo_Factura tif on f.id_tip_fac = tif.id_tip_fac
+inner join Estado e on f.id_estado = e.id_estado
+where e.nom_estado IN ('Falta Pagar', 'No Pagado')
+  AND f.fecha_emision <= CURRENT_DATE;
+```
+--Facturas que faltan pagar la semana actual
+```
+select f.nro_factura, f.fecha_emision,
+f.monto,f.id_persona, f.ruc_proveedor,  tif.tipo_fac, e.nom_estado
+from factura f
+inner join Tipo_Factura tif on f.id_tip_fac = tif.id_tip_fac
+inner join Estado e on f.id_estado = e.id_estado
+where e.nom_estado IN ('Falta Pagar', 'No Pagado')
+  and extract(week from f.fecha_emision) = extract(week from current_date)
+  and extract(year from f.fecha_emision) = extract(year from current_date);
+```
+--Faltan mes actual 
+```
+select f.nro_factura, f.fecha_emision,
+f.monto,f.id_persona, f.ruc_proveedor,  tif.tipo_fac, e.nom_estado
+from factura f
+inner join Tipo_Factura tif on f.id_tip_fac = tif.id_tip_fac
+inner join Estado e on f.id_estado = e.id_estado
+where e.nom_estado IN ('Falta Pagar', 'No Pagado')
+  and extract(month from f.fecha_emision) = extract(month from current_date)-1
+  and extract(year from f.fecha_emision) = extract(year from current_date);
+```  
+
+### Código Requerimiento : R - 040
+### Codigo interfaz : I - 040
+### Imagen interfaz : 
+![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/Pantallas/HistorialdeAsientos.PNG)
+
+-Eventos: Ver los asientos contables así como su estado y el tipo.
+```
+select a.id_asiento_contable,ta.nombre_tipo_as as tipo_asientocontable, a.cant_debe, a.cant_haber, 
+f.monto, e.nom_estado 
+from asiento_contable a
+inner join tipo_asiento_contable ta on ta.id_tipo_asiento_contable = a.id_tipo_asiento_contable
+inner join factura f on f.nro_factura = a.nro_factura
+inner join Persona p on p.id_persona = f.id_persona
+inner join Estado e on f.id_estado = e.id_estado
+order by a.id_asiento_contable;
+```
+
+### Código Requerimiento : R - 041
+### Codigo interfaz : I - 041
+### Imagen interfaz : 
+![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/Pantallas/EstadodeResultados.PNG)
+
+-Eventos: Ver el estado de Resultados:
+```
+select ite.id_item_est__resultados, tie.nombre_tipo_item, f.monto, tv.nom_val,  
+top.nom_operacion, er.periodo, er.mes 
+from item_estado_resultados ite
+inner join asiento_contable a on a.id_asiento_contable = ite.id_asiento_contable
+inner join factura f on f.nro_factura = a.nro_factura
+inner join estadoxitem ei on ei.id_item_est__resultados= ite.id_item_est__resultados
+inner join estado_de_Resultados er on er.id_estad_result = ei.id_estad_result
+inner join tipo_item_est tie on tie.id_tipo_item_est = ite.id_tipo_item_est
+inner join Tip_valor tv on tv.id_tip_valor = tie.id_tip_valor
+inner join Tip_operación top on top.id_tip_op = tie.id_tip_op ;
+```
