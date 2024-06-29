@@ -5,9 +5,9 @@ from tkinter import messagebox, ttk
 class DatabaseDAO:
     def __init__(self):
         self.conn = psycopg2.connect(
-            dbname="DBD - GRUPO 4",
+            dbname="",#ACA VA EL NOMBRE DE TU BASE DE DATOS
             user="postgres",
-            password="soyuningeniero",
+            password="",#ACA VA LA CONTRASEÑA
             host="localhost",
             port="5432"
         )
