@@ -131,13 +131,42 @@
 |:--------------:|--------------|
 | Descripción | Proceso de visualización del inventario de cada producto recepcionado | 
 | Actor primario | Gestor de almacén | 
-|Actor secundario| Trabajador de almacén|
+|Actor secundario|-|
 |Precondiciones | El producto debe ser ingresado a algún almacén |
 | Paso | <p align="center"> Acción </p> |
 | 1 | Inicio de login del gestor de almacén, cuyo correo se mostrará en la parte superior derecho|
 | 2 | Ingresa a la opción de Inventario en el marco izquierdo |
 | 3 | El sistema le mostrará en un tabla el id producto, nombre, presentación, color, stock, ubicación|
-| 4 | Se podrá seleccionar una fila de la tabla, lo cual el sistema mostrará en el marco derecho la imagen, importe total y volumen del producto |
+| 4 | Se podrá seleccionar una fila de la tabla, lo cual el sistema mostrará en el marco derecho la imagen, importe total y volumen del producto seleccionado |
+
+**Caso de uso : Filtrar Inventario**
+
+| Objetivo | <p align="left"> Permite al Gestor de Almacén o algún trabajador filtrar los campos de mi tabla productos para mostrar lo que se requiere buscar </p> | 
+|:--------------:|--------------|
+| Descripción | Proceso de búsqueda o filtración con parámetros (botones o labels) para mis productos| 
+| Actor primario | Gestor de almacén | 
+|Actor secundario| Trabajador de almacén|
+|Precondiciones |Ingresar un dato o dar clic en algún filtro|
+| Paso | <p align="center"> Acción </p> |
+| 1 | En el marco superior se puede dar clic en el botón 'Maquillaje' y se mostrará en la tabla solo los productos de mi almacén maquillaje, del mismo modo, al dar clic en el botón 'Papelería', me mostrará los productos de mi almacén papelería |
+| 2 | Al dar clic en el botón 'Sin Stock' me mostrará los productos que no cuento con stock para posteriormente realizar una compra |
+| 3 | El label 'Ingresar Código Producto' se puede filtrar por el ID Producto ya sea con el código completo o con las iniciales del ID Producto al darle clic en 'Buscar'|
+| 4 | El label 'Ingresar Marca Produco' mostrará un combo box con las marcas registradas de los productos y al seleccionar una marca y darle clic en buscar se mostrará los productos que sean de la marca ingresada |
+| 5 | El label 'Ingresar Stock Minimo' permite ingresar un número para filtrar los producto que tengan como stock igual o mayor que el número ingresado|
+| 6 | El label 'Ingresar Categoría' mostrará un combo box con las categorías registradas para poder filtrar los productos de acuerdo a su tipo de categoría|
+
+**Caso de uso : Visualizar Pedidos**
+
+| Objetivo | <p align="left"> Permite al Gestor de Almacén ver los pedidos que faltan por procesar o que ya han sido procesados y/o completados </p> | 
+|:--------------:|--------------|
+| Descripción | Ver y gestionar los pedidos de las ventas efectuadas en el sistema para registrar un kardex| 
+| Actor primario | Gestor de almacén | 
+|Actor secundario| Trabajador de almacén|
+|Precondiciones |La venta deben estar en estado 'C' (Canceladas) para que el pedido pase automático y esté en estado 'L' (Leído)|
+| Paso | <p align="center"> Acción </p> |
+| 1 |En el marco izquierdo ingresar a la sección 'Pedidos' que mostrará en un inicio todos los pedidos que están en estado 'L' para su registro más rápido |
+| 2 | En la tabla pedidos se mostrará los campos: ID Pedido, Tipo Entrega, Fecha Entrega, Dias Faltantes, Cod Venta, Repartidor (asignado automático por la zona de la dirección del cliente, si el repartidor está disponible y si el tipo de entrega es en domicilio) |
+| 3 | Al dar clic en una fila de la tabla pedidos, en el marco derecho se mostrará una tabla con los campos: ID Producto, Nombre, Cantidad, Ubicación; que vendría a ser el detalle del pedido para poder preparar los respectivos productos|
 
 ## -  Casos de uso para Distribucion
 
