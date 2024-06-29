@@ -43,4 +43,11 @@
 [EXPLICACION FINANZAS](https://github.com/fiis-bd241/grupo04/blob/main/7.%20MONOGRAFIA/Capitulos/archivos_cap16/MODFinanzas/ExplicacionFin.md)
 
 
+## Módulo distribucion
+### Código
+[APLICATIVO DISTRIBUCION](archivos_cap16/MODdist/proyectodistribucion)
 
+
+### Explicación de las funcionalidades
+
+[EXPLICACION DISTRIBUCION](archivos_cap16/MODdist/Mod_distribucion.md.md)
