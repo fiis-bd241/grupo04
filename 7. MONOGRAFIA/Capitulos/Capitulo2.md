@@ -206,6 +206,30 @@
 | 6 | El sistema genera automáticamente el asiento contable correspondiente. |
 | **Flujo Alternativo** | - Si hay errores en los datos, el sistema muestra mensajes de error y permite correcciones. |
 
+**Caso de Uso: Ver Estado de Facturas**
+|  **Objetivo** | <p align="left">Permitir al usuario consultar y gestionar el estado de las facturas en el sistema, incluyendo el pago.</p>|
+|:--------------:|--------------|
+|Descripción	| Proceso de visualización y gestión de las facturas registradas, permitiendo su edición, aprobación o rechazo según el estado de cada factura.|
+|Actor Primario	| Contador General, Gestor de Costos, Gerente General. |
+| Precondiciones|	El usuario ha iniciado sesión y tiene permisos para acceder al módulo de Finanzas.|
+| Paso | <p align="center">Acción</p>|
+| 1 | El usuario selecciona "Facturas" en el menú principal. |
+| 2 | El usuario elige "Ver Estado de Facturas" en el menú del módulo de Finanzas. |
+| 3 | El sistema muestra una lista de todas las facturas registradas con su estado actual (VIGENTE, PROPUESTA, ACEPTADA, RECHAZADA) y estado de pago (Pagada, No Pagada, Parcialmente Pagada). |
+| 4 | El usuario puede filtrar las facturas por criterios específicos (fecha, proveedor, cliente, estado, estado de pago, etc.). |
+| 5 | El usuario selecciona una factura de la lista para ver más detalles. |
+| 6 | El sistema muestra una vista detallada de la factura seleccionada, incluyendo: fecha de emisión, proveedor, importe total, productos/servicios, estado actual, estado de pago, historial de modificaciones. |
+| 7 | Dependiendo del estado de la factura, el usuario puede realizar las siguientes acciones: |
+| 7.1 | Editar (VIGENTE): Modificar fecha y modalidad de pago, agregar o quitar productos/servicios. |
+| 7.2 | Revisar (PROPUESTA): Aprobar o rechazar la factura, añadiendo observaciones si es rechazada. |
+| 7.3 | Registrar (ACEPTADA): Registrar la factura en los sistemas contables. |
+| 7.4 | Ver Observaciones (RECHAZADA): Ver las observaciones realizadas por el contador general. |
+| 7.5 | Actualizar Estado de Pago: Marcar la factura como pagada, no pagada o parcialmente pagada según corresponda. |
+| 8 | El usuario guarda cualquier cambio realizado. |
+| 9 | El sistema confirma que los cambios han sido guardados exitosamente y envía notificaciones pertinentes. |
+| Flujo Alternativo | - Si el usuario no tiene permisos, el sistema muestra un mensaje de error y redirige a la pantalla principal. |
+| | - Si la factura buscada no se encuentra, el sistema muestra un mensaje indicando que no hay resultados y ofrece opciones de búsqueda avanzada. |
+
 **Caso de Uso: Ver Asientos Contables**
 
 | **Objetivo**       | <p align="left"> Facilitar al usuario la consulta de asientos contables. </p>  |
