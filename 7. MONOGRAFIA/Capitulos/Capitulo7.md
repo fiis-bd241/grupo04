@@ -127,7 +127,7 @@ Columnas: id_tip_op, nom_operacion
 
 ### Tipo_asiento_contable
 Columnas: id_tipo_asiento_contable, nombre_tipo_as
-| id_tipo_asiento_contable, nombre_tipo_as |
+| id_tipo_asiento_contable | nombre_tipo_as |
 |------------------|----------------------|
 | 1	 | Apertura |
 | 2	 | Cierre |
@@ -138,5 +138,5 @@ Columnas: id_tipo_asiento_contable, nombre_tipo_as
 | 7	 | Cobro |
 | 8	 | Compras |
 | 9	 | Ventas |
-| 10	 | Provisión |
+| 10	| Provisión |
 
