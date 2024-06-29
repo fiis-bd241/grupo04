@@ -22,7 +22,7 @@
     - Labiales y glosses
     - Máscaras de pestañas
 ## Entrevista
-- Conclusión de la entrevista: Se obtuvo principamente los requerimientos del aplicativo que quisiera ya que tenían procesos no optimizados dentro de la empresa considerando el registro de todas sus compras y ventas asi como la recepción de pedidos y confirmaciones de entrega, además pudimos visualizar los productos que tenían así como la explicación detallada de sus procesos de negocio.
+- Conclusión de la entrevista: Se obtuvo principamente los requerimientos del aplicativo ya que tenían procesos no optimizados dentro de la empresa considerando el registro de todas sus compras y ventas asi como la recepción de pedidos y confirmaciones de entrega, además pudimos visualizar los productos que tenían así como la explicación detallada de sus procesos de negocio.
 - [Entrevista 1 (31-03-24)](Entrevista1/entrevista1.md)
 ## 1.2 Descripción del proceso de negocio
 
