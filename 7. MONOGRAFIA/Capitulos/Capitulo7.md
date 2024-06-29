@@ -21,3 +21,13 @@ Columnas: id_est_proveedor, est_proveedor
 |N|No Activo|
 
 ![image](imagenes_cap7/P1.png)
+
+### Pedido
+- Tipo estado pedido
+Columnas: id_est_pedido, estado_pedido
+
+|id_est_pedido|estado_pedido|
+|----------------------|------------|
+|E|ENTREGADO|
+|P|PENDIENTE|
+|C|CANCELADO|
