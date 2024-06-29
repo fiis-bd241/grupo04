@@ -23,3 +23,9 @@
 ### Explicación de las funcionalidades
 
 [EXPLICACION ALMACEN](archivos_cap16/modulo_almacen/MOD_ALMACEN.md)
+
+## Módulo Ventas
+### Código
+[APLICATIVO VENTAS](archivos_cap16/modulo_venta.md)
+
+
