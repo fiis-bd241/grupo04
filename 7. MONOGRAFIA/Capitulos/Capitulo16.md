@@ -65,4 +65,8 @@ Se verifica que se realizo la correccion con respecto a la descripcion de la obs
 
 ## Módulo Almacén
 ### Código
-[APLICATIVO ALMACEN](archivos_cap16/mod_compra/COMPRAS)
+[APLICATIVO ALMACEN](archivos_cap16/modulo_almacen)
+
+### Explicación de las funcionalidades
+
+[EXPLICACION ALMACEN](archivos_cap16/mod_compra/MODCOMPRA.md)
