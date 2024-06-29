@@ -1,0 +1,8 @@
+id_tipo_item,Nombre,id_tip_op,id_tip_valor
+301,ventas,21,41
+302,costos,21,42
+303,gastos,21,42
+304,utilidad bruta,22,
+305,utilidad antes de impuesto,22,
+306,impuesto,21,42
+307,utilidad neta,22,

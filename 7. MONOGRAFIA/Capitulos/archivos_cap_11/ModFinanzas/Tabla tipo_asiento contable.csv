@@ -1,0 +1,11 @@
+id_tipo_asiento_contable,Denominacion
+401,Apertura
+402,Cierre
+403,Ajuste
+404,Ingreso
+405,Gasto
+406,Pago
+407,Cobro
+408,Compras
+409,Ventas
+410,Provisión
