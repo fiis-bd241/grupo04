@@ -189,7 +189,7 @@ Reportes Financieros: Incorporar la capacidad de generar reportes financieros de
 Conciliación Bancaria: Añadir una funcionalidad para realizar la conciliación bancaria de manera automática o manual.
 ## Módulo de Distribucion
 #### Conectar con las pantallas de cliente y repartidor
--Si bien se pudo conectar y hacer las funcionalidades de gestor de distribucion, que asignaba repartidores y rutas. No se ha podido conectar con las pantallas de cliente y repartidor por problemas con el login.
+-Si bien se pudo conectar y hacer las funcionalidades de gestor de distribucion, que asignaba repartidores y rutas,ademas abajo de la pantalla para ingresar el id_repartidor y id_ruta,nos aparecia una lista con los repartidores disponibles que se encontraban en la misma zona que de donde proviene el cliente. No se ha podido conectar con las pantallas de cliente y repartidor por problemas con el login.
 
 # 6. Videos individuales
 

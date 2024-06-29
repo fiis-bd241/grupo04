@@ -25,6 +25,10 @@ Para llevar a cabo estas funcionalidades mencionadas previamente en el módulo d
 * Mejorar la estética de las pantallas para poder dejar una mejor presentación en  la calidad del aplicativo. De manera que se vea mas amigable al consumidor.
 * Aún no esta acabada todas las funcionalidades, por ejemplo los historiales de venta y de cliente deberian poder funcioanr,sin embargo, no estan en uso. Deberia poder implementarse para un mejor seguimeinto tanto de la empresa como de los clientes.
 
+## Módulo de distribucion
+
+* Se espera poder lograr la conexion con las pantallas de cliente y repartidor al momento de loguearse, se ha logrado completar la funcionalidad del gestor de distribucion,sin embargo el establecimiento de la fecha_entrega por parte del cliente(el cual crea el registro del pedido) aun no se logro completar, y que el repartidor acepte el pedido y actualice el estado una vez lo haya entregado.
+
 ## Módulo de Finanzas
 * Funcionalidad Actual: El módulo de finanzas actualmente solo permite registrar facturas para generar asientos contables y estado de resultados y también la asignación de presupuestos, limitando la gestión financiera a una simple función de registro.
 ### Requerimientos Iniciales
