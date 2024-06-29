@@ -124,6 +124,21 @@
 | 6 | El sistema muestra el historial de ofertas que fueron subidas a la pagina web y su estado|
 | 7 | El caso termina |
 
+## -  Casos de uso para Almacen
+**Caso de uso : Visualizar Inventario**
+
+| Objetivo | <p align="left"> Permite que el Gestor de Almacén pueda gestionar el inventario, analizar, filtrar y hacer toma de decisiones respecto al stock y ubicación </p> | 
+|:--------------:|--------------|
+| Descripción | Proceso de visualización del inventario de cada producto recepcionado | 
+| Actor primario | Gestor de almacén | 
+|Actor secundario| Trabajador de almacén|
+|Precondiciones | El producto debe ser ingresado a algún almacén |
+| Paso | <p align="center"> Acción </p> |
+| 1 | Inicio de login del gestor de almacén, cuyo correo se mostrará en la parte superior derecho|
+| 2 | Ingresa a la opción de Inventario en el marco izquierdo |
+| 3 | El sistema le mostrará en un tabla el id producto, nombre, presentación, color, stock, ubicación|
+| 4 | Se podrá seleccionar una fila de la tabla, lo cual el sistema mostrará en el marco derecho la imagen, importe total y volumen del producto |
+
 ## -  Casos de uso para Distribucion
 
 **Caso de uso : Establecer fecha de entrega del pedido**
