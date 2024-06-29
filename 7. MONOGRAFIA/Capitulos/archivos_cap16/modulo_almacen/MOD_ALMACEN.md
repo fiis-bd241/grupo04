@@ -1,5 +1,5 @@
 # MODULO DE ALMACEN
-## NOTA: TRABJÉ EL FLUJO DE ALMACÉN CON EL SIGUIENTE MODELO CONCEPTUAL Y LÓGICO (que por tema se tiempo no se pudo consolidar con los de mi grupo)
+## NOTA: TRABAJÉ MI FLUJO DE ALMACÉN CON EL SIGUIENTE MODELO CONCEPTUAL Y LÓGICO QUE ELABORÉ A BASE DEL INICIAL (que por tema de tiempo no se pudo consolidar)
 
 ![Modelo conceptual2](../../imagenes_cap5/Flujo_2_Almacen_ER.png)
 
