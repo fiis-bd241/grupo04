@@ -493,6 +493,9 @@ CREATE TABLE Inventario
   FOREIGN KEY (Id_Producto) REFERENCES Producto(Id_Producto),
   FOREIGN KEY (Ubicacion_Prod) REFERENCES Ubicacion(Ubicacion_Prod)
 );
+```
+## Creación de tablas de Finanzas
+```sql
 CREATE TABLE Tipo_Factura
 (
   id_tip_Fac INT NOT NULL,
@@ -504,6 +507,13 @@ CREATE TABLE Estado
   id_estado INT NOT NULL,
   nom_estado VARCHAR(100) NOT NULL,
   PRIMARY KEY (id_estado)
+);
+
+CREATE TABLE tipo_estado_presupuesto
+(
+  id_estad_presupuesto INT NOT NULL,
+  nombre_estado VARCHAR(100) NOT NULL,
+  PRIMARY KEY (id_estad_presupuesto)
 );
 
 CREATE TABLE Tip_valor
@@ -557,8 +567,9 @@ CREATE TABLE Factura
   nro_factura INT NOT NULL,
   fecha_emision DATE NOT NULL,
   monto FLOAT NOT NULL,
-  Id_persona INT,
+  fecha_vencimiento DATE NOT NULL,
   RUC_proveedor CHAR(11),
+  Id_persona VARCHAR(100) NOT NULL,
   id_tip_Fac INT NOT NULL,
   id_estado INT NOT NULL,
   PRIMARY KEY (nro_factura),
@@ -566,18 +577,25 @@ CREATE TABLE Factura
   FOREIGN KEY (Id_persona) REFERENCES Persona(Id_persona),
   FOREIGN KEY (id_tip_Fac) REFERENCES Tipo_Factura(id_tip_Fac),
   FOREIGN KEY (id_estado) REFERENCES Estado(id_estado)
-); 
+);
 
 CREATE TABLE Presupuesto
 (
   Id_presupuesto INT NOT NULL,
   fecha_elaboracion DATE NOT NULL,
-  periodo VARCHAR(100) NOT NULL,
+  Periodo VARCHAR(100) NOT NULL,
+  fecha_inicio DATE NOT NULL,
+  fecha_finalización DATE NOT NULL,
+  monto_total FLOAT NOT NULL,
+  monto_gastado FLOAT NOT NULL,
+  iid_tipo_presupuesto INT NOT NULL,
   Id_tipo_presupuesto INT NOT NULL,
-  Id_persona INT,
+  Id_persona VARCHAR(100) NOT NULL,
+  id_estad_presupuesto INT NOT NULL,
   PRIMARY KEY (Id_presupuesto),
   FOREIGN KEY (Id_tipo_presupuesto) REFERENCES Tipo_presupuesto(Id_tipo_presupuesto),
-  FOREIGN KEY (Id_persona) REFERENCES Persona(Id_persona)
+  FOREIGN KEY (Id_persona) REFERENCES Persona(Id_persona),
+  FOREIGN KEY (id_estad_presupuesto) REFERENCES tipo_estado_presupuesto(id_estad_presupuesto)
 );
 
 CREATE TABLE Asiento_Contable
@@ -592,14 +610,16 @@ CREATE TABLE Asiento_Contable
   FOREIGN KEY (id_tipo_asiento_contable) REFERENCES tipo_asiento_contable(id_tipo_asiento_contable)
 );
 
-CREATE TABLE Item_estado_resultados(
+CREATE TABLE Item_estado_resultados
+(
   Id_item_est__resultados INT NOT NULL,
   Id_asiento_contable INT NOT NULL,
   Id_tipo_item_est INT NOT NULL,
   PRIMARY KEY (Id_item_est__resultados),
   FOREIGN KEY (Id_asiento_contable) REFERENCES Asiento_Contable(Id_asiento_contable),
   FOREIGN KEY (Id_tipo_item_est) REFERENCES Tipo_item_est(Id_tipo_item_est)
-);  
+);
+
 CREATE TABLE EstadoxItem
 (
   monto FLOAT NOT NULL,
