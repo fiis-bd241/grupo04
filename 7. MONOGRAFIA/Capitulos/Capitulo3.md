@@ -1,5 +1,5 @@
 # Capítulo 03: Módulos
-###  Módulo Marketing
+## Módulo Marketing
 
 - Descripción: Este módulo de gestión de publicidad permite al gestor de marketing tener control sobre las campañas realizadas por el equipo de maeketing con el fin de atraer más clientes. El gestor de marketing puede visualizar y editar las campañas vigentes, además puede revisar y tomar decisiones sobre las campañas propuestas comunicandose con el equipo de marketing encargado.
 
@@ -34,7 +34,7 @@
   **- Proponer campaña**
     - Responsabilidades: Permite al equipo de marketing generar campañas para la posterior revision del gestor de marketing.
 
- ### Módulo Compra-Proveedores
+ ## Módulo Compra-Proveedores
 - Descripción: Este módulo de compra-proveedores permite al gestor de compras añadir nuevos proveedores a la base de datos de la empresa, así como también facilita la gestión de las ofertas recibidas de dichos proveedores. Desde aceptar hasta rechazar ofertas, además permite la visualización completa de los datos del proveedor, desde sus datos hasta el historial de ofertas que han realizado a la empresa, este modulo tiene el fin de poder optimizar el proceso de gestión de compras realizadas a los proveedores.
 
 - Responsabilidades: Gestionar el proceso de compra, elección de proveedores, añadir nuevos proveedores, subir los archivos de la cotizacion que el proveedor le ofrece y confirmar o rechazar las ofertas del proveedor.
@@ -64,7 +64,7 @@
   **- Confirmar Oferta**
     - Responsabilidades: Permite al gestor de compras aceptar o rechazar la oferta final que ha realizado el proveedor hacia la empresa.
 
-### Módulo Distribución
+## Módulo Distribución
 
 - Descripcion: Este modulo de distribucion permite al cliente ver el estado de sus pedidos,al gestor de ventas acceder a la base de datos de los pedidos para ver los detalles de las entregas y asignarles un repartidor,y este ultimo podra visualizar la lista de pedidos pendientes que se les asigno accediendo a la base datos y actualizar los estados de los pedidos.
 
@@ -116,4 +116,73 @@
   **- Ver detalles de la entrega**
     - Responsabilidades: Permite al cliente ver los detalles de la entrega,como la fecha,el perfil del repartidor que fue asignado.
 
+## Módulo de Finanzas
+- Descripción: Este módulo permite obtener las facturas y verificar su estado, facilitando la realización de asientos contables relacionados con ingresos y gastos derivados de compras, ventas, gastos y pagos. Esto es esencial para elaborar el estado de resultados y generar un reporte que muestre las ganancias de la empresa.
 
+- Responsabilidades: Registrar, editar y ver facturas; ver y editar asientos contables; ver estado de resultados que permita editar, verificar y enviar comentarios, ver resumen contable así como el reporte contables que permita enviar comentarios así como acotaciones; gestionar y asignar presupuestos.
+
+- Interacción: Con el módulo de compras , almacén, ventas y marketing.
+- Detalles de Estado:
+  - Facturas:
+     - VIGENTE: Las facturas están activas y pueden ser editadas en cuanto a fecha y modalidad de pago, además de agregar o quitar productos y/o servicios.
+     - PROPUESTA: Las facturas están a disposición del contador general así como el gerente general para su revisión y decisión de aceptación o rechazo.
+     - ACEPTADA: Las facturas han sido aceptadas y están en espera para ser registradas en los sistemas contables.
+     - RECHAZADA: Las facturas han sido rechazadas y el contador contable comunica las observaciones necesarias para su corrección.
+  - Presupuesto:
+     - VIGENTE: El presupuesto está activo y puede ser editado para ajustar cifras y conceptos según necesidades actuales.
+     - PROPUESTA: El presupuesto está a disposición del contador general y del gerente general para su revisión y decisión de aceptación o rechazo.
+     - ACEPTADA: El presupuesto ha sido aceptado y está listo para su implementación en las operaciones de la empresa.
+     - RECHAZADA: El presupuesto ha sido rechazado y el contador general comunica las observaciones necesarias para su corrección.
+  - Asientos contables:
+     - VIGENTE: Los asientos contables están activos y pueden ser creados, revisados y aprobados según sea necesario.
+     - PROPUESTA: Los asientos contables están a disposición del contador general para su revisión y decisión de aceptación o rechazo.
+     - ACEPTADA: Los asientos contables han sido aceptados y registrados en el sistema contable.
+     - RECHAZADA: Los asientos contables han sido rechazados y el contador general comunica las observaciones necesarias para su corrección
+  - Estado de resultados:
+     - VIGENTE: El estado de resultados está activo y puede ser consultado y editado para reflejar las operaciones actuales.
+     - PROPUESTA: El estado de resultados está a disposición del contador general para su revisión y aprobación.
+     - ACEPTADA: El estado de resultados ha sido aprobado y está listo para su presentación.
+     - RECHAZADA: El estado de resultados ha sido rechazado y se comunican las observaciones necesarias para su corrección.
+- Funcionalidad:
+
+  **- Home Contador General**
+    - Responsabilidades: Permite al contador general tener acceso a funciones como el registro de facturas, visualización de resúmenes contables y generación de reportes contables.
+
+  **- Historial de Ventas y Compras**
+    - Responsabilidades: Mostrar un registro detallado de todas las transacciones de ventas y compras realizadas por la empresa.
+    - Funciones: Filtrar y buscar transacciones por fecha, cliente, proveedor, producto, etc.
+
+  **- Registro Automatizado de Facturas**
+    - Responsabilidades: Permitir el registro automático de facturas de ventas y compras.
+    - Funciones:Reconocimiento automático de datos relevantes en las facturas para facilitar el proceso de registro.
+      
+  **- Campañas propuestas**
+    - Responsabilidades: Permite al gestor de marketing visualizar las campañas propuestas por el equipo de marketing designado, además de poder desplegar la vista de revisar campaña.
+
+  **- Asientos Contables Automatizados**
+    - Responsabilidades: Generar automáticamente asientos contables basados en las transacciones registradas.
+    - Funciones:Integrar con el módulo de ventas y compras para capturar datos necesarios para la contabilidad.
+      
+  **- Estado de Resultados Automatizado**
+    - Responsabilidades: Calcular automáticamente el estado de resultados utilizando la información de ventas, compras, gastos y pagos.
+    - Funciones: Mostrar ingresos, costos de ventas, gastos operativos y beneficios netos.
+
+  **- Reportes Financieros**
+    - Responsabilidades: Generar reportes financieros personalizados en el que pueda deesglosar y filtrar por producto, periodo, año, etc.
+    - Funciones: Permitir el análisis de diferentes parámetros asignados para los ingresos, egresos, etc.
+  
+  **- Presupuestos**
+    - Responsabilidades: Gestionar la creación y revisión de presupuestos financieros.
+    - Funciones: Proyectar ingresos y gastos futuros. Ajustar presupuestos según necesidades cambiantes de la empresa.
+      
+  **- Alertas y Notificaciones**
+    - Responsabilidades: Enviar alertas sobre transacciones pendientes, vencimientos de pagos y otras actividades financieras importantes.
+      
+  **- Integración con Otros Módulos**
+    - Responsabilidades: Integrar con módulos de almacén, marketing, compras y ventas.
+    - Funciones: Obtener una visión completa de la situación financiera de la empresa.
+       
+  **- Análisis Financiero**
+    - Responsabilidades: Ofrecer herramientas de análisis financiero.
+    - Funciones: Evaluar la rentabilidad, liquidez y solvencia de la empresa. Realizar proyecciones financieras y escenarios hipotéticos para la toma de decisiones 
+      estratégicas.
