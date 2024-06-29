@@ -20,3 +20,17 @@ Esta funcionalidad permitirá cumplir con los requerimientos de las pantallas re
 | 2    | En el caso que le dé en ver más en una cotización que ya tiene un estado de aceptado o no aceptado, no aparecerán los botones (botones deshabilitados), de aceptar o rechazar oferta <br> ![image](../../04.Entregables/Entregable_PC3/Pantallas/ModCompras/MP4.png) | 
 | 3 | En el caso que le dé en ver más en una cotización que tiene un estado de pendiente, tendrá habilitado la opcion de seleccionar y aceptar o rechazar la oferta.<br> ![image](../../04.Entregables/Entregable_PC3/Pantallas/ModCompras/MP5.png) 
 
+## MÓDULO : Distribucion
+**Funcionalidad primaria elegida:** Flujo de entrega de pedido <br>
+**Sustentación:** Para la empresa, el área de distribucion  es indispensable puesto que es una necesidad hacer llegar los productos a los cliente, es por ello que estara area se encargara de la gestion de distribucion desde la creacion del pedido hasta la entrega.<br>
+
+Esta funcionalidad permitirá cumplir con los requerimientos Establecer fecha de entrega (R021), asignar repartidor y ruta (R023), visualizar el historial de pedidos (R024 y R027) y confirmar la entrega (RO26), estas tienen como interfaces a I021, I023, I024,I027 e I026 respectivamente.
+
+| Actividad     | Descripción        | 
+|:-------------:|:---------------:|
+| 1       | El cliente ingresa a la página principal con una cuenta autorizada y se dirige al apartado de "ver mis pedidos".<br>![image](../../04.Entregables/Entregable_PC3/Pantallas/ModDistribucion/I0019.png) | 
+| 2    | Ya en la pantalla de "ver mis pedidos", el cliente escoge uno de los pedidos que le faltan entregar y selecciona la fecha de entrega. <br> ![image](../../04.Entregables/Entregable_PC3/Pantallas/ModDistribucion/I0020.png) | 
+| 3 | Una vez seleccionada la fecha de entrega,esto creara el pedido y aparecera en el apartado de gestionar pedidos del gestor de distribucion. <br>![image](../../04.Entregables/Entregable_PC3/Pantallas/ModDistribucion/I0021.png) |
+| 4    |El gestor de distribucion accede al apartado de gestionar pedidos y escoge uno de los pedidos para asignarle un repartidor y una ruta <br> ![image](../../04.Entregables/Entregable_PC3/Pantallas/ModDistribucion/I0022.png) | 
+| 5    | Cuando es seleccionado el repartidor este pedido aparecera en el apartado de "gestionar pedidos" del repartidor. <br> ![image](../../04.Entregables/Entregable_PC3/Pantallas/ModDistribucion/I0024.png) | 
+| 6    | El repartidor acepta el pedido cuando este realizar la entrega puede confirmarlo,y asi actualizar el estado del pedido a ENTREGADO <br> ![image](../../04.Entregables/Entregable_PC3/Pantallas/ModDistribucion/I0025.png) |
