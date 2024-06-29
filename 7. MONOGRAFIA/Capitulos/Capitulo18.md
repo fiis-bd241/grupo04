@@ -8,7 +8,7 @@
 
 ## Descripción del escenario de uso
 ### Escenario de uso
-- 
+- Se creará la tabla de cotizacion, gracias a que InfluxDB nos permite tener una marca de tiempo en el momento en que se realiza una insercion de datos, sera mucho mas facil trabajar con los tiempo pues automaticamente se asignara una marca de tiempo.
 
 ## Configuración
 ### Instalación de InfluxDB
