@@ -24,7 +24,6 @@ BEGIN
     END LOOP;
 END;
 $$ LANGUAGE plpgsql;
-```
 
--- Ejecutar la función para actualizar el stock al crearla
 SELECT actualizar_stock_inventario();
+```
