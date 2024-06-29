@@ -452,4 +452,80 @@
 |----------|----------|
 |Imagen interfaz|![image](../../04.Entregables/Entregable_PC3/Pantallas/ModVentas/cambio_direccion.png)|
 
+### Modulo de Finanzas
 
+| Código Interfaz | I037 |
+|-----------------|------|
+|Imagen interfaz| ![imagen](imagenes_cap_4/VistasFinanzas/HomeContadorGeneral.PNG) |
+
+| Código Interfaz | I038 |
+|-----------------|------|
+|Imagen interfaz| ![imagen](imagenes_cap_4/VistasFinanzas/HomeGerenteGeneral.PNG) |
+
+| Código Interfaz | I039 |
+|-----------------|------|
+|Imagen interfaz| ![imagen](imagenes_cap_4/VistasFinanzas/HomeGestordeCostos.PNG) |
+
+| Código Interfaz | I040 |
+|-----------------|------|
+|Imagen interfaz| ![imagen](imagenes_cap_4/VistasFinanzas/VerEstadoFacturas.PNG)  |
+
+| Código Interfaz | I041 |
+|-----------------|------|
+|Imagen interfaz| ![imagen](https://github.com/fiis-bd241/grupo04/blob/main/7.%20MONOGRAFIA/Capitulos/imagenes_cap_4/VistasFinanzas/Info%20de%20Factura.PNG) |
+
+| Código Interfaz | I042 |
+|-----------------|------|
+|Imagen interfaz| ![imagen](imagenes_cap_4/VistasFinanzas/SubirFactura.PNG) |
+
+| Código Interfaz | I043 |
+|-----------------|------|
+|Imagen interfaz| ![imagen](imagenes_cap_4/VistasFinanzas/FacturaVenta.PNG) |
+
+| Código Interfaz | I044 |
+|-----------------|------|
+|Imagen interfaz| ![imagen](imagenes_cap_4/VistasFinanzas/FacturaCompras.PNG) |
+
+| Código Interfaz | I045 |
+|-----------------|------|
+|Imagen interfaz| ![imagen](imagenes_cap_4/VistasFinanzas/FacturaPAgo.PNG) |
+
+| Código Interfaz | I046 |
+|-----------------|------|
+|Imagen interfaz| ![imagen](imagenes_cap_4/VistasFinanzas/FacturaGasto.PNG) |
+
+| Código Interfaz | I047 |
+|-----------------|------|
+|Imagen interfaz| ![imagen](imagenes_cap_4/VistasFinanzas/HistorialVentas.PNG) |
+
+| Código Interfaz | I048 |
+|-----------------|------|
+|Imagen interfaz| ![imagen](imagenes_cap_4/VistasFinanzas/HistorialCompras.PNG) |
+
+| Código Interfaz | I049 |
+|-----------------|------|
+|Imagen interfaz| ![imagen](imagenes_cap_4/VistasFinanzas/HistorialPagos.PNG) |
+
+| Código Interfaz | I050 |
+|-----------------|------|
+|Imagen interfaz| ![imagen](imagenes_cap_4/VistasFinanzas/HistorialGastos.PNG)  |
+
+| Código Interfaz | I051 |
+|-----------------|------|
+|Imagen interfaz| ![imagen](https://github.com/fiis-bd241/grupo04/blob/main/7.%20MONOGRAFIA/Capitulos/imagenes_cap_4/VistasFinanzas/Asiento%20Contable.PNG) |
+
+| Código Interfaz | I052 |
+|-----------------|------|
+|Imagen interfaz| ![imagen](https://github.com/fiis-bd241/grupo04/blob/main/7.%20MONOGRAFIA/Capitulos/imagenes_cap_4/VistasFinanzas/Estado%20de%20Resultados.PNG) |
+
+| Código Interfaz | I053 |
+|-----------------|------|
+|Imagen interfaz| ![imagen](imagenes_cap_4/VistasFinanzas/ReporteContable.PNG) |
+
+| Código Interfaz | I054 |
+|-----------------|------|
+|Imagen interfaz| ![imagen](imagenes_cap_4/VistasFinanzas/Proveedores.PNG) |
+
+| Código Interfaz | I055 |
+|-----------------|------|
+|Imagen interfaz| ![imagen](imagenes_cap_4/VistasFinanzas/Presupuestos.PNG) |
