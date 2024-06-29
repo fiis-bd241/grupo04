@@ -32,3 +32,65 @@ Para ver el esquema completo, puede ingresar al figma del equipo: (https://www.f
 ![imagen](imagenes_cap_4/VistasVentas/info_prod_catalogo.png)
 ![imagen](imagenes_cap_4/VistasVentas/tipo_pago.png)
 
+## Módulo Finanzas:
+### Homes de los roles
+#### Los roles para el módulo son Gerente General, Contador General y Gestor de Costos
+###### Home Contador General: Se encargará de ver los estados de la Factura en el Resumen, el Reporte General, el Historial de pagos, gastos, compras, ventas, los asientos contables y el estado de resultados. Además de agregar Facturas según sea el tipo y subirlas.
+![imagen](imagenes_cap_4/VistasFinanzas/HomeContadorGeneral.PNG)
+
+##### Resumen de las facturas (estados)
+![imagen](imagenes_cap_4/VistasFinanzas/VerEstadoFacturas.PNG)
+##### Info de una factura
+![imagen](https://github.com/fiis-bd241/grupo04/blob/main/7.%20MONOGRAFIA/Capitulos/imagenes_cap_4/VistasFinanzas/Info%20de%20Factura.PNG)
+
+
+##### Facturas
+###### Se podrá editar, registrar, eliminar facturas dentro del sistema.
+###### Subir Factura:
+![imagen](imagenes_cap_4/VistasFinanzas/SubirFactura.PNG)
+###### Registrar Factura de venta:
+![imagen](imagenes_cap_4/VistasFinanzas/FacturaVenta.PNG)
+###### Registrar Factura de compra:
+![imagen](imagenes_cap_4/VistasFinanzas/FacturaCompras.PNG)
+###### Registrar Factura de pagos:
+![imagen](imagenes_cap_4/VistasFinanzas/FacturaPAgo.PNG)
+###### Registrar Factura de gastos:
+![imagen](imagenes_cap_4/VistasFinanzas/FacturaGasto.PNG)
+###### - Además se puede visualizar el historial de las transacciones en la empresa:
+###### Historial de ventas:
+![imagen](imagenes_cap_4/VistasFinanzas/HistorialVentas.PNG)
+###### Historial de compras:
+![imagen](imagenes_cap_4/VistasFinanzas/HistorialCompras.PNG)
+###### Historial de pagos:
+![imagen](imagenes_cap_4/VistasFinanzas/HistorialPagos.PNG)
+###### Historial de gastos:
+![imagen](imagenes_cap_4/VistasFinanzas/HistorialGastos.PNG)
+
+##### Asientos Contables
+![imagen](https://github.com/fiis-bd241/grupo04/blob/main/7.%20MONOGRAFIA/Capitulos/imagenes_cap_4/VistasFinanzas/Asiento%20Contable.PNG)
+
+##### Estado de Resultados
+![imagen](https://github.com/fiis-bd241/grupo04/blob/main/7.%20MONOGRAFIA/Capitulos/imagenes_cap_4/VistasFinanzas/Estado%20de%20Resultados.PNG)
+
+##### Reporte Contable
+![imagen](imagenes_cap_4/VistasFinanzas/ReporteContable.PNG)
+
+###### Home Gerente General: Se encargará de ver el estado de resultados que le permitirá ver la rentabilidad d ela empresa así como dar soluciones estratégicas por lo que podrá visualizar el historial de compras, ventas, gastos, pagos, proveedores reporte que le dará una mirada esencial a la empresa.
+![imagen](imagenes_cap_4/VistasFinanzas/HomeGerenteGeneral.PNG)
+
+##### Reporte Contable (Esencial para decisiones)
+![imagen](imagenes_cap_4/VistasFinanzas/ReporteContable.PNG)
+
+##### Proveedores: Esta vista será importante para el gerente general para entablar relaciones fuertes con sus proveedores.
+![imagen](imagenes_cap_4/VistasFinanzas/Proveedores.PNG)
+
+###### Home Gestor de Costos: Se encargará de controlar los presupuestos para cada área y asignarlos por lo que también debe estar pendiente de los pagos, gastos así como el reporte.
+![imagen](imagenes_cap_4/VistasFinanzas/HomeGestordeCostos.PNG)
+
+##### Presupuestos: Se podrá editar los presupuestos generados así como enviarlos ya se al área y al gerente General.
+![imagen](imagenes_cap_4/VistasFinanzas/Presupuestos.PNG)
+
+
+
+
+
