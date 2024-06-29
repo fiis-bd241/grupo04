@@ -319,6 +319,152 @@ UPDATE cotizacion
 SET id_est_cotizacion = 'N'
 WHERE id_cotizacion = <1>;
 ```
+## 3.4 Modulo de Distribucion
+### Código Requerimiento : R - 011
+### Codigo interfaz : I - 011
+### Imagen interfaz : 
+![image](../../04.Entregables/Entregable_PC3/Pantallas/ModDistribucion/I0019.png)
+### Sentecias SQL:
+### Eventos: 
+* **Pantalla Visualizar compras: Se mostrará todas las compras que ha realizado el cliente con id = <1>**
+```
+select fecha_pago,hora_pago
+from venta 
+inner join detalle_pago on venta.id_detalle_pago = detalle_pago.id_detalle_pago
+where id_persona = <1>
+```
+### Código Requerimiento : R - 012
+### Codigo interfaz : I - 012
+### Imagen interfaz : 
+![image](../../04.Entregables/Entregable_PC3/Pantallas/ModDistribucion/I0020.png)
+### Sentecias SQL:
+### Eventos: 
+* **BOTON ACEPTAR : Se registrará la fecha de entrega de la compra con id = <4> y se creara un nuevo registro de pedido con estado P, sabiendo que el id_pedido es incrementable**
+```
+INSERT INTO Pedido (fecha_entrega, id_venta,id_est_pedido)
+VALUES (TO_DATE(CONCAT(<3>, '-', <2>, '-', <1>), 'YYYY-MM-DD'),<4>,'P');
+```
+### Código Requerimiento : R - 013
+### Codigo interfaz : I - 013
+### Imagen interfaz : 
+![image](../../04.Entregables/Entregable_PC3/Pantallas/ModDistribucion/I0021.png)
+### Sentecias SQL:
+### Eventos: 
+* **Pantalla Visualizar pedidos: El gestor de distribucion podra visualizar los pedidos pendientes de la zona <A>,en este caso la 1**
+```
+SELECT 
+    p.id_venta,
+    p.fecha_entrega,
+    pe.Nombre || ' ' || pe.Primer_apell || ' ' || pe.Segundo_apell AS nombre_cliente,
+    p.id_est_pedido AS estado_pedido
+FROM pedido p
+INNER JOIN venta v ON p.id_venta = v.id_venta
+INNER JOIN persona pe ON v.id_persona = pe.id_persona
+INNER JOIN distrito d ON pe.id_distrito = d.id_distrito
+INNER JOIN zona z ON d.id_zona = z.id_zona
+WHERE z.id_zona = 1
+AND p.id_est_pedido = 'P'
+```
+### Código Requerimiento : R - 014
+### Codigo interfaz : I - 014
+### Imagen interfaz : 
+![image](../../04.Entregables/Entregable_PC3/Pantallas/ModDistribucion/I0022.png)
+### Sentecias SQL:
+### Eventos: 
+* **Pantalla Asignar: El gestor de distribucion podra visualizar los repartidores disponibles y asignar una fecha y ruta al pedido de codigo <1>**
+```
+SELECT r.id_repartidor, r.nombre, r.apellido
+FROM Repartidor r
+INNER JOIN zona z ON r.id_zona = z.id_zona
+INNER JOIN distrito d ON z.id_zona = d.id_zona
+INNER JOIN persona pe ON pe.id_distrito = d.Id_distrito
+INNER JOIN venta v ON v.id_persona = pe.Id_persona
+INNER JOIN pedido p ON p.id_venta = v.Id_venta
+WHERE p.Id_pedido = <1>;
+
+INSERT INTO pedido(id_repartidor,id_ruta) 
+VALUES (<2>,<3>);
+WHERE id_pedido = <1>
+```
+### Código Requerimiento : R - 015
+### Codigo interfaz : I - 015
+### Imagen interfaz : 
+![image](../../04.Entregables/Entregable_PC3/Pantallas/ModDistribucion/I0023.png)
+### Sentecias SQL:
+### Eventos: 
+* **Visualizar historial de pedidos: El gestor de distribucion podra visualizar todos los pedidos que se han registrado**
+```
+SELECT p.Id_venta, p.fecha_entrega, 
+	pe.Nombre || ' ' || pe.Primer_apell || ' ' || pe.Segundo_apell AS nombre_cliente, 
+    te.estado_pedido AS estado_pedido
+FROM Pedido p
+INNER JOIN Venta v ON p.Id_venta = v.Id_venta
+INNER JOIN Persona pe ON v.Id_persona = pe.Id_persona
+INNER JOIN Tipo_est_pedido te ON p.id_est_pedido = te.id_est_pedido;
+```
+### Código Requerimiento : R - 016
+### Codigo interfaz : I - 016
+### Imagen interfaz : 
+![image](../../04.Entregables/Entregable_PC3/Pantallas/ModDistribucion/I0024.png)
+### Sentecias SQL:
+### Eventos: 
+* **Visualizar las entregas pendientes: El repartidor de id = <1> podra visualizar todos los pedidos que se encuentran pendientes**
+```
+SELECT p.Id_venta,p.fecha_entrega,te.estado_pedido
+FROM Pedido p
+INNER JOIN Repartidor r ON p.Id_repartidor = r.Id_repartidor
+INNER JOIN Tipo_est_pedido te ON p.id_est_pedido = te.id_est_pedido
+WHERE r.Id_repartidor = <1>
+AND p.id_est_pedido = 'P';
+```
+### Código Requerimiento : R - 017
+### Codigo interfaz : I - 017
+### Imagen interfaz : 
+![image](../../04.Entregables/Entregable_PC3/Pantallas/ModDistribucion/I0025.png)
+### Sentecias SQL:
+### Eventos: 
+* **Boton entregado: El repartidor de id = <1> podra confirmar que se realizó la entrega con exito y actualizara el estado de pedido de codigo <2> a E**
+```
+UPDATE pedido
+SET id_est_pedido = 'E'
+WHERE id_repartidor = <1> AND id_pedido = <2>>;
+```
+
+### Código Requerimiento : R - 018
+### Codigo interfaz : I - 018
+### Imagen interfaz : 
+![image](../../04.Entregables/Entregable_PC3/Pantallas/ModDistribucion/I0026.png)
+### Sentecias SQL:
+### Eventos: 
+* **Visualizar el historial de pedido: El repartidor de id = <1> podra visualizar todas las entregas que realizó**
+```
+SELECT p.id_venta,p.fecha_entrega,e.estado_pedido
+FROM pedido p
+INNER JOIN tipo_est_pedido e on p.id_est_pedido = e.id_est_pedido
+WHERE p.id_repartidor = <1>;
+```
+### Código Requerimiento : R - 019
+### Codigo interfaz : I - 019
+### Imagen interfaz : 
+![image](../../04.Entregables/Entregable_PC3/Pantallas/ModDistribucion/I0027.png)
+### Sentecias SQL:
+### Eventos: 
+* **BOTON VER MAS: El repartidor y el gestor de distribucion podran visualizar los detalles del pedido de id = <1>**
+```
+SELECT 
+    pe.Nombre || ' ' || pe.Primer_apell || ' ' || pe.Segundo_apell AS nombre_cliente,
+    p.fecha_entrega,
+    p.Id_venta AS codigo_de_compra,
+    p.Id_ruta,
+    r.nombre AS nombre_repartidor,
+    r.Id_repartidor,
+    pe.Direccion
+FROM Pedido p
+INNER JOIN Venta v ON p.Id_venta = v.Id_venta
+INNER JOIN Persona pe ON v.Id_persona = pe.Id_persona
+INNER JOIN Repartidor r ON p.Id_repartidor = r.Id_repartidor
+WHERE p.Id_pedido = <1>;
+```
 
 
 
