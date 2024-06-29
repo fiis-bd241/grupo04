@@ -477,3 +477,83 @@ query = '''
         '''
         cursor.execute(query,(id_detalle,))
 ```
+![Imagen](../../imagenes_cap16/mod_Almacen/Vista_Nuevo_Producto.png)
+*Para ingresar un nuevo producto se llenarán los combo box y los labels en el orden:
+  -Marco superior: De izquierda a derecha
+  -Marco Inferior: De arriba hacia abajo
+
+![Imagen](../../imagenes_cap16/mod_Almacen/Producto_Ingresado.png)
+*Al ingresar cada campo solicitado en el orden del marco superior, se irán filtrando valores correspondientes al almacén donde estoy registrando mi producto (Maquillaje o Papelería)
+
+```py
+def actualizar_categorias(self,event):
+        tipo_producto_seleccionado = self.entry_InAlmacen.get()
+        conn,cursor = bd.conectar()
+
+        query = '''
+            SELECT 
+                CP.nombre_categoria
+            FROM 
+                Categoria_Producto CP
+            JOIN 
+                Tipo_Producto TP ON CP.id_tipo_producto = TP.id_tipo_producto
+            WHERE 
+                TP.nombre_tipo_producto = %s
+        '''
+        cursor.execute(query,(tipo_producto_seleccionado,))
+        rows = cursor.fetchall()
+        categorias = [categoria[0] for categoria in rows]
+
+        self.entry_InCategoria['values'] = categorias
+
+        if tipo_producto_seleccionado == 'Maquillaje':
+            query2 = '''
+                SELECT M.id_marca
+                FROM Marca M
+                WHERE 
+                M.rubro NOT LIKE '%Artículos%'    
+            '''
+            cursor.execute(query2)
+            rows = cursor.fetchall()
+            marcas = [marca[0] for marca in rows]
+
+            query3 = '''
+                SELECT tipo_presentacion
+                FROM Presentacion
+                WHERE 
+                (id_presentacion >=1 AND id_presentacion <=16)
+            '''
+            cursor.execute(query3)
+            rows = cursor.fetchall()
+            presentas = [presenta[0] for presenta in rows]
+
+        elif tipo_producto_seleccionado == 'Papelería':
+            query2 = '''
+                SELECT M.id_marca
+                FROM Marca M
+                WHERE 
+                M.rubro LIKE '%Artículos%'       
+            '''
+            cursor.execute(query2)
+            rows = cursor.fetchall()
+            marcas = [marca[0] for marca in rows] 
+
+            query3 = '''
+                SELECT tipo_presentacion
+                FROM Presentacion
+                WHERE 
+                (id_presentacion >=16 AND id_presentacion <=25)
+            '''
+            cursor.execute(query3)
+            rows = cursor.fetchall()
+            presentas = [presenta[0] for presenta in rows]     
+
+        self.entry_InMarca['values'] = marcas
+        self.entry_InPresentacion['values'] = presentas
+
+        cursor.close()
+        conn.commit()
+        conn.close()
+```
+
+  
