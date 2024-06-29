@@ -26,6 +26,6 @@
 
 ## Módulo Ventas
 ### Código
-[APLICATIVO VENTAS](archivos_cap16/mod_venta.md)
+[APLICATIVO VENTAS](archivos_cap16/mod_venta/ventas.py)
 
 
