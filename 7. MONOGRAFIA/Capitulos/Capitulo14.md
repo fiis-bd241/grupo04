@@ -27,3 +27,35 @@ $$ LANGUAGE plpgsql;
 
 SELECT actualizar_stock_inventario();
 ```
+
+- Proceso Batch para el Módulo de marketing, se actualizará los estados de observacion de la tabla obsservacion, el criterio para elegir será las observaciones que tengan asociada una campaña que ya finalizó, esto con el propósito de ya no mostrar campañas que ya finalizaron al equipo de marketing en su funcionalidad de "atender observación".
+
+```sql
+CREATE OR REPLACE FUNCTION actualizar_observaciones_campañas_finalizadas()
+RETURNS VOID AS $$
+DECLARE
+    observacion_id INT;
+    campaña_id INT;
+    fecha_final DATE;
+BEGIN
+    FOR observacion_id, campaña_id IN
+        SELECT id_observacion, id_campaña
+        FROM Observacion
+        WHERE estado_atendido = false
+    LOOP
+        SELECT c.fecha_fin INTO fecha_final
+        FROM Campaña c
+        WHERE c.id_campaña = campaña_id;
+        
+        IF fecha_final < CURRENT_DATE THEN  
+            UPDATE Observacion
+            SET estado_atendido = true
+            WHERE id_observacion = observacion_id;
+        END IF;
+    END LOOP;
+END;
+$$ LANGUAGE plpgsql;
+
+SELECT actualizar_observaciones_campañas_finalizadas();
+
+```
