@@ -1,0 +1,6 @@
+﻿id_tipo_pago,nombre_tipo
+11,Tarjeta de crédito
+12,Tarjeta de débito
+13,Efectivo
+14,A contra entrega
+15,Yape/Plin
