@@ -252,8 +252,80 @@ query = '''
 ![Imagen](../../imagenes_cap16/mod_Almacen/Aviso_Sin_Busqueda.png)
 *Mensaje si se da clic en buscar pero no se da ningún parámetro de entrada
 
+![Imagen](../../imagenes_cap16/mod_Almacen/Vista_Pedidos.png)
+*Vista de la sección Pedidos que están en estado L (Leídos para procedor a preparar)
 
+```py
+  query = '''
+            SELECT
+                p.id_pedido,
+                te.nombre_tipo_entrega,
+                p.fecha_entrega,
+                (p.fecha_entrega - CURRENT_DATE) AS dias_faltantes,
+                p.cod_venta,
+                CONCAT(pe.nombre, ' ', pe.primer_apellido) AS nombre_repartidor
+            FROM
+                Pedido p
+            INNER JOIN
+                Tipo_Entrega te ON p.id_tipo_entrega = te.id_tipo_entrega
+            LEFT JOIN
+                Persona pe ON p.id_repartidor = pe.id_persona
+            WHERE
+                p.id_estado_pedido = 'L'
+        '''
+        cursor.execute(query)
+        self.tabla_frame(cursor.fetchall())
+```
+![Imagen](../../imagenes_cap16/mod_Almacen/Pedido_Detalles.png)
+* Al dar clic en la fila de la tabla pedido, se mostrará al lado derecho los detalles de la venta que se ha efectuado
 
+```py
+query = '''
+            SELECT 
+                cxp.id_producto,
+                p.nombre_producto,
+                cxp.cantidad,
+                CONCAT(inv.seccion, '-', inv.id_stand, '-', inv.id_repisas) AS ubicacion
+            FROM 
+                Pedido pd
+            JOIN 
+                Venta v ON pd.cod_venta = v.cod_venta AND pd.id_persona = v.id_persona
+            JOIN 
+                Cliente cl ON v.id_persona = cl.id_persona
+            JOIN 
+                ClientexProducto cxp ON cl.id_persona = cxp.id_persona
+            JOIN 
+                Producto p ON cxp.id_producto = p.id_producto
+            LEFT JOIN
+                Inventario inv ON p.id_producto = inv.id_producto
+            WHERE 
+                pd.id_pedido = %s
+                AND pd.id_estado_pedido = 'L'
+                AND v.id_estado_venta = 'C'   
+        '''
+        cursor.execute(query,(id_pedido,))
+```
+![Imagen](../../imagenes_cap16/mod_Almacen/Filtro_Entrega.png)
+*Se puede filtrar para ver pedidos actuales o pasados por tipo de entrega o estado de pedido
 
-## CODIGO DEL APLICATIVO
-[APLICATIVO COMPRAS](archivos_cap16/modulo_almacen)
+```py
+query = '''
+                    SELECT
+                        p.id_pedido,
+                        te.nombre_tipo_entrega,
+                        p.fecha_entrega,
+                        (p.fecha_entrega - CURRENT_DATE) AS dias_faltantes,
+                        p.cod_venta,
+                        CONCAT(pe.nombre, ' ', pe.primer_apellido) AS nombre_repartidor
+                    FROM
+                        Pedido p
+                    INNER JOIN
+                        Tipo_Entrega te ON p.id_tipo_entrega = te.id_tipo_entrega
+                    LEFT JOIN
+                        Persona pe ON p.id_repartidor = pe.id_persona
+                    WHERE
+                        te.nombre_tipo_entrega = %s           
+                '''
+                cursor.execute(query,(valor_entrega,))
+                rows = cursor.fetchall()
+```
