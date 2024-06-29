@@ -27,7 +27,7 @@ Para llevar a cabo estas funcionalidades mencionadas previamente en el módulo d
 
 ## Módulo de distribucion
 
-* Se espera poder lograr la conexion con las pantalla cliente y repartidor al momento de loguearse, se ha logrado completar la funcionalidad del gestor de distribucion,sin embargo el establecimiento de la fecha_entrega por parte del cliente(el cual crear el registro del pedido) aun no se logro completar, y que el repartidor acepte el pedido y actualice el estado una vez lo haya entregado.
+* Se espera poder lograr la conexion con las pantallas de cliente y repartidor al momento de loguearse, se ha logrado completar la funcionalidad del gestor de distribucion,sin embargo el establecimiento de la fecha_entrega por parte del cliente(el cual crea el registro del pedido) aun no se logro completar, y que el repartidor acepte el pedido y actualice el estado una vez lo haya entregado.
 
 ## Módulo de Finanzas
 * Funcionalidad Actual: El módulo de finanzas actualmente solo permite registrar facturas para generar asientos contables y estado de resultados y también la asignación de presupuestos, limitando la gestión financiera a una simple función de registro.
