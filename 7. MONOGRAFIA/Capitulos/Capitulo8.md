@@ -870,4 +870,4 @@ CREATE TABLE Pedido(
 [Ver completo](archivos_cap16/modulo_almacen/Migni_Store_Tables.sql)
 
 ## SQL general para pruebas: 
-[Ver SQL para pruebas](https://github.com/fiis-bd241/grupo04/tree/main/7.%20MONOGRAFIA/Capitulos/Cap8)
+[Ver SQL para pruebas](https://github.com/fiis-bd241/grupo04/blob/main/7.%20MONOGRAFIA/Capitulos/Cap8/SQL.md)
