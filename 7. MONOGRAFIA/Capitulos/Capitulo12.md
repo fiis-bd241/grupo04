@@ -42,5 +42,5 @@ Esta funcionalidad permitirá cumplir con los requerimientos Establecer fecha de
 
 | Actividad     | Descripción        | 
 |:-------------:|:---------------:|
-| 1       | Al ingresar a la sección inventario se podrá visualizar la lista de todos los productos y poder filtrar según la necesidad que se busca<br> ![image](../../7.MONOGRAFIA/Capitulos/imagenes_cap16/mod_Almacen/Pantalla_Inventario.png)| 
-| 2    | Para saber lso movimientos efectuados y los detalles de los productos con su cantidad, se podrá visualizar en la sección Kardex<br> ![image](../../7.MONOGRAFIA/Capitulos/imagenes_cap16/mod_Almacen/Vista_Kardex.png)|
+| 1       | Al ingresar a la sección inventario se podrá visualizar la lista de todos los productos y poder filtrar según la necesidad que se busca<br> ![image](imagenes_cap16/mod_Almacen/Pantalla_Inventario.png)| 
+| 2    | Para saber lso movimientos efectuados y los detalles de los productos con su cantidad, se podrá visualizar en la sección Kardex<br> ![image](imagenes_cap16/mod_Almacen/Vista_Kardex.png)|
