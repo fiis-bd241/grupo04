@@ -34,3 +34,13 @@ Esta funcionalidad permitirá cumplir con los requerimientos Establecer fecha de
 | 4    |El gestor de distribucion accede al apartado de gestionar pedidos y escoge uno de los pedidos para asignarle un repartidor y una ruta <br> ![image](../../04.Entregables/Entregable_PC3/Pantallas/ModDistribucion/I0022.png) | 
 | 5    | Cuando es seleccionado el repartidor este pedido aparecera en el apartado de "gestionar pedidos" del repartidor. <br> ![image](../../04.Entregables/Entregable_PC3/Pantallas/ModDistribucion/I0024.png) | 
 | 6    | El repartidor acepta el pedido cuando este realizar la entrega puede confirmarlo,y asi actualizar el estado del pedido a ENTREGADO <br> ![image](../../04.Entregables/Entregable_PC3/Pantallas/ModDistribucion/I0025.png) |
+
+## Módulo de Almacén
+
+**Funcionalidad primaria elegida:** Gestionar el inventario de todos los productos<br>
+**Sustentación:** Saber el stock disponible, la ubicación de cada producto, y el movimiento que se efectúa periodicamente para saber la disponibilidad de los productos para ofertarlos o realizar neuvas compras<br>
+
+| Actividad     | Descripción        | 
+|:-------------:|:---------------:|
+| 1       | Al ingresar a la sección inventario se podrá visualizar la lista de todos los productos y poder filtrar según la necesidad que se busca<br>![image](../../MONOGRAFIA/imagenes_cap16/mod_almacen/Pantalla_inventario.png) | 
+| 2    | Para saber lso movimientos efectuados y los detalles de los productos con su cantidad, se podrá visualizar en la sección Kardex<br> ![image](../../MONOGRAFIA/imagenes_cap16/mod_almacen/Vista_Kardex.png)|
