@@ -1,0 +1,7 @@
+color_barra_superior = "#C08081"
+color_menu_lateral = "#FFB6C1"
+color_cuerpo_principal = "#FFC0CB"
+color_menu_cursor_encima = "#FFD1DC"
+color_marco_izquierdo = "#FFB6CE"
+color_marco_derecho = "#FF96C5"
+borde_marco = "#F70071"
