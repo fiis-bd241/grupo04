@@ -46,6 +46,8 @@ Para ver el esquema completo, puede ingresar al figma del equipo: (https://www.f
 
 ##### Facturas
 ###### Se podrá editar, registrar, eliminar facturas dentro del sistema.
+###### Ver historial de Facturas:
+![imagen](https://github.com/fiis-bd241/grupo04/blob/main/7.%20MONOGRAFIA/Capitulos/imagenes_cap_4/VistasFinanzas/Historial%20de%20Facturas.PNG)
 ###### Subir Factura:
 ![imagen](imagenes_cap_4/VistasFinanzas/SubirFactura.PNG)
 ###### Registrar Factura de venta:
