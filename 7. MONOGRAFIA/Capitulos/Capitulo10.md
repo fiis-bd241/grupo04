@@ -604,6 +604,467 @@ join tipos_pago t on t.id_tipo_pago = d.id_tipo_pago
 where p.nombre = 'Brittney'
 
 ```
+
+### Módulo de CRM
+
+
+### Código Requerimiento : R - 028
+### Codigo interfaz : I - 028
+### Imagen interfaz : 
+![image](../../04.Entregables/Entregable_PC3/Pantallas/ModCRM2/analisis.png)
+
+Sectencia SQL:
+Eventos:Visualizar análisis de datos de productos:
+```
+SELECT p.nombre_producto, COUNT(vp.id_producto) AS cantidad_vendida, SUM(vp.precio_total) AS ingreso_total
+FROM Producto p
+LEFT JOIN VentaXProd vp ON p.id_producto = vp.id_producto
+GROUP BY p.nombre_producto
+ORDER BY cantidad_vendida ASC;
+
+```
+
+
+### Código Requerimiento : R - 029
+### Codigo interfaz : I - 029
+### Imagen interfaz : 
+![image](../../04.Entregables/Entregable_PC3/Pantallas/ModCRM2/comentarios.png)
+
+Sectencia SQL:
+
+Eventos: Visualizar, guardar y eliminar comentarios de clientes.
+
+Visualizar comentarios:
+
+```
+SELECT p.Nombre || ' ' || p.Primer_apell || ' ' || p.Segundo_apell, 
+       prod.nombre_producto, c.descrip_comentario, c.hora_comentario, c.fecha_comentario, c.Id_comentario
+FROM Comentario c
+JOIN Persona p ON c.Id_persona = p.Id_persona
+JOIN Producto prod ON c.id_producto = prod.id_producto;
+
+```
+
+Guardar en revisión:
+
+
+```
+INSERT INTO Revision (id_comentario, puntos) 
+VALUES (%s, %s);
+
+```
+
+
+Eliminar comentario:
+
+
+```
+DELETE FROM Comentario 
+WHERE Id_comentario = %s;
+
+```
+
+
+Visualizar revisiones:
+
+
+```
+SELECT p.Nombre || ' ' || p.Primer_apell || ' ' || p.Segundo_apell, 
+       prod.nombre_producto, r.puntos, c.Id_comentario, c.descrip_comentario, prod.descripcion_prod
+FROM Revision r 
+JOIN Comentario c ON r.id_comentario = c.Id_comentario
+JOIN Persona p ON c.Id_persona = p.Id_persona
+JOIN Producto prod ON c.id_producto = prod.id_producto;
+
+```
+Eliminar revisión:
+
+
+```
+DELETE FROM Revision 
+WHERE id_comentario = %s;
+
+```
+
+
+
+### Código Requerimiento : R - 030
+### Codigo interfaz : I - 030
+### Imagen interfaz : 
+![image](../../04.Entregables/Entregable_PC3/Pantallas/ModCRM2/correo.png)
+
+Sectencia SQL:
+
+Eventos: Visualizar, enviar y eliminar correos electrónicos.
+
+Visualizar correos:
+
+```
+SELECT Id_persona, Nombre, Correo FROM Persona;
+
+```
+
+Cargar correos enviados:
+
+
+```
+SELECT email_name, FechaHora FROM EmailSend ORDER BY FechaHora DESC;
+
+```
+
+Guardar correo enviado:
+
+```
+INSERT INTO EmailSend (email_name, enviados, email_content, FechaHora) 
+VALUES (%s, %s::text[], %s, %s);
+
+```
+
+Eliminar correo enviado:
+
+```
+DELETE FROM EmailSend 
+WHERE email_name = %s;
+
+```
+
+Cargar detalles del correo enviado:
+
+```
+SELECT email_name, email_content, enviados 
+FROM EmailSend 
+WHERE email_name = %s;
+
+```
+
+
+### Código Requerimiento : R - 031
+### Codigo interfaz : I - 031
+### Imagen interfaz : 
+![image](../../04.Entregables/Entregable_PC3/Pantallas/ModCRM2/formularios.png)
+
+Sentencia SQL:
+
+Eventos: Crear, enviar y gestionar formularios.
+
+Cargar formularios creados:
+
+```
+SELECT Id_formulario, descrip_formulario 
+FROM Formulario 
+ORDER BY descrip_formulario;
+
+```
+
+Recuperar emails:
+
+```
+SELECT Id_persona, Nombre, Correo 
+FROM Persona;
+
+```
+
+Insertar nuevo formulario:
+
+
+```
+INSERT INTO Formulario (descrip_formulario, fecha_creacion, Id_est_formulario) 
+VALUES (%s, CURRENT_DATE, %s) 
+RETURNING Id_formulario;
+
+```
+
+Insertar pregunta de formulario:
+
+```
+INSERT INTO Pregunta (pregunta, tipo_preg) 
+VALUES (%s, %s) 
+RETURNING Id_pregunta;
+
+```
+
+Vincular pregunta con formulario:
+
+
+```
+INSERT INTO FormularioxPregunta (Id_formulario, Id_pregunta) 
+VALUES (%s, %s);
+
+```
+
+Eliminar formulario:
+
+```
+DELETE FROM Respuesta 
+WHERE Id_pregunta IN (SELECT Id_pregunta FROM FormularioxPregunta WHERE Id_formulario = %s);
+
+DELETE FROM FormularioxPregunta 
+WHERE Id_formulario = %s;
+
+DELETE FROM Formulario 
+WHERE Id_formulario = %s;
+
+```
+
+Mostrar detalles del formulario:
+
+```
+SELECT pregunta 
+FROM Pregunta 
+INNER JOIN FormularioxPregunta 
+ON Pregunta.Id_pregunta = FormularioxPregunta.Id_pregunta 
+WHERE FormularioxPregunta.Id_formulario = %s;
+
+
+```
+
+
+Mostrar detalles de los encuestados:
+
+
+```
+SELECT Persona.Id_persona, Persona.Nombre 
+FROM Persona 
+INNER JOIN Respuesta 
+ON Persona.Id_persona = Respuesta.Id_persona 
+INNER JOIN Pregunta 
+ON Respuesta.Id_pregunta = Pregunta.Id_pregunta 
+INNER JOIN FormularioxPregunta 
+ON Pregunta.Id_pregunta = FormularioxPregunta.Id_pregunta 
+WHERE FormularioxPregunta.Id_formulario = %s;
+
+
+```
+
+Mostrar respuestas del encuestado:
+
+
+```
+SELECT Pregunta.pregunta, Respuesta.respuesta 
+FROM Respuesta 
+INNER JOIN Pregunta 
+ON Respuesta.Id_pregunta = Pregunta.Id_pregunta 
+INNER JOIN FormularioxPregunta 
+ON Pregunta.Id_pregunta = FormularioxPregunta.Id_pregunta 
+WHERE FormularioxPregunta.Id_formulario = %s 
+AND Respuesta.Id_persona = %s;
+
+```
+
+### Código Requerimiento : R - 032
+### Codigo interfaz : I - 032
+### Imagen interfaz : 
+![image](../../04.Entregables/Entregable_PC3/Pantallas/ModCRM2/home.png)
+
+Sentencia :
+
+Eventos: presiona un boton y enviar .
+
+Wattsapp: Ejecuta enviar_wats5.py:
+
+```
+os.system('python c:/Users/Administrador/Desktop/pythonproyects/apli_escri/enviar_wats5.py')
+
+```
+
+Comentarios: Ejecuta revisar_comentario8.py:
+
+```
+os.system('python c:/Users/Administrador/Desktop/pythonproyects/apli_escri/revisar_comentario8.py')
+
+```
+
+Crear Formulario: Ejecuta crear_formularios14.py:
+
+```
+os.system('python c:/Users/Administrador/Desktop/pythonproyects/apli_escri/crear_formularios14.py')
+
+```
+
+Crear Email: Ejecuta correos_enviar8.py:
+
+```
+os.system('python c:/Users/Administrador/Desktop/pythonproyects/apli_escri/correos_enviar8.py')
+
+```
+
+Mis Clientes Potenciales: Ejecuta analisis4.py:
+
+```
+os.system('python c:/Users/Administrador/Desktop/pythonproyects/apli_escri/analisis4.py')
+
+```
+
+Ver Datos: Ejecuta verinfo.py
+
+```
+os.system('python c:/Users/Administrador/Desktop/pythonproyects/apli_escri/verinfo.py')
+
+```
+
+Abrir Pipeline: Ejecuta Pipelinefino3.py
+
+```
+os.system('python c:/Users/Administrador/Desktop/pythonproyects/apli_escri/Pipelinefino3.py')
+
+```
+
+
+### Código Requerimiento : R - 033
+### Codigo interfaz : I - 033
+### Imagen interfaz : 
+![image](../../04.Entregables/Entregable_PC3/Pantallas/ModCRM2/pipeline.png)
+
+Sentencia SQL:
+
+Evento: Actualizar el estado del pipeline
+
+Acción: Actualiza el estado del usuario en la base de datos y en la interfaz gráfica.
+
+```
+INSERT INTO Pipeline (Id_persona, estado) 
+VALUES (%s, %s) 
+ON CONFLICT (Id_persona) 
+DO UPDATE SET estado = EXCLUDED.estado;
+
+```
+
+Evento: Enviar Email
+
+Acción: Abre una ventana para redactar y enviar un correo electrónico al usuario seleccionado. Guarda el correo enviado en la base de datos.
+
+```
+INSERT INTO EmailSend (email_name, enviados, email_content, fechahora, Id_persona) 
+VALUES (%s, %s::text[], %s, %s, %s)
+
+```
+
+Evento: Enviar WhatsApp
+
+Acción: Abre una ventana para redactar y enviar un mensaje de WhatsApp al usuario seleccionado. Guarda el mensaje enviado en la base de datos.
+
+```
+INSERT INTO MensajeSend (mensaje_name, enviados, mensaje_content, fechahora, Id_persona) 
+VALUES (%s, %s::text[], %s, %s, %s)
+
+```
+
+
+### Código Requerimiento : R - 034
+### Codigo interfaz : I - 034
+### Imagen interfaz : 
+![image](../../04.Entregables/Entregable_PC3/Pantallas/ModCRM2/watsapp.png)
+
+Sentencia SQL:
+
+Evento: Cargar Contactos
+
+Acción: Cargar y mostrar los contactos desde la base de datos en una lista.
+
+```
+SELECT Id_persona, Nombre, Telefono FROM Persona;
+
+```
+
+Evento: Agregar Destinatarios
+
+Acción: Agregar los contactos seleccionados a la lista de destinatarios.
+
+Evento: Enviar y Guardar Mensaje
+
+Acción: Enviar un mensaje de WhatsApp a los contactos seleccionados y guardar el mensaje enviado en la base de datos.
+
+```
+INSERT INTO MensajeSend (mensaje_name, enviados, mensaje_content, FechaHora, Id_persona) 
+VALUES (%s, %s::text[], %s, %s, %s)
+
+
+```
+Evento: Cargar Detalles del Mensaje Enviado
+
+Acción: Cargar y mostrar los detalles del mensaje enviado seleccionado desde la base de datos.
+
+```
+SELECT mensaje_name, mensaje_content, enviados FROM MensajeSend WHERE mensaje_name = %s
+
+```
+
+Evento: Eliminar Mensaje Enviado
+
+Acción: Eliminar el mensaje enviado seleccionado de la base de datos y de la lista.
+
+```
+DELETE FROM MensajeSend WHERE mensaje_name = %s
+
+```
+
+### Código Requerimiento : R - 035
+### Codigo interfaz : I - 035
+### Imagen interfaz : 
+![image](../../04.Entregables/Entregable_PC3/Pantallas/ModCRM2/usuario.png)
+
+Sentencia SQL:
+
+Evento: Cargar Preferencias del Usuario
+
+Acción: Cargar y mostrar las preferencias y datos recopilados del usuario desde la base de datos.
+
+```
+SELECT p.Nombre, f.descrip_formulario, r.respuesta 
+FROM Respuesta r
+JOIN Persona p ON r.Id_persona = p.Id_persona
+JOIN Pregunta q ON r.Id_pregunta = q.Id_pregunta
+JOIN FormularioxPregunta fp ON q.Id_pregunta = fp.Id_pregunta
+JOIN Formulario f ON fp.Id_formulario = f.Id_formulario
+WHERE p.Id_persona = %s;
+
+```
+
+Evento: Enviar Mensaje de WhatsApp Basado en Preferencias
+
+Acción: Enviar un mensaje de WhatsApp al usuario basado en sus preferencias.
+
+```
+INSERT INTO MensajeSend (mensaje_name, enviados, mensaje_content, FechaHora, Id_persona) 
+VALUES (%s, %s::text[], %s, %s, %s)
+
+```
+
+
+### Código Requerimiento : R - 036
+### Codigo interfaz : I - 036
+### Imagen interfaz : 
+![image](../../04.Entregables/Entregable_PC3/Pantallas/ModCRM2/contacto.png)
+
+Sentencia SQL:
+
+Evento: Enviar Comentario
+
+Acción: Insertar el comentario del usuario en la base de datos.
+
+```
+INSERT INTO Comentario (Id_persona, Id_producto, descrip_comentario, fecha_comentario, hora_comentario) 
+VALUES (%s, %s, %s, CURRENT_DATE, CURRENT_TIME)
+
+```
+
+
+| Código | R036 |
+|----------|----------|
+|Nombre  | 	Envío de Comentarios por Parte del Usuario |
+| Objetivo | <p align="left"> Permitir a los usuarios enviar comentarios sobre productos y servicios.</p> | 
+| Descripción | Facilitar a los usuarios la capacidad de enviar comentarios y opiniones sobre productos y servicios, para que el gestor de CRM pueda revisarlos y actuar en consecuencia. | 
+| Actor primario   | Usuario | 
+|Actor secundario| Gestor de CRM|
+|Precondiciones |El usuario ha accedido a su cuenta en la plataforma |
+
+
+| Código Interfaz | I036 |
+|----------|----------|
+|Imagen interfaz||
+
+
+
 ##3.6. Módulo de finanzas
 
 ### Código Requerimiento : R - 037
