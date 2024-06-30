@@ -91,6 +91,18 @@ Para ver el esquema completo, puede ingresar al figma del equipo: (https://www.f
 ![imagen](imagenes_cap_4/VistasFinanzas/Presupuestos.PNG)
 
 
+## Módulo CRM:
+
+![imagen](imagenes_cap_4/VistasCRM/home.png)
+![imagen](imagenes_cap_4/VistasCRM/usuario.png)
+![imagen](imagenes_cap_4/VistasCRM/analisis.png)
+![imagen](imagenes_cap_4/VistasCRM/comentarios.png)
+![imagen](imagenes_cap_4/VistasCRM/contacto.png)
+![imagen](imagenes_cap_4/VistasCRM/correo.png)
+![imagen](imagenes_cap_4/VistasCRM/formularios.png)
+![imagen](imagenes_cap_4/VistasCRM/watsapp.png)
+![imagen](imagenes_cap_4/VistasCRM/no.png)
+![imagen](imagenes_cap_4/VistasCRM/si.png)
 
 
 
