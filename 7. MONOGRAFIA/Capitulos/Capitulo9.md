@@ -253,6 +253,103 @@
 |Actor secundario| Plataforma de Ventas|
 |Precondiciones |El gestor ha accedido a la plataforma de ventas|
 
+### Módulo de CRM
+
+
+| Código | R028 |
+|----------|----------|
+|Nombre  | Análisis de Datos de Productos|
+| Objetivo | <p align="left"> Permitir al gestor de CRM realizar análisis de datos sobre los productos vendidos.</p> | 
+| Descripción | Facilitar al gestor el acceso a información detallada sobre las tendencias de compra, los productos menos comprados y los patrones de comportamiento de los clientes. | 
+| Actor primario   | Gestor de CRM | 
+|Actor secundario| Plataforma de CRM|
+|Precondiciones |El gestor ha accedido a la plataforma de CRM|
+
+
+| Código | R029 |
+|----------|----------|
+|Nombre  | Gestión de Comentarios de Clientes |
+| Objetivo | <p align="left"> Permitir al gestor de CRM revisar y clasificar los comentarios enviados por los clientes.</p> | 
+| Descripción | Facilitar al gestor la capacidad de ver, clasificar y responder a los comentarios de los clientes para mejorar la atención y satisfacción del cliente. | 
+| Actor primario   | Gestor de CRM | 
+|Actor secundario| Clientes|
+|Precondiciones |El gestor ha accedido a la plataforma de CRM|
+
+
+
+| Código | R030 |
+|----------|----------|
+|Nombre  | Envío de Correos a Clientes |
+| Objetivo | <p align="left"> Permitir al gestor de CRM enviar correos electrónicos a los clientes seleccionados.</p> | 
+| Descripción | acilitar al gestor la capacidad de enviar correos electrónicos masivos o individuales para promociones, actualizaciones o comunicaciones generales. | 
+| Actor primario   | Gestor de CRM | 
+|Actor secundario| Clientes|
+|Precondiciones |El gestor ha accedido a la plataforma de CRM y ha seleccionado los destinatarios|
+
+
+| Código | R031 |
+|----------|----------|
+|Nombre  | Creación y Envío de Formularios |
+| Objetivo | <p align="left"> Permitir al gestor de CRM crear y enviar formularios para recoger las preferencias y opiniones de los clientes.</p> | 
+| Descripción | personalizados y enviarlos a los clientes para recopilar datos importantes que ayuden a mejorar el servicio y los productos. | 
+| Actor primario   | Gestor de CRM | 
+|Actor secundario| Clientes|
+|Precondiciones |El gestor ha accedido a la plataforma de CRM|
+
+
+
+| Código | R032 |
+|----------|----------|
+|Nombre  | 	Acceso al Módulo de CRM desde el Home |
+| Objetivo | <p align="left"> Permitir a los usuarios acceder a las distintas funcionalidades del módulo de CRM desde la página principal.</p> | 
+| Descripción | Facilitar un acceso rápido y sencillo a las diferentes secciones del módulo de CRM desde el home de la plataforma. | 
+| Actor primario   | Gestor de CRM | 
+|Actor secundario| Plataforma de CRM|
+|Precondiciones |El gestor ha accedido a la plataforma de CRM|
+
+
+
+| Código | R033 |
+|----------|----------|
+|Nombre  | 	Gestión de Usuarios en el Pipeline |
+| Objetivo | <p align="left"> Permitir al gestor de CRM gestionar los usuarios en diferentes etapas del pipeline de ventas.</p> | 
+| Descripción | Facilitar al gestor la capacidad de mover a los usuarios entre las diferentes etapas del pipeline (nuevo, calificado, propuesta, negociación, ganado) según su estado en el proceso de ventas. | 
+| Actor primario   | Gestor de CRM | 
+|Actor secundario| Clientes|
+|Precondiciones |El gestor ha accedido a la plataforma de CRM|
+
+
+| Código | R034 |
+|----------|----------|
+|Nombre  | 	Envío de Mensajes de WhatsApp |
+| Objetivo | <p align="left"> Permitir al gestor de CRM enviar mensajes de WhatsApp a los clientes seleccionados.</p> | 
+| Descripción | Facilitar al gestor la capacidad de enviar mensajes de WhatsApp masivos o individuales para promociones, actualizaciones o comunicaciones generales. | 
+| Actor primario   | Gestor de CRM | 
+|Actor secundario| Clientes|
+|Precondiciones |El gestor ha accedido a la plataforma de CRM y ha seleccionado los destinatarios|
+
+
+| Código | R035 |
+|----------|----------|
+|Nombre  | 	Vista de Preferencias del Usuario |
+| Objetivo | <p align="left"> Permitir a los usuarios ver sus preferencias y datos recopilados mediante formularios.</p> | 
+| Descripción | Facilitar a los usuarios el acceso a sus preferencias y respuestas a formularios, para que puedan revisarlas y actualizarlas si es necesario. | 
+| Actor primario   | Usuario | 
+|Actor secundario| Plataforma|
+|Precondiciones |El usuario ha accedido a su cuenta en la plataforma |
+
+
+
+| Código | R036 |
+|----------|----------|
+|Nombre  | 	Envío de Comentarios por Parte del Usuario |
+| Objetivo | <p align="left"> Permitir a los usuarios enviar comentarios sobre productos y servicios.</p> | 
+| Descripción | Facilitar a los usuarios la capacidad de enviar comentarios y opiniones sobre productos y servicios, para que el gestor de CRM pueda revisarlos y actuar en consecuencia. | 
+| Actor primario   | Usuario | 
+|Actor secundario| Gestor de CRM|
+|Precondiciones |El usuario ha accedido a su cuenta en la plataforma |
+
+
 ### Módulo de Finanzas
 
 | Código             | R037 |
@@ -451,6 +548,51 @@
 | Código Interfaz | I027 |
 |----------|----------|
 |Imagen interfaz|![image](../../04.Entregables/Entregable_PC3/Pantallas/ModVentas/cambio_direccion.png)|
+
+### Modulo de CRM
+
+| Código Interfaz | I028 |
+|----------|----------|
+|Imagen interfaz|![image](../../04.Entregables/Entregable_PC3/Pantallas/ModCRM2/analisis.png)|
+
+| Código Interfaz | I029 |
+|----------|----------|
+|Imagen interfaz|![image](../../04.Entregables/Entregable_PC3/Pantallas/ModCRM2/comentarios.png)|
+
+| Código Interfaz | I030 |
+|----------|----------|
+|Imagen interfaz|![image](../../04.Entregables/Entregable_PC3/Pantallas/ModCRM2/correo.png)|
+
+| Código Interfaz | I031 |
+|----------|----------|
+|Imagen interfaz|![image](../../04.Entregables/Entregable_PC3/Pantallas/ModCRM2/formularios.png)|
+
+
+| Código Interfaz | I032 |
+|----------|----------|
+|Imagen interfaz|![image](../../04.Entregables/Entregable_PC3/Pantallas/ModCRM2/home.png)|
+
+
+| Código Interfaz | I033 |
+|----------|----------|
+|Imagen interfaz|![image](../../04.Entregables/Entregable_PC3/Pantallas/ModCRM2/pipeline.png)|
+
+
+| Código Interfaz | I034 |
+|----------|----------|
+|Imagen interfaz|![image](../../04.Entregables/Entregable_PC3/Pantallas/ModCRM2/watsapp.png)|
+
+
+
+| Código Interfaz | I035 |
+|----------|----------|
+|Imagen interfaz|![image](../../04.Entregables/Entregable_PC3/Pantallas/ModCRM2/usuario.png)|
+
+
+| Código Interfaz | I036 |
+|----------|----------|
+|Imagen interfaz|![image](../../04.Entregables/Entregable_PC3/Pantallas/ModCRM2/contacto.png)|
+
 
 ### Modulo de Finanzas
 

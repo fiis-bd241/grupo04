@@ -504,6 +504,25 @@
 | 6 | El gestor de CRM guarda la clasificación. |
 | 7 | El caso termina.|
 
+**Caso de uso: Crear y Enviar Formularios para Preferencias de Clientes**
+
+| Objetivo |	<p align="left"> Permitir que el Gestor de CRM cree y envíe formularios a los usuarios para estudiar sus preferencias y gustos.</p>| 
+|:--------------:|--------------|
+| Descripción | Proceso mediante el cual el Gestor de CRM puede crear formularios personalizados y enviarlos a los usuarios registrados para recolectar información sobre sus preferencias y gustos, ayudando a mejorar la segmentación y personalización de ofertas.| 
+| Actor primario   | Gestor de CRM | 
+|Actor secundario| Usuarios registrados |
+|Precondiciones | 	Deben existir usuarios registrados en el sistema y el Gestor de CRM debe tener permisos para crear y enviar formularios.|
+| Paso | <p align="center"> Acción </p> |
+| 1 | El gestor de CRM inicia sesión en su cuenta de la página web de Migni Store.|
+| 2 | El gestor de CRM accede a la sección "Crear y Enviar Formularios". |
+| 3 | La página muestra la opción para crear un nuevo formulario. |
+| 4 | El gestor de CRM diseña el formulario, añadiendo preguntas sobre preferencias y gustos de los clientes.|
+| 5 | El gestor de CRM selecciona los usuarios a los que se enviará el formulario. |
+| 6 | El gestor de CRM envía el formulario a los usuarios seleccionados. |
+| 7 | Los usuarios reciben el formulario y lo completan.|
+| 8 | Las respuestas de los usuarios son recolectadas y almacenadas en el sistema.|
+| 9 | El gestor de CRM analiza las respuestas para identificar preferencias y gustos de los clientes.|
+| 10 | El caso termina.|
 
 
 ## Requerimientos de atributos de Calidad

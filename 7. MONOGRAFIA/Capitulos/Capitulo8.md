@@ -866,8 +866,56 @@ CREATE TABLE Pedido(
 	FOREIGN KEY (cod_venta,id_persona) REFERENCES Venta(cod_venta,id_persona),
 	FOREIGN KEY (id_repartidor) REFERENCES Repartidor(id_persona)
 );
+
+CREATE TABLE Revision
+(
+  id_revision SERIAL,
+  id_comentario INT NOT NULL,
+  puntos INT NOT NULL,
+  PRIMARY KEY (id_revision),
+  FOREIGN KEY (id_comentario) REFERENCES Comentario(Id_comentario)
+);
+
+
+CREATE TABLE MensajeSend
+(
+  id_MensajeSend SERIAL,
+  mensaje_name VARCHAR(255) NOT NULL,
+  enviados  VARCHAR[]  NOT NULL,
+  mensaje_content VARCHAR(255) NOT NULL, 
+  FechaHora TIMESTAMP NOT NULL,
+  Id_persona INT,
+  PRIMARY KEY (id_MensajeSend),
+  FOREIGN KEY (Id_persona) REFERENCES Persona(Id_persona)
+);
+
+
+CREATE TABLE EmailSend
+(
+  id_EmailSend SERIAL,
+  email_name VARCHAR(255) NOT NULL,
+  enviados  VARCHAR[]  NOT NULL,
+  FechaHora TIMESTAMP NOT NULL
+  email_content VARCHAR(255) NOT NULL,
+  Id_persona INT,
+  PRIMARY KEY (id_EmailSend),
+  FOREIGN KEY (Id_persona) REFERENCES Persona(Id_persona)
+);
+
+
+CREATE TABLE Pipeline (
+  Id_persona INT PRIMARY KEY,
+  estado VARCHAR(20) NOT NULL,
+  FOREIGN KEY (Id_persona) REFERENCES Persona(Id_persona)
+);
+
+
+
+
 ```
 [Ver completo](archivos_cap16/modulo_almacen/Migni_Store_Tables.sql)
+
+[Ver completo](archivos_cap16/mod_CRM/Mignistore_final.sql)
 
 ## SQL general para pruebas: 
 [Ver SQL para pruebas](https://github.com/fiis-bd241/grupo04/blob/main/7.%20MONOGRAFIA/Capitulos/Cap8/SQL.md)

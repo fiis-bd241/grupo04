@@ -1,5 +1,5 @@
 # Capítulo 06: Modelamiento Lógico
-![Modelamiento lógico](imagenes_cap5/modelo_lógico.PNG)
+![Modelamiento lógico](imagenes_cap5/modelo_logico.png)
 
 ## 2.2 Diccionario de Datos
 

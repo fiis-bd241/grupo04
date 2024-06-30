@@ -140,3 +140,13 @@ Columnas: id_tipo_asiento_contable, nombre_tipo_as
 | 9	 | Ventas |
 | 10	| Provisión |
 
+### Pipeline
+Columnas: id_persona,estado
+
+|id_persona|estado|
+|----------------------|------------|
+|A|nuevo|
+|B|calificado|
+|C|propuesta|
+|D|negociacion|
+|E|ganado|

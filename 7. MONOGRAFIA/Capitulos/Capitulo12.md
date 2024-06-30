@@ -7,6 +7,16 @@ En el aplicativo del gestor de marketing este ingresará directamente al ser el 
 
 En el aplicativo de equipo de marketing se tendra un login para verificar el id del equipo de marketing ingresante, cuando se logea se tendra la opcion de generar propuesta y atender observaciones; la primera mostrara espacios de texto para ingresar los datos correspondientes a una campaña y se podrá generar tanto en la tabla campaña como en sus tablas con llaves foraneas campañaxprod y campañaxcanal, la funcionalidad de atender observaciones hara un select de todas aquellas observaciones realizadas a campañas que le pertenezcan al equipo de marketing y que esten en estado false, cuando se selecciona una observacion y se da en atender se mostrarán los datos correspondientes a la campaña asociada, luego de los cambios se presiona en actualizar y se hara un update en las tablas asociadas y la observacion pasara a ser estado atendido.
 
+
+## MÓDULO: CRM
+
+Funcionalidad primaria elegida: Gestión de Comentarios de Clientes y Análisis de Datos.<br>
+Sustentación: El módulo de CRM permite la gestión integral de la relación con los clientes, facilitando la revisión de comentarios, envío de comunicaciones, gestión de formularios, y análisis de datos de ventas y comportamiento de clientes.<br>
+
+Esta funcionalidad permitirá cumplir con los requerimientos de las pantallas relacionadas a Análisis de Datos de Productos (R028), Gestión de Comentarios de Clientes (R029), Envío de Correos a Clientes (R030), Creación y Envío de Formularios (R031), Acceso al Módulo de CRM desde el Home (R032), Gestión de Usuarios en el Pipeline (R033), Envío de Mensajes de WhatsApp (R034), Vista de Preferencias del Usuario (R035) y Envío de Comentarios por Parte del Usuario (R036). Dichas funcionalidades se encuentran relacionadas con las interfaces I-028, I-029, I-030, I-031, I-032, I-033, I-034, I-035 y I-036.
+
+
+
 ## Módulo de Compras
 
 **Funcionalidad primaria elegida:** Gestionar todas las cotizaciones hechas por los proveedores<br>
@@ -78,3 +88,6 @@ Esta funcionalidad permitirá cumplir con los requerimientos de las pantallas re
 | 10 | También puede ver el historial de asientos. <br> ![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/Pantallas/HistorialdeAsientos.PNG) |
 | 11 | También puede ver el estado de resultados. <br> ![image](https://github.com/fiis-bd241/grupo04/blob/main/04.Entregables/Entregable_PC3/Pantallas/EstadodeResultados.PNG) |
 | 12 | También puede ver el reporte contable y escoge el periodo. <br>![imagen](imagenes_cap_4/VistasFinanzas/ReporteContable.PNG) |
+
+
+

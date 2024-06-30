@@ -36,3 +36,8 @@ pago (detalle_pago),tipos_pago,venta, ventaxprod, personas, producto
 [Carpeta contenedora de los archivos](archivos_cap_11/ModFinanzas)
 
 Aquí estan presentes los archivos csv de el módulo de Finanzas que incluye presupuesto, facturas, asientos contables, estado de resultados, etc.
+
+## Módulo CRM
+
+[Carpeta contenedora de los archivos](archivos_cap_11/Mod_CRM)
+

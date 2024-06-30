@@ -51,3 +51,13 @@
 ### Explicación de las funcionalidades
 
 [EXPLICACION DISTRIBUCION](archivos_cap16/MODdist/Mod_distribucion.md)
+
+
+## Módulo CRM
+### Código
+[APLICATIVO DISTRIBUCION](archivos_cap16/mod_CRM/proyecto_crm)
+
+
+### Explicación de las funcionalidades
+
+[EXPLICACION DISTRIBUCION](archivos_cap16/mod_CRM/mod_crm.md)

@@ -192,7 +192,7 @@
 
 - Descripción: Este módulo está diseñado para gestionar la interacción con los clientes a través de diversos canales, clasificar y analizar comentarios, y facilitar la comunicación masiva vía WhatsApp y correo electrónico. Además, incluye herramientas de análisis de datos para identificar tendencias de compra y productos menos comprados, así como la visualización de tablas en PostgreSQL y la clasificación de usuarios mediante un pipeline.
 
-- Responsabilidades: Gestionar y clasificar comentarios de usuarios,puntuar comentarios basados en la posibilidad de compra,enviar y atender mensajes de WhatsApp y correos electrónicos,realizar análisis de datos para detectar tendencias de compra y productos menos comprados,visualizar y gestionar tablas en PostgreSQL yclasificar usuarios mediante un pipeline.
+- Responsabilidades: Gestionar y clasificar comentarios de usuarios,puntuar comentarios basados en la posibilidad de compra,hacer formularios,enviar y atender mensajes de WhatsApp y correos electrónicos,realizar análisis de datos para detectar tendencias de compra y productos menos comprados,visualizar y gestionar tablas en PostgreSQL yclasificar usuarios mediante un pipeline.
 
 - Interacción: Con el módulo de ventas y soporte técnico.
 
